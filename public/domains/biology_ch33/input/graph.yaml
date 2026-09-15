@@ -1,0 +1,156 @@
+domain: biology_2e_ch33
+primitives:
+  body_symmetry:
+    defines: The pattern of an animal's body plan, classified as asymmetrical, radial, or bilateral.
+    tier: 0
+  diffusion:
+    defines: The passive movement of nutrients and wastes between a cell and its watery environment.
+    tier: 0
+  exoskeleton_endoskeleton:
+    defines: External or internal hard support structures that constrain and enable animal size, shape,
+      and movement.
+    tier: 0
+  atp_energy_storage:
+    defines: The short-term (ATP), medium-term (glycogen), and long-term (triglyceride) forms in which
+      animals store energy obtained from food.
+    tier: 0
+  epithelial_tissue:
+    defines: Tissue that covers the outside of organs and lines organ lumens in single or multiple layers
+      of cells.
+    tier: 0
+  connective_tissue:
+    defines: Tissue made up of living cells embedded in a nonliving matrix of ground substance and protein
+      fibers.
+    tier: 0
+  muscle_tissue:
+    defines: Contractile tissue of the animal body, classified as smooth, skeletal, or cardiac based on
+      striations, nuclei, and control.
+    tier: 0
+  nervous_tissue:
+    defines: Tissue made of neurons and glial cells specialized to receive and transmit electrical impulses.
+    tier: 0
+  homeostasis:
+    defines: The dynamic equilibrium by which animal organs and organ systems constantly adjust to internal
+      and external changes.
+    tier: 0
+  heat_exchange_mechanisms:
+    defines: The four physical mechanisms (radiation, evaporation, convection, and conduction) by which
+      heat moves between an animal and its environment.
+    tier: 0
+concepts:
+  surface_to_volume_ratio:
+    defines: The ratio of an object's surface area to its volume, which decreases as size increases and
+      limits the effectiveness of diffusion.
+    composed_of:
+    - diffusion
+    tier: 1
+  metabolic_rate:
+    defines: The amount of energy an animal expends over a given time, measured at rest as basal metabolic
+      rate (endotherms) or standard metabolic rate (ectotherms).
+    composed_of:
+    - atp_energy_storage
+    tier: 1
+  bioenergetics:
+    defines: The relationship between an animal's energy use and its body size, activity level, and environment.
+    composed_of:
+    - metabolic_rate
+    - surface_to_volume_ratio
+    tier: 2
+  torpor:
+    defines: A decrease in activity and metabolism, including hibernation and estivation, that allows
+      animals to survive adverse conditions.
+    composed_of:
+    - metabolic_rate
+    tier: 2
+  body_planes_and_cavities:
+    defines: The anatomical planes (sagittal, frontal, transverse) and cavities (dorsal, ventral) used
+      to describe vertebrate body organization.
+    composed_of:
+    - body_symmetry
+    tier: 1
+  epithelial_cell_types:
+    defines: Squamous, cuboidal, columnar, and transitional epithelial cells classified by shape and number
+      of layers, each suited to specific functions.
+    composed_of:
+    - epithelial_tissue
+    tier: 1
+  connective_tissue_types:
+    defines: Loose/areolar, fibrous, cartilage, bone, adipose, and blood tissues distinguished by their
+      cell types, fibers, and matrix composition.
+    composed_of:
+    - connective_tissue
+    tier: 1
+  stimulus_receptor_effector:
+    defines: The homeostatic control pathway in which a receptor senses a change, a control center generates
+      a response, and an effector carries it out.
+    composed_of:
+    - homeostasis
+    - nervous_tissue
+    tier: 1
+  set_point:
+    defines: The target value around which a homeostatic system maintains equilibrium, which can itself
+      be adjusted (alteration).
+    composed_of:
+    - homeostasis
+    tier: 1
+  negative_feedback_loop:
+    defines: A homeostatic mechanism that changes the direction of a stimulus to bring a system back toward
+      its set point.
+    composed_of:
+    - stimulus_receptor_effector
+    - set_point
+    tier: 2
+  positive_feedback_loop:
+    defines: A feedback mechanism that maintains or accelerates the direction of a stimulus rather than
+      reversing it.
+    composed_of:
+    - stimulus_receptor_effector
+    - set_point
+    tier: 2
+  acclimatization:
+    defines: Adjustments made across body organ systems to maintain a homeostatic set point in response
+      to a changed environment.
+    composed_of:
+    - set_point
+    tier: 2
+  endotherm_ectotherm:
+    defines: The classification of animals as endotherms (internally regulated body temperature) or ectotherms
+      (body temperature set by the environment).
+    composed_of:
+    - heat_exchange_mechanisms
+    - homeostasis
+    tier: 1
+  thermoregulation:
+    defines: The regulation of body temperature through neural control, circulatory adaptations, insulation,
+      and behavior.
+    composed_of:
+    - heat_exchange_mechanisms
+    - negative_feedback_loop
+    - endotherm_ectotherm
+    tier: 3
+applications:
+  fever_response:
+    defines: An application of thermoregulation in which pyrogens released after infection reset the hypothalamic
+      set point to raise body temperature and fight pathogens.
+    needs:
+    - thermoregulation
+    - set_point
+    tier: 4
+  blood_glucose_regulation:
+    defines: An application of negative feedback in which insulin and glucagon adjust blood glucose levels
+      toward a set point.
+    needs:
+    - negative_feedback_loop
+    tier: 3
+  blood_clotting_cascade:
+    defines: An application of positive feedback in which sequential activation of clotting factors, ending
+      in thrombin, amplifies clot formation.
+    needs:
+    - positive_feedback_loop
+    tier: 3
+  childbirth_oxytocin:
+    defines: An application of positive feedback in which oxytocin-driven uterine contractions intensify
+      until childbirth occurs.
+    needs:
+    - positive_feedback_loop
+    tier: 3

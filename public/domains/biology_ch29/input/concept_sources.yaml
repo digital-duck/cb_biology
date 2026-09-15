@@ -1,0 +1,214 @@
+domain: biology_2e_ch29
+sources:
+  notochord:
+    label: Notochord
+    sections:
+    - id: ch29_s29_1
+      title: 29.1 Chordates
+  dorsal_hollow_nerve_cord:
+    label: Dorsal Hollow Nerve Cord
+    sections:
+    - id: ch29_s29_1
+      title: 29.1 Chordates
+  pharyngeal_slits:
+    label: Pharyngeal Slits
+    sections:
+    - id: ch29_s29_1
+      title: 29.1 Chordates
+  post_anal_tail:
+    label: Post-Anal Tail
+    sections:
+    - id: ch29_s29_1
+      title: 29.1 Chordates
+  endostyle:
+    label: Endostyle/Thyroid Gland
+    sections:
+    - id: ch29_s29_1
+      title: 29.1 Chordates
+  chordata:
+    label: Chordata (Phylum)
+    sections:
+    - id: ch29_s29_1
+      title: 29.1 Chordates
+  cranium:
+    label: Cranium
+    sections:
+    - id: ch29_s29_1
+      title: 29.1 Chordates
+  vertebral_column:
+    label: Vertebral Column
+    sections:
+    - id: ch29_s29_1
+      title: 29.1 Chordates
+  vertebrata_craniata:
+    label: Vertebrata/Craniata
+    sections:
+    - id: ch29_s29_1
+      title: 29.1 Chordates
+  cephalochordata_urochordata:
+    label: Invertebrate Chordates (Cephalochordata & Urochordata)
+    sections:
+    - id: ch29_s29_1
+      title: 29.1 Chordates
+  gnathostomes:
+    label: Gnathostomes
+    sections:
+    - id: ch29_s29_1
+      title: 29.1 Chordates
+    - id: ch29_s29_2
+      title: 29.2 Fishes
+  agnatha:
+    label: Agnatha (Jawless Fishes)
+    sections:
+    - id: ch29_s29_2
+      title: 29.2 Fishes
+  tetrapods:
+    label: Tetrapods
+    sections:
+    - id: ch29_s29_1
+      title: 29.1 Chordates
+    - id: ch29_s29_2
+      title: 29.2 Fishes
+  amniotes:
+    label: Amniotes
+    sections:
+    - id: ch29_s29_1
+      title: 29.1 Chordates
+    - id: ch29_s29_4
+      title: 29.4 Reptiles
+  cartilaginous_bony_fishes:
+    label: Chondrichthyes and Osteichthyes
+    sections:
+    - id: ch29_s29_2
+      title: 29.2 Fishes
+    - id: ch29_s29_3
+      title: 29.3 Amphibians
+  lateral_line_system:
+    label: Lateral Line System
+    sections:
+    - id: ch29_s29_2
+      title: 29.2 Fishes
+  swim_bladder:
+    label: Swim Bladder
+    sections:
+    - id: ch29_s29_2
+      title: 29.2 Fishes
+  amphibian_life_cycle:
+    label: Amphibian Life Cycle and Characteristics
+    sections:
+    - id: ch29_s29_3
+      title: 29.3 Amphibians
+  tetrapod_evolution:
+    label: Evolution of Tetrapods from Fish
+    sections:
+    - id: ch29_s29_3
+      title: 29.3 Amphibians
+  amniotic_egg:
+    label: Amniotic Egg
+    sections:
+    - id: ch29_s29_4
+      title: 29.4 Reptiles
+  temporal_fenestrae:
+    label: Temporal Fenestrae
+    sections:
+    - id: ch29_s29_4
+      title: 29.4 Reptiles
+  synapsid_anapsid_diapsid:
+    label: Synapsids, Anapsids, and Diapsids
+    sections:
+    - id: ch29_s29_4
+      title: 29.4 Reptiles
+  reptile_characteristics:
+    label: Characteristics of Reptiles
+    sections:
+    - id: ch29_s29_4
+      title: 29.4 Reptiles
+  ectothermy_endothermy:
+    label: Ectothermy and Endothermy
+    sections:
+    - id: ch29_s29_4
+      title: 29.4 Reptiles
+    - id: ch29_s29_5
+      title: 29.5 Birds
+    - id: ch29_s29_6
+      title: 29.6 Mammals
+  archosaur_diversification:
+    label: Archosaur Diversification (Dinosaurs, Pterosaurs, Crocodilians, Birds)
+    sections:
+    - id: ch29_s29_4
+      title: 29.4 Reptiles
+  modern_reptile_clades:
+    label: Modern Reptile Clades
+    sections:
+    - id: ch29_s29_4
+      title: 29.4 Reptiles
+  feathers:
+    label: Feathers
+    sections:
+    - id: ch29_s29_5
+      title: 29.5 Birds
+  bird_flight_adaptations:
+    label: Bird Adaptations for Flight
+    sections:
+    - id: ch29_s29_5
+      title: 29.5 Birds
+  bird_evolution:
+    label: Evolution of Birds from Theropod Dinosaurs
+    sections:
+    - id: ch29_s29_5
+      title: 29.5 Birds
+  hair:
+    label: Hair
+    sections:
+    - id: ch29_s29_6
+      title: 29.6 Mammals
+  mammary_glands:
+    label: Mammary Glands
+    sections:
+    - id: ch29_s29_6
+      title: 29.6 Mammals
+  mammal_characteristics:
+    label: Characteristics of Mammals
+    sections:
+    - id: ch29_s29_6
+      title: 29.6 Mammals
+  mammal_evolution:
+    label: Evolution of Mammals from Synapsids
+    sections:
+    - id: ch29_s29_6
+      title: 29.6 Mammals
+  living_mammal_groups:
+    label: Monotremes, Marsupials, and Eutherians
+    sections:
+    - id: ch29_s29_6
+      title: 29.6 Mammals
+  primate_characteristics:
+    label: Characteristics of Primates
+    sections:
+    - id: ch29_s29_7
+      title: 29.7 The Evolution of Primates
+  strepsirrhine_haplorhine:
+    label: Strepsirrhines and Haplorhines
+    sections:
+    - id: ch29_s29_7
+      title: 29.7 The Evolution of Primates
+  primate_evolution:
+    label: Evolution of Monkeys and Apes
+    sections:
+    - id: ch29_s29_7
+      title: 29.7 The Evolution of Primates
+  hominin_evolution:
+    label: Hominin Evolution
+    sections:
+    - id: ch29_s29_7
+      title: 29.7 The Evolution of Primates
+  vertebrate_conservation:
+    label: Vertebrate Conservation Status
+    sections:
+    - id: ch29_s29_1
+      title: 29.1 Chordates
+  veterinary_medicine:
+    label: Veterinary Medicine
+    sections:
+    - id: ch29_s29_5
+      title: 29.5 Birds

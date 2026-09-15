@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Concept Graph — graph</title>
+<script src="https://unpkg.com/vis-network@9.1.9/standalone/umd/vis-network.min.js"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,sans-serif;background:#f0f2f5;overflow:hidden;height:100vh}
+.app{
+  display:grid;
+  grid-template-columns:230px 1fr 210px;
+  grid-template-rows:60vh 40vh;
+  height:100vh;
+  gap:0;
+}
+/* ── Left sidebar: learning path ── */
+#path-sidebar{
+  grid-column:1;grid-row:1/3;
+  background:#f5f6f8;color:#2a2a2a;
+  display:flex;flex-direction:column;
+  overflow:hidden;
+  border-right:1px solid #dde0e6;
+}
+#path-header{
+  padding:14px 14px 10px;
+  border-bottom:1px solid #dde0e6;
+  flex-shrink:0;
+}
+#path-header h1{font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:#888;margin-bottom:2px;font-weight:700}
+#path-header .domain-name{font-size:11px;color:#555;margin-top:4px}
+#path-steps{flex:1;overflow-y:auto;padding:8px 0}
+#path-steps .hint{color:#aaa;font-size:12px;text-align:center;padding:24px 12px;line-height:1.5}
+.step-item{
+  display:flex;align-items:flex-start;gap:8px;
+  padding:7px 12px;cursor:pointer;
+  border-left:3px solid transparent;
+  transition:background .15s;
+}
+.step-item:hover{background:#ebebf0}
+.step-item.active{background:#e8eef8;border-left-color:#4a90d9}
+.step-item.target{background:#eaf5ea;border-left-color:#4caf50}
+.step-num{min-width:20px;font-size:10px;font-weight:700;color:#bbb;padding-top:2px;flex-shrink:0}
+.step-item.target .step-num{color:#4caf50}
+.step-label{font-size:12px;font-weight:600;color:#333;line-height:1.4}
+.step-def{font-size:10px;color:#888;margin-top:2px;line-height:1.4}
+.step-kind{display:inline-block;padding:0 5px;border-radius:8px;font-size:9px;font-weight:700;margin-left:4px}
+#path-count{font-size:10px;color:#aaa;margin-top:3px}
+/* ── Graph panel ── */
+#graph-panel{
+  grid-column:2;grid-row:1;
+  position:relative;background:#fff;
+  border-bottom:2px solid #dde;
+}
+#graph-container{width:100%;height:100%}
+.graph-recenter-btn{
+  position:absolute;right:16px;bottom:16px;z-index:50;
+  padding:6px 14px;border-radius:6px;
+  border:1px solid #1e3a5f;background:#1e3a5f;color:#fff;
+  font-size:12px;font-weight:600;font-family:system-ui,sans-serif;
+  box-shadow:0 1px 4px rgba(0,0,0,.25);cursor:pointer;
+}
+.graph-recenter-btn:hover{background:#28496f;border-color:#28496f}
+/* ── Explanation panel ── */
+#explain-panel{
+  grid-column:2;grid-row:2;
+  background:#fff;overflow-y:auto;
+  padding:16px 20px;
+}
+#explain-panel .empty{color:#aaa;font-size:13px;padding:20px 0;text-align:center}
+#explain-panel .node-title{
+  display:flex;align-items:center;gap:8px;margin-bottom:10px;
+}
+#explain-panel .node-title h2{font-size:16px;color:#1e3a5f}
+.badge{
+  display:inline-block;padding:2px 8px;border-radius:10px;
+  font-size:11px;font-weight:700;
+}
+.badge.primitive{background:#e8f5e9;color:#2e7d32}
+.badge.concept{background:#e3f2fd;color:#1565c0}
+.badge.application{background:#fff3e0;color:#ef6c00}
+.tier-tag{font-size:11px;color:#999;margin-left:auto}
+#explain-panel .defines{
+  font-size:14px;color:#333;line-height:1.6;margin-bottom:12px;
+  padding:10px 12px;background:#f8f9fb;border-radius:6px;
+  border-left:3px solid #90b4e8;
+}
+#explain-panel .section-label{
+  font-size:10px;font-weight:700;text-transform:uppercase;
+  letter-spacing:.08em;color:#999;margin-bottom:6px;
+}
+#explain-panel .prereq-list{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+.prereq-chip{
+  padding:3px 9px;border-radius:12px;font-size:11px;
+  background:#e3f2fd;color:#1565c0;cursor:pointer;
+  border:1px solid #90caf9;transition:background .12s;
+}
+.prereq-chip:hover{background:#bbdefb}
+#explain-panel .meta-row{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:10px}
+.meta-item{font-size:12px;color:#555}
+.meta-item b{color:#1e3a5f}
+#explain-panel .play-hint{
+  font-size:12px;color:#5a5a5a;line-height:1.6;
+  padding:8px 12px;background:#fffde7;border-radius:6px;
+  border-left:3px solid #ffd54f;margin-bottom:8px;
+}
+/* ── Notes sidebar ── */
+#notes-sidebar{
+  grid-column:3;grid-row:1/3;
+  background:#fafaf8;
+  border-left:2px solid #e8e8e0;
+  display:flex;flex-direction:column;
+  overflow:hidden;
+}
+#notes-header{
+  padding:10px 12px 8px;
+  border-bottom:1px solid #e0e0d8;
+  flex-shrink:0;
+}
+#notes-header-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:2px}
+#notes-header h2{font-size:12px;font-weight:700;color:#555;text-transform:uppercase;letter-spacing:.06em;margin:0}
+#notes-node-label{font-size:11px;color:#999;margin-top:2px}
+.nb-btn{font-size:10px;padding:2px 7px;border-radius:3px;
+  border:1px solid #ddd;background:#f0f0ea;cursor:pointer;color:#777;
+  font-family:system-ui,sans-serif}
+.nb-btn:hover{background:#e0e0d8;color:#444}
+#notes-textarea{
+  flex:0 0 auto;height:100px;border:none;resize:none;
+  padding:12px;font-size:12px;line-height:1.6;
+  font-family:inherit;background:#fafaf8;color:#333;
+  outline:none;
+}
+#notes-with-entries{
+  border-top:1px solid #e8e8e0;flex:1;min-height:0;overflow-y:auto;
+}
+.note-entry{
+  padding:6px 12px;cursor:pointer;
+  border-bottom:1px solid #f0f0e8;
+  font-size:11px;
+}
+.note-entry:hover{background:#f0efe8}
+.note-entry .note-node{font-weight:600;color:#555;display:flex;justify-content:space-between;align-items:center}
+.note-entry .note-ts{font-weight:400;color:#bbb;font-size:10px}
+.note-entry .note-preview{color:#999;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+/* ── kind badge colours in sidebar ── */
+.primitive-k{background:#e8f5e9;color:#2e7d32}
+.concept-k{background:#e3f2fd;color:#1565c0}
+.application-k{background:#fff3e0;color:#ef6c00}
+/* ── concept detail panel ── */
+#concept-detail{margin-top:14px;border-top:1px solid #e8e8e0;padding-top:10px;}
+#concept-iframe{width:100%;height:500px;border:1px solid #e0e0d8;border-radius:4px;margin-top:6px;display:block;}
+.concept-not-found{color:#e57373;font-size:12px;padding:6px 0;font-style:italic;}
+</style>
+</head>
+<body>
+<div class="app">
+
+<!-- LEFT: learning path sidebar -->
+<aside id="path-sidebar">
+  <div id="path-header">
+    <h1>Learning Path</h1>
+    <div class="domain-name">graph</div>
+    <div id="path-count"></div>
+  </div>
+  <div id="path-steps">
+    <div class="hint">Click any node in the graph<br>to see its learning path</div>
+  </div>
+</aside>
+
+<!-- CENTRE TOP: concept graph -->
+<div id="graph-panel">
+  <div id="graph-container"></div>
+  <button class="graph-recenter-btn" onclick="reCenterGraph()" title="Re-fit the graph to the viewport">Re-Center</button>
+</div>
+
+<!-- CENTRE BOTTOM: explanation panel -->
+<div id="explain-panel">
+  <div class="empty">Select a node to see its definition, prerequisites, and learning context.</div>
+</div>
+
+<!-- RIGHT: notes sidebar -->
+<aside id="notes-sidebar">
+  <div id="notes-header">
+    <div id="notes-header-top">
+      <h2>Notes</h2>
+      <div>
+        <button class="nb-btn" id="nb-clear-btn" onclick="clearNote()">Clear</button>
+        <button class="nb-btn" onclick="exportNotes()">Export</button>
+      </div>
+    </div>
+    <div id="notes-node-label">no node selected</div>
+  </div>
+  <textarea id="notes-textarea" placeholder="Type notes here&#10;(auto-saved per node)"></textarea>
+  <div id="notes-with-entries"></div>
+</aside>
+
+</div><!-- .app -->
+
+<script>
+const RAW = {"nodes": [{"id": "ecosystem", "label": "ecosystem", "kind": "primitive", "tier": 0, "defines": "A community of living organisms and their interactions with their abiotic (nonliving) environment.", "prereqs": [], "verifier": "", "lab": "", "play": "", "color": {"background": "#fffde7", "border": "#795548"}, "font": {"size": 13}}, {"id": "trophic_level", "label": "trophic level", "kind": "primitive", "tier": 0, "defines": "The position of a species or group of species in a food chain or food web.", "prereqs": [], "verifier": "", "lab": "", "play": "", "color": {"background": "#fffde7", "border": "#795548"}, "font": {"size": 13}}, {"id": "autotroph", "label": "autotroph", "kind": "primitive", "tier": 0, "defines": "An organism capable of synthesizing its own food using sunlight (photoautotroph) or inorganic molecules (chemoautotroph) as an energy source.", "prereqs": [], "verifier": "", "lab": "", "play": "", "color": {"background": "#fffde7", "border": "#795548"}, "font": {"size": 13}}, {"id": "heterotroph", "label": "heterotroph", "kind": "primitive", "tier": 0, "defines": "An organism that acquires energy by consuming and digesting other living or previously living organisms.", "prereqs": [], "verifier": "", "lab": "", "play": "", "color": {"background": "#fffde7", "border": "#795548"}, "font": {"size": 13}}, {"id": "biomass", "label": "biomass", "kind": "primitive", "tier": 0, "defines": "The total mass, in a unit area at the time of measurement, of living or previously living organisms within a trophic level.", "prereqs": [], "verifier": "", "lab": "", "play": "", "color": {"background": "#fffde7", "border": "#795548"}, "font": {"size": 13}}, {"id": "biogeochemical_cycle", "label": "biogeochemical cycle", "kind": "primitive", "tier": 0, "defines": "The cycling of inorganic mineral nutrients between living organisms and the nonliving (geologic and atmospheric) world.", "prereqs": [], "verifier": "", "lab": "", "play": "", "color": {"background": "#fffde7", "border": "#795548"}, "font": {"size": 13}}, {"id": "second_law_of_thermodynamics", "label": "second law of thermodynamics", "kind": "primitive", "tier": 0, "defines": "The principle that energy conversion at each trophic transfer tends toward disorder, causing energy to be lost as metabolic heat and limiting food chain length.", "prereqs": [], "verifier": "", "lab": "", "play": "", "color": {"background": "#fffde7", "border": "#795548"}, "font": {"size": 13}}, {"id": "primary_producer", "label": "primary producer", "kind": "concept", "tier": 1, "defines": "The trophic level that obtains energy from sunlight, inorganic chemicals, or dead/decaying organic material, forming the base of a food chain.", "prereqs": ["trophic_level", "autotroph"], "verifier": "", "lab": "", "play": "", "color": {"background": "#e8f5e9", "border": "#2e7d32"}, "font": {"size": 13}}, {"id": "primary_consumer", "label": "primary consumer", "kind": "concept", "tier": 2, "defines": "A herbivore trophic level that consumes primary producers.", "prereqs": ["trophic_level", "heterotroph", "primary_producer"], "verifier": "", "lab": "", "play": "", "color": {"background": "#e8f5e9", "border": "#2e7d32"}, "font": {"size": 13}}, {"id": "secondary_consumer", "label": "secondary consumer", "kind": "concept", "tier": 3, "defines": "Usually a carnivore that eats primary consumers.", "prereqs": ["trophic_level", "heterotroph", "primary_consumer"], "verifier": "", "lab": "", "play": "", "color": {"background": "#e8f5e9", "border": "#2e7d32"}, "font": {"size": 13}}, {"id": "tertiary_consumer", "label": "tertiary consumer", "kind": "concept", "tier": 4, "defines": "A carnivore that eats other carnivores.", "prereqs": ["trophic_level", "heterotroph", "secondary_consumer"], "verifier": "", "lab": "", "play": "", "color": {"background": "#e8f5e9", "border": "#2e7d32"}, "font": {"size": 13}}, {"id": "apex_consumer", "label": "apex consumer", "kind": "concept", "tier": 5, "defines": "The organism at the top of the food chain, fed on by no higher trophic level.", "prereqs": ["tertiary_consumer"], "verifier": "", "lab": "", "play": "", "color": {"background": "#e8f5e9", "border": "#2e7d32"}, "font": {"size": 13}}, {"id": "food_chain", "label": "food chain", "kind": "concept", "tier": 3, "defines": "A linear sequence of organisms (primary producers, primary consumers, and higher-level consumers) through which nutrients and energy pass.", "prereqs": ["primary_producer", "primary_consumer", "secondary_consumer"], "verifier": "", "lab": "", "play": "", "color": {"background": "#e8f5e9", "border": "#2e7d32"}, "font": {"size": 13}}, {"id": "food_web", "label": "food web", "kind": "concept", "tier": 4, "defines": "A graphic, holistic, nonlinear representation of the feeding interactions among primary producers, primary consumers, and higher-level consumers in an ecosystem.", "prereqs": ["food_chain"], "verifier": "", "lab": "", "play": "", "color": {"background": "#e8f5e9", "border": "#2e7d32"}, "font": {"size": 13}}, {"id": "grazing_food_web", "label": "grazing food web", "kind": "concept", "tier": 5, "defines": "A food web with plants or phytoplankton at its base, followed by herbivores and carnivores.", "prereqs": ["food_web"], "verifier": "", "lab": "", "play": "", "color": {"background": "#e8f5e9", "border": "#2e7d32"}, "font": {"size": 13}}, {"id": "detrital_food_web", "label": "detrital food web", "kind": "concept", "tier": 5, "defines": "A food web based on decomposers/detritivores that feed on decaying organic matter and recycle it back into the ecosystem.", "prereqs": ["food_web", "heterotroph"], "verifier": "", "lab": "", "play": "", "color": {"background": "#e8f5e9", "border": "#2e7d32"}, "font": {"size": 13}}, {"id": "ecosystem_dynamics", "label": "ecosystem dynamics", "kind": "concept", "tier": 5, "defines": "The study of changes in ecosystem structure caused by environmental disturbances or internal forces.", "prereqs": ["ecosystem", "food_web"], "verifier": "", "lab": "", "play": "", "color": {"background": "#e8f5e9", "border": "#2e7d32"}, "font": {"size": 13}}, {"id": "equilibrium", "label": "equilibrium", "kind": "concept", "tier": 6, "defines": "The steady state of an ecosystem where all organisms are in balance with their environment and each other.", "prereqs": ["ecosystem_dynamics"], "verifier": "", "lab": "", "play": "", "color": {"background": "#e8f5e9", "border": "#2e7d32"}, "font": {"size": 13}}, {"id": "resistance", "label": "resistance", "kind": "concept", "tier": 7, "defines": "The ability of an ecosystem to remain at equilibrium despite disturbances.", "prereqs": ["equilibrium"], "verifier": "", "lab": "", "play": "", "color": {"background": "#e8f5e9", "border": "#2e7d32"}, "font": {"size": 13}}, {"id": "resilience", "label": "resilience", "kind": "concept", "tier": 7, "defines": "The speed at which an ecosystem recovers equilibrium after being disturbed.", "prereqs": ["equilibrium"], "verifier": "", "lab": "", "play": "", "color": {"background": "#e8f5e9", "border": "#2e7d32"}, "font": {"size": 13}}, {"id": "holistic_ecosystem_model", "label": "holistic ecosystem model", "kind": "concept", "tier": 6, "defines": "A model that attempts to quantify the composition, interaction, and dynamics of an entire ecosystem in its natural state, such as a food web.", "prereqs": ["food_web", "ecosystem_dynamics"], "verifier": "", "lab": "", "play": "", "color": {"background": "#e8f5e9", "border": "#2e7d32"}, "font": {"size": 13}}, {"id": "mesocosm", "label": "mesocosm", "kind": "concept", "tier": 1, "defines": "A partitioned portion of a natural ecosystem used for controlled experiments.", "prereqs": ["ecosystem"], "verifier": "", "lab": "", "play": "", "color": {"background": "#e8f5e9", "border": "#2e7d32"}, "font": {"size": 13}}, {"id": "microcosm", "label": "microcosm", "kind": "concept", "tier": 1, "defines": "A re-creation of a natural ecosystem entirely within a laboratory environment for experimentation.", "prereqs": ["ecosystem"], "verifier": "", "lab": "", "play": "", "color": {"background": "#e8f5e9", "border": "#2e7d32"}, "font": {"size": 13}}, {"id": "conceptual_model", "label": "conceptual model", "kind": "concept", "tier": 1, "defines": "An ecosystem model using flow charts (compartments) to show interactions of living and nonliving components and energy/nutrient transfer.", "prereqs": ["ecosystem", "biogeochemical_cycle"], "verifier": "", "lab": "", "play": "", "color": {"background": "#e8f5e9", "border": "#2e7d32"}, "font": {"size": 13}}, {"id": "analytical_model", "label": "analytical model", "kind": "concept", "tier": 6, "defines": "An ecosystem model using simple mathematical formulas to predict effects of environmental disturbances on ecosystem structure and dynamics.", "prereqs": ["ecosystem_dynamics"], "verifier": "", "lab": "", "play": "", "color": {"background": "#e8f5e9", "border": "#2e7d32"}, "font": {"size": 13}}, {"id": "simulation_model", "label": "simulation model", "kind": "concept", "tier": 7, "defines": "An ecosystem model using complex computer algorithms to holistically model ecosystems and predict effects of disturbances.", "prereqs": ["holistic_ecosystem_model"], "verifier": "", "lab": "", "play": "", "color": {"background": "#e8f5e9", "border": "#2e7d32"}, "font": {"size": 13}}, {"id": "gross_primary_productivity", "label": "gross primary productivity", "kind": "concept", "tier": 2, "defines": "The rate at which photosynthetic primary producers incorporate energy from the sun.", "prereqs": ["primary_producer"], "verifier": "", "lab": "", "play": "", "color": {"background": "#e8f5e9", "border": "#2e7d32"}, "font": {"size": 13}}, {"id": "net_primary_productivity", "label": "net primary productivity", "kind": "concept", "tier": 3, "defines": "The energy that remains in primary producers after accounting for their own respiration and heat loss, available to primary consumers.", "prereqs": ["gross_primary_productivity"], "verifier": "", "lab": "", "play": "", "color": {"background": "#e8f5e9", "border": "#2e7d32"}, "font": {"size": 13}}, {"id": "trophic_level_transfer_efficiency", "label": "trophic level transfer efficiency", "kind": "concept", "tier": 1, "defines": "The measurement of energy transfer efficiency between two successive trophic levels.", "prereqs": ["trophic_level", "second_law_of_thermodynamics"], "verifier": "", "lab": "", "play": "", "color": {"background": "#e8f5e9", "border": "#2e7d32"}, "font": {"size": 13}}, {"id": "net_production_efficiency", "label": "net production efficiency", "kind": "concept", "tier": 2, "defines": "A measure of how efficiently organisms at a trophic level convert received energy (net consumer productivity) into biomass, after assimilation losses.", "prereqs": ["biomass", "trophic_level_transfer_efficiency"], "verifier": "", "lab": "", "play": "", "color": {"background": "#e8f5e9", "border": "#2e7d32"}, "font": {"size": 13}}, {"id": "ecological_pyramid", "label": "ecological pyramid", "kind": "concept", "tier": 2, "defines": "A graphical model showing the relative numbers of organisms, biomass, or energy across the trophic levels of an ecosystem.", "prereqs": ["trophic_level", "biomass", "trophic_level_transfer_efficiency"], "verifier": "", "lab": "", "play": "", "color": {"background": "#e8f5e9", "border": "#2e7d32"}, "font": {"size": 13}}, {"id": "residence_time", "label": "residence time", "kind": "concept", "tier": 1, "defines": "A measure of the average time an individual molecule (e.g., water) stays in a particular reservoir.", "prereqs": ["biogeochemical_cycle"], "verifier": "", "lab": "", "play": "", "color": {"background": "#e8f5e9", "border": "#2e7d32"}, "font": {"size": 13}}, {"id": "water_cycle", "label": "water cycle", "kind": "concept", "tier": 2, "defines": "The biogeochemical cycle by which water moves among the atmosphere, land, and oceans via evaporation, condensation/precipitation, runoff, and subsurface flow.", "prereqs": ["biogeochemical_cycle", "residence_time"], "verifier": "", "lab": "", "play": "", "color": {"background": "#e8f5e9", "border": "#2e7d32"}, "font": {"size": 13}}, {"id": "carbon_cycle", "label": "carbon cycle", "kind": "concept", "tier": 1, "defines": "The biogeochemical cycle of carbon exchange between living organisms (via photosynthesis and respiration) and long-term geologic reservoirs (atmosphere, oceans, sediments, fossil fuels).", "prereqs": ["biogeochemical_cycle", "autotroph", "heterotroph"], "verifier": "", "lab": "", "play": "", "color": {"background": "#e8f5e9", "border": "#2e7d32"}, "font": {"size": 13}}, {"id": "nitrogen_fixation", "label": "nitrogen fixation", "kind": "concept", "tier": 1, "defines": "The conversion of atmospheric nitrogen gas (N2) into organic nitrogen compounds by free-living or symbiotic bacteria.", "prereqs": ["biogeochemical_cycle"], "verifier": "", "lab": "", "play": "", "color": {"background": "#e8f5e9", "border": "#2e7d32"}, "font": {"size": 13}}, {"id": "ammonification", "label": "ammonification", "kind": "concept", "tier": 1, "defines": "The process converting nitrogenous waste or dead organism remains into ammonium (NH4+) by bacteria and fungi.", "prereqs": ["biogeochemical_cycle"], "verifier": "", "lab": "", "play": "", "color": {"background": "#e8f5e9", "border": "#2e7d32"}, "font": {"size": 13}}, {"id": "nitrification", "label": "nitrification", "kind": "concept", "tier": 2, "defines": "The bacterial conversion of ammonium into nitrites and then nitrates.", "prereqs": ["ammonification"], "verifier": "", "lab": "", "play": "", "color": {"background": "#e8f5e9", "border": "#2e7d32"}, "font": {"size": 13}}, {"id": "denitrification", "label": "denitrification", "kind": "concept", "tier": 3, "defines": "The bacterial conversion of nitrates back into nitrogen gas, returning it to the atmosphere.", "prereqs": ["nitrification"], "verifier": "", "lab": "", "play": "", "color": {"background": "#e8f5e9", "border": "#2e7d32"}, "font": {"size": 13}}, {"id": "nitrogen_cycle", "label": "nitrogen cycle", "kind": "concept", "tier": 4, "defines": "The biogeochemical cycle converting atmospheric nitrogen gas into usable organic forms and back, via nitrogen fixation, ammonification, nitrification, and denitrification.", "prereqs": ["nitrogen_fixation", "ammonification", "nitrification", "denitrification"], "verifier": "", "lab": "", "play": "", "color": {"background": "#e8f5e9", "border": "#2e7d32"}, "font": {"size": 13}}, {"id": "phosphorus_cycle", "label": "phosphorus cycle", "kind": "concept", "tier": 1, "defines": "The biogeochemical cycle of phosphorus, moving as phosphate ions between rock, soil, water, and living organisms, largely without an atmospheric phase.", "prereqs": ["biogeochemical_cycle"], "verifier": "", "lab": "", "play": "", "color": {"background": "#e8f5e9", "border": "#2e7d32"}, "font": {"size": 13}}, {"id": "sulfur_cycle", "label": "sulfur cycle", "kind": "concept", "tier": 1, "defines": "The biogeochemical cycle of sulfur between oceans, land, and atmosphere via decomposition, volcanic activity, weathering, and fossil fuel combustion.", "prereqs": ["biogeochemical_cycle"], "verifier": "", "lab": "", "play": "", "color": {"background": "#e8f5e9", "border": "#2e7d32"}, "font": {"size": 13}}, {"id": "nonrenewable_resource", "label": "nonrenewable resource", "kind": "concept", "tier": 1, "defines": "A resource, such as fossil fuel, that regenerates very slowly or not at all relative to its rate of use.", "prereqs": ["biogeochemical_cycle"], "verifier": "", "lab": "", "play": "", "color": {"background": "#e8f5e9", "border": "#2e7d32"}, "font": {"size": 13}}, {"id": "biomagnification", "label": "biomagnification", "kind": "application", "tier": 4, "defines": "The increasing concentration of persistent, toxic substances in organisms at each successive trophic level, from primary producers to apex consumers.", "prereqs": ["food_chain", "trophic_level_transfer_efficiency"], "verifier": "", "lab": "", "play": "", "color": {"background": "#fce4ec", "border": "#c62828"}, "font": {"size": 13}}, {"id": "eutrophication", "label": "eutrophication", "kind": "application", "tier": 5, "defines": "A process whereby nutrient runoff causes excessive growth of microorganisms, depleting dissolved oxygen and killing ecosystem fauna.", "prereqs": ["nitrogen_cycle", "phosphorus_cycle"], "verifier": "", "lab": "", "play": "", "color": {"background": "#fce4ec", "border": "#c62828"}, "font": {"size": 13}}, {"id": "dead_zone", "label": "dead zone", "kind": "application", "tier": 6, "defines": "An area within a freshwater or marine ecosystem depleted of normal flora and fauna, often caused by eutrophication, oil spills, or toxic dumping.", "prereqs": ["eutrophication"], "verifier": "", "lab": "", "play": "", "color": {"background": "#fce4ec", "border": "#c62828"}, "font": {"size": 13}}, {"id": "acid_rain", "label": "acid rain", "kind": "application", "tier": 5, "defines": "Corrosive rain formed when rainwater falls through sulfur dioxide or nitrogen oxide gas, turning it into weak sulfuric or nitric acid, damaging ecosystems and structures.", "prereqs": ["sulfur_cycle", "nitrogen_cycle"], "verifier": "", "lab": "", "play": "", "color": {"background": "#fce4ec", "border": "#c62828"}, "font": {"size": 13}}], "edges": [{"from": "ecosystem", "to": "ecosystem_dynamics"}, {"from": "ecosystem", "to": "mesocosm"}, {"from": "ecosystem", "to": "microcosm"}, {"from": "ecosystem", "to": "conceptual_model"}, {"from": "trophic_level", "to": "primary_producer"}, {"from": "trophic_level", "to": "primary_consumer"}, {"from": "trophic_level", "to": "secondary_consumer"}, {"from": "trophic_level", "to": "tertiary_consumer"}, {"from": "trophic_level", "to": "trophic_level_transfer_efficiency"}, {"from": "trophic_level", "to": "ecological_pyramid"}, {"from": "autotroph", "to": "primary_producer"}, {"from": "autotroph", "to": "carbon_cycle"}, {"from": "heterotroph", "to": "primary_consumer"}, {"from": "heterotroph", "to": "secondary_consumer"}, {"from": "heterotroph", "to": "tertiary_consumer"}, {"from": "heterotroph", "to": "detrital_food_web"}, {"from": "heterotroph", "to": "carbon_cycle"}, {"from": "biomass", "to": "net_production_efficiency"}, {"from": "biomass", "to": "ecological_pyramid"}, {"from": "biogeochemical_cycle", "to": "conceptual_model"}, {"from": "biogeochemical_cycle", "to": "residence_time"}, {"from": "biogeochemical_cycle", "to": "water_cycle"}, {"from": "biogeochemical_cycle", "to": "carbon_cycle"}, {"from": "biogeochemical_cycle", "to": "nitrogen_fixation"}, {"from": "biogeochemical_cycle", "to": "ammonification"}, {"from": "biogeochemical_cycle", "to": "phosphorus_cycle"}, {"from": "biogeochemical_cycle", "to": "sulfur_cycle"}, {"from": "biogeochemical_cycle", "to": "nonrenewable_resource"}, {"from": "second_law_of_thermodynamics", "to": "trophic_level_transfer_efficiency"}, {"from": "primary_producer", "to": "primary_consumer"}, {"from": "primary_producer", "to": "food_chain"}, {"from": "primary_producer", "to": "gross_primary_productivity"}, {"from": "primary_consumer", "to": "secondary_consumer"}, {"from": "primary_consumer", "to": "food_chain"}, {"from": "secondary_consumer", "to": "tertiary_consumer"}, {"from": "secondary_consumer", "to": "food_chain"}, {"from": "tertiary_consumer", "to": "apex_consumer"}, {"from": "food_chain", "to": "food_web"}, {"from": "food_chain", "to": "biomagnification"}, {"from": "food_web", "to": "grazing_food_web"}, {"from": "food_web", "to": "detrital_food_web"}, {"from": "food_web", "to": "ecosystem_dynamics"}, {"from": "food_web", "to": "holistic_ecosystem_model"}, {"from": "ecosystem_dynamics", "to": "equilibrium"}, {"from": "ecosystem_dynamics", "to": "holistic_ecosystem_model"}, {"from": "ecosystem_dynamics", "to": "analytical_model"}, {"from": "equilibrium", "to": "resistance"}, {"from": "equilibrium", "to": "resilience"}, {"from": "holistic_ecosystem_model", "to": "simulation_model"}, {"from": "gross_primary_productivity", "to": "net_primary_productivity"}, {"from": "trophic_level_transfer_efficiency", "to": "net_production_efficiency"}, {"from": "trophic_level_transfer_efficiency", "to": "ecological_pyramid"}, {"from": "trophic_level_transfer_efficiency", "to": "biomagnification"}, {"from": "residence_time", "to": "water_cycle"}, {"from": "nitrogen_fixation", "to": "nitrogen_cycle"}, {"from": "ammonification", "to": "nitrification"}, {"from": "ammonification", "to": "nitrogen_cycle"}, {"from": "nitrification", "to": "denitrification"}, {"from": "nitrification", "to": "nitrogen_cycle"}, {"from": "denitrification", "to": "nitrogen_cycle"}, {"from": "nitrogen_cycle", "to": "eutrophication"}, {"from": "nitrogen_cycle", "to": "acid_rain"}, {"from": "phosphorus_cycle", "to": "eutrophication"}, {"from": "sulfur_cycle", "to": "acid_rain"}, {"from": "eutrophication", "to": "dead_zone"}]};
+const DOMAIN_KEY = "graph";
+
+// ── index ──────────────────────────────────────────────────────────────────
+const nodeIndex = {};
+RAW.nodes.forEach(n => nodeIndex[n.id] = n);
+
+const prereqOf  = {};  // id → ids that are direct prerequisites OF id
+const dependsOn = {};  // id → ids that id feeds into
+RAW.nodes.forEach(n => { prereqOf[n.id] = []; dependsOn[n.id] = []; });
+RAW.edges.forEach(e => {
+  prereqOf[e.to].push(e.from);
+  dependsOn[e.from].push(e.to);
+});
+
+// ── BFS longest-path levels (fixes application nodes at wrong tier) ─────────
+const bfsLevels = (() => {
+  const levels = {};
+  const successors = {};
+  RAW.nodes.forEach(n => { levels[n.id] = -1; successors[n.id] = []; });
+  RAW.edges.forEach(e => successors[e.from].push(e.to));
+  const sources = RAW.nodes.filter(n => !RAW.edges.some(e => e.to === n.id));
+  const queue = sources.map(n => n.id);
+  queue.forEach(n => levels[n] = 0);
+  let i = 0;
+  while (i < queue.length) {
+    const cur = queue[i++];
+    for (const succ of successors[cur]) {
+      const nl = levels[cur] + 1;
+      if (levels[succ] < nl) { levels[succ] = nl; queue.push(succ); }
+    }
+  }
+  return levels;
+})();
+
+// ── graph algorithms ────────────────────────────────────────────────────────
+function getAncestors(targetId) {
+  const visited = new Set();
+  const queue = [targetId];
+  while (queue.length) {
+    const cur = queue.shift();
+    for (const p of prereqOf[cur])
+      if (!visited.has(p)) { visited.add(p); queue.push(p); }
+  }
+  return visited;
+}
+
+function topoSort(nodeSet) {
+  const inDeg = {};
+  nodeSet.forEach(n => inDeg[n] = 0);
+  nodeSet.forEach(n => { for (const p of prereqOf[n]) if (nodeSet.has(p)) inDeg[n]++; });
+  const reach = {};
+  nodeSet.forEach(n => {
+    let r = 0;
+    nodeSet.forEach(m => { if (m !== n && getAncestors(m).has(n)) r++; });
+    reach[n] = r;
+  });
+  const heap = [];
+  nodeSet.forEach(n => { if (inDeg[n] === 0) heap.push(n); });
+  heap.sort((a, b) => (reach[b] - reach[a]) || a.localeCompare(b));
+  const result = [];
+  while (heap.length) {
+    const node = heap.shift();
+    result.push(node);
+    for (const succ of dependsOn[node]) {
+      if (!nodeSet.has(succ)) continue;
+      if (--inDeg[succ] === 0) {
+        heap.push(succ);
+        heap.sort((a, b) => (reach[b] - reach[a]) || a.localeCompare(b));
+      }
+    }
+  }
+  return result;
+}
+
+// ── vis.js network ──────────────────────────────────────────────────────────
+const container = document.getElementById('graph-container');
+const visNodes = new vis.DataSet(RAW.nodes.map(n => ({
+  id: n.id,
+  label: n.label.replace(/ /g, '\n'),
+  level: bfsLevels[n.id] !== undefined ? bfsLevels[n.id] : n.tier,
+  color: n.color,
+  font: n.font,
+  shape: n.kind === 'concept' ? 'ellipse' : 'box',
+})));
+const visEdges = new vis.DataSet(RAW.edges.map((e, i) => ({
+  id: i, from: e.from, to: e.to,
+  arrows: 'to', color: {color: '#c8ccd4'}, width: 1,
+})));
+const network = new vis.Network(container, {nodes: visNodes, edges: visEdges}, {
+  layout: { hierarchical: {
+    enabled: true, direction: 'UD',
+    sortMethod: 'directed', levelSeparation: 85, nodeSpacing: 130,
+  } },
+  physics: { enabled: false },
+  interaction: { hover: true, tooltipDelay: 150 },
+  edges: { smooth: { type: 'cubicBezier', forceDirection: 'vertical' } },
+});
+
+// Compact layout: group by tier, sort alphabetically, left-align all nodes.
+network.once('afterDrawing', function() {
+  const pos = network.getPositions();
+  const spacing = 140;
+
+  // Group nodes by their BFS tier
+  const byTier = {};
+  RAW.nodes.forEach(n => {
+    const tier = bfsLevels[n.id] ?? n.tier ?? 0;
+    if (!byTier[tier]) byTier[tier] = [];
+    byTier[tier].push(n.id);
+  });
+
+  // Sort each tier alphabetically, assign X starting from 0
+  const tiers = Object.keys(byTier).map(Number).sort((a, b) => a - b);
+  const tierSep = 85;
+  tiers.forEach((tier, ti) => {
+    const ids = byTier[tier].sort();
+    const y = ti * tierSep;
+    ids.forEach((id, i) => {
+      network.moveNode(id, i * spacing, y);
+    });
+  });
+
+  network.fit({ animation: false });
+});
+
+function reCenterGraph() {
+  network.fit({ animation: true });
+}
+
+const C_PATH   = {background: '#fff9c4', border: '#f9a825'};
+const C_TARGET = {background: '#ffe082', border: '#e65100'};
+
+function resetColors() {
+  visNodes.update(RAW.nodes.map(n => ({id: n.id, color: n.color})));
+  visEdges.update(RAW.edges.map((e, i) => ({id: i, color: {color: '#c8ccd4'}, width: 1})));
+}
+
+// ── explanation panel ───────────────────────────────────────────────────────
+function renderExplanation(node) {
+  const kclass = node.kind;
+  const prereqChips = (node.prereqs || []).map(p =>
+    `<span class="prereq-chip" onclick="selectNode('${p}')">${p.replace(/_/g,' ')}</span>`
+  ).join('');
+  const metaItems = [
+    node.verifier ? `<span class="meta-item"><b>Verifier:</b> ${node.verifier}</span>` : '',
+    node.lab      ? `<span class="meta-item"><b>Lab:</b> ${node.lab}</span>` : '',
+  ].filter(Boolean).join('');
+  const playHtml = node.play
+    ? `<div class="section-label">Try it</div><div class="play-hint">${node.play}</div>`
+    : '';
+
+  const panel = document.getElementById('explain-panel');
+  panel.innerHTML = `
+    <div class="node-title">
+      <h2>${node.label}</h2>
+      <span class="badge ${kclass}">${kclass}</span>
+      <span class="tier-tag">BFS level ${bfsLevels[node.id] ?? node.tier}</span>
+    </div>
+    ${node.defines ? `<div class="defines">${node.defines}</div>` : ''}
+    ${prereqChips ? `<div class="section-label">Prerequisites</div><div class="prereq-list">${prereqChips}</div>` : ''}
+    ${metaItems ? `<div class="meta-row">${metaItems}</div>` : ''}
+    ${playHtml}
+  `;
+
+  // ── concept HTML detail ──
+  const conceptsBase = window.__cb_CONCEPTS_BASE;
+  const conceptUrls = window.__cb_CONCEPT_URLS || {};
+  const mappedUrl = conceptUrls[node.id];
+  if (mappedUrl || conceptsBase) {
+    const conceptUrl = mappedUrl || (conceptsBase + 'concept_' + encodeURIComponent(node.id) + '.html');
+    const detail = document.createElement('div');
+    detail.id = 'concept-detail';
+    detail.innerHTML = '<div class="section-label">Concept Detail</div><div class="concept-loading" style="color:#aaa;font-size:12px;padding:6px 0">Loading…</div>';
+    panel.appendChild(detail);
+    fetch(conceptUrl)
+      .then(r => {
+        if (!r.ok) throw new Error('not found');
+        return r.text();
+      })
+      .then(html => {
+        const slot = detail.querySelector('.concept-loading');
+        if (!slot) return;
+        // Vite dev server returns the SPA index.html (200) for missing static files.
+        // Verify we got a real concept page by checking for a known marker.
+        if (html.includes('spl-credit') || html.includes('Powered by')) {
+          const iframe = document.createElement('iframe');
+          iframe.id = 'concept-iframe';
+          iframe.src = conceptUrl;
+          slot.replaceWith(iframe);
+        } else {
+          slot.className = 'concept-not-found';
+          slot.textContent = 'Content not found — generate it first.';
+        }
+      })
+      .catch(() => {
+        const slot = detail.querySelector('.concept-loading');
+        if (slot) { slot.className = 'concept-not-found'; slot.textContent = 'Content not found — generate it first.'; }
+      });
+  }
+}
+
+// ── learning path sidebar ───────────────────────────────────────────────────
+function renderPathSidebar(orderedPath, targetId) {
+  const stepsEl = document.getElementById('path-steps');
+  const countEl = document.getElementById('path-count');
+  countEl.textContent = orderedPath.length
+    ? `${orderedPath.length} step${orderedPath.length !== 1 ? 's' : ''} to learn first`
+    : 'Root concept — no prerequisites';
+
+  const target = nodeIndex[targetId];
+  const kc = k => `${k.charAt(0).toUpperCase() + k.slice(1)}`;
+
+  stepsEl.innerHTML = orderedPath.map((n, i) => {
+    const nd = nodeIndex[n];
+    return `<div class="step-item" onclick="selectNode('${n}')">
+      <span class="step-num">${i + 1}.</span>
+      <div>
+        <div class="step-label">${nd.label}
+          <span class="step-kind ${nd.kind}-k">${nd.kind}</span>
+        </div>
+        ${nd.defines ? `<div class="step-def">${nd.defines}</div>` : ''}
+      </div>
+    </div>`;
+  }).join('') + `<div class="step-item target">
+    <span class="step-num">▶</span>
+    <div>
+      <div class="step-label">${target.label}
+        <span class="step-kind ${target.kind}-k">${target.kind}</span>
+      </div>
+      ${target.defines ? `<div class="step-def">${target.defines}</div>` : ''}
+    </div>
+  </div>`;
+}
+
+// ── notes (localStorage) ────────────────────────────────────────────────────
+let currentNodeId = null;
+
+function noteKey(nodeId) { return `concept_notes_${DOMAIN_KEY}_${nodeId}`; }
+
+function loadNote(nodeId) {
+  const parsed = _parseNote(localStorage.getItem(noteKey(nodeId)));
+  return parsed ? parsed.text : '';
+}
+
+function saveNote(nodeId, text) {
+  if (text.trim()) {
+    const data = JSON.stringify({ text, ts: new Date().toISOString() });
+    localStorage.setItem(noteKey(nodeId), data);
+  } else {
+    localStorage.removeItem(noteKey(nodeId));
+  }
+  renderNotesList();
+}
+
+function _parseNote(raw) {
+  if (!raw) return null;
+  try { const d = JSON.parse(raw); return { text: d.text || '', ts: d.ts || '' }; }
+  catch (_) { return { text: raw, ts: '' }; }
+}
+
+function _fmtTs(iso) {
+  if (!iso) return '';
+  const d = new Date(iso);
+  const yy = d.getFullYear();
+  const mm = String(d.getMonth()+1).padStart(2,'0');
+  const dd = String(d.getDate()).padStart(2,'0');
+  const hh = String(d.getHours()).padStart(2,'0');
+  const mi = String(d.getMinutes()).padStart(2,'0');
+  return `${yy}-${mm}-${dd} ${hh}:${mi}`;
+}
+
+function renderNotesList() {
+  const container = document.getElementById('notes-with-entries');
+  const entries = RAW.nodes
+    .filter(n => localStorage.getItem(noteKey(n.id)))
+    .map(n => {
+      const parsed = _parseNote(localStorage.getItem(noteKey(n.id)));
+      return {id: n.id, label: n.label, preview: (parsed?.text || '').slice(0, 60), ts: parsed?.ts || ''};
+    });
+  if (!entries.length) { container.innerHTML = ''; return; }
+  container.innerHTML = entries.map(e =>
+    `<div class="note-entry" onclick="selectNode('${e.id}')">
+      <div class="note-node">${e.label}<span class="note-ts">${_fmtTs(e.ts)}</span></div>
+      <div class="note-preview">${e.preview}</div>
+    </div>`
+  ).join('');
+}
+
+function switchNotes(nodeId) {
+  if (currentNodeId !== null) {
+    saveNote(currentNodeId, document.getElementById('notes-textarea').value);
+  }
+  currentNodeId = nodeId;
+  document.getElementById('notes-textarea').value = loadNote(nodeId);
+  document.getElementById('notes-node-label').textContent =
+    nodeIndex[nodeId]?.label || nodeId;
+}
+
+function clearNote() {
+  if (!currentNodeId) return;
+  document.getElementById('notes-textarea').value = '';
+  saveNote(currentNodeId, '');
+  const btn = document.getElementById('nb-clear-btn');
+  if (btn) { btn.textContent = 'Cleared!'; setTimeout(() => { btn.textContent = 'Clear'; }, 1000); }
+}
+
+function exportNotes() {
+  const notes = {};
+  RAW.nodes.forEach(n => {
+    const v = localStorage.getItem(noteKey(n.id));
+    if (v) notes[n.id] = v;
+  });
+  const blob = new Blob([JSON.stringify(notes, null, 2)], {type: 'application/json'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `${DOMAIN_KEY}_notes.json`;
+  a.click();
+}
+
+document.getElementById('notes-textarea').addEventListener('input', () => {
+  if (currentNodeId) saveNote(currentNodeId, document.getElementById('notes-textarea').value);
+});
+
+// ── unified node select ─────────────────────────────────────────────────────
+function selectNode(nodeId) {
+  if (!nodeIndex[nodeId]) return;
+  network.selectNodes([nodeId]);
+  handleSelect(nodeId);
+}
+
+function handleSelect(targetId) {
+  const node = nodeIndex[targetId];
+
+  renderExplanation(node);
+  switchNotes(targetId);
+
+  const ancestors = getAncestors(targetId);
+  const pathSet = new Set([...ancestors]);
+  const orderedPath = topoSort(pathSet);
+
+  renderPathSidebar(orderedPath, targetId);
+
+  resetColors();
+  visNodes.update(orderedPath.map(n => ({id: n, color: C_PATH})));
+  visNodes.update([{id: targetId, color: C_TARGET}]);
+  visEdges.update(RAW.edges.map((e, i) => {
+    const inPath = pathSet.has(e.from) && (pathSet.has(e.to) || e.to === targetId);
+    return {id: i, color: {color: inPath ? '#f9a825' : '#c8ccd4'}, width: inPath ? 2 : 1};
+  }));
+}
+
+network.on('click', params => {
+  if (params.nodes.length) handleSelect(params.nodes[0]);
+});
+
+// initialise notes list on load
+renderNotesList();
+
+// When viewed directly (not in an iframe), inject a back link next to the
+// "Learning Path" heading so it doesn't look like a title-bar element.
+if (window.parent === window) {
+  var h1 = document.querySelector('#path-header h1');
+  if (h1) {
+    var backLink = document.createElement('a');
+    backLink.href = '../../';
+    backLink.textContent = '← App';
+    backLink.style.cssText = [
+      'font-size:10px','color:#2563eb','font-family:system-ui,sans-serif',
+      'text-decoration:none','font-weight:400','letter-spacing:normal',
+      'text-transform:none','white-space:nowrap','flex-shrink:0'
+    ].join(';');
+    var row = document.createElement('div');
+    row.style.cssText = 'display:flex;align-items:baseline;gap:8px;';
+    h1.parentNode.insertBefore(row, h1);
+    row.appendChild(h1);
+    row.appendChild(backLink);
+  }
+}
+</script>
+</body>
+</html>

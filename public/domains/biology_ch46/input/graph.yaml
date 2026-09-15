@@ -1,0 +1,277 @@
+domain: biology_2e_ch46
+primitives:
+  ecosystem:
+    defines: A community of living organisms and their interactions with their abiotic (nonliving) environment.
+    tier: 0
+  trophic_level:
+    defines: The position of a species or group of species in a food chain or food web.
+    tier: 0
+  autotroph:
+    defines: An organism capable of synthesizing its own food using sunlight (photoautotroph) or inorganic
+      molecules (chemoautotroph) as an energy source.
+    tier: 0
+  heterotroph:
+    defines: An organism that acquires energy by consuming and digesting other living or previously living
+      organisms.
+    tier: 0
+  biomass:
+    defines: The total mass, in a unit area at the time of measurement, of living or previously living
+      organisms within a trophic level.
+    tier: 0
+  biogeochemical_cycle:
+    defines: The cycling of inorganic mineral nutrients between living organisms and the nonliving (geologic
+      and atmospheric) world.
+    tier: 0
+  second_law_of_thermodynamics:
+    defines: The principle that energy conversion at each trophic transfer tends toward disorder, causing
+      energy to be lost as metabolic heat and limiting food chain length.
+    tier: 0
+concepts:
+  primary_producer:
+    defines: The trophic level that obtains energy from sunlight, inorganic chemicals, or dead/decaying
+      organic material, forming the base of a food chain.
+    composed_of:
+    - trophic_level
+    - autotroph
+    tier: 1
+  primary_consumer:
+    defines: A herbivore trophic level that consumes primary producers.
+    composed_of:
+    - trophic_level
+    - heterotroph
+    - primary_producer
+    tier: 2
+  secondary_consumer:
+    defines: Usually a carnivore that eats primary consumers.
+    composed_of:
+    - trophic_level
+    - heterotroph
+    - primary_consumer
+    tier: 3
+  tertiary_consumer:
+    defines: A carnivore that eats other carnivores.
+    composed_of:
+    - trophic_level
+    - heterotroph
+    - secondary_consumer
+    tier: 4
+  apex_consumer:
+    defines: The organism at the top of the food chain, fed on by no higher trophic level.
+    composed_of:
+    - tertiary_consumer
+    tier: 5
+  food_chain:
+    defines: A linear sequence of organisms (primary producers, primary consumers, and higher-level consumers)
+      through which nutrients and energy pass.
+    composed_of:
+    - primary_producer
+    - primary_consumer
+    - secondary_consumer
+    tier: 3
+  food_web:
+    defines: A graphic, holistic, nonlinear representation of the feeding interactions among primary producers,
+      primary consumers, and higher-level consumers in an ecosystem.
+    composed_of:
+    - food_chain
+    tier: 4
+  grazing_food_web:
+    defines: A food web with plants or phytoplankton at its base, followed by herbivores and carnivores.
+    composed_of:
+    - food_web
+    tier: 5
+  detrital_food_web:
+    defines: A food web based on decomposers/detritivores that feed on decaying organic matter and recycle
+      it back into the ecosystem.
+    composed_of:
+    - food_web
+    - heterotroph
+    tier: 5
+  ecosystem_dynamics:
+    defines: The study of changes in ecosystem structure caused by environmental disturbances or internal
+      forces.
+    composed_of:
+    - ecosystem
+    - food_web
+    tier: 5
+  equilibrium:
+    defines: The steady state of an ecosystem where all organisms are in balance with their environment
+      and each other.
+    composed_of:
+    - ecosystem_dynamics
+    tier: 6
+  resistance:
+    defines: The ability of an ecosystem to remain at equilibrium despite disturbances.
+    composed_of:
+    - equilibrium
+    tier: 7
+  resilience:
+    defines: The speed at which an ecosystem recovers equilibrium after being disturbed.
+    composed_of:
+    - equilibrium
+    tier: 7
+  holistic_ecosystem_model:
+    defines: A model that attempts to quantify the composition, interaction, and dynamics of an entire
+      ecosystem in its natural state, such as a food web.
+    composed_of:
+    - food_web
+    - ecosystem_dynamics
+    tier: 6
+  mesocosm:
+    defines: A partitioned portion of a natural ecosystem used for controlled experiments.
+    composed_of:
+    - ecosystem
+    tier: 1
+  microcosm:
+    defines: A re-creation of a natural ecosystem entirely within a laboratory environment for experimentation.
+    composed_of:
+    - ecosystem
+    tier: 1
+  conceptual_model:
+    defines: An ecosystem model using flow charts (compartments) to show interactions of living and nonliving
+      components and energy/nutrient transfer.
+    composed_of:
+    - ecosystem
+    - biogeochemical_cycle
+    tier: 1
+  analytical_model:
+    defines: An ecosystem model using simple mathematical formulas to predict effects of environmental
+      disturbances on ecosystem structure and dynamics.
+    composed_of:
+    - ecosystem_dynamics
+    tier: 6
+  simulation_model:
+    defines: An ecosystem model using complex computer algorithms to holistically model ecosystems and
+      predict effects of disturbances.
+    composed_of:
+    - holistic_ecosystem_model
+    tier: 7
+  gross_primary_productivity:
+    defines: The rate at which photosynthetic primary producers incorporate energy from the sun.
+    composed_of:
+    - primary_producer
+    tier: 2
+  net_primary_productivity:
+    defines: The energy that remains in primary producers after accounting for their own respiration and
+      heat loss, available to primary consumers.
+    composed_of:
+    - gross_primary_productivity
+    tier: 3
+  trophic_level_transfer_efficiency:
+    defines: The measurement of energy transfer efficiency between two successive trophic levels.
+    composed_of:
+    - trophic_level
+    - second_law_of_thermodynamics
+    tier: 1
+  net_production_efficiency:
+    defines: A measure of how efficiently organisms at a trophic level convert received energy (net consumer
+      productivity) into biomass, after assimilation losses.
+    composed_of:
+    - biomass
+    - trophic_level_transfer_efficiency
+    tier: 2
+  ecological_pyramid:
+    defines: A graphical model showing the relative numbers of organisms, biomass, or energy across the
+      trophic levels of an ecosystem.
+    composed_of:
+    - trophic_level
+    - biomass
+    - trophic_level_transfer_efficiency
+    tier: 2
+  residence_time:
+    defines: A measure of the average time an individual molecule (e.g., water) stays in a particular
+      reservoir.
+    composed_of:
+    - biogeochemical_cycle
+    tier: 1
+  water_cycle:
+    defines: The biogeochemical cycle by which water moves among the atmosphere, land, and oceans via
+      evaporation, condensation/precipitation, runoff, and subsurface flow.
+    composed_of:
+    - biogeochemical_cycle
+    - residence_time
+    tier: 2
+  carbon_cycle:
+    defines: The biogeochemical cycle of carbon exchange between living organisms (via photosynthesis
+      and respiration) and long-term geologic reservoirs (atmosphere, oceans, sediments, fossil fuels).
+    composed_of:
+    - biogeochemical_cycle
+    - autotroph
+    - heterotroph
+    tier: 1
+  nitrogen_fixation:
+    defines: The conversion of atmospheric nitrogen gas (N2) into organic nitrogen compounds by free-living
+      or symbiotic bacteria.
+    composed_of:
+    - biogeochemical_cycle
+    tier: 1
+  ammonification:
+    defines: The process converting nitrogenous waste or dead organism remains into ammonium (NH4+) by
+      bacteria and fungi.
+    composed_of:
+    - biogeochemical_cycle
+    tier: 1
+  nitrification:
+    defines: The bacterial conversion of ammonium into nitrites and then nitrates.
+    composed_of:
+    - ammonification
+    tier: 2
+  denitrification:
+    defines: The bacterial conversion of nitrates back into nitrogen gas, returning it to the atmosphere.
+    composed_of:
+    - nitrification
+    tier: 3
+  nitrogen_cycle:
+    defines: The biogeochemical cycle converting atmospheric nitrogen gas into usable organic forms and
+      back, via nitrogen fixation, ammonification, nitrification, and denitrification.
+    composed_of:
+    - nitrogen_fixation
+    - ammonification
+    - nitrification
+    - denitrification
+    tier: 4
+  phosphorus_cycle:
+    defines: The biogeochemical cycle of phosphorus, moving as phosphate ions between rock, soil, water,
+      and living organisms, largely without an atmospheric phase.
+    composed_of:
+    - biogeochemical_cycle
+    tier: 1
+  sulfur_cycle:
+    defines: The biogeochemical cycle of sulfur between oceans, land, and atmosphere via decomposition,
+      volcanic activity, weathering, and fossil fuel combustion.
+    composed_of:
+    - biogeochemical_cycle
+    tier: 1
+  nonrenewable_resource:
+    defines: A resource, such as fossil fuel, that regenerates very slowly or not at all relative to its
+      rate of use.
+    composed_of:
+    - biogeochemical_cycle
+    tier: 1
+applications:
+  biomagnification:
+    defines: The increasing concentration of persistent, toxic substances in organisms at each successive
+      trophic level, from primary producers to apex consumers.
+    needs:
+    - food_chain
+    - trophic_level_transfer_efficiency
+    tier: 4
+  eutrophication:
+    defines: A process whereby nutrient runoff causes excessive growth of microorganisms, depleting dissolved
+      oxygen and killing ecosystem fauna.
+    needs:
+    - nitrogen_cycle
+    - phosphorus_cycle
+    tier: 5
+  dead_zone:
+    defines: An area within a freshwater or marine ecosystem depleted of normal flora and fauna, often
+      caused by eutrophication, oil spills, or toxic dumping.
+    needs:
+    - eutrophication
+    tier: 6
+  acid_rain:
+    defines: Corrosive rain formed when rainwater falls through sulfur dioxide or nitrogen oxide gas,
+      turning it into weak sulfuric or nitric acid, damaging ecosystems and structures.
+    needs:
+    - sulfur_cycle
+    - nitrogen_cycle
+    tier: 5

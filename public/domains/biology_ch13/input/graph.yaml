@@ -1,0 +1,127 @@
+domain: biology_2e_ch13
+primitives:
+  chromosome:
+    defines: A threadlike nuclear structure consisting of DNA and proteins that serves as the repository
+      for genetic information.
+    tier: 0
+  gene:
+    defines: The physical unit of inheritance, arranged in a linear order on chromosomes.
+    tier: 0
+  meiosis:
+    defines: The cell division process during which homologous chromosomes separate to form gametes with
+      half the chromosomal complement.
+    tier: 0
+  synapsis:
+    defines: The pairing and close interaction of homologous chromosomes during meiosis.
+    tier: 0
+  karyotype:
+    defines: The number and appearance of an individual's chromosomes, including their length, banding
+      pattern, and centromere position.
+    tier: 0
+concepts:
+  chromosomal_theory_of_inheritance:
+    defines: The theory proposing that chromosomes are the vehicles of genes and that their behavior during
+      meiosis is the physical basis of Mendelian inheritance patterns.
+    composed_of:
+    - chromosome
+    - gene
+    - meiosis
+    tier: 1
+  genetic_linkage:
+    defines: The phenomenon in which genes located on the same chromosome tend to be inherited together
+      rather than assorting independently.
+    composed_of:
+    - gene
+    - chromosome
+    tier: 1
+  homologous_recombination:
+    defines: The process by which synapsed homologous chromosomes undergo reciprocal physical exchange
+      of chromosome segments at their arms.
+    composed_of:
+    - synapsis
+    - chromosome
+    tier: 1
+  parental_and_nonparental_types:
+    defines: Progeny that exhibit either the same allele combination as their parents (parental) or a
+      different combination resulting from recombination (nonparental).
+    composed_of:
+    - genetic_linkage
+    - homologous_recombination
+    tier: 2
+  recombination_frequency:
+    defines: The average number of crossovers between two alleles, observed as the proportion of nonparental-type
+      progeny in a population.
+    composed_of:
+    - parental_and_nonparental_types
+    tier: 3
+  genetic_map:
+    defines: A linear representation of gene order and relative distance on a chromosome, constructed
+      using recombination frequencies expressed in centimorgans.
+    composed_of:
+    - recombination_frequency
+    tier: 4
+  nondisjunction:
+    defines: The failure of homologous chromosomes or sister chromatids to separate completely during
+      meiosis, resulting in an abnormal chromosome number.
+    composed_of:
+    - meiosis
+    - chromosome
+    tier: 1
+  aneuploidy:
+    defines: A condition in which an individual has an error in chromosome number, including monosomy
+      (one chromosome missing) or trisomy (one extra chromosome), typically caused by nondisjunction.
+    composed_of:
+    - nondisjunction
+    tier: 2
+  polyploidy:
+    defines: A condition in which an individual has more than the normal number of complete chromosome
+      sets.
+    composed_of:
+    - meiosis
+    - chromosome
+    tier: 1
+  x_inactivation:
+    defines: The condensation of one X chromosome into a Barr body during embryonic development in females,
+      compensating for the double genetic dose of X-linked genes.
+    composed_of:
+    - chromosome
+    tier: 1
+  chromosomal_duplications_and_deletions:
+    defines: Structural changes in which a chromosomal segment is duplicated or lost, producing disorders
+      such as Cri-du-chat syndrome from deletion of part of chromosome 5.
+    composed_of:
+    - chromosome
+    tier: 1
+  chromosome_inversion:
+    defines: A structural rearrangement involving the detachment, 180-degree rotation, and reinsertion
+      of part of a chromosome, classified as pericentric or paracentric.
+    composed_of:
+    - chromosome
+    tier: 1
+  translocation:
+    defines: A structural rearrangement in which a chromosome segment dissociates and reattaches to a
+      different, nonhomologous chromosome.
+    composed_of:
+    - chromosome
+    tier: 1
+applications:
+  karyogram:
+    defines: A photographic chart image of an individual's karyotype, used by clinicians to detect chromosomal
+      abnormalities.
+    needs:
+    - karyotype
+    tier: 1
+  sex_chromosome_aneuploidy_disorders:
+    defines: Conditions such as Klinefelter syndrome (XXY) and Turner syndrome (X0) that arise from abnormal
+      numbers of sex chromosomes, generally producing milder effects than autosomal aneuploidies due to
+      X inactivation.
+    needs:
+    - aneuploidy
+    - x_inactivation
+    tier: 3
+  autosomal_aneuploidy_disorders:
+    defines: Conditions such as Down syndrome (trisomy 21) that arise from an abnormal number of autosomes,
+      often fatal or severely impactful due to gene dosage imbalance.
+    needs:
+    - aneuploidy
+    tier: 3

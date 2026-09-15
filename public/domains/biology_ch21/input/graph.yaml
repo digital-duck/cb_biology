@@ -1,0 +1,183 @@
+domain: biology_2e_ch21
+primitives:
+  virus:
+    defines: A noncellular, obligate intracellular parasitic entity consisting of a nucleic acid genome
+      surrounded by a protein capsid, lacking independent metabolism or the ability to divide by cell
+      division.
+    tier: 0
+  virion:
+    defines: A single, complete virus particle existing outside a host cell, consisting of a nucleic acid
+      core, protein capsid, and sometimes an envelope.
+    tier: 0
+  viral_genome:
+    defines: The total genetic content of a virus, which may be DNA or RNA, single- or double-stranded,
+      linear or circular, and segmented or non-segmented.
+    tier: 0
+  prion:
+    defines: An infectious, proteinaceous particle lacking nucleic acid that causes disease by converting
+      normal host protein (PrPc) into a misfolded infectious form (PrPsc).
+    tier: 0
+  viroid:
+    defines: A small, single-stranded, circular RNA plant pathogen that lacks a capsid and does not encode
+      any proteins.
+    tier: 0
+concepts:
+  capsid:
+    defines: The protein coating that covers the viral nucleic acid core, composed of protein subunits
+      called capsomeres and classified into helical, icosahedral, and complex shapes.
+    composed_of:
+    - virion
+    tier: 1
+  viral_receptor:
+    defines: A molecule on the host cell surface, normally serving the cell's own physiological function,
+      that a virus uses via glycoproteins to attach to and enter the cell.
+    composed_of:
+    - virion
+    tier: 1
+  viral_origin_hypotheses:
+    defines: Competing theories (regressive/devolution, progressive/escapist, and virus-first) proposed
+      to explain how viruses originated, since viruses leave no fossil record.
+    composed_of:
+    - virus
+    tier: 1
+  baltimore_classification:
+    defines: A system that groups viruses into seven categories (Groups I-VII) based on their genome type
+      and the pathway used to produce mRNA during replication.
+    composed_of:
+    - viral_genome
+    tier: 1
+  viral_attenuation:
+    defines: The laboratory weakening of a disease-causing virus, typically by growth under altered conditions,
+      to create a live vaccine that induces immunity without significant disease.
+    composed_of:
+    - virus
+    tier: 1
+  viral_envelope:
+    defines: An outer membrane of protein and phospholipids derived from the host cell that surrounds
+      the capsid in some viruses.
+    composed_of:
+    - capsid
+    tier: 2
+  viral_classification_by_structure:
+    defines: Earlier systems of grouping viruses based on nucleic acid type/structure and capsid morphology
+      (naked or enveloped, icosahedral, helical, or complex).
+    composed_of:
+    - viral_genome
+    - capsid
+    tier: 2
+  dna_virus:
+    defines: A virus whose genome consists of DNA, which directs the host cell's replication machinery
+      to copy the genome and produce viral proteins.
+    composed_of:
+    - baltimore_classification
+    tier: 2
+  rna_virus:
+    defines: A virus whose genome consists of RNA, requiring virus-encoded enzymes to replicate the RNA
+      (or convert it to DNA in retroviruses), leading to higher mutation rates.
+    composed_of:
+    - baltimore_classification
+    tier: 2
+  viral_replication_cycle:
+    defines: The sequence of steps (attachment, entry, uncoating, replication, assembly, egress) by which
+      a virus uses host-cell processes to produce and release new virions.
+    composed_of:
+    - viral_receptor
+    tier: 2
+  reverse_transcriptase:
+    defines: A viral enzyme, found in Baltimore groups VI and VII, that transcribes RNA into DNA, a process
+      not found in uninfected host cells.
+    composed_of:
+    - rna_virus
+    tier: 3
+  cytopathic_effect:
+    defines: Biochemical and structural changes to a host cell caused by viral replication, which can
+      alter cell function or destroy the cell.
+    composed_of:
+    - viral_replication_cycle
+    tier: 3
+  lytic_cycle:
+    defines: A mode of viral replication in which new virions are produced and released by bursting (lysis)
+      of the host cell.
+    composed_of:
+    - viral_replication_cycle
+    tier: 3
+  lysogenic_cycle:
+    defines: A mode of bacteriophage replication in which the viral genome is incorporated into the host
+      cell's genome as a prophage and passed on to daughter cells without killing them.
+    composed_of:
+    - viral_replication_cycle
+    tier: 3
+  animal_virus_entry:
+    defines: The methods by which animal viruses enter host cells, including receptor-mediated endocytosis
+      and, for enveloped viruses, membrane fusion.
+    composed_of:
+    - viral_receptor
+    - viral_envelope
+    tier: 3
+  retrovirus:
+    defines: An RNA virus (Baltimore Group VI) that uses reverse transcriptase to convert its RNA genome
+      into DNA, which is then integrated into the host genome.
+    composed_of:
+    - rna_virus
+    - reverse_transcriptase
+    tier: 4
+  latency:
+    defines: A state in which a virus persists within host tissue for long periods without producing new
+      virions, periodically reactivating to cause intermittent symptoms.
+    composed_of:
+    - lysogenic_cycle
+    tier: 4
+  acute_vs_chronic_infection:
+    defines: Patterns of viral disease course, ranging from short-term acute infection resolved by immune
+      response, to persistent chronic infection, to infection without symptoms.
+    composed_of:
+    - viral_replication_cycle
+    - latency
+    tier: 5
+applications:
+  plant_virus_transmission:
+    defines: The means by which plant viruses spread, either horizontally through mechanical damage and
+      vectors or vertically from parent to offspring plants.
+    needs:
+    - virus
+    tier: 1
+  vaccination:
+    defines: A preventive method that builds immunity to a virus using live, killed, or subunit vaccine
+      preparations to stimulate a protective immune response.
+    needs:
+    - viral_attenuation
+    tier: 2
+  oncogenic_virus:
+    defines: A virus capable of causing cancer by introducing oncogenes or disrupting normal host cell-cycle
+      regulation.
+    needs:
+    - viral_replication_cycle
+    tier: 3
+  antiviral_drug:
+    defines: A medication that treats viral infection by selectively blocking the function of virus-encoded
+      proteins without harming the host.
+    needs:
+    - viral_replication_cycle
+    tier: 3
+  bacteriophage:
+    defines: A virus that infects bacteria, often with a complex head-and-tail structure used to inject
+      its genome across the bacterial cell wall.
+    needs:
+    - virus
+    - lytic_cycle
+    - lysogenic_cycle
+    tier: 4
+  haart:
+    defines: A combination drug therapy targeting HIV at multiple stages of its replication cycle simultaneously,
+      reducing the likelihood of the virus developing resistance.
+    needs:
+    - retrovirus
+    - antiviral_drug
+    tier: 5
+  viral_medical_applications:
+    defines: The use of viruses as tools in medicine, including gene therapy vectors, oncolytic viruses
+      that kill cancer cells, and phage therapy against antibiotic-resistant bacteria.
+    needs:
+    - bacteriophage
+    - oncogenic_virus
+    tier: 5

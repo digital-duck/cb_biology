@@ -1,0 +1,86 @@
+domain: biology_2e_ch7
+sources:
+  redox_reaction:
+    label: Oxidation-Reduction (Redox) Reaction
+    sections:
+    - id: ch07_s7_1
+      title: 7.1 Energy in Living Systems
+  electron_carrier:
+    label: Electron Carrier (NAD+/FAD)
+    sections:
+    - id: ch07_s7_1
+      title: 7.1 Energy in Living Systems
+  atp:
+    label: ATP (Adenosine Triphosphate)
+    sections:
+    - id: ch07_s7_1
+      title: 7.1 Energy in Living Systems
+  phosphorylation:
+    label: Phosphorylation
+    sections:
+    - id: ch07_s7_1
+      title: 7.1 Energy in Living Systems
+  substrate_level_phosphorylation:
+    label: Substrate-Level Phosphorylation
+    sections:
+    - id: ch07_s7_1
+      title: 7.1 Energy in Living Systems
+    - id: ch07_s7_2
+      title: 7.2 Glycolysis
+    - id: ch07_s7_3
+      title: 7.3 Oxidation of Pyruvate and the Citric Acid Cycle
+  glycolysis:
+    label: Glycolysis
+    sections:
+    - id: ch07_s7_2
+      title: 7.2 Glycolysis
+  pyruvate_oxidation:
+    label: Oxidation of Pyruvate to Acetyl CoA
+    sections:
+    - id: ch07_s7_3
+      title: 7.3 Oxidation of Pyruvate and the Citric Acid Cycle
+  citric_acid_cycle:
+    label: Citric Acid Cycle (Krebs/TCA Cycle)
+    sections:
+    - id: ch07_s7_3
+      title: 7.3 Oxidation of Pyruvate and the Citric Acid Cycle
+  electron_transport_chain:
+    label: Electron Transport Chain
+    sections:
+    - id: ch07_s7_4
+      title: 7.4 Oxidative Phosphorylation
+  chemiosmosis:
+    label: Chemiosmosis
+    sections:
+    - id: ch07_s7_4
+      title: 7.4 Oxidative Phosphorylation
+  oxidative_phosphorylation:
+    label: Oxidative Phosphorylation
+    sections:
+    - id: ch07_s7_1
+      title: 7.1 Energy in Living Systems
+    - id: ch07_s7_4
+      title: 7.4 Oxidative Phosphorylation
+  fermentation:
+    label: Fermentation
+    sections:
+    - id: ch07_s7_5
+      title: 7.5 Metabolism without Oxygen
+  anaerobic_cellular_respiration:
+    label: Anaerobic Cellular Respiration
+    sections:
+    - id: ch07_s7_5
+      title: 7.5 Metabolism without Oxygen
+  metabolic_pathway_integration:
+    label: Integration of Carbohydrate, Protein, and Lipid Metabolism
+    sections:
+    - id: ch07_s7_6
+      title: 7.6 Connections of Carbohydrate, Protein, and Lipid Metabolic Pathways
+  regulation_of_cellular_respiration:
+    label: Regulation of Cellular Respiration
+    sections:
+    - id: ch07_s7_7
+      title: 7.7 Regulation of Cellular Respiration
+  cellular_respiration:
+    label: Cellular Respiration
+    sections: []

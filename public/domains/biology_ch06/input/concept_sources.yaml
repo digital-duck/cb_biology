@@ -1,0 +1,176 @@
+domain: biology_2e_ch6
+sources:
+  energy:
+    label: Energy
+    sections:
+    - id: ch06_s6_2
+      title: 6.2 Potential, Kinetic, Free, and Activation Energy
+  kinetic_energy:
+    label: Kinetic Energy
+    sections:
+    - id: ch06_s6_2
+      title: 6.2 Potential, Kinetic, Free, and Activation Energy
+  potential_energy:
+    label: Potential Energy
+    sections:
+    - id: ch06_s6_2
+      title: 6.2 Potential, Kinetic, Free, and Activation Energy
+  chemical_energy:
+    label: Chemical Energy
+    sections:
+    - id: ch06_s6_2
+      title: 6.2 Potential, Kinetic, Free, and Activation Energy
+  thermodynamics:
+    label: Thermodynamics
+    sections:
+    - id: ch06_s6_3
+      title: 6.3 The Laws of Thermodynamics
+  system_and_surroundings:
+    label: System and Surroundings
+    sections:
+    - id: ch06_s6_3
+      title: 6.3 The Laws of Thermodynamics
+  first_law_of_thermodynamics:
+    label: First Law of Thermodynamics
+    sections:
+    - id: ch06_s6_3
+      title: 6.3 The Laws of Thermodynamics
+  entropy:
+    label: Entropy
+    sections:
+    - id: ch06_s6_3
+      title: 6.3 The Laws of Thermodynamics
+  second_law_of_thermodynamics:
+    label: Second Law of Thermodynamics
+    sections:
+    - id: ch06_s6_3
+      title: 6.3 The Laws of Thermodynamics
+  enthalpy:
+    label: Enthalpy
+    sections:
+    - id: ch06_s6_2
+      title: 6.2 Potential, Kinetic, Free, and Activation Energy
+  free_energy:
+    label: Gibbs Free Energy
+    sections:
+    - id: ch06_s6_2
+      title: 6.2 Potential, Kinetic, Free, and Activation Energy
+  delta_g:
+    label: Change in Free Energy (ΔG)
+    sections:
+    - id: ch06_s6_2
+      title: 6.2 Potential, Kinetic, Free, and Activation Energy
+  exergonic_reaction:
+    label: Exergonic Reaction
+    sections:
+    - id: ch06_s6_2
+      title: 6.2 Potential, Kinetic, Free, and Activation Energy
+  endergonic_reaction:
+    label: Endergonic Reaction
+    sections:
+    - id: ch06_s6_2
+      title: 6.2 Potential, Kinetic, Free, and Activation Energy
+  chemical_equilibrium:
+    label: Chemical Equilibrium
+    sections:
+    - id: ch06_s6_2
+      title: 6.2 Potential, Kinetic, Free, and Activation Energy
+  activation_energy:
+    label: Activation Energy
+    sections:
+    - id: ch06_s6_2
+      title: 6.2 Potential, Kinetic, Free, and Activation Energy
+  transition_state:
+    label: Transition State
+    sections:
+    - id: ch06_s6_2
+      title: 6.2 Potential, Kinetic, Free, and Activation Energy
+  catalysis:
+    label: Catalysis
+    sections:
+    - id: ch06_s6_2
+      title: 6.2 Potential, Kinetic, Free, and Activation Energy
+    - id: ch06_s6_5
+      title: 6.5 Enzymes
+  metabolism:
+    label: Metabolism
+    sections:
+    - id: ch06_s6_1
+      title: 6.1 Energy and Metabolism
+  anabolic_pathway:
+    label: Anabolic Pathway
+    sections:
+    - id: ch06_s6_1
+      title: 6.1 Energy and Metabolism
+  catabolic_pathway:
+    label: Catabolic Pathway
+    sections:
+    - id: ch06_s6_1
+      title: 6.1 Energy and Metabolism
+  atp:
+    label: ATP (Adenosine Triphosphate)
+    sections:
+    - id: ch06_s6_1
+      title: 6.1 Energy and Metabolism
+    - id: ch06_s6_4
+      title: '6.4 ATP: Adenosine Triphosphate'
+  atp_hydrolysis:
+    label: ATP Hydrolysis
+    sections:
+    - id: ch06_s6_4
+      title: '6.4 ATP: Adenosine Triphosphate'
+  phosphorylation:
+    label: Phosphorylation
+    sections:
+    - id: ch06_s6_4
+      title: '6.4 ATP: Adenosine Triphosphate'
+  energy_coupling:
+    label: Energy Coupling
+    sections:
+    - id: ch06_s6_4
+      title: '6.4 ATP: Adenosine Triphosphate'
+  enzyme:
+    label: Enzyme
+    sections:
+    - id: ch06_s6_5
+      title: 6.5 Enzymes
+  substrate:
+    label: Substrate
+    sections:
+    - id: ch06_s6_5
+      title: 6.5 Enzymes
+  active_site:
+    label: Active Site
+    sections:
+    - id: ch06_s6_5
+      title: 6.5 Enzymes
+  induced_fit:
+    label: Induced Fit
+    sections:
+    - id: ch06_s6_5
+      title: 6.5 Enzymes
+  enzyme_regulation:
+    label: Enzyme Regulation
+    sections:
+    - id: ch06_s6_5
+      title: 6.5 Enzymes
+  competitive_inhibition:
+    label: Competitive Inhibition
+    sections:
+    - id: ch06_s6_5
+      title: 6.5 Enzymes
+  allosteric_regulation:
+    label: Allosteric Regulation
+    sections:
+    - id: ch06_s6_5
+      title: 6.5 Enzymes
+  cofactors_and_coenzymes:
+    label: Cofactors and Coenzymes
+    sections:
+    - id: ch06_s6_5
+      title: 6.5 Enzymes
+  feedback_inhibition:
+    label: Feedback Inhibition
+    sections:
+    - id: ch06_s6_5
+      title: 6.5 Enzymes

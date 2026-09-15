@@ -1,0 +1,173 @@
+domain: biology_2e_ch14
+primitives:
+  nucleotide:
+    defines: A DNA/RNA building block composed of a nitrogenous base, a five-carbon sugar, and a phosphate
+      group.
+    tier: 0
+  nitrogenous_base:
+    defines: A purine (adenine, guanine) or pyrimidine (cytosine, thymine) ring structure attached to
+      the sugar of a nucleotide.
+    tier: 0
+  transformation:
+    defines: A process, first shown by Griffith, in which external DNA is taken up by a cell and changes
+      its morphology and physiology.
+    tier: 0
+  bacteriophage:
+    defines: A virus, consisting of a protein capsid and a nucleic acid core, that infects bacteria and
+      was used by Hershey and Chase to identify the genetic material.
+    tier: 0
+  origin_of_replication:
+    defines: A specific nucleotide sequence where DNA replication begins and the double helix first opens.
+    tier: 0
+  helicase:
+    defines: An enzyme that unwinds the DNA double helix by breaking hydrogen bonds between base pairs,
+      using energy from ATP hydrolysis.
+    tier: 0
+  dna_polymerase:
+    defines: An enzyme that adds nucleotides one-by-one in the 5' to 3' direction to a growing DNA strand
+      complementary to a template.
+    tier: 0
+concepts:
+  phosphodiester_bond:
+    defines: The ester linkage joining the 5' phosphate of one nucleotide's sugar to the 3'-OH of the
+      next, forming the DNA backbone.
+    composed_of:
+    - nucleotide
+    tier: 1
+  dna_as_genetic_material:
+    defines: The conclusion that DNA (not protein) carries hereditary information.
+    composed_of:
+    - transformation
+    - bacteriophage
+    tier: 1
+  chargaffs_rules:
+    defines: The observation that adenine equals thymine and guanine equals cytosine in DNA.
+    composed_of:
+    - nitrogenous_base
+    tier: 1
+  replication_fork:
+    defines: The Y-shaped structure formed where the DNA helix opens at the origin of replication.
+    composed_of:
+    - origin_of_replication
+    - helicase
+    tier: 1
+  dna_proofreading:
+    defines: The ability of DNA polymerase to check and correct a newly added base's pairing before continuing
+      elongation.
+    composed_of:
+    - dna_polymerase
+    tier: 1
+  dna_double_helix_structure:
+    defines: The Watson-Crick model in which two antiparallel, complementary nucleotide strands twist
+      into a right-handed helix stabilized by hydrogen-bonded base pairs.
+    composed_of:
+    - nucleotide
+    - nitrogenous_base
+    - phosphodiester_bond
+    - chargaffs_rules
+    tier: 2
+  primer_synthesis:
+    defines: The action of primase in laying down a short RNA segment that provides the free 3'-OH group
+      DNA polymerase requires to begin synthesis.
+    composed_of:
+    - replication_fork
+    tier: 2
+  mismatch_repair:
+    defines: A post-replication repair mechanism that recognizes and corrects mispaired bases missed during
+      proofreading.
+    composed_of:
+    - dna_proofreading
+    tier: 2
+  dna_packaging:
+    defines: The organization of DNA into compact forms via supercoiling and wrapping around histones
+      into nucleosomes and chromatin.
+    composed_of:
+    - dna_double_helix_structure
+    tier: 3
+  semiconservative_replication:
+    defines: The model of DNA replication in which each daughter double helix retains one old and one
+      new strand.
+    composed_of:
+    - dna_double_helix_structure
+    tier: 3
+  nucleotide_excision_repair:
+    defines: A repair mechanism that removes damaged bases, such as UV-induced pyrimidine dimers, and
+      resynthesizes the region.
+    composed_of:
+    - dna_double_helix_structure
+    tier: 3
+  leading_and_lagging_strand:
+    defines: The continuous synthesis of the leading strand and discontinuous synthesis of the lagging
+      strand, arising from DNA polymerase's 5'-to-3' restriction.
+    composed_of:
+    - replication_fork
+    - dna_polymerase
+    - primer_synthesis
+    tier: 3
+  okazaki_fragments:
+    defines: The short, individually primed DNA fragments synthesized on the lagging strand during replication.
+    composed_of:
+    - leading_and_lagging_strand
+    tier: 4
+  mutation:
+    defines: A permanent variation in nucleotide sequence arising from uncorrected replication errors
+      or DNA damage.
+    composed_of:
+    - dna_proofreading
+    - mismatch_repair
+    - nucleotide_excision_repair
+    tier: 4
+  prokaryotic_dna_replication:
+    defines: The integrated process by which E. coli replicates its circular chromosome bidirectionally
+      from one origin.
+    composed_of:
+    - origin_of_replication
+    - helicase
+    - dna_polymerase
+    - replication_fork
+    - primer_synthesis
+    - leading_and_lagging_strand
+    - okazaki_fragments
+    tier: 5
+  point_mutation_types:
+    defines: Single-base-pair changes, including transitions, transversions, silent mutations, and frameshift-causing
+      indels.
+    composed_of:
+    - mutation
+    tier: 5
+  eukaryotic_dna_replication:
+    defines: The replication of linear eukaryotic chromosomes from multiple origins using analogous enzymes.
+    composed_of:
+    - prokaryotic_dna_replication
+    tier: 6
+  telomere_replication:
+    defines: The mechanism by which the repetitive DNA ends of linear eukaryotic chromosomes are extended
+      to compensate for incomplete lagging-strand replication.
+    composed_of:
+    - eukaryotic_dna_replication
+    - leading_and_lagging_strand
+    tier: 7
+  telomerase:
+    defines: An enzyme with a built-in RNA template that adds telomeric repeats to chromosome ends.
+    composed_of:
+    - telomere_replication
+    tier: 8
+applications:
+  gel_electrophoresis:
+    defines: A technique for separating DNA fragments by size by migrating negatively charged DNA through
+      an agarose gel under an electric field.
+    needs:
+    - nucleotide
+    tier: 1
+  dna_sequencing_sanger_method:
+    defines: A method for reading DNA sequence using dideoxynucleotides that terminate strand elongation.
+    needs:
+    - dna_polymerase
+    - phosphodiester_bond
+    tier: 2
+  meselson_stahl_experiment:
+    defines: An isotope-labeling and density-gradient centrifugation experiment that confirmed semi-conservative
+      DNA replication.
+    needs:
+    - semiconservative_replication
+    tier: 4

@@ -1,0 +1,169 @@
+domain: biology_2e_ch24
+primitives:
+  fungus:
+    defines: A eukaryotic, heterotrophic organism with chitin cell walls that absorbs nutrients externally,
+      distinct from plants and animals.
+    tier: 0
+  eukaryotic_cell_structure:
+    defines: Fungal cells contain a membrane-bound nucleus, mitochondria, endoplasmic reticulum, and Golgi
+      apparatus, but lack chloroplasts.
+    tier: 0
+  chitin_cell_wall:
+    defines: A rigid fungal cell wall composed of chitin and glucans that provides structural support
+      and protection.
+    tier: 0
+  heterotrophic_nutrition:
+    defines: Fungi obtain carbon and energy from complex organic compounds rather than photosynthesis,
+      digesting externally via exoenzymes before absorbing nutrients.
+    tier: 0
+  hypha:
+    defines: A single fungal filament, either septate or coenocytic, that is the basic structural unit
+      of multicellular fungi.
+    tier: 0
+  septum:
+    defines: A perforated or solid endwall dividing a hypha into separate cells, allowing or restricting
+      flow of nutrients between cells.
+    tier: 0
+  spore:
+    defines: A haploid reproductive cell produced by fungi that can undergo mitosis to form a new multicellular
+      haploid individual.
+    tier: 0
+  plasmogamy:
+    defines: The fusion of cytoplasm from two haploid fungal cells, producing a dikaryotic stage without
+      nuclear fusion.
+    tier: 0
+  karyogamy:
+    defines: The fusion of two haploid nuclei to form a diploid zygote nucleus, following plasmogamy in
+      fungal sexual reproduction.
+    tier: 0
+  symbiosis:
+    defines: An ecological interaction in which two different organisms live together, encompassing mutualism,
+      parasitism, and commensalism.
+    tier: 0
+concepts:
+  coenocytic_hypha:
+    defines: A hypha lacking septa that contains many nuclei within a continuous cytoplasm.
+    composed_of:
+    - hypha
+    - septum
+    tier: 1
+  mycelium:
+    defines: The mass of interwoven hyphae that forms the vegetative body of a multicellular fungus.
+    composed_of:
+    - hypha
+    tier: 1
+  yeast:
+    defines: A unicellular form of fungus that can reproduce by budding and, in some species, switch between
+      unicellular and multicellular (dimorphic) growth.
+    composed_of:
+    - fungus
+    - eukaryotic_cell_structure
+    tier: 1
+  asexual_reproduction:
+    defines: Reproduction by fragmentation, budding, or production of genetically identical spores (e.g.,
+      conidiospores, sporangiospores) without fusion of gametes.
+    composed_of:
+    - spore
+    - hypha
+    - yeast
+    tier: 2
+  sexual_reproduction:
+    defines: A three-stage process (plasmogamy, karyogamy, meiosis) that fuses two haploid mating types
+      to introduce genetic variation and produce sexual spores.
+    composed_of:
+    - plasmogamy
+    - karyogamy
+    - spore
+    tier: 1
+  fungal_phyla_classification:
+    defines: The organization of true fungi into five phyla based primarily on mode of sexual reproduction
+      and molecular (18S rRNA) data.
+    composed_of:
+    - sexual_reproduction
+    tier: 2
+  chytridiomycota:
+    defines: The most primitive fungal phylum, mostly aquatic, uniquely retaining flagellated gametes
+      and zoospores.
+    composed_of:
+    - fungal_phyla_classification
+    tier: 3
+  zygomycota:
+    defines: A phylum with coenocytic hyphae that reproduces sexually via conjugation, forming a thick-walled
+      zygospore.
+    composed_of:
+    - fungal_phyla_classification
+    - coenocytic_hypha
+    tier: 3
+  ascomycota:
+    defines: The largest fungal phylum, characterized by production of haploid ascospores within a sac-like
+      ascus.
+    composed_of:
+    - fungal_phyla_classification
+    tier: 3
+  basidiomycota:
+    defines: A phylum recognized by club-shaped basidia that produce basidiospores, typically borne on
+      gilled fruiting bodies (mushrooms).
+    composed_of:
+    - fungal_phyla_classification
+    tier: 3
+  glomeromycota:
+    defines: A phylum of fungi lacking sexual reproduction that forms obligate arbuscular mycorrhizal
+      associations with plant roots.
+    composed_of:
+    - fungal_phyla_classification
+    tier: 3
+  mutualism:
+    defines: A symbiotic relationship in which both participating organisms benefit from the association.
+    composed_of:
+    - symbiosis
+    tier: 1
+  mycorrhiza:
+    defines: A mutualistic association between fungal hyphae and vascular plant roots in which the fungus
+      supplies water and minerals in exchange for photosynthetic carbohydrates.
+    composed_of:
+    - mutualism
+    - hypha
+    tier: 2
+  lichen:
+    defines: A stable mutualistic association between a fungus and a photosynthetic partner (alga or cyanobacterium)
+      that together form a distinct composite organism.
+    composed_of:
+    - mutualism
+    - fungus
+    tier: 2
+  fungal_decomposition_ecology:
+    defines: The ecological role of fungi as saprobes that break down organic matter and release essential
+      elements back into ecosystems.
+    composed_of:
+    - heterotrophic_nutrition
+    - mycelium
+    tier: 2
+  parasitism:
+    defines: A symbiotic relationship in which one organism benefits at the expense of the other, which
+      may or may not develop disease.
+    composed_of:
+    - symbiosis
+    tier: 1
+  mycosis:
+    defines: A fungal disease resulting from direct infection and tissue damage, classified as superficial,
+      systemic, or opportunistic.
+    composed_of:
+    - parasitism
+    tier: 2
+  fungal_toxins:
+    defines: Poisoning of humans or animals by fungal-produced toxins, either through contaminated food
+      (mycotoxicosis) or ingestion of poisonous mushrooms (mycetismus).
+    composed_of:
+    - heterotrophic_nutrition
+    tier: 1
+applications:
+  fungi_in_human_life:
+    defines: The practical roles fungi play for humans, including food production, fermentation, pharmaceuticals,
+      biological pest control, and genetic model organisms.
+    needs:
+    - yeast
+    - asexual_reproduction
+    - mycorrhiza
+    - mycosis
+    - fungal_toxins
+    tier: 3

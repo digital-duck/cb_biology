@@ -1,0 +1,142 @@
+domain: biology_2e_ch12
+sources:
+  heredity:
+    label: Heredity
+    sections:
+    - id: ch12_s12_1
+      title: 12.1 Mendel’s Experiments and the Laws of Probability
+  trait:
+    label: Trait
+    sections:
+    - id: ch12_s12_1
+      title: 12.1 Mendel’s Experiments and the Laws of Probability
+  true_breeding:
+    label: True-Breeding
+    sections:
+    - id: ch12_s12_1
+      title: 12.1 Mendel’s Experiments and the Laws of Probability
+  hybridization:
+    label: Hybridization
+    sections:
+    - id: ch12_s12_1
+      title: 12.1 Mendel’s Experiments and the Laws of Probability
+  filial_generations:
+    label: Filial Generations (P0, F1, F2)
+    sections:
+    - id: ch12_s12_1
+      title: 12.1 Mendel’s Experiments and the Laws of Probability
+  dominant_recessive_traits:
+    label: Dominant and Recessive Traits
+    sections:
+    - id: ch12_s12_1
+      title: 12.1 Mendel’s Experiments and the Laws of Probability
+  reciprocal_cross:
+    label: Reciprocal Cross
+    sections:
+    - id: ch12_s12_1
+      title: 12.1 Mendel’s Experiments and the Laws of Probability
+  probability_basics:
+    label: Probability Basics
+    sections:
+    - id: ch12_s12_1
+      title: 12.1 Mendel’s Experiments and the Laws of Probability
+  product_rule:
+    label: Product Rule
+    sections:
+    - id: ch12_s12_1
+      title: 12.1 Mendel’s Experiments and the Laws of Probability
+  sum_rule:
+    label: Sum Rule
+    sections:
+    - id: ch12_s12_1
+      title: 12.1 Mendel’s Experiments and the Laws of Probability
+  diploidy_and_alleles:
+    label: Diploidy and Alleles
+    sections:
+    - id: ch12_s12_2
+      title: 12.2 Characteristics and Traits
+  genotype_phenotype:
+    label: Genotype and Phenotype
+    sections:
+    - id: ch12_s12_2
+      title: 12.2 Characteristics and Traits
+  homozygous_heterozygous:
+    label: Homozygous and Heterozygous
+    sections:
+    - id: ch12_s12_2
+      title: 12.2 Characteristics and Traits
+  punnett_square:
+    label: Punnett Square
+    sections:
+    - id: ch12_s12_2
+      title: 12.2 Characteristics and Traits
+  monohybrid_cross:
+    label: Monohybrid Cross
+    sections:
+    - id: ch12_s12_2
+      title: 12.2 Characteristics and Traits
+  test_cross:
+    label: Test Cross
+    sections:
+    - id: ch12_s12_2
+      title: 12.2 Characteristics and Traits
+  incomplete_dominance:
+    label: Incomplete Dominance
+    sections:
+    - id: ch12_s12_2
+      title: 12.2 Characteristics and Traits
+  codominance:
+    label: Codominance
+    sections:
+    - id: ch12_s12_2
+      title: 12.2 Characteristics and Traits
+  multiple_alleles:
+    label: Multiple Alleles
+    sections:
+    - id: ch12_s12_2
+      title: 12.2 Characteristics and Traits
+  x_linked_inheritance:
+    label: X-Linked Inheritance
+    sections:
+    - id: ch12_s12_2
+      title: 12.2 Characteristics and Traits
+  lethality_alleles:
+    label: Recessive and Dominant Lethal Alleles
+    sections:
+    - id: ch12_s12_2
+      title: 12.2 Characteristics and Traits
+  law_of_dominance:
+    label: Law of Dominance
+    sections:
+    - id: ch12_s12_3
+      title: 12.3 Laws of Inheritance
+  law_of_segregation:
+    label: Law of Segregation
+    sections:
+    - id: ch12_s12_3
+      title: 12.3 Laws of Inheritance
+  law_of_independent_assortment:
+    label: Law of Independent Assortment
+    sections:
+    - id: ch12_s12_3
+      title: 12.3 Laws of Inheritance
+  dihybrid_cross:
+    label: Dihybrid Cross
+    sections:
+    - id: ch12_s12_3
+      title: 12.3 Laws of Inheritance
+  forked_line_and_probability_methods:
+    label: Forked-Line and Probability Methods
+    sections:
+    - id: ch12_s12_3
+      title: 12.3 Laws of Inheritance
+  gene_linkage_recombination:
+    label: Linkage and Recombination
+    sections:
+    - id: ch12_s12_3
+      title: 12.3 Laws of Inheritance
+  epistasis:
+    label: Epistasis
+    sections:
+    - id: ch12_s12_3
+      title: 12.3 Laws of Inheritance

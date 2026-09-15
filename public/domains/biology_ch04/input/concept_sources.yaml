@@ -1,0 +1,216 @@
+domain: biology_2e_ch4
+sources:
+  cell:
+    label: Cell
+    sections:
+    - id: ch04_s4_1
+      title: 4.1 Studying Cells
+  microscope:
+    label: Microscope
+    sections:
+    - id: ch04_s4_1
+      title: 4.1 Studying Cells
+  magnification_and_resolution:
+    label: Magnification and Resolving Power
+    sections:
+    - id: ch04_s4_1
+      title: 4.1 Studying Cells
+  light_microscope:
+    label: Light Microscope
+    sections:
+    - id: ch04_s4_1
+      title: 4.1 Studying Cells
+  electron_microscope:
+    label: Electron Microscope
+    sections:
+    - id: ch04_s4_1
+      title: 4.1 Studying Cells
+  unified_cell_theory:
+    label: Unified Cell Theory
+    sections:
+    - id: ch04_s4_1
+      title: 4.1 Studying Cells
+  prokaryotic_cell:
+    label: Prokaryotic Cell
+    sections:
+    - id: ch04_s4_2
+      title: 4.2 Prokaryotic Cells
+  eukaryotic_cell:
+    label: Eukaryotic Cell
+    sections:
+    - id: ch04_s4_3
+      title: 4.3 Eukaryotic Cells
+  plasma_membrane:
+    label: Plasma Membrane
+    sections:
+    - id: ch04_s4_2
+      title: 4.2 Prokaryotic Cells
+    - id: ch04_s4_3
+      title: 4.3 Eukaryotic Cells
+  cytoplasm:
+    label: Cytoplasm
+    sections:
+    - id: ch04_s4_2
+      title: 4.2 Prokaryotic Cells
+    - id: ch04_s4_3
+      title: 4.3 Eukaryotic Cells
+  dna:
+    label: DNA
+    sections:
+    - id: ch04_s4_2
+      title: 4.2 Prokaryotic Cells
+  ribosome:
+    label: Ribosome
+    sections:
+    - id: ch04_s4_2
+      title: 4.2 Prokaryotic Cells
+    - id: ch04_s4_3
+      title: 4.3 Eukaryotic Cells
+  cell_wall:
+    label: Cell Wall
+    sections:
+    - id: ch04_s4_2
+      title: 4.2 Prokaryotic Cells
+    - id: ch04_s4_3
+      title: 4.3 Eukaryotic Cells
+  surface_area_to_volume_ratio:
+    label: Surface Area-to-Volume Ratio
+    sections:
+    - id: ch04_s4_2
+      title: 4.2 Prokaryotic Cells
+  nucleus:
+    label: Nucleus
+    sections:
+    - id: ch04_s4_3
+      title: 4.3 Eukaryotic Cells
+  nucleoid:
+    label: Nucleoid
+    sections:
+    - id: ch04_s4_2
+      title: 4.2 Prokaryotic Cells
+  nuclear_envelope:
+    label: Nuclear Envelope
+    sections:
+    - id: ch04_s4_3
+      title: 4.3 Eukaryotic Cells
+  chromatin_and_chromosomes:
+    label: Chromatin and Chromosomes
+    sections:
+    - id: ch04_s4_3
+      title: 4.3 Eukaryotic Cells
+  nucleolus:
+    label: Nucleolus
+    sections:
+    - id: ch04_s4_3
+      title: 4.3 Eukaryotic Cells
+  mitochondria:
+    label: Mitochondria
+    sections:
+    - id: ch04_s4_3
+      title: 4.3 Eukaryotic Cells
+  peroxisome:
+    label: Peroxisome
+    sections:
+    - id: ch04_s4_3
+      title: 4.3 Eukaryotic Cells
+  vesicle_and_vacuole:
+    label: Vesicles and Vacuoles
+    sections:
+    - id: ch04_s4_3
+      title: 4.3 Eukaryotic Cells
+  central_vacuole:
+    label: Central Vacuole
+    sections:
+    - id: ch04_s4_3
+      title: 4.3 Eukaryotic Cells
+  centrosome:
+    label: Centrosome
+    sections:
+    - id: ch04_s4_3
+      title: 4.3 Eukaryotic Cells
+    - id: ch04_s4_5
+      title: 4.5 The Cytoskeleton
+  lysosome:
+    label: Lysosome
+    sections:
+    - id: ch04_s4_3
+      title: 4.3 Eukaryotic Cells
+    - id: ch04_s4_4
+      title: 4.4 The Endomembrane System and Proteins
+  chloroplast:
+    label: Chloroplast
+    sections:
+    - id: ch04_s4_3
+      title: 4.3 Eukaryotic Cells
+  endosymbiosis:
+    label: Endosymbiosis
+    sections:
+    - id: ch04_s4_3
+      title: 4.3 Eukaryotic Cells
+  endomembrane_system:
+    label: Endomembrane System
+    sections:
+    - id: ch04_s4_4
+      title: 4.4 The Endomembrane System and Proteins
+  endoplasmic_reticulum:
+    label: Endoplasmic Reticulum
+    sections:
+    - id: ch04_s4_4
+      title: 4.4 The Endomembrane System and Proteins
+  golgi_apparatus:
+    label: Golgi Apparatus
+    sections:
+    - id: ch04_s4_4
+      title: 4.4 The Endomembrane System and Proteins
+  cytoskeleton:
+    label: Cytoskeleton
+    sections:
+    - id: ch04_s4_5
+      title: 4.5 The Cytoskeleton
+  microfilaments:
+    label: Microfilaments
+    sections:
+    - id: ch04_s4_5
+      title: 4.5 The Cytoskeleton
+  intermediate_filaments:
+    label: Intermediate Filaments
+    sections:
+    - id: ch04_s4_5
+      title: 4.5 The Cytoskeleton
+  microtubules:
+    label: Microtubules
+    sections:
+    - id: ch04_s4_5
+      title: 4.5 The Cytoskeleton
+  flagella_and_cilia:
+    label: Flagella and Cilia
+    sections:
+    - id: ch04_s4_5
+      title: 4.5 The Cytoskeleton
+  extracellular_matrix:
+    label: Extracellular Matrix
+    sections:
+    - id: ch04_s4_6
+      title: 4.6 Connections between Cells and Cellular Activities
+  intercellular_junctions:
+    label: Intercellular Junctions
+    sections:
+    - id: ch04_s4_6
+      title: 4.6 Connections between Cells and Cellular Activities
+  plant_vs_animal_cell_structures:
+    label: Plant versus Animal Cell Differences
+    sections:
+    - id: ch04_s4_3
+      title: 4.3 Eukaryotic Cells
+  cell_communication_and_signaling:
+    label: Cell Communication via Matrix and Junctions
+    sections:
+    - id: ch04_s4_6
+      title: 4.6 Connections between Cells and Cellular Activities
+  medical_applications_of_cell_biology:
+    label: Medical Applications of Cell Biology
+    sections:
+    - id: ch04_s4_1
+      title: 4.1 Studying Cells
+    - id: ch04_s4_4
+      title: 4.4 The Endomembrane System and Proteins

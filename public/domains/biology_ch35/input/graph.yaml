@@ -1,0 +1,202 @@
+domain: biology_2e_ch35
+primitives:
+  neuron:
+    defines: A specialized cell that can receive and transmit electrical or chemical signals, forming
+      the basic signaling unit of the nervous system.
+    tier: 0
+  glia:
+    defines: Non-neuronal cells that provide support functions for neurons, including nutrient supply,
+      structural support, myelination, and waste removal.
+    tier: 0
+  ion_channel:
+    defines: A membrane-spanning protein that allows ions to pass into or out of a neuron, including voltage-gated
+      channels.
+    tier: 0
+  meninges_csf:
+    defines: The three protective membrane layers covering the CNS and the cerebrospinal fluid that cushions
+      and circulates within it.
+    tier: 0
+concepts:
+  neuron_structure:
+    defines: The dendrites, cell body, axon hillock, axon, and axon terminals that receive, integrate,
+      and transmit neuronal signals.
+    composed_of:
+    - neuron
+    tier: 1
+  neuron_types:
+    defines: Neurons classified into unipolar, bipolar, multipolar, and pseudounipolar types based on
+      process arrangement.
+    composed_of:
+    - neuron
+    - neuron_structure
+    tier: 2
+  glial_cell_types:
+    defines: Distinct glial cell types that each perform specialized supportive roles for neurons.
+    composed_of:
+    - glia
+    tier: 1
+  myelin:
+    defines: A fatty substance produced by glial cells that insulates axons to increase conduction speed.
+    composed_of:
+    - glial_cell_types
+    tier: 2
+  membrane_potential:
+    defines: The difference in electrical charge across a neuron's membrane arising from unequal ion concentrations.
+    composed_of:
+    - ion_channel
+    - neuron
+    tier: 1
+  resting_membrane_potential:
+    defines: The baseline membrane potential of a neuron at rest, maintained by differential ion permeability
+      and pumps.
+    composed_of:
+    - membrane_potential
+    tier: 2
+  action_potential:
+    defines: A self-propagating, all-or-nothing reversal of the resting membrane potential that transmits
+      a signal along a neuron.
+    composed_of:
+    - resting_membrane_potential
+    - ion_channel
+    tier: 3
+  depolarization_repolarization:
+    defines: The sequential voltage changes that constitute the phases of an action potential.
+    composed_of:
+    - action_potential
+    tier: 4
+  refractory_period:
+    defines: The period following an action potential during which a neuron cannot fire again.
+    composed_of:
+    - action_potential
+    tier: 4
+  saltatory_conduction:
+    defines: Propagation of an action potential by jumping between nodes of Ranvier along a myelinated
+      axon.
+    composed_of:
+    - action_potential
+    - myelin
+    tier: 4
+  synapse:
+    defines: The junction between two neurons where signals are communicated chemically or electrically.
+    composed_of:
+    - neuron
+    - action_potential
+    tier: 4
+  chemical_synaptic_transmission:
+    defines: The process by which an action potential triggers neurotransmitter release that binds postsynaptic
+      receptors.
+    composed_of:
+    - synapse
+    - action_potential
+    tier: 5
+  electrical_synapse:
+    defines: A synapse where membranes are connected by gap junctions, allowing near-instantaneous current
+      flow.
+    composed_of:
+    - synapse
+    tier: 5
+  postsynaptic_potentials:
+    defines: EPSPs and IPSPs that depolarize or hyperpolarize the postsynaptic membrane, altering firing
+      likelihood.
+    composed_of:
+    - chemical_synaptic_transmission
+    tier: 6
+  summation:
+    defines: The integration of multiple EPSPs and IPSPs at the axon hillock to determine whether a neuron
+      fires.
+    composed_of:
+    - postsynaptic_potentials
+    tier: 7
+  synaptic_plasticity:
+    defines: The capacity of synapses to be strengthened or weakened over time, forming the basis of learning
+      and memory.
+    composed_of:
+    - synapse
+    tier: 5
+  ltp_ltd:
+    defines: Persistent strengthening or weakening of synaptic connections mediated by glutamate receptor
+      dynamics.
+    composed_of:
+    - synaptic_plasticity
+    - postsynaptic_potentials
+    tier: 7
+  cerebral_cortex:
+    defines: The outermost folded layer of brain tissue, divided into hemispheres, responsible for higher-order
+      functions.
+    composed_of:
+    - meninges_csf
+    - neuron
+    tier: 1
+  cortical_lobes:
+    defines: Four functionally and spatially defined regions of the cerebral cortex specialized for distinct
+      functions.
+    composed_of:
+    - cerebral_cortex
+    tier: 2
+  subcortical_structures:
+    defines: Deep brain structures that regulate movement, sensory relay, homeostasis, emotion, coordination,
+      and vital functions.
+    composed_of:
+    - meninges_csf
+    - neuron
+    tier: 1
+  spinal_cord:
+    defines: A nerve tissue bundle connecting the brain to the peripheral nervous system, transmitting
+      signals and controlling reflexes.
+    composed_of:
+    - meninges_csf
+    - neuron
+    tier: 1
+  peripheral_nervous_system:
+    defines: The network of nerves connecting the CNS to the rest of the body, divided into autonomic
+      and sensory-somatic divisions.
+    composed_of:
+    - neuron
+    - spinal_cord
+    tier: 2
+  autonomic_nervous_system:
+    defines: The PNS division that controls involuntary bodily functions through sympathetic and parasympathetic
+      pathways.
+    composed_of:
+    - peripheral_nervous_system
+    tier: 3
+  sympathetic_parasympathetic:
+    defines: Two opposing divisions of the autonomic nervous system driving fight-or-flight or rest-and-digest
+      responses.
+    composed_of:
+    - autonomic_nervous_system
+    tier: 4
+  sensory_somatic_system:
+    defines: The PNS division that transmits sensory information to the CNS and motor commands to skeletal
+      muscles.
+    composed_of:
+    - peripheral_nervous_system
+    tier: 3
+applications:
+  neurodegenerative_disorders:
+    defines: Nervous system disorders characterized by progressive neuronal death and loss of function.
+    needs:
+    - neuron
+    - action_potential
+    tier: 4
+  neurodevelopmental_disorders:
+    defines: Disorders arising from disturbances in nervous system development affecting cortical and
+      synaptic function.
+    needs:
+    - cerebral_cortex
+    - synaptic_plasticity
+    tier: 6
+  mental_illness:
+    defines: Nervous system disorders that impair thinking, mood, or social functioning via synaptic and
+      cortical dysfunction.
+    needs:
+    - synapse
+    - cerebral_cortex
+    tier: 5
+  epilepsy_stroke:
+    defines: Neurological conditions involving recurrent seizures or interrupted blood flow causing neuronal
+      death.
+    needs:
+    - action_potential
+    - spinal_cord
+    tier: 4

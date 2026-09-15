@@ -1,0 +1,156 @@
+domain: biology_2e_ch44
+primitives:
+  ecology:
+    defines: The study of the interactions of living organisms with their environment.
+    tier: 0
+  abiotic_factors:
+    defines: The nonliving components of the environment, such as air, water, soil, temperature, and light.
+    tier: 0
+  biotic_factors:
+    defines: The living components of the environment.
+    tier: 0
+  biosphere:
+    defines: All of the parts of Earth inhabited by life, extending from the upper atmosphere to the depths
+      of the oceans.
+    tier: 0
+  climate_vs_weather:
+    defines: The distinction between climate, the long-term predictable atmospheric conditions of an area,
+      and weather, short-term atmospheric conditions.
+    tier: 0
+concepts:
+  levels_of_ecological_study:
+    defines: The four general levels at which ecologists work — organism, population, community, and ecosystem.
+    composed_of:
+    - ecology
+    tier: 1
+  organismal_ecology:
+    defines: The study of the morphological, physiological, and behavioral adaptations that enable individual
+      organisms to live in specific habitats.
+    composed_of:
+    - levels_of_ecological_study
+    tier: 2
+  population_ecology:
+    defines: The study of the number of individuals in a population and how and why population size changes
+      over time.
+    composed_of:
+    - levels_of_ecological_study
+    tier: 2
+  community_ecology:
+    defines: The study of the interactions within and among the different species that make up a biological
+      community.
+    composed_of:
+    - levels_of_ecological_study
+    tier: 2
+  ecosystem_ecology:
+    defines: The study of the biotic and abiotic components of an area and how nutrients and energy are
+      stored and move among them.
+    composed_of:
+    - levels_of_ecological_study
+    - abiotic_factors
+    - biotic_factors
+    tier: 2
+  biogeography:
+    defines: The study of the geographic distribution of living things and the abiotic factors that affect
+      their distribution.
+    composed_of:
+    - biosphere
+    - abiotic_factors
+    tier: 1
+  endemic_and_generalist_species:
+    defines: Species distribution patterns ranging from endemic species restricted to a small geographic
+      area to generalist species found across wide areas.
+    composed_of:
+    - biogeography
+    tier: 2
+  ocean_upwelling:
+    defines: The rising of deep, nutrient-rich ocean waters that occurs when prevailing winds blow along
+      surface waters near a coastline.
+    composed_of:
+    - abiotic_factors
+    tier: 1
+  lake_turnover:
+    defines: Seasonal processes driven by a thermocline that recycle nutrients and oxygen from the bottom
+      of a freshwater lake to the top.
+    composed_of:
+    - abiotic_factors
+    tier: 1
+  net_primary_productivity:
+    defines: An estimate of the organic matter available as food, calculated as the total carbon fixed
+      per year minus that oxidized during cellular respiration.
+    composed_of:
+    - ecosystem_ecology
+    tier: 3
+  biome:
+    defines: A large ecological community of plants, animals, and other organisms adapted to a characteristic
+      set of environmental conditions, distinguished by temperature and precipitation.
+    composed_of:
+    - abiotic_factors
+    - biotic_factors
+    - biogeography
+    tier: 2
+  terrestrial_biomes:
+    defines: The eight major land-based biomes, distinguished by characteristic temperature and precipitation.
+    composed_of:
+    - biome
+    tier: 3
+  aquatic_biomes:
+    defines: Freshwater and marine biomes shaped primarily by light penetration, temperature stratification,
+      and water movement.
+    composed_of:
+    - biome
+    tier: 3
+  ocean_zones:
+    defines: The division of the ocean into zones based on depth, distance from shore, and light penetration.
+    composed_of:
+    - aquatic_biomes
+    tier: 4
+  global_climate_change:
+    defines: Altered global weather patterns, especially a worldwide increase in temperature, due largely
+      to rising levels of atmospheric carbon dioxide.
+    composed_of:
+    - climate_vs_weather
+    tier: 1
+  natural_drivers_of_climate_change:
+    defines: Pre-industrial factors affecting long-term climate, including Milankovitch cycles, variation
+      in solar intensity, and volcanic eruptions.
+    composed_of:
+    - global_climate_change
+    tier: 2
+  greenhouse_effect:
+    defines: The warming of Earth caused by greenhouse gases trapping thermal radiation in the atmosphere.
+    composed_of:
+    - global_climate_change
+    tier: 2
+applications:
+  coral_reefs:
+    defines: Ocean ridges formed by marine invertebrates living in warm, shallow, photic-zone waters,
+      often in mutualistic relationships with photosynthetic algae.
+    needs:
+    - ocean_zones
+    tier: 5
+  estuaries:
+    defines: Biomes where a source of fresh water meets the ocean, creating brackish water and important
+      breeding grounds for many species.
+    needs:
+    - aquatic_biomes
+    tier: 4
+  freshwater_biomes:
+    defines: Standing-water and flowing-water biomes, including wetlands, that provide freshwater ecosystem
+      resources.
+    needs:
+    - aquatic_biomes
+    - lake_turnover
+    tier: 4
+  human_drivers_of_climate_change:
+    defines: Human activities, especially the burning of fossil fuels and deforestation, that release
+      greenhouse gases and rapidly increase atmospheric carbon dioxide.
+    needs:
+    - greenhouse_effect
+    tier: 3
+  consequences_of_climate_change:
+    defines: Documented and past effects of climate change, including mass extinction events, glacier
+      and ice sheet retreat, sea level rise, and shifts in species phenology.
+    needs:
+    - human_drivers_of_climate_change
+    - natural_drivers_of_climate_change
+    tier: 4

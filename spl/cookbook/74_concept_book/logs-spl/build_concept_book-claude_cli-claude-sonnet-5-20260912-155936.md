@@ -1,0 +1,198 @@
+# SPL Run: build_concept_book
+
+- **Adapter:** claude_cli
+- **Model:** claude-sonnet-5
+- **Tokens:** 2702 in / 4230 out
+- **Latency:** 93870ms
+- **Timestamp:** 2026-09-12 15:59:36
+
+## Output
+
+```output
+
+
+---
+
+## Fatty Acid
+
+**Definition.** A fatty acid is a carboxylic acid, $\text{R–COOH}$, in which $R$ is a long, unbranched hydrocarbon chain, typically containing between 12 and 24 carbon atoms. The molecule has two chemically distinct regions: a polar, hydrophilic carboxyl head ($-\text{COOH}$) and a nonpolar, hydrophobic hydrocarbon tail. Fatty acids are classified by the saturation of their tail. A **saturated** fatty acid contains only single bonds between carbon atoms, so each carbon (except the terminal $-\text{COOH}$) is bonded to the maximum possible number of hydrogens, giving the chain a straight, flexible shape. An **unsaturated** fatty acid contains one or more carbon–carbon double bonds, which introduces a rigid kink at each double bond (in the common *cis* configuration) and reduces the number of hydrogen atoms relative to a saturated chain of the same length.
+
+**Worked example.** Consider palmitic acid, $\text{CH}_3(\text{CH}_2)_{14}\text{COOH}$, with molecular formula $\text{C}_{16}\text{H}_{32}\text{O}_2$. Since every internal carbon–carbon bond is single, this is a saturated fatty acid. Compare it to oleic acid, $\text{C}_{18}\text{H}_{34}\text{O}_2$, which has one double bond ($\Delta^9$). The general formula for a saturated fatty acid with $n$ carbons is $\text{C}_n\text{H}_{2n}\text{O}_2$; each additional double bond removes two hydrogens, giving $\text{C}_n\text{H}_{2n-2k}\text{O}_2$ for $k$ double bonds. This formula follows directly from counting degrees of unsaturation, since each ring or $\pi$-bond reduces the saturated hydrogen count by exactly 2.
+
+**Key theorem (esterification).** When three fatty acid molecules condense with one glycerol molecule ($\text{C}_3\text{H}_8\text{O}_3$) via ester-bond formation, three water molecules are released:
+$$\text{glycerol} + 3\,\text{fatty acid} \rightarrow \text{triglyceride} + 3\,\text{H}_2\text{O}.$$
+This dehydration synthesis is reversible by hydrolysis, which regenerates glycerol and free fatty acids.
+
+**Lab cell (SymPy).**
+```python
+from sympy import symbols, Eq, solve
+
+n, k = symbols('n k', positive=True, integer=True)
+H = 2*n - 2*k  # hydrogens in C_n H_(2n-2k) O2
+print(H.subs({n: 18, k: 1}))  # oleic acid: expect 34
+```
+
+---
+
+## Monomer
+
+**Definition.** A monomer is the smallest discrete chemical subunit that can be joined, through repeated covalent bonding, to identical or similar subunits to construct a larger macromolecule. Formally, if a macromolecule composed of $n$ subunits is denoted $P$, we may write
+
+$$
+P = M_1 - M_2 - \cdots - M_n,
+$$
+
+where each $M_i$ is a monomer and the dashes represent covalent linkages formed through the loss of a small molecule (typically water) during each bond-forming reaction. In biological systems, monomers include simple sugars, amino acids, and nucleotides, which combine to build carbohydrates, proteins, and nucleic acids, respectively.
+
+**Worked example.** Consider glucose ($\mathrm{C_6H_{12}O_6}$) as a monomer. Two glucose molecules combine, releasing one water molecule and forming a covalent bond between them:
+
+$$
+2\,\mathrm{C_6H_{12}O_6} \longrightarrow \mathrm{C_{12}H_{22}O_{11}} + \mathrm{H_2O}.
+$$
+
+The product is the smallest possible chain built from two glucose monomers. Repeating this bond-forming step $n-1$ times yields a chain of $n$ glucose units, such as starch or cellulose, with the general formula $(\mathrm{C_6H_{10}O_5})_n \cdot \mathrm{H_2O}$.
+
+**Key theorem (Mass conservation in monomer assembly).** If a chain of $n$ monomers, each of molar mass $m$, forms via $n-1$ bond-forming reactions each releasing a small molecule of mass $w$ (typically water), the resulting molar mass $M_P$ satisfies
+
+$$
+M_P = nm - (n-1)w.
+$$
+
+This relation allows prediction of macromolecular mass directly from monomer composition and the number of monomers joined.
+
+**Lab cell (SymPy).**
+```python
+from sympy import symbols, Eq, solve
+
+n, m, w, M_P = symbols('n m w M_P', positive=True)
+chain_mass = Eq(M_P, n*m - (n - 1)*w)
+
+# Example: n = 500 glucose monomers, m = 180 g/mol, w = 18 g/mol
+result = chain_mass.subs({n: 500, m: 180, w: 18})
+solve(result, M_P)
+```
+
+---
+
+## Dehydration Synthesis
+
+**Definition.** Dehydration synthesis (also termed a condensation reaction) is the chemical process by which two monomers are covalently joined into a larger polymer with the concomitant release of one molecule of water, $\mathrm{H_2O}$. In each such reaction, a hydroxyl group ($-\mathrm{OH}$) is removed from one monomer while a hydrogen atom ($-\mathrm{H}$) is removed from the other; these fragments combine to form water, and the two monomers become linked by a new covalent bond, typically at the site once occupied by the departing $-\mathrm{OH}$ group. This mechanism underlies the biosynthesis of all four major classes of macromolecules: polysaccharides (glycosidic bonds), proteins (peptide bonds), nucleic acids (phosphodiester bonds), and, in a modified form, lipids (ester bonds in triglycerides).
+
+**Worked example.** Consider the formation of maltose from two glucose monomers, $\mathrm{C_6H_{12}O_6}$. The reaction is:
+$$
+\mathrm{C_6H_{12}O_6} + \mathrm{C_6H_{12}O_6} \longrightarrow \mathrm{C_{12}H_{22}O_{11}} + \mathrm{H_2O}
+$$
+Note the mass balance: the product polymer has exactly one fewer water molecule's worth of atoms ($2\mathrm{H}, 1\mathrm{O}$) than the sum of the two free monomers, confirming that a single glycosidic bond has formed with loss of $\mathrm{H_2O}$.
+
+**Key theorem.** For a linear polymer formed from $n$ identical monomers of molecular mass $m$, dehydration synthesis proceeds through $n-1$ sequential condensation steps, each releasing one water molecule of mass $18\ \mathrm{g/mol}$. The resulting polymer mass $M$ satisfies:
+$$
+M = nm - (n-1)(18)
+$$
+This relation generalizes directly to the hydrolysis reaction (the reverse process), which restores $n-1$ water molecules upon cleavage of all bonds.
+
+**Lab cell (SymPy).**
+```python
+from sympy import symbols, Eq, solve
+
+n, m, M = symbols('n m M', positive=True)
+polymer_mass_eq = Eq(M, n*m - (n - 1)*18)
+
+# Example: 5 glucose monomers (m = 180 g/mol) forming a pentasaccharide
+result = polymer_mass_eq.subs({n: 5, m: 180})
+print(solve(result, M))  # [828]
+```
+
+---
+
+## Saturated Unsaturated Fatty Acids
+
+**Definition.** A fatty acid is a carboxylic acid, $\text{CH}_3(\text{CH}_2)_n\text{COOH}$, with an unbranched hydrocarbon tail typically 12–24 carbons long. The tail is classified by its bonding pattern: a **saturated** fatty acid contains only single (sigma) carbon–carbon bonds, so every carbon is bonded to the maximum possible number of hydrogens. An **unsaturated** fatty acid contains one or more carbon–carbon double bonds ($\text{C}=\text{C}$); if it contains exactly one, it is *monounsaturated*, and if it contains two or more, it is *polyunsaturated*. Each double bond removes two hydrogen atoms relative to the saturated analog, which is the origin of the term "unsaturated" — the molecule is not saturated with hydrogen.
+
+**Worked example.** Stearic acid, $\text{C}_{18}\text{H}_{36}\text{O}_2$, is fully saturated: its 18-carbon chain has the general saturated formula $\text{C}_n\text{H}_{2n}\text{O}_2$, here with $n=18$, giving $\text{C}_{18}\text{H}_{36}\text{O}_2$. Oleic acid, $\text{C}_{18}\text{H}_{34}\text{O}_2$, has the same 18-carbon backbone but one double bond, at carbon 9. Comparing formulas: $36 - 34 = 2$ hydrogens fewer, confirming one degree of unsaturation. The double bond in oleic acid is naturally *cis*, introducing a rigid ~30° kink in the chain that prevents tight packing, which is why oleic acid is liquid (oil) at room temperature while stearic acid is solid (fat).
+
+**Key theorem.** For an unbranched fatty acid with $n$ carbons and $d$ double bonds in the chain, the molecular formula is
+$$\text{C}_n\text{H}_{2n-2d}\text{O}_2.$$
+This follows by induction on $d$: each additional double bond replaces two C–H single bonds' worth of hydrogen saturation with one C=C bond, removing exactly two hydrogens from the fully saturated formula $\text{C}_n\text{H}_{2n}\text{O}_2$ ($d=0$).
+
+**Lab cell (SymPy).**
+```python
+import sympy as sp
+
+n, d = sp.symbols('n d', positive=True, integer=True)
+H = 2*n - 2*d
+formula = sp.Eq(sp.Symbol('H'), H)
+print(formula)  # H = 2n - 2d
+
+# Check stearic (n=18, d=0) vs oleic (n=18, d=1)
+print(H.subs({n: 18, d: 0}))  # 36
+print(H.subs({n: 18, d: 1}))  # 34
+```
+
+---
+
+## Triacylglycerol
+
+**Definition.** A triacylglycerol (TAG), also called a triglyceride, is formed when a glycerol molecule (a three-carbon polyol with hydroxyl groups at each carbon) undergoes esterification with three fatty acid molecules. Each esterification reaction forms an ester bond between a carboxyl group ($-\text{COOH}$) of a fatty acid and a hydroxyl group ($-\text{OH}$) of glycerol, releasing one water molecule per bond:
+$$\text{glycerol} + 3\,\text{fatty acid} \longrightarrow \text{triacylglycerol} + 3\,\text{H}_2\text{O}$$
+This is a condensation (dehydration synthesis) reaction, the reverse of hydrolysis. Because the fatty acid tails are long hydrocarbon chains, TAGs are highly nonpolar and hydrophobic, distinguishing them from the polar glycerol backbone alone.
+
+**Worked example.** Glycerol has molecular formula $\text{C}_3\text{H}_8\text{O}_3$ (MW $\approx 92.09\ \text{g/mol}$). Suppose all three fatty acids are palmitic acid, $\text{C}_{16}\text{H}_{32}\text{O}_2$ (MW $\approx 256.42\ \text{g/mol}$). The resulting tripalmitin has molecular formula:
+$$\text{C}_3\text{H}_8\text{O}_3 + 3\,\text{C}_{16}\text{H}_{32}\text{O}_2 \rightarrow \text{C}_{51}\text{H}_{98}\text{O}_6 + 3\,\text{H}_2\text{O}$$
+Mass check: $92.09 + 3(256.42) = 861.35\ \text{g/mol}$ (reactants) versus $806.30 + 3(18.02) = 860.36\ \text{g/mol}$ (products, within rounding), confirming atom conservation.
+
+**Key theorem (energy density).** Because fatty acid chains are almost fully reduced (rich in C–H bonds), TAGs store roughly $9\ \text{kcal/g}$, more than double the $\approx 4\ \text{kcal/g}$ yield of carbohydrates or proteins. This follows from bond enthalpy: oxidation of C–H and C–C bonds releases more energy per gram than the partially oxidized C–OH bonds dominant in sugars, and the hydrophobic packing of TAGs avoids the extra mass of associated water that glycogen requires for storage.
+
+**Lab cell (SymPy).**
+```python
+from sympy import Rational
+
+M_glycerol = Rational(9209, 100)
+M_fatty_acid = Rational(25642, 100)
+M_water = Rational(1802, 100)
+
+M_tag = M_glycerol + 3*M_fatty_acid - 3*M_water
+print(f"Molar mass of tripalmitin: {float(M_tag):.2f} g/mol")
+```
+
+---
+
+## Trans Fat
+
+**Definition.** A trans fat is a lipid containing one or more carbon–carbon double bonds in the *trans* configuration, most commonly produced by partial hydrogenation of unsaturated vegetable oils. In the native *cis* configuration, the two hydrogen atoms flanking a double bond lie on the same side of the carbon chain, producing a rigid kink in the fatty acid tail. Industrial hydrogenation adds hydrogen atoms catalytically (typically over nickel) to some, but not all, double bonds; the partial reaction isomerizes many remaining double bonds from *cis* to *trans*, yielding a straighter chain geometrically similar to a fully saturated fat, despite retaining unsaturation.
+
+**Worked example.** Consider oleic acid, $\mathrm{C_{18}H_{34}O_2}$, a *cis*-monounsaturated fatty acid with one double bond at carbon 9 (denoted $\Delta^9$-*cis*). Partial hydrogenation can isomerize this bond without saturating it, producing elaidic acid — the *trans* isomer, $\Delta^9$-*trans*-$\mathrm{C_{18}H_{34}O_2}$. Both compounds share the identical molecular formula and degree of unsaturation, one degree of unsaturation given by
+$$
+\text{DoU} = \frac{2(18) + 2 - 34}{2} = 1,
+$$
+yet elaidic acid packs more densely and melts at a substantially higher temperature (approximately $43^\circ\text{C}$) than oleic acid (approximately $13^\circ\text{C}$), because its straightened chain mimics saturated-fat packing.
+
+**Key theorem (structure–function principle).** *For fatty acids of equal chain length and equal double-bond count, trans-configured chains adopt conformations closer to the fully extended, saturated conformer than their cis counterparts, and therefore exhibit higher melting points and greater propensity to integrate into ordered lipid bilayers.* This follows from bond-angle geometry: a *cis* double bond imposes a rigid ~$30^\circ$ bend, while a *trans* double bond preserves an approximately linear backbone, closely approximating the all-*anti* conformation of a saturated chain.
+
+**Lab cell (SymPy).**
+```python
+from sympy import symbols, Rational
+
+C, H = symbols('C H', positive=True, integer=True)
+DoU = (2*C + 2 - H) / 2
+print(DoU.subs({C: 18, H: 34}))  # degree of unsaturation, oleic/elaidic acid
+```
+
+---
+
+## Payoff
+
+The concept of a trans fat represents the endpoint of a chain of reasoning that begins with the geometry of carbon-carbon double bonds and ends with a molecule whose shape, rather than its chemical formula alone, determines its biological consequence. A trans fat is an unsaturated fatty acid in which the hydrogen atoms flanking at least one carbon-carbon double bond lie on opposite sides of the bond axis, in contrast to the cis configuration, where they lie on the same side. This is a natural endpoint because it synthesizes everything the preceding material established: bond hybridization, the rigidity of $\pi$-bonds preventing free rotation, and the packing behavior of hydrocarbon chains. The trans configuration straightens the chain, allowing tighter molecular packing—mimicking a saturated fat's solidity—while retaining the reduced hydrogen count of an unsaturated species.
+
+**Worked example.** Consider oleic acid, $\mathrm{C_{18}H_{34}O_2}$, with a single cis double bond at carbon 9. Its elaidic acid isomer has identical molecular formula but a trans configuration at the same position. Only the spatial arrangement around the double bond differs, yet oleic acid is liquid at room temperature while elaidic acid is solid—a direct consequence of packing efficiency, not caloric or elemental content.
+
+**Key theorem (informal).** For fatty acids of fixed chain length and degree of unsaturation, packing density (and hence melting point) is a monotonic function of the fraction of trans double bonds, since each trans bond preserves near-linear chain geometry while each cis bond introduces a fixed $\approx 30^\circ$ kink.
+
+```python
+from sympy import symbols, cos, rad, simplify
+theta = rad(120)  # approximate cis kink deviation from linear
+chain_deviation = simplify(cos(theta))
+print(chain_deviation)  # illustrates reduced linearity for cis bonds
+```
+
+This structural insight radiates outward into nutrition science, food engineering, and cardiovascular epidemiology—domains where molecular geometry translates directly into physiological and industrial consequence. You are invited to explore one such application in depth: the role of trans fats in low-density lipoprotein metabolism and atherogenesis.
+```

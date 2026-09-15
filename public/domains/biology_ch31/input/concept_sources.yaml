@@ -1,0 +1,114 @@
+domain: biology_2e_ch31
+sources:
+  plant_nutrient:
+    label: Plant Nutrient
+    sections:
+    - id: ch31_s31_1
+      title: 31.1 Nutritional Requirements of Plants
+  organic_compound:
+    label: Organic Compound
+    sections:
+    - id: ch31_s31_1
+      title: 31.1 Nutritional Requirements of Plants
+  inorganic_compound:
+    label: Inorganic Compound
+    sections:
+    - id: ch31_s31_1
+      title: 31.1 Nutritional Requirements of Plants
+  essential_nutrient:
+    label: Essential Nutrient
+    sections:
+    - id: ch31_s31_1
+      title: 31.1 Nutritional Requirements of Plants
+  macronutrient:
+    label: Macronutrient
+    sections:
+    - id: ch31_s31_1
+      title: 31.1 Nutritional Requirements of Plants
+  micronutrient:
+    label: Micronutrient
+    sections:
+    - id: ch31_s31_1
+      title: 31.1 Nutritional Requirements of Plants
+  nutrient_deficiency:
+    label: Nutrient Deficiency
+    sections:
+    - id: ch31_s31_1
+      title: 31.1 Nutritional Requirements of Plants
+  soil:
+    label: Soil
+    sections:
+    - id: ch31_s31_2
+      title: 31.2 The Soil
+  soil_composition:
+    label: Soil Composition
+    sections:
+    - id: ch31_s31_2
+      title: 31.2 The Soil
+  humus:
+    label: Humus
+    sections:
+    - id: ch31_s31_2
+      title: 31.2 The Soil
+  soil_particle_classification:
+    label: Soil Particle Classification (Sand, Silt, Clay, Loam)
+    sections:
+    - id: ch31_s31_2
+      title: 31.2 The Soil
+  soil_formation:
+    label: Soil Formation
+    sections:
+    - id: ch31_s31_2
+      title: 31.2 The Soil
+  parent_material:
+    label: Parent Material
+    sections:
+    - id: ch31_s31_2
+      title: 31.2 The Soil
+  soil_profile:
+    label: Soil Profile
+    sections:
+    - id: ch31_s31_2
+      title: 31.2 The Soil
+  soil_horizon:
+    label: Soil Horizon
+    sections:
+    - id: ch31_s31_2
+      title: 31.2 The Soil
+  rhizosphere:
+    label: Rhizosphere
+    sections:
+    - id: ch31_s31_2
+      title: 31.2 The Soil
+    - id: ch31_s31_3
+      title: 31.3 Nutritional Adaptations of Plants
+  autotrophic_heterotrophic_nutrition:
+    label: Autotrophic and Heterotrophic Plant Nutrition
+    sections:
+    - id: ch31_s31_3
+      title: 31.3 Nutritional Adaptations of Plants
+  nitrogen_fixation:
+    label: Biological Nitrogen Fixation
+    sections:
+    - id: ch31_s31_3
+      title: 31.3 Nutritional Adaptations of Plants
+  rhizobia_nodule_symbiosis:
+    label: Rhizobia-Legume Nodule Symbiosis
+    sections:
+    - id: ch31_s31_3
+      title: 31.3 Nutritional Adaptations of Plants
+  mycorrhizae:
+    label: Mycorrhizae
+    sections:
+    - id: ch31_s31_3
+      title: 31.3 Nutritional Adaptations of Plants
+  ecto_endo_mycorrhizae:
+    label: Ectomycorrhizae and Endomycorrhizae
+    sections:
+    - id: ch31_s31_3
+      title: 31.3 Nutritional Adaptations of Plants
+  alternative_nutrient_sources:
+    label: Plants with Alternative Nutrient Sources
+    sections:
+    - id: ch31_s31_3
+      title: 31.3 Nutritional Adaptations of Plants

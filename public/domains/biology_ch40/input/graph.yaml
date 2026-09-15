@@ -1,0 +1,173 @@
+domain: biology_2e_ch40
+primitives:
+  diffusion_gas_exchange:
+    defines: The movement of water, nutrients, waste, and gases directly across cell layers without a
+      circulatory system, sufficient for simple animals only a few cell layers thick.
+    tier: 0
+  hemolymph_interstitial_fluid:
+    defines: Hemolymph is the fluid formed when blood mixes with interstitial fluid in open circulatory
+      systems, whereas interstitial fluid is the fluid surrounding cells that remains separate from blood
+      in closed systems.
+    tier: 0
+  blood_composition:
+    defines: Blood is composed of plasma and cellular components (red blood cells, white blood cells,
+      platelets), roughly 55% plasma and 45% cells in humans.
+    tier: 0
+  hemoglobin_respiratory_pigments:
+    defines: Iron-containing hemoglobin binds and transports oxygen (and some carbon dioxide) within red
+      blood cells; other organisms use alternative pigments such as hemocyanin, chlorocruorin, and hemerythrin.
+    tier: 0
+  heart_wall_layers:
+    defines: The three tissue layers composing the heart wall—endocardium, myocardium, and epicardium—surrounded
+      by the pericardium.
+    tier: 0
+  cardiomyocytes:
+    defines: Specialized, striated heart muscle cells connected by intercalated disks that contract rhythmically
+      and involuntarily.
+    tier: 0
+concepts:
+  open_circulatory_system:
+    defines: A circulatory arrangement in which blood is pumped into a body cavity where it mixes with
+      interstitial fluid before reentering the heart through ostia.
+    composed_of:
+    - hemolymph_interstitial_fluid
+    tier: 1
+  closed_circulatory_system:
+    defines: A circulatory arrangement in which blood remains contained inside blood vessels and circulates
+      unidirectionally from the heart, through the body, and back.
+    composed_of:
+    - hemolymph_interstitial_fluid
+    tier: 1
+  unidirectional_circulation:
+    defines: A single-circuit blood flow pattern, as in fish, passing from the heart through the gills
+      and then the body before returning.
+    composed_of:
+    - closed_circulatory_system
+    tier: 2
+  double_circulation:
+    defines: A circulatory pattern with two circuits—pulmonary and systemic—allowing blood to be re-pressurized
+      after passing through the lungs.
+    composed_of:
+    - closed_circulatory_system
+    - unidirectional_circulation
+    tier: 3
+  vertebrate_heart_evolution:
+    defines: The comparative anatomy of fish, amphibian/reptile, and mammal/bird hearts, reflecting increasing
+      separation of oxygenated and deoxygenated blood.
+    composed_of:
+    - unidirectional_circulation
+    - double_circulation
+    tier: 4
+  pulmonary_circulation:
+    defines: The circuit of blood flow from the heart through the lungs, where oxygenation occurs, and
+      back to the heart.
+    composed_of:
+    - double_circulation
+    tier: 4
+  systemic_circulation:
+    defines: The circuit of blood flow from the heart to the body's organs and tissues and back to the
+      heart.
+    composed_of:
+    - double_circulation
+    tier: 4
+  coronary_circulation:
+    defines: The circuit of blood flow that supplies the heart muscle itself, branching directly from
+      the aorta.
+    composed_of:
+    - systemic_circulation
+    tier: 5
+  red_blood_cells:
+    defines: Small, biconcave, hemoglobin-packed cells that circulate through the body delivering oxygen
+      to tissues.
+    composed_of:
+    - blood_composition
+    - hemoglobin_respiratory_pigments
+    tier: 1
+  white_blood_cells:
+    defines: Nucleated blood cells that identify and target pathogens as part of the immune response.
+    composed_of:
+    - blood_composition
+    tier: 1
+  platelets_coagulation:
+    defines: Cell fragments that gather at wound sites and convert fibrinogen into fibrin, forming a clot.
+    composed_of:
+    - blood_composition
+    tier: 1
+  plasma_and_serum:
+    defines: Plasma is the liquid component of blood; serum is plasma with coagulation factors removed.
+    composed_of:
+    - blood_composition
+    tier: 1
+  heart_chambers_valves:
+    defines: The four-chambered mammalian heart with one-way valves that direct unidirectional blood flow
+      through the heart.
+    composed_of:
+    - heart_wall_layers
+    - cardiomyocytes
+    tier: 1
+  cardiac_cycle:
+    defines: The repeating sequence of heart muscle contraction and relaxation that fills and empties
+      the heart of blood.
+    composed_of:
+    - heart_chambers_valves
+    - cardiomyocytes
+    tier: 2
+  cardiac_conduction_system:
+    defines: The heart's internal electrical pacemaker system that times the heartbeat and is recorded
+      as an ECG.
+    composed_of:
+    - cardiomyocytes
+    - cardiac_cycle
+    tier: 3
+  blood_vessel_types:
+    defines: The three main classes of blood vessels—arteries, veins, and capillaries—each with distinct
+      wall structures suited to their function.
+    composed_of:
+    - closed_circulatory_system
+    tier: 2
+  vasoconstriction_vasodilation:
+    defines: The narrowing and widening of blood vessels, which regulate blood flow distribution and blood
+      pressure.
+    composed_of:
+    - blood_vessel_types
+    tier: 3
+  peripheral_resistance:
+    defines: The resistance that vessel walls present against the pressure exerted by the pumping heart,
+      contributing to blood pressure.
+    composed_of:
+    - blood_vessel_types
+    - vasoconstriction_vasodilation
+    tier: 4
+  cardiac_output:
+    defines: The volume of blood pumped by the heart in one minute, calculated as heart rate multiplied
+      by stroke volume.
+    composed_of:
+    - cardiac_cycle
+    tier: 3
+  blood_pressure:
+    defines: The pressure exerted by blood against vessel walls, measured as systolic and diastolic values.
+    composed_of:
+    - cardiac_output
+    - peripheral_resistance
+    tier: 5
+  blood_flow_regulation:
+    defines: The control of blood distribution through the body via vessel diameter, sphincters, valves,
+      and nerve/hormone signals.
+    composed_of:
+    - vasoconstriction_vasodilation
+    - blood_pressure
+    tier: 6
+  capillary_exchange:
+    defines: The process by which fluid, gases, and nutrients diffuse between capillaries and interstitial
+      space, with excess fluid returned via the lymphatic system.
+    composed_of:
+    - blood_vessel_types
+    - diffusion_gas_exchange
+    tier: 3
+applications:
+  blood_type_groups:
+    defines: Classification systems based on antigens on red blood cell surfaces, such as ABO and Rh,
+      determining transfusion compatibility.
+    needs:
+    - red_blood_cells
+    tier: 2

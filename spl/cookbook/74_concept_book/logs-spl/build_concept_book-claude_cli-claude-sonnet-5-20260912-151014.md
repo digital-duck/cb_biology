@@ -1,0 +1,146 @@
+# SPL Run: build_concept_book
+
+- **Adapter:** claude_cli
+- **Model:** claude-sonnet-5
+- **Tokens:** 3107 in / 4399 out
+- **Latency:** 99388ms
+- **Timestamp:** 2026-09-12 15:10:14
+
+## Output
+
+```output
+
+
+---
+
+## Science
+
+**Definition.** Science is the systematic enterprise of building and organizing knowledge about the natural world through observation, hypothesis formation, and empirical testing. A hypothesis is a proposed explanation for a phenomenon that must be falsifiable — that is, it must generate predictions that could, in principle, be shown false by observation or experiment. A collection of hypotheses that has survived repeated rigorous testing and unifies a broad range of phenomena is elevated to the status of a scientific theory. Central to this process is the scientific method: observation, hypothesis, prediction, experiment (with controlled and experimental groups), analysis, and revision.
+
+**Worked example.** Suppose a biologist hypothesizes that a nutrient $N$ affects the growth rate $r$ of a bacterial population according to a simple proportional model, $\frac{dP}{dt} = rP$, where $P(t)$ is population size at time $t$. To test this, she prepares a control culture (no added $N$) and an experimental culture (with $N$ added), measuring $P(t)$ at fixed intervals. Fitting $P(t) = P_0 e^{rt}$ to each dataset via least squares yields estimates $\hat{r}_{control}$ and $\hat{r}_{experimental}$. If $\hat{r}_{experimental}$ is significantly larger, the data support (but do not prove) the hypothesis.
+
+**Key theorem (principle of falsifiability).** A statement qualifies as scientific if and only if there exists an observation or experiment whose outcome could contradict it. This criterion, formalized by Karl Popper, distinguishes science from non-testable claims: no finite number of confirming observations can prove a universal hypothesis true, but a single reproducible counterexample can prove it false.
+
+**Lab cell (SymPy).**
+```python
+import sympy as sp
+
+t, r, P0 = sp.symbols('t r P0', positive=True)
+P = P0 * sp.exp(r*t)
+
+# Verify P satisfies dP/dt = r*P
+lhs = sp.diff(P, t)
+rhs = r * P
+print(sp.simplify(lhs - rhs))  # -> 0, confirming the model
+```
+
+---
+
+## Basic Science
+
+**Definition.** Science is the systematic enterprise of building and organizing knowledge in the form of testable explanations and predictions about the natural world. Its methodology, the *scientific method*, proceeds through a cycle: observation, formulation of a hypothesis, deduction of testable predictions, controlled experimentation, and revision of the hypothesis in light of data. A hypothesis that survives repeated, independent attempts at falsification and successfully predicts new observations may be elevated to a *theory*—not a guess, but a well-substantiated explanatory framework unifying many observations.
+
+**Worked example.** Suppose a biologist observes that plants grown near a particular fungus show enhanced root growth. She forms the hypothesis: "The fungus secretes a growth-promoting compound." She designs a controlled experiment with two groups—one exposed to fungal filtrate, one to a sterile control—holding light, water, and soil constant, and measures root length after 14 days as the dependent variable. If root length in the treatment group is statistically significantly greater than in the control, the hypothesis is supported; if not, it must be revised or rejected. Crucially, a single confirming result never *proves* the hypothesis—it only fails to disprove it. Confidence accumulates through replication.
+
+**Key theorem (logical structure of hypothesis testing).** Let $H$ denote a hypothesis and $P$ a prediction logically entailed by $H$, so that $H \Rightarrow P$. If experimental observation establishes $\neg P$, then by modus tollens $\neg H$ follows: the hypothesis is falsified. However, observing $P$ does not establish $H$, since $P$ may follow from alternative hypotheses $H'$. This asymmetry—falsification is logically decisive, confirmation is not—is the cornerstone of Popperian scientific reasoning and explains why science advances by eliminating explanations rather than proving them outright.
+
+**Lab cell (SymPy).**
+```python
+from sympy import symbols
+
+# Compare treatment and control means using a single new primitive: symbols()
+mu_t, mu_c, sigma, n = symbols('mu_t mu_c sigma n', positive=True)
+z = (mu_t - mu_c) / (sigma / n**0.5)
+print("Standardized test statistic z =", z)
+```
+
+---
+
+## Applied Science
+
+Applied science is the systematic use of scientific knowledge—concepts, models, and empirical laws—to solve practical problems in engineering, medicine, agriculture, and technology. Whereas basic (or pure) science seeks to understand natural phenomena for their own sake, applied science asks: given what we know about a system's behavior, how can we predict, control, or optimize its outcomes? Formally, if a basic-science model provides a function $f: X \to Y$ mapping inputs (conditions) to outputs (observables), applied science constructs an inverse or optimization problem: find $x^* \in X$ such that $f(x^*)$ satisfies a design constraint or maximizes/minimizes an objective $g(f(x))$.
+
+**Worked example.** Consider population ecology's logistic growth model, $\frac{dN}{dt} = rN\left(1 - \frac{N}{K}\right)$, a basic-science description of bounded population growth. An applied scientist managing a fishery uses this model to determine the maximum sustainable yield: the harvest rate $h$ that can be sustained indefinitely without driving the population to extinction. Setting $\frac{dN}{dt} = rN(1 - N/K) - hN$ and solving for equilibrium ($dN/dt = 0$) yields $N^* = K(1 - h/r)$, with sustainable yield $Y(h) = hN^* = hK(1 - h/r)$. Maximizing $Y(h)$ by differentiation gives $h^* = r/2$, the classic result that maximum sustainable yield occurs at half the intrinsic growth rate.
+
+**Key theorem (Extremum principle for applied optimization).** If $Y(h)$ is continuous and twice differentiable on $[0, r]$ with $Y(0) = Y(r) = 0$, then a maximum exists in the interior, found where $Y'(h) = 0$ and $Y''(h) < 0$.
+
+**Lab cell (SymPy).**
+```python
+from sympy import symbols, diff, solve
+
+h, r, K = symbols('h r K', positive=True)
+Y = h * K * (1 - h/r)
+h_star = solve(diff(Y, h), h)
+print(h_star)  # [r/2]
+```
+
+---
+
+## Natural Science
+
+Natural science is the systematic study of the structure and behavior of the physical and biological universe, built on empirical observation, hypothesis formation, and controlled testing. Its defining methodological commitment is the **scientific method**: a cyclical process of observation, hypothesis generation, prediction, experimentation, and revision, governed by the requirement that every claim be *falsifiable* — capable, in principle, of being disproven by some observation or experiment. This single criterion is what separates natural science from metaphysical or purely descriptive systems of thought, and it will serve as the organizing idea for the rest of this section.
+
+**Worked example.** Gregor Mendel's study of pea plant inheritance illustrates the method directly. He observed that crossing purebred tall and short pea plants produced, in the second generation, offspring in a ratio close to 3 tall to 1 short. From this observation he formed a hypothesis about how heritable traits are passed on, and derived a precise numerical prediction — the 3:1 ratio — that could be checked against further trials. Repeated crosses across thousands of plants matched the prediction closely, so the hypothesis survived a genuine attempt to falsify it, rather than being accepted on faith or on a single trial.
+
+**Key theorem (why replication matters).** If a hypothesis predicts that an event occurs with true proportion $p$, then the *observed* proportion $\hat p_n$ in $n$ independent trials satisfies
+$$
+\hat p_n \to p \quad \text{as } n \to \infty.
+$$
+The larger the number of trials, the more the observed frequency is guaranteed to settle near the predicted value. This is precisely why Mendel's confirmation required many plants rather than one: a small sample can deviate from $p = 3/4$ by chance alone, while a large sample cannot, making the 3:1 ratio a genuinely falsifiable — and falsifiably *confirmed* — prediction.
+
+**Lab cell (SymPy).**
+```python
+import sympy as sp
+
+n = sp.symbols('n', positive=True, integer=True)
+p_true = sp.Rational(3, 4)          # Mendel's predicted proportion of tall plants
+p_observed = sp.Rational(3, 4)      # observed proportion from a large sample
+
+deviation = sp.simplify(p_observed - p_true)
+print("Deviation from predicted ratio:", deviation)
+```
+
+---
+
+## Bioethics
+
+**Definition.** Bioethics is the interdisciplinary study of the moral, legal, and social implications arising from advances in biology, medicine, and biotechnology. Unlike purely descriptive biological science, bioethics is normative: it asks not merely what *can* be done, but what *ought* to be done, and by whom. Four principles anchor most bioethical analysis: autonomy (respecting an individual's right to self-determination), beneficence (acting to benefit others), non-maleficence (avoiding harm, *primum non nocere*), and justice (fair distribution of benefits and burdens). These principles frequently conflict, and much bioethical reasoning consists of weighing them against one another in specific cases rather than applying a single formula.
+
+**Worked example.** Consider CRISPR-Cas9 germline editing, which permanently alters the genome of an embryo and all its descendants. Suppose a couple carries an allele for a severe monogenic disease with penetrance $p = 0.95$. Editing the embryo could reduce disease risk essentially to zero, honoring beneficence and the parents' autonomy. Yet germline editing also raises justice concerns (unequal access could entrench genetic inequality) and non-maleficence concerns (off-target mutations, estimated in early trials at rates on the order of $10^{-4}$ to $10^{-3}$ per edited base pair, could introduce unintended harms transmitted to future generations who cannot consent). The 2018 case of germline-edited twins in China is the canonical example of a procedure judged to have violated international ethical consensus despite technical feasibility.
+
+**Key theorem (framework result).** The Principle of Proportionality states that an intervention is ethically permissible only if its expected benefit $B$ exceeds its expected harm $H$ by a margin sufficient to justify the irreversibility and scope $S$ of the action: $B - H > k \cdot S$, where $k$ reflects societal risk tolerance. Germline interventions demand larger $k$ than somatic interventions because $S$ (heritable scope) is far greater.
+
+**Lab cell (SymPy).**
+```python
+from sympy import symbols, Rational, solve
+
+B, H, k, S = symbols('B H k S', positive=True)
+p = Rational(95, 100)  # penetrance
+expected_benefit = p  # risk reduction achieved
+inequality = expected_benefit - H - k*S
+solve(inequality > 0, H)
+```
+
+---
+
+## Payoff
+
+Bioethics is the discipline that evaluates the permissibility, distribution, and consequences of biological knowledge and biotechnological power. Formally, one can model a bioethical judgment as an optimization over a constrained space: given a set of possible actions $A$, a utility function $U: A \to \mathbb{R}$ capturing aggregate welfare, and a set of deontological constraints $C \subseteq A$ (autonomy, non-maleficence, justice), the admissible action is
+$$a^* = \arg\max_{a \in C} U(a).$$
+This formalization is a proof sketch, not a proof: it shows that ethical reasoning is not opposed to rigor but is rather a constrained optimization problem layered atop the same quantitative machinery used elsewhere in biology — population models, risk calculations, and decision trees all reappear here as inputs to $U$ and $C$.
+
+**Worked example.** Consider CRISPR-based germline editing to eliminate a Mendelian disease allele with penetrance $p = 0.9$. The naive utility gain from editing $n$ embryos is $\Delta U = n \cdot p \cdot w$, where $w$ is the welfare weight of avoiding disease. But $C$ excludes actions with irreversible off-target mutation rate above threshold $\epsilon$, and includes a justice term penalizing unequal access. The bioethical analysis therefore does not ask "does this maximize $U$ alone?" but "does $a$ remain in $C$ while maximizing $U$?" — exactly the constrained-optimization structure above.
+
+This is why bioethics is the natural endpoint of the book: every concept developed earlier — genetics, evolution, physiology, ecology, molecular mechanism — generates *capabilities*, and bioethics is the discipline that asks whether, how, and for whom those capabilities should be exercised. It connects to each domain: population genetics informs polygenic risk-score screening policy; developmental biology informs debates over embryo research limits; ecology informs biosecurity and de-extinction governance; physiology informs organ allocation and end-of-life care; neuroscience informs questions of consent and cognitive enhancement.
+
+**Lab cell (SymPy):**
+```python
+from sympy import symbols, Max, diff
+n, p, w, eps, penalty = symbols('n p w epsilon penalty', positive=True)
+U = n*p*w - penalty*Max(0, n - eps)
+dU_dn = diff(U, n)
+print(dU_dn)
+```
+
+Explore one thread in depth: trace how population-genetics screening thresholds propagate into the justice constraint $C$ above.
+```

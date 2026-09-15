@@ -1,0 +1,142 @@
+domain: biology_2e_ch20
+sources:
+  phylogeny:
+    label: Phylogeny
+    sections:
+    - id: ch20_s20_1
+      title: 20.1 Organizing Life on Earth
+  phylogenetic_tree:
+    label: Phylogenetic Tree
+    sections:
+    - id: ch20_s20_1
+      title: 20.1 Organizing Life on Earth
+  rooted_tree:
+    label: Rooted Tree
+    sections:
+    - id: ch20_s20_1
+      title: 20.1 Organizing Life on Earth
+  branch_point:
+    label: Branch Point
+    sections:
+    - id: ch20_s20_1
+      title: 20.1 Organizing Life on Earth
+  basal_taxon:
+    label: Basal Taxon
+    sections:
+    - id: ch20_s20_1
+      title: 20.1 Organizing Life on Earth
+  sister_taxa:
+    label: Sister Taxa
+    sections:
+    - id: ch20_s20_1
+      title: 20.1 Organizing Life on Earth
+  polytomy:
+    label: Polytomy
+    sections:
+    - id: ch20_s20_1
+      title: 20.1 Organizing Life on Earth
+  systematics:
+    label: Systematics
+    sections:
+    - id: ch20_s20_1
+      title: 20.1 Organizing Life on Earth
+  taxonomy:
+    label: Taxonomy
+    sections:
+    - id: ch20_s20_1
+      title: 20.1 Organizing Life on Earth
+  taxonomic_classification_levels:
+    label: Taxonomic Classification Levels
+    sections:
+    - id: ch20_s20_1
+      title: 20.1 Organizing Life on Earth
+  binomial_nomenclature:
+    label: Binomial Nomenclature
+    sections:
+    - id: ch20_s20_1
+      title: 20.1 Organizing Life on Earth
+  taxon:
+    label: Taxon
+    sections:
+    - id: ch20_s20_1
+      title: 20.1 Organizing Life on Earth
+  homology:
+    label: Homologous Structures
+    sections:
+    - id: ch20_s20_2
+      title: 20.2 Determining Evolutionary Relationships
+  analogy:
+    label: Analogous Structures (Homoplasy)
+    sections:
+    - id: ch20_s20_2
+      title: 20.2 Determining Evolutionary Relationships
+  molecular_systematics:
+    label: Molecular Systematics
+    sections:
+    - id: ch20_s20_2
+      title: 20.2 Determining Evolutionary Relationships
+  cladistics:
+    label: Cladistics
+    sections:
+    - id: ch20_s20_2
+      title: 20.2 Determining Evolutionary Relationships
+  clade:
+    label: Clade (Monophyletic Group)
+    sections:
+    - id: ch20_s20_2
+      title: 20.2 Determining Evolutionary Relationships
+  shared_ancestral_character:
+    label: Shared Ancestral Character
+    sections:
+    - id: ch20_s20_2
+      title: 20.2 Determining Evolutionary Relationships
+  shared_derived_character:
+    label: Shared Derived Character
+    sections:
+    - id: ch20_s20_2
+      title: 20.2 Determining Evolutionary Relationships
+  maximum_parsimony:
+    label: Maximum Parsimony
+    sections:
+    - id: ch20_s20_2
+      title: 20.2 Determining Evolutionary Relationships
+  horizontal_gene_transfer:
+    label: Horizontal Gene Transfer (HGT)
+    sections:
+    - id: ch20_s20_3
+      title: 20.3 Perspectives on the Phylogenetic Tree
+  hgt_mechanisms_prokaryotes:
+    label: HGT Mechanisms in Prokaryotes
+    sections:
+    - id: ch20_s20_3
+      title: 20.3 Perspectives on the Phylogenetic Tree
+  gene_transfer_agent:
+    label: Gene Transfer Agent (GTA)
+    sections:
+    - id: ch20_s20_3
+      title: 20.3 Perspectives on the Phylogenetic Tree
+  endosymbiont_theory:
+    label: Endosymbiont Theory
+    sections:
+    - id: ch20_s20_3
+      title: 20.3 Perspectives on the Phylogenetic Tree
+  genome_fusion:
+    label: Genome Fusion
+    sections:
+    - id: ch20_s20_3
+      title: 20.3 Perspectives on the Phylogenetic Tree
+  eukaryote_evolution_hypotheses:
+    label: Eukaryote Evolution Hypotheses
+    sections:
+    - id: ch20_s20_3
+      title: 20.3 Perspectives on the Phylogenetic Tree
+  web_of_life:
+    label: Web of Life Model
+    sections:
+    - id: ch20_s20_3
+      title: 20.3 Perspectives on the Phylogenetic Tree
+  ring_of_life:
+    label: Ring of Life Model
+    sections:
+    - id: ch20_s20_3
+      title: 20.3 Perspectives on the Phylogenetic Tree

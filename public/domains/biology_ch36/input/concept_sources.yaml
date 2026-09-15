@@ -1,0 +1,179 @@
+domain: biology_2e_ch36
+sources:
+  stimulus:
+    label: Sensory Stimulus
+    sections:
+    - id: ch36_s36_1
+      title: 36.1 Sensory Processes
+  sensory_receptor:
+    label: Sensory Receptor
+    sections:
+    - id: ch36_s36_1
+      title: 36.1 Sensory Processes
+  receptive_field:
+    label: Receptive Field
+    sections:
+    - id: ch36_s36_1
+      title: 36.1 Sensory Processes
+  sensory_transduction:
+    label: Sensory Transduction
+    sections:
+    - id: ch36_s36_1
+      title: 36.1 Sensory Processes
+  receptor_potential:
+    label: Receptor Potential
+    sections:
+    - id: ch36_s36_1
+      title: 36.1 Sensory Processes
+  sensory_coding:
+    label: Encoding of Sensory Information
+    sections:
+    - id: ch36_s36_1
+      title: 36.1 Sensory Processes
+  perception:
+    label: Perception
+    sections:
+    - id: ch36_s36_1
+      title: 36.1 Sensory Processes
+  just_noticeable_difference:
+    label: Just-Noticeable Difference / Weber's Law
+    sections:
+    - id: ch36_s36_1
+      title: 36.1 Sensory Processes
+  somatosensation:
+    label: Somatosensation
+    sections:
+    - id: ch36_s36_2
+      title: 36.2 Somatosensation
+  mechanoreceptor:
+    label: Mechanoreceptor
+    sections:
+    - id: ch36_s36_2
+      title: 36.2 Somatosensation
+  thermoreceptor:
+    label: Thermoreceptor
+    sections:
+    - id: ch36_s36_2
+      title: 36.2 Somatosensation
+  nociceptor_pain:
+    label: Nociception and Pain
+    sections:
+    - id: ch36_s36_2
+      title: 36.2 Somatosensation
+  skin_mechanoreceptor_types:
+    label: Skin Mechanoreceptor Types
+    sections:
+    - id: ch36_s36_2
+      title: 36.2 Somatosensation
+  proprioception_kinesthesia:
+    label: Proprioception and Kinesthesia
+    sections:
+    - id: ch36_s36_2
+      title: 36.2 Somatosensation
+  two_point_discrimination:
+    label: Two-Point Discrimination Test
+    sections:
+    - id: ch36_s36_2
+      title: 36.2 Somatosensation
+  gustation:
+    label: Gustation (Taste)
+    sections:
+    - id: ch36_s36_3
+      title: 36.3 Taste and Smell
+  olfaction:
+    label: Olfaction (Smell)
+    sections:
+    - id: ch36_s36_3
+      title: 36.3 Taste and Smell
+  chemoreceptor:
+    label: Chemoreceptor
+    sections:
+    - id: ch36_s36_2
+      title: 36.2 Somatosensation
+    - id: ch36_s36_3
+      title: 36.3 Taste and Smell
+  pheromone_detection:
+    label: Pheromone Detection
+    sections:
+    - id: ch36_s36_3
+      title: 36.3 Taste and Smell
+  audition:
+    label: Audition (Hearing)
+    sections:
+    - id: ch36_s36_4
+      title: 36.4 Hearing and Vestibular Sensation
+  sound_wave:
+    label: Sound Wave
+    sections:
+    - id: ch36_s36_4
+      title: 36.4 Hearing and Vestibular Sensation
+  ear_anatomy:
+    label: Ear Anatomy (Outer, Middle, Inner Ear)
+    sections:
+    - id: ch36_s36_4
+      title: 36.4 Hearing and Vestibular Sensation
+  hair_cell:
+    label: Hair Cell
+    sections:
+    - id: ch36_s36_4
+      title: 36.4 Hearing and Vestibular Sensation
+  cochlear_transduction:
+    label: Cochlear Sound Transduction
+    sections:
+    - id: ch36_s36_4
+      title: 36.4 Hearing and Vestibular Sensation
+  place_theory_pitch:
+    label: Place Theory of Pitch Perception
+    sections:
+    - id: ch36_s36_4
+      title: 36.4 Hearing and Vestibular Sensation
+  cochlear_implant:
+    label: Cochlear Implant
+    sections:
+    - id: ch36_s36_4
+      title: 36.4 Hearing and Vestibular Sensation
+  vestibular_sense:
+    label: Vestibular Sense
+    sections:
+    - id: ch36_s36_4
+      title: 36.4 Hearing and Vestibular Sensation
+  vision:
+    label: Vision
+    sections:
+    - id: ch36_s36_5
+      title: 36.5 Vision
+  light_wave:
+    label: Light (Electromagnetic Wave)
+    sections:
+    - id: ch36_s36_5
+      title: 36.5 Vision
+  eye_anatomy:
+    label: Eye Anatomy (Cornea, Lens, Iris, Retina)
+    sections:
+    - id: ch36_s36_5
+      title: 36.5 Vision
+  photoreceptor:
+    label: Photoreceptor (Rods and Cones)
+    sections:
+    - id: ch36_s36_5
+      title: 36.5 Vision
+  phototransduction:
+    label: Phototransduction
+    sections:
+    - id: ch36_s36_5
+      title: 36.5 Vision
+  trichromatic_coding:
+    label: Trichromatic Color Coding
+    sections:
+    - id: ch36_s36_5
+      title: 36.5 Vision
+  retinal_processing:
+    label: Retinal Processing
+    sections:
+    - id: ch36_s36_5
+      title: 36.5 Vision
+  refractive_vision_defects:
+    label: Refractive Vision Defects
+    sections:
+    - id: ch36_s36_5
+      title: 36.5 Vision

@@ -1,0 +1,212 @@
+domain: biology_2e_ch45
+primitives:
+  ecology:
+    defines: The study of the relationships among living organisms and their environment, at individual,
+      population, community, ecosystem, and biosphere levels.
+    tier: 0
+  population:
+    defines: All individuals of a particular species in a given area that can potentially interact.
+    tier: 0
+  energy_budget:
+    defines: The allocation of an organism's limited energy among metabolism, growth, reproduction, parental
+      care, and storage.
+    tier: 0
+  community:
+    defines: All populations of different species occupying and interacting within the same habitat at
+      the same time.
+    tier: 0
+  behavior:
+    defines: A change in an organism's activity in response to a stimulus.
+    tier: 0
+concepts:
+  population_size_and_density:
+    defines: Total number of individuals (N) in a habitat and the number of individuals per unit area
+      or volume.
+    composed_of:
+    - population
+    tier: 1
+  species_dispersion_pattern:
+    defines: The spatial relationship between population members, classified as uniform, random, or clumped.
+    composed_of:
+    - population
+    tier: 1
+  demography:
+    defines: The statistical study of population changes over time, including birth rates, death rates,
+      and life expectancies.
+    composed_of:
+    - population
+    tier: 1
+  life_history:
+    defines: The evolutionarily shaped pattern of how a species allocates resources over its lifetime
+      to growth, maintenance, and reproduction.
+    composed_of:
+    - energy_budget
+    tier: 1
+  species_diversity:
+    defines: Species richness combined with relative abundance, describing a community's biological complexity.
+    composed_of:
+    - community
+    tier: 1
+  interspecific_competition:
+    defines: Competition between different species sharing an environment for the same resources.
+    composed_of:
+    - population
+    - community
+    tier: 1
+  symbiosis:
+    defines: Close, prolonged interactions between individuals of different species (commensalism, mutualism,
+      parasitism).
+    composed_of:
+    - community
+    tier: 1
+  predation_and_herbivory:
+    defines: Interactions in which one organism consumes another, as animal prey or plant material.
+    composed_of:
+    - community
+    tier: 1
+  foundation_and_keystone_species:
+    defines: Species that structurally or functionally underpin a community's biodiversity.
+    composed_of:
+    - community
+    tier: 1
+  ecological_succession:
+    defines: The sequential appearance and disappearance of species in a community over time following
+      disturbance.
+    composed_of:
+    - community
+    tier: 1
+  innate_behavior:
+    defines: Instinctual, genetically based behavior largely independent of environmental influence.
+    composed_of:
+    - behavior
+    tier: 1
+  learned_behavior:
+    defines: Behavior shaped by environmental conditioning that can change with experience.
+    composed_of:
+    - behavior
+    tier: 1
+  life_table:
+    defines: A table dividing a population into age groups showing mortality rate and life expectancy
+      at each interval.
+    composed_of:
+    - demography
+    tier: 2
+  age_structure:
+    defines: The proportion of a population's members at specific age ranges, used to predict growth.
+    composed_of:
+    - population_size_and_density
+    - demography
+    tier: 2
+  fecundity_and_parental_care_tradeoff:
+    defines: The inverse relationship between offspring number and parental care investment.
+    composed_of:
+    - life_history
+    tier: 2
+  reproductive_timing:
+    defines: The tradeoff between reproducing early (favoring offspring number) versus late (favoring
+      size and fecundity).
+    composed_of:
+    - life_history
+    tier: 2
+  semelparity_and_iteroparity:
+    defines: Reproducing once then dying versus reproducing repeatedly across a lifetime.
+    composed_of:
+    - life_history
+    tier: 2
+  exponential_growth:
+    defines: Accelerating population growth under unlimited resources, producing a J-shaped curve.
+    composed_of:
+    - population_size_and_density
+    tier: 2
+  carrying_capacity:
+    defines: The maximum population size an environment can support (K).
+    composed_of:
+    - population_size_and_density
+    tier: 2
+  intraspecific_competition:
+    defines: Competition between members of the same species for limited resources.
+    composed_of:
+    - population_size_and_density
+    tier: 2
+  antipredator_defense_mechanisms:
+    defines: Mechanical, chemical, physical, and behavioral adaptations to avoid predation or herbivory.
+    composed_of:
+    - predation_and_herbivory
+    tier: 2
+  competitive_exclusion_principle:
+    defines: Two species cannot indefinitely occupy the same niche competing for identical resources without
+      one outcompeting the other.
+    composed_of:
+    - interspecific_competition
+    tier: 2
+  communication_and_mating_behavior:
+    defines: Signal-based interactions including pheromones, displays, and mating systems.
+    composed_of:
+    - innate_behavior
+    tier: 2
+  migration_and_foraging:
+    defines: Long-range seasonal movement and optimal food-searching behavior.
+    composed_of:
+    - innate_behavior
+    tier: 2
+  altruistic_behavior_and_kin_selection:
+    defines: Behaviors lowering individual fitness while benefiting others, explained via kin selection
+      and reciprocal altruism.
+    composed_of:
+    - innate_behavior
+    tier: 2
+  survivorship_curve:
+    defines: A graph of individuals surviving at each age interval, classified into Type I, II, and III
+      patterns.
+    composed_of:
+    - life_table
+    tier: 3
+  intrinsic_rate_of_increase:
+    defines: The per capita growth rate (r) and maximal growth rate (rmax, biotic potential) under ideal
+      conditions.
+    composed_of:
+    - exponential_growth
+    tier: 3
+  logistic_growth:
+    defines: Exponential growth that slows and levels off as population approaches carrying capacity,
+      producing an S-shaped curve.
+    composed_of:
+    - exponential_growth
+    - carrying_capacity
+    tier: 3
+  density_dependent_and_independent_regulation:
+    defines: Population regulation via factors that scale with density (e.g. predation) versus factors
+      independent of it (e.g. weather).
+    composed_of:
+    - carrying_capacity
+    - intraspecific_competition
+    tier: 3
+  r_and_k_selected_species:
+    defines: A continuum from r-selected (many offspring, little care) to K-selected (few offspring, extensive
+      care) species.
+    composed_of:
+    - life_history
+    - carrying_capacity
+    tier: 3
+applications:
+  population_sampling_methods:
+    defines: Techniques such as quadrat sampling and mark-and-recapture used to estimate population size
+      and density.
+    needs:
+    - population_size_and_density
+    tier: 2
+  human_population_growth:
+    defines: The exponential growth of the human population, driven by technology-based increases in carrying
+      capacity.
+    needs:
+    - exponential_growth
+    - carrying_capacity
+    - age_structure
+    tier: 3
+  sociobiology:
+    defines: An interdisciplinary science extending population biology and evolutionary theory to explain
+      social organization and behavior.
+    needs:
+    - altruistic_behavior_and_kin_selection
+    - communication_and_mating_behavior
+    tier: 3

@@ -1,0 +1,212 @@
+domain: anatomy_physiology_2e_ch38
+primitives:
+  hydrostatic_skeleton:
+    defines: A fluid-filled compartment under pressure that supports the body and, via surrounding muscle
+      contraction, produces movement.
+    tier: 0
+  exoskeleton:
+    defines: A hard external encasement that protects, supports, and allows movement through muscles attached
+      to its interior.
+    tier: 0
+  endoskeleton:
+    defines: A skeleton of hard, mineralized structures within soft tissue that supports, protects, and
+      enables movement.
+    tier: 0
+  bone_tissue:
+    defines: A connective tissue of specialized cells and mineralized collagen matrix constituting the
+      endoskeleton.
+    tier: 0
+  joint:
+    defines: The point where two or more bones meet, responsible for movement or stability.
+    tier: 0
+  muscle_tissue_types:
+    defines: The three muscle tissue types (skeletal, cardiac, smooth) distinguished by structure, control,
+      and location.
+    tier: 0
+  actin_myosin_filaments:
+    defines: The contractile proteins forming thin (actin) and thick (myosin) myofilaments that interact
+      to produce muscle contraction.
+    tier: 0
+  membrane_action_potential:
+    defines: The electrical charge gradient across a cell membrane and its depolarization/repolarization
+      cycle that propagates a signal.
+    tier: 0
+concepts:
+  skull:
+    defines: The 22 cranial and facial bones that support facial structures and protect the brain.
+    composed_of:
+    - endoskeleton
+    tier: 1
+  vertebral_column:
+    defines: The 26-bone spinal column that protects the spinal cord, supports the head, and anchors ribs
+      and back muscles.
+    composed_of:
+    - endoskeleton
+    tier: 1
+  thoracic_cage:
+    defines: The ribcage that encloses and protects thoracic organs.
+    composed_of:
+    - endoskeleton
+    tier: 1
+  pectoral_girdle:
+    defines: The clavicle and scapula that attach the upper limbs to the axial skeleton.
+    composed_of:
+    - endoskeleton
+    tier: 1
+  pelvic_girdle:
+    defines: The paired hip bones that attach the lower limbs to the axial skeleton and bear body weight.
+    composed_of:
+    - endoskeleton
+    tier: 1
+  upper_limb_bones:
+    defines: The 30 bones of the arm, forearm, and hand.
+    composed_of:
+    - endoskeleton
+    tier: 1
+  lower_limb_bones:
+    defines: The bones of the thigh, leg, and foot.
+    composed_of:
+    - endoskeleton
+    tier: 1
+  axial_skeleton:
+    defines: The central body axis, consisting of the skull, ossicles, hyoid, vertebral column, and thoracic
+      cage.
+    composed_of:
+    - skull
+    - vertebral_column
+    - thoracic_cage
+    tier: 2
+  appendicular_skeleton:
+    defines: The limb bones plus pectoral and pelvic girdles that attach limbs to the axial skeleton.
+    composed_of:
+    - pectoral_girdle
+    - pelvic_girdle
+    - upper_limb_bones
+    - lower_limb_bones
+    tier: 2
+  calcification:
+    defines: Deposition of mineral salts onto the collagen fiber matrix, crystallizing and hardening tissue.
+    composed_of:
+    - bone_tissue
+    tier: 1
+  bone_shape_classification:
+    defines: Classification of bones by shape into long, short, flat, irregular, sesamoid, and sutural
+      bones.
+    composed_of:
+    - bone_tissue
+    tier: 1
+  bone_cell_types:
+    defines: The four cell types of bone tissue that build, resorb, maintain, and regenerate bone.
+    composed_of:
+    - bone_tissue
+    tier: 1
+  compact_bone:
+    defines: The hard outer bone layer made of osteons that provides strength and protection.
+    composed_of:
+    - bone_tissue
+    - calcification
+    tier: 2
+  spongy_bone:
+    defines: The inner bone layer made of trabeculae that reduces density and houses red bone marrow.
+    composed_of:
+    - bone_tissue
+    - calcification
+    tier: 2
+  ossification:
+    defines: The process by which osteoblasts form bone, via intramembranous or endochondral pathways.
+    composed_of:
+    - bone_cell_types
+    - calcification
+    tier: 2
+  bone_growth:
+    defines: Lengthwise growth at the epiphyseal plate and appositional growth of long bones during development.
+    composed_of:
+    - ossification
+    - compact_bone
+    - spongy_bone
+    tier: 3
+  bone_remodeling_repair:
+    defines: Ongoing replacement of bone tissue by deposition and resorption, including fracture repair
+      stages.
+    composed_of:
+    - bone_cell_types
+    - ossification
+    tier: 3
+  joint_structural_classification:
+    defines: Classification of joints as fibrous, cartilaginous, or synovial based on connecting material
+      and joint cavity.
+    composed_of:
+    - joint
+    tier: 1
+  joint_functional_classification:
+    defines: Classification of joints as synarthroses, amphiarthroses, or diarthroses based on degree
+      of movement allowed.
+    composed_of:
+    - joint
+    tier: 1
+  synovial_joint_shape_types:
+    defines: Classification of synovial joints by shape, determining the type of movement permitted.
+    composed_of:
+    - joint_structural_classification
+    tier: 2
+  synovial_joint_movement_types:
+    defines: The four movement categories at synovial joints.
+    composed_of:
+    - synovial_joint_shape_types
+    tier: 3
+  skeletal_muscle_fiber_structure:
+    defines: The organization of a skeletal muscle cell, including the sarcolemma and myofibrils built
+      from sarcomeres.
+    composed_of:
+    - muscle_tissue_types
+    tier: 1
+  sarcomere:
+    defines: The functional unit of skeletal muscle, spanning two Z discs and containing organized thick
+      and thin myofilaments.
+    composed_of:
+    - skeletal_muscle_fiber_structure
+    - actin_myosin_filaments
+    tier: 2
+  regulatory_proteins:
+    defines: Tropomyosin and troponin, which block or expose myosin-binding sites on actin, gated by calcium.
+    composed_of:
+    - actin_myosin_filaments
+    tier: 1
+  cross_bridge_cycle:
+    defines: The ATP-driven cycle in which myosin heads bind actin, pull it, and re-cock to generate filament
+      sliding.
+    composed_of:
+    - sarcomere
+    - regulatory_proteins
+    tier: 3
+  sliding_filament_model:
+    defines: The theory that sarcomeres shorten as thick and thin filaments slide past one another.
+    composed_of:
+    - cross_bridge_cycle
+    tier: 4
+  neuromuscular_junction:
+    defines: The synapse between a motor neuron and a muscle fiber's motor end plate, transmitting the
+      signal via acetylcholine.
+    composed_of:
+    - membrane_action_potential
+    tier: 1
+  excitation_contraction_coupling:
+    defines: The transduction linking a neural action potential at the sarcolemma to calcium release and
+      contraction initiation.
+    composed_of:
+    - neuromuscular_junction
+    - regulatory_proteins
+    tier: 2
+  muscle_tension_control:
+    defines: Regulation of muscle force via sarcomere length, cross-bridge number, and fiber recruitment/frequency.
+    composed_of:
+    - sliding_filament_model
+    - excitation_contraction_coupling
+    tier: 5
+applications:
+  rheumatoid_arthritis_diagnosis:
+    defines: An autoimmune inflammatory joint disease diagnosed via symptoms, imaging, and blood tests.
+    needs:
+    - joint_structural_classification
+    - joint_functional_classification
+    tier: 2

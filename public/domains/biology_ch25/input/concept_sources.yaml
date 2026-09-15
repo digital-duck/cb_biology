@@ -1,0 +1,155 @@
+domain: biology_2e_ch25
+sources:
+  archaeplastida:
+    label: Archaeplastida
+    sections:
+    - id: ch25_s25_1
+      title: 25.1 Early Plant Life
+    - id: ch25_s25_2
+      title: '25.2 Green Algae: Precursors of Land Plants'
+  green_algae:
+    label: Green Algae
+    sections:
+    - id: ch25_s25_1
+      title: 25.1 Early Plant Life
+    - id: ch25_s25_2
+      title: '25.2 Green Algae: Precursors of Land Plants'
+  charophytes:
+    label: Charophytes
+    sections:
+    - id: ch25_s25_2
+      title: '25.2 Green Algae: Precursors of Land Plants'
+  streptophytes:
+    label: Streptophytes
+    sections:
+    - id: ch25_s25_2
+      title: '25.2 Green Algae: Precursors of Land Plants'
+  desiccation:
+    label: Desiccation
+    sections:
+    - id: ch25_s25_1
+      title: 25.1 Early Plant Life
+  gametophyte:
+    label: Gametophyte
+    sections:
+    - id: ch25_s25_1
+      title: 25.1 Early Plant Life
+  sporophyte:
+    label: Sporophyte
+    sections:
+    - id: ch25_s25_1
+      title: 25.1 Early Plant Life
+  alternation_of_generations:
+    label: Alternation of Generations
+    sections:
+    - id: ch25_s25_1
+      title: 25.1 Early Plant Life
+  gametangium:
+    label: Gametangium
+    sections:
+    - id: ch25_s25_1
+      title: 25.1 Early Plant Life
+    - id: ch25_s25_3
+      title: 25.3 Bryophytes
+  sporangium:
+    label: Sporangium
+    sections:
+    - id: ch25_s25_1
+      title: 25.1 Early Plant Life
+    - id: ch25_s25_3
+      title: 25.3 Bryophytes
+    - id: ch25_s25_4
+      title: 25.4 Seedless Vascular Plants
+  homospory_heterospory:
+    label: Homospory and Heterospory
+    sections:
+    - id: ch25_s25_1
+      title: 25.1 Early Plant Life
+    - id: ch25_s25_4
+      title: 25.4 Seedless Vascular Plants
+  sporopollenin:
+    label: Sporopollenin
+    sections:
+    - id: ch25_s25_1
+      title: 25.1 Early Plant Life
+  apical_meristem:
+    label: Apical Meristem
+    sections:
+    - id: ch25_s25_1
+      title: 25.1 Early Plant Life
+  lignin:
+    label: Lignin
+    sections:
+    - id: ch25_s25_1
+      title: 25.1 Early Plant Life
+    - id: ch25_s25_4
+      title: 25.4 Seedless Vascular Plants
+  cuticle:
+    label: Waxy Cuticle
+    sections:
+    - id: ch25_s25_1
+      title: 25.1 Early Plant Life
+  stomata:
+    label: Stomata
+    sections:
+    - id: ch25_s25_1
+      title: 25.1 Early Plant Life
+    - id: ch25_s25_3
+      title: 25.3 Bryophytes
+  land_plant_adaptations:
+    label: Land Plant Adaptations
+    sections:
+    - id: ch25_s25_1
+      title: 25.1 Early Plant Life
+  vascular_tissue:
+    label: Vascular Tissue (Xylem and Phloem)
+    sections:
+    - id: ch25_s25_4
+      title: 25.4 Seedless Vascular Plants
+  roots:
+    label: Roots
+    sections:
+    - id: ch25_s25_4
+      title: 25.4 Seedless Vascular Plants
+  leaves:
+    label: Leaves (Microphylls and Megaphylls)
+    sections:
+    - id: ch25_s25_4
+      title: 25.4 Seedless Vascular Plants
+  sporophylls_and_strobili:
+    label: Sporophylls and Strobili
+    sections:
+    - id: ch25_s25_4
+      title: 25.4 Seedless Vascular Plants
+  non_vascular_plants:
+    label: Non-Vascular Plants (Bryophytes)
+    sections:
+    - id: ch25_s25_3
+      title: 25.3 Bryophytes
+  seedless_vascular_plants:
+    label: Seedless Vascular Plants (Tracheophytes)
+    sections:
+    - id: ch25_s25_4
+      title: 25.4 Seedless Vascular Plants
+  mycorrhizae:
+    label: Mycorrhizae
+    sections:
+    - id: ch25_s25_1
+      title: 25.1 Early Plant Life
+    - id: ch25_s25_4
+      title: 25.4 Seedless Vascular Plants
+  coal_formation:
+    label: Coal Formation from Seedless Plants
+    sections:
+    - id: ch25_s25_4
+      title: 25.4 Seedless Vascular Plants
+  moss_pollution_indicator:
+    label: Mosses as Pollution Indicators
+    sections:
+    - id: ch25_s25_4
+      title: 25.4 Seedless Vascular Plants
+  ecological_and_human_uses_of_seedless_plants:
+    label: Ecological and Human Uses of Seedless Plants
+    sections:
+    - id: ch25_s25_4
+      title: 25.4 Seedless Vascular Plants

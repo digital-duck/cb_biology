@@ -1,0 +1,221 @@
+domain: biology_2e_ch17
+sources:
+  dna_rna_structure:
+    label: DNA and RNA Structure
+    sections:
+    - id: ch17_s17_1
+      title: 17.1 Biotechnology
+  genome:
+    label: Genome
+    sections:
+    - id: ch17_s17_1
+      title: 17.1 Biotechnology
+  restriction_endonuclease:
+    label: Restriction Endonuclease
+    sections:
+    - id: ch17_s17_1
+      title: 17.1 Biotechnology
+  plasmid:
+    label: Plasmid
+    sections:
+    - id: ch17_s17_1
+      title: 17.1 Biotechnology
+  biotechnology:
+    label: Biotechnology
+    sections:
+    - id: ch17_s17_1
+      title: 17.1 Biotechnology
+  dna_rna_extraction:
+    label: DNA/RNA Extraction
+    sections:
+    - id: ch17_s17_1
+      title: 17.1 Biotechnology
+  gel_electrophoresis:
+    label: Gel Electrophoresis
+    sections:
+    - id: ch17_s17_1
+      title: 17.1 Biotechnology
+  pcr:
+    label: Polymerase Chain Reaction (PCR)
+    sections:
+    - id: ch17_s17_1
+      title: 17.1 Biotechnology
+  rt_pcr:
+    label: Reverse Transcriptase PCR (RT-PCR)
+    sections:
+    - id: ch17_s17_1
+      title: 17.1 Biotechnology
+  blotting_techniques:
+    label: Southern and Northern Blotting
+    sections:
+    - id: ch17_s17_1
+      title: 17.1 Biotechnology
+  molecular_cloning:
+    label: Molecular Cloning
+    sections:
+    - id: ch17_s17_1
+      title: 17.1 Biotechnology
+  recombinant_dna:
+    label: Recombinant DNA
+    sections:
+    - id: ch17_s17_1
+      title: 17.1 Biotechnology
+  cellular_cloning:
+    label: Cellular Cloning
+    sections:
+    - id: ch17_s17_1
+      title: 17.1 Biotechnology
+  reproductive_cloning:
+    label: Reproductive Cloning
+    sections:
+    - id: ch17_s17_1
+      title: 17.1 Biotechnology
+  genetic_engineering:
+    label: Genetic Engineering
+    sections:
+    - id: ch17_s17_1
+      title: 17.1 Biotechnology
+  gene_targeting:
+    label: Gene Targeting
+    sections:
+    - id: ch17_s17_1
+      title: 17.1 Biotechnology
+  genetic_diagnosis_therapy:
+    label: Genetic Diagnosis and Gene Therapy
+    sections:
+    - id: ch17_s17_1
+      title: 17.1 Biotechnology
+  biotech_products:
+    label: Biotechnology Products (Vaccines, Antibiotics, Hormones)
+    sections:
+    - id: ch17_s17_1
+      title: 17.1 Biotechnology
+  transgenic_organisms:
+    label: Transgenic Animals and Plants
+    sections:
+    - id: ch17_s17_1
+      title: 17.1 Biotechnology
+  genomics:
+    label: Genomics
+    sections:
+    - id: ch17_s17_1
+      title: 17.1 Biotechnology
+    - id: ch17_s17_2
+      title: 17.2 Mapping Genomes
+  genetic_recombination:
+    label: Genetic Recombination
+    sections:
+    - id: ch17_s17_2
+      title: 17.2 Mapping Genomes
+  linkage_analysis:
+    label: Linkage Analysis
+    sections:
+    - id: ch17_s17_2
+      title: 17.2 Mapping Genomes
+  genetic_map:
+    label: Genetic Map
+    sections:
+    - id: ch17_s17_2
+      title: 17.2 Mapping Genomes
+  genetic_markers:
+    label: Genetic Markers (RFLP, VNTR, SNP)
+    sections:
+    - id: ch17_s17_2
+      title: 17.2 Mapping Genomes
+  physical_map:
+    label: Physical Map
+    sections:
+    - id: ch17_s17_2
+      title: 17.2 Mapping Genomes
+  genome_mapping:
+    label: Genome Mapping
+    sections:
+    - id: ch17_s17_2
+      title: 17.2 Mapping Genomes
+  chain_termination_sequencing:
+    label: Chain Termination (Sanger) Sequencing
+    sections:
+    - id: ch17_s17_3
+      title: 17.3 Whole-Genome Sequencing
+  shotgun_sequencing:
+    label: Shotgun and Pairwise-End Sequencing
+    sections:
+    - id: ch17_s17_3
+      title: 17.3 Whole-Genome Sequencing
+  next_gen_sequencing:
+    label: Next-Generation Sequencing
+    sections:
+    - id: ch17_s17_3
+      title: 17.3 Whole-Genome Sequencing
+  whole_genome_sequencing:
+    label: Whole-Genome Sequencing
+    sections:
+    - id: ch17_s17_3
+      title: 17.3 Whole-Genome Sequencing
+  model_organisms_annotation:
+    label: Model Organisms and Genome Annotation
+    sections:
+    - id: ch17_s17_3
+      title: 17.3 Whole-Genome Sequencing
+  dna_microarray:
+    label: DNA Microarray
+    sections:
+    - id: ch17_s17_3
+      title: 17.3 Whole-Genome Sequencing
+  personalized_disease_risk:
+    label: Predicting Individual Disease Risk
+    sections:
+    - id: ch17_s17_4
+      title: 17.4 Applying Genomics
+  pharmacogenomics:
+    label: Pharmacogenomics
+    sections:
+    - id: ch17_s17_4
+      title: 17.4 Applying Genomics
+  metagenomics:
+    label: Metagenomics
+    sections:
+    - id: ch17_s17_4
+      title: 17.4 Applying Genomics
+  mitochondrial_genomics:
+    label: Mitochondrial Genomics
+    sections:
+    - id: ch17_s17_4
+      title: 17.4 Applying Genomics
+  agricultural_genomics:
+    label: Genomics in Agriculture
+    sections:
+    - id: ch17_s17_1
+      title: 17.1 Biotechnology
+    - id: ch17_s17_4
+      title: 17.4 Applying Genomics
+  proteome:
+    label: Proteome
+    sections:
+    - id: ch17_s17_5
+      title: 17.5 Genomics and Proteomics
+  proteomics:
+    label: Proteomics
+    sections:
+    - id: ch17_s17_5
+      title: 17.5 Genomics and Proteomics
+  metabolomics:
+    label: Metabolomics
+    sections:
+    - id: ch17_s17_5
+      title: 17.5 Genomics and Proteomics
+  protein_analysis_techniques:
+    label: Protein Analysis Techniques (Mass Spectrometry, X-ray Crystallography, NMR)
+    sections:
+    - id: ch17_s17_5
+      title: 17.5 Genomics and Proteomics
+  systems_biology:
+    label: Systems Biology
+    sections:
+    - id: ch17_s17_5
+      title: 17.5 Genomics and Proteomics
+  cancer_proteomics:
+    label: Cancer Proteomics and Protein Signatures
+    sections:
+    - id: ch17_s17_5
+      title: 17.5 Genomics and Proteomics

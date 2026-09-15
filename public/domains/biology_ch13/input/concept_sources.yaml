@@ -1,0 +1,107 @@
+domain: biology_2e_ch13
+sources:
+  chromosome:
+    label: Chromosome
+    sections:
+    - id: ch13_s13_1
+      title: 13.1 Chromosomal Theory and Genetic Linkage
+  gene:
+    label: Gene
+    sections:
+    - id: ch13_s13_1
+      title: 13.1 Chromosomal Theory and Genetic Linkage
+  meiosis:
+    label: Meiosis
+    sections:
+    - id: ch13_s13_1
+      title: 13.1 Chromosomal Theory and Genetic Linkage
+  chromosomal_theory_of_inheritance:
+    label: Chromosomal Theory of Inheritance
+    sections:
+    - id: ch13_s13_1
+      title: 13.1 Chromosomal Theory and Genetic Linkage
+  genetic_linkage:
+    label: Genetic Linkage
+    sections:
+    - id: ch13_s13_1
+      title: 13.1 Chromosomal Theory and Genetic Linkage
+  synapsis:
+    label: Synapsis
+    sections:
+    - id: ch13_s13_1
+      title: 13.1 Chromosomal Theory and Genetic Linkage
+  homologous_recombination:
+    label: Homologous Recombination (Crossing Over)
+    sections:
+    - id: ch13_s13_1
+      title: 13.1 Chromosomal Theory and Genetic Linkage
+  parental_and_nonparental_types:
+    label: Parental and Nonparental (Recombinant) Types
+    sections:
+    - id: ch13_s13_1
+      title: 13.1 Chromosomal Theory and Genetic Linkage
+  recombination_frequency:
+    label: Recombination Frequency
+    sections:
+    - id: ch13_s13_1
+      title: 13.1 Chromosomal Theory and Genetic Linkage
+  genetic_map:
+    label: Genetic Map (Chromosome Map)
+    sections:
+    - id: ch13_s13_1
+      title: 13.1 Chromosomal Theory and Genetic Linkage
+  karyotype:
+    label: Karyotype
+    sections:
+    - id: ch13_s13_2
+      title: 13.2 Chromosomal Basis of Inherited Disorders
+  karyogram:
+    label: Karyogram
+    sections:
+    - id: ch13_s13_2
+      title: 13.2 Chromosomal Basis of Inherited Disorders
+  nondisjunction:
+    label: Nondisjunction
+    sections:
+    - id: ch13_s13_2
+      title: 13.2 Chromosomal Basis of Inherited Disorders
+  aneuploidy:
+    label: Aneuploidy
+    sections:
+    - id: ch13_s13_2
+      title: 13.2 Chromosomal Basis of Inherited Disorders
+  polyploidy:
+    label: Polyploidy
+    sections:
+    - id: ch13_s13_2
+      title: 13.2 Chromosomal Basis of Inherited Disorders
+  x_inactivation:
+    label: X Inactivation
+    sections:
+    - id: ch13_s13_2
+      title: 13.2 Chromosomal Basis of Inherited Disorders
+  sex_chromosome_aneuploidy_disorders:
+    label: Sex Chromosome Aneuploidy Disorders
+    sections:
+    - id: ch13_s13_2
+      title: 13.2 Chromosomal Basis of Inherited Disorders
+  autosomal_aneuploidy_disorders:
+    label: Autosomal Aneuploidy Disorders
+    sections:
+    - id: ch13_s13_2
+      title: 13.2 Chromosomal Basis of Inherited Disorders
+  chromosomal_duplications_and_deletions:
+    label: Chromosomal Duplications and Deletions
+    sections:
+    - id: ch13_s13_2
+      title: 13.2 Chromosomal Basis of Inherited Disorders
+  chromosome_inversion:
+    label: Chromosome Inversion
+    sections:
+    - id: ch13_s13_2
+      title: 13.2 Chromosomal Basis of Inherited Disorders
+  translocation:
+    label: Translocation
+    sections:
+    - id: ch13_s13_2
+      title: 13.2 Chromosomal Basis of Inherited Disorders

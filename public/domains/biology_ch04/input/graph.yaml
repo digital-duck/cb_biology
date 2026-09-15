@@ -1,0 +1,256 @@
+domain: biology_2e_ch4
+primitives:
+  cell:
+    defines: The smallest unit of a living thing; the basic building block of all organisms.
+    tier: 0
+  microscope:
+    defines: An instrument that magnifies an object so scientists can study cells too small to see with
+      the naked eye.
+    tier: 0
+  prokaryotic_cell:
+    defines: A simple, mostly single-celled organism that lacks a nucleus or any other membrane-bound
+      organelle.
+    tier: 0
+  eukaryotic_cell:
+    defines: A cell that has a membrane-bound nucleus and several other membrane-bound organelles.
+    tier: 0
+  plasma_membrane:
+    defines: A phospholipid bilayer with embedded proteins that separates a cell's interior from its surrounding
+      environment.
+    tier: 0
+  cytoplasm:
+    defines: The entire region between the plasma membrane and the nuclear envelope, consisting of organelles
+      suspended in cytosol.
+    tier: 0
+  dna:
+    defines: The cell's genetic material, present in all cells and organized differently in prokaryotes
+      versus eukaryotes.
+    tier: 0
+  ribosome:
+    defines: A cellular structure, present in all cells, responsible for synthesizing proteins.
+    tier: 0
+concepts:
+  magnification_and_resolution:
+    defines: Magnification is enlarging an object's appearance; resolving power is a microscope's ability
+      to distinguish two adjacent structures as separate.
+    composed_of:
+    - microscope
+    tier: 1
+  light_microscope:
+    defines: A microscope that uses visible light bent through a lens system to view specimens, useful
+      for living organisms but limited in resolution.
+    composed_of:
+    - microscope
+    - magnification_and_resolution
+    tier: 2
+  electron_microscope:
+    defines: A microscope that uses a beam of electrons instead of light, providing higher magnification
+      and resolving power but killing the specimen.
+    composed_of:
+    - microscope
+    - magnification_and_resolution
+    tier: 2
+  unified_cell_theory:
+    defines: The theory stating that one or more cells comprise all living things, the cell is the basic
+      unit of life, and new cells arise from existing cells.
+    composed_of:
+    - cell
+    tier: 1
+  cell_wall:
+    defines: A rigid covering external to the plasma membrane that protects the cell, provides structural
+      support, and gives it shape.
+    composed_of:
+    - plasma_membrane
+    tier: 1
+  surface_area_to_volume_ratio:
+    defines: The relationship explaining why cells must stay small, since volume grows faster than surface
+      area as a cell enlarges, limiting diffusion efficiency.
+    composed_of:
+    - cell
+    tier: 1
+  nucleoid:
+    defines: The central part of a prokaryotic cell where its chromosomal DNA is located, lacking a surrounding
+      membrane.
+    composed_of:
+    - prokaryotic_cell
+    - dna
+    tier: 1
+  nuclear_envelope:
+    defines: The double-membrane structure that constitutes the nucleus's outermost portion and is continuous
+      with the endoplasmic reticulum.
+    composed_of:
+    - eukaryotic_cell
+    - plasma_membrane
+    tier: 1
+  nucleus:
+    defines: The organelle that houses the cell's DNA and directs the synthesis of ribosomes and proteins.
+    composed_of:
+    - eukaryotic_cell
+    - dna
+    - nuclear_envelope
+    tier: 2
+  chromatin_and_chromosomes:
+    defines: Chromosomes are linear DNA structures in the nucleus; chromatin is the decondensed protein-DNA
+      complex they form outside of cell division.
+    composed_of:
+    - nucleus
+    - dna
+    tier: 3
+  nucleolus:
+    defines: A darkly staining region within the nucleus where ribosomal RNA and proteins assemble into
+      ribosomal subunits.
+    composed_of:
+    - nucleus
+    - ribosome
+    tier: 3
+  mitochondria:
+    defines: Double-membrane organelles with their own DNA and ribosomes that carry out cellular respiration
+      to produce ATP.
+    composed_of:
+    - eukaryotic_cell
+    - dna
+    - ribosome
+    tier: 1
+  peroxisome:
+    defines: A small, single-membrane organelle that oxidizes fatty acids and amino acids and detoxifies
+      poisons.
+    composed_of:
+    - eukaryotic_cell
+    tier: 1
+  vesicle_and_vacuole:
+    defines: Membrane-bound sacs that function in storage and transport, with vacuoles being somewhat
+      larger than vesicles.
+    composed_of:
+    - eukaryotic_cell
+    - plasma_membrane
+    tier: 1
+  central_vacuole:
+    defines: A large plant cell organelle that regulates water concentration, supports the cell wall,
+      and enables cell expansion.
+    composed_of:
+    - vesicle_and_vacuole
+    tier: 2
+  centrosome:
+    defines: A microtubule-organizing region near the nucleus of animal cells containing a pair of centrioles.
+    composed_of:
+    - eukaryotic_cell
+    tier: 1
+  lysosome:
+    defines: An animal cell organelle that digests macromolecules, recycles worn-out organelles, and destroys
+      engulfed pathogens.
+    composed_of:
+    - eukaryotic_cell
+    - vesicle_and_vacuole
+    tier: 2
+  chloroplast:
+    defines: A plant cell organelle with its own DNA and ribosomes that carries out photosynthesis.
+    composed_of:
+    - eukaryotic_cell
+    - dna
+    - ribosome
+    tier: 1
+  endosymbiosis:
+    defines: A mutually beneficial relationship in which one organism lives inside another, proposed to
+      explain the origin of mitochondria and chloroplasts from ingested bacteria.
+    composed_of:
+    - mitochondria
+    - chloroplast
+    tier: 2
+  endoplasmic_reticulum:
+    defines: A series of interconnected membranous sacs and tubules, divided into rough ER (protein modification)
+      and smooth ER (lipid synthesis and detoxification).
+    composed_of:
+    - nuclear_envelope
+    - eukaryotic_cell
+    tier: 2
+  golgi_apparatus:
+    defines: A series of flattened membranous sacs that sorts, tags, packages, and distributes lipids
+      and proteins received from the ER.
+    composed_of:
+    - endoplasmic_reticulum
+    - vesicle_and_vacuole
+    tier: 3
+  endomembrane_system:
+    defines: A group of membranes and organelles in eukaryotic cells, including the nuclear envelope,
+      ER, Golgi apparatus, lysosomes, vesicles, and plasma membrane, that work together to modify, package,
+      and transport lipids and proteins.
+    composed_of:
+    - nuclear_envelope
+    - endoplasmic_reticulum
+    - golgi_apparatus
+    - lysosome
+    - vesicle_and_vacuole
+    - plasma_membrane
+    tier: 4
+  cytoskeleton:
+    defines: A network of protein fibers that maintains a cell's shape, secures organelles, and enables
+      movement of cytoplasm, vesicles, and whole cells.
+    composed_of:
+    - cytoplasm
+    - eukaryotic_cell
+    tier: 1
+  microfilaments:
+    defines: The narrowest cytoskeletal fibers, composed of actin, that provide rigidity and enable cellular
+      movement.
+    composed_of:
+    - cytoskeleton
+    tier: 2
+  intermediate_filaments:
+    defines: Cytoskeletal fibers of intermediate diameter, composed of fibrous proteins, that bear tension
+      and anchor organelles in place.
+    composed_of:
+    - cytoskeleton
+    tier: 2
+  microtubules:
+    defines: The widest cytoskeletal fibers, made of tubulin dimers, that resist compression, guide vesicle
+      transport, and form flagella, cilia, and centrioles.
+    composed_of:
+    - cytoskeleton
+    - centrosome
+    tier: 2
+  flagella_and_cilia:
+    defines: Microtubule-based, hair-like structures that extend from the plasma membrane to move an entire
+      cell or move substances along its surface.
+    composed_of:
+    - microtubules
+    tier: 3
+  extracellular_matrix:
+    defines: Material secreted by animal cells, composed mainly of collagen and proteoglycans, that anchors
+      cells and enables cell-to-cell communication.
+    composed_of:
+    - plasma_membrane
+    - eukaryotic_cell
+    tier: 1
+  intercellular_junctions:
+    defines: Direct-contact structures between adjacent cells, including plasmodesmata in plants and tight
+      junctions, desmosomes, and gap junctions in animals.
+    composed_of:
+    - plasma_membrane
+    - cell_wall
+    tier: 2
+applications:
+  plant_vs_animal_cell_structures:
+    defines: The application of eukaryotic cell components to explain structural differences between plant
+      cells (cell wall, chloroplasts, central vacuole) and animal cells (centrosome, lysosomes).
+    needs:
+    - cell_wall
+    - chloroplast
+    - central_vacuole
+    - centrosome
+    - lysosome
+    tier: 3
+  cell_communication_and_signaling:
+    defines: The real-world process by which cells use the extracellular matrix and intercellular junctions
+      to coordinate activities, such as blood clotting or coordinated muscle contraction.
+    needs:
+    - extracellular_matrix
+    - intercellular_junctions
+    tier: 3
+  medical_applications_of_cell_biology:
+    defines: Real-world diagnostic and clinical uses of cell structure knowledge, such as Pap smear cytology,
+      heart failure related to ER calcium storage, and Lowe disease from Golgi enzyme deficiency.
+    needs:
+    - microscope
+    - endoplasmic_reticulum
+    - golgi_apparatus
+    tier: 4
