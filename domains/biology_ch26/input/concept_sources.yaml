@@ -1,0 +1,166 @@
+domain: biology_2e_ch26
+sources:
+  alternation_of_generations:
+    label: Alternation of Generations
+    sections:
+    - id: ch26_s26_1
+      title: 26.1 Evolution of Seed Plants
+  heterospory:
+    label: Heterospory
+    sections:
+    - id: ch26_s26_1
+      title: 26.1 Evolution of Seed Plants
+  gametophyte:
+    label: Gametophyte
+    sections:
+    - id: ch26_s26_1
+      title: 26.1 Evolution of Seed Plants
+  sporophyte:
+    label: Sporophyte
+    sections:
+    - id: ch26_s26_1
+      title: 26.1 Evolution of Seed Plants
+  pollen_grain:
+    label: Pollen Grain
+    sections:
+    - id: ch26_s26_1
+      title: 26.1 Evolution of Seed Plants
+    - id: ch26_s26_2
+      title: 26.2 Gymnosperms
+    - id: ch26_s26_3
+      title: 26.3 Angiosperms
+  seed:
+    label: Seed
+    sections:
+    - id: ch26_s26_1
+      title: 26.1 Evolution of Seed Plants
+    - id: ch26_s26_2
+      title: 26.2 Gymnosperms
+  ovule:
+    label: Ovule
+    sections:
+    - id: ch26_s26_2
+      title: 26.2 Gymnosperms
+    - id: ch26_s26_3
+      title: 26.3 Angiosperms
+  integument:
+    label: Integument
+    sections:
+    - id: ch26_s26_2
+      title: 26.2 Gymnosperms
+  pollination:
+    label: Pollination
+    sections:
+    - id: ch26_s26_2
+      title: 26.2 Gymnosperms
+    - id: ch26_s26_3
+      title: 26.3 Angiosperms
+    - id: ch26_s26_4
+      title: 26.4 The Role of Seed Plants
+  strobilus:
+    label: Strobilus (Cone)
+    sections:
+    - id: ch26_s26_2
+      title: 26.2 Gymnosperms
+  gymnosperm:
+    label: Gymnosperm
+    sections:
+    - id: ch26_s26_1
+      title: 26.1 Evolution of Seed Plants
+    - id: ch26_s26_2
+      title: 26.2 Gymnosperms
+  conifer:
+    label: Conifer
+    sections:
+    - id: ch26_s26_2
+      title: 26.2 Gymnosperms
+  cycad:
+    label: Cycad
+    sections:
+    - id: ch26_s26_2
+      title: 26.2 Gymnosperms
+  ginkgophyte:
+    label: Ginkgophyte
+    sections:
+    - id: ch26_s26_2
+      title: 26.2 Gymnosperms
+  gnetophyte:
+    label: Gnetophyte
+    sections:
+    - id: ch26_s26_2
+      title: 26.2 Gymnosperms
+  flower:
+    label: Flower
+    sections:
+    - id: ch26_s26_3
+      title: 26.3 Angiosperms
+  fruit:
+    label: Fruit
+    sections:
+    - id: ch26_s26_3
+      title: 26.3 Angiosperms
+  double_fertilization:
+    label: Double Fertilization
+    sections:
+    - id: ch26_s26_3
+      title: 26.3 Angiosperms
+  angiosperm:
+    label: Angiosperm
+    sections:
+    - id: ch26_s26_1
+      title: 26.1 Evolution of Seed Plants
+    - id: ch26_s26_3
+      title: 26.3 Angiosperms
+  basal_angiosperm:
+    label: Basal Angiosperm
+    sections:
+    - id: ch26_s26_3
+      title: 26.3 Angiosperms
+  monocot:
+    label: Monocot
+    sections:
+    - id: ch26_s26_3
+      title: 26.3 Angiosperms
+  eudicot:
+    label: Eudicot
+    sections:
+    - id: ch26_s26_3
+      title: 26.3 Angiosperms
+  monoecious_dioecious:
+    label: Monoecious and Dioecious Reproduction
+    sections:
+    - id: ch26_s26_2
+      title: 26.2 Gymnosperms
+    - id: ch26_s26_3
+      title: 26.3 Angiosperms
+  coevolution_pollination:
+    label: Coevolution of Pollination
+    sections:
+    - id: ch26_s26_1
+      title: 26.1 Evolution of Seed Plants
+    - id: ch26_s26_4
+      title: 26.4 The Role of Seed Plants
+  herbivory_defense:
+    label: Herbivory and Plant Defense
+    sections:
+    - id: ch26_s26_4
+      title: 26.4 The Role of Seed Plants
+  seed_dispersal:
+    label: Seed and Fruit Dispersal
+    sections:
+    - id: ch26_s26_1
+      title: 26.1 Evolution of Seed Plants
+    - id: ch26_s26_3
+      title: 26.3 Angiosperms
+    - id: ch26_s26_4
+      title: 26.4 The Role of Seed Plants
+  human_uses_of_seed_plants:
+    label: Human Uses of Seed Plants
+    sections:
+    - id: ch26_s26_4
+      title: 26.4 The Role of Seed Plants
+  plant_biodiversity_conservation:
+    label: Plant Biodiversity and Conservation
+    sections:
+    - id: ch26_s26_4
+      title: 26.4 The Role of Seed Plants

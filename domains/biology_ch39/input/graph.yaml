@@ -1,0 +1,194 @@
+domain: biology_2e_ch39
+primitives:
+  gas_exchange:
+    defines: The process by which oxygen and carbon dioxide are exchanged between an organism and its
+      environment or between blood and tissues.
+    tier: 0
+  diffusion:
+    defines: A passive transport process in which gas molecules move from a region of high concentration
+      to a region of low concentration until equilibrium is reached.
+    tier: 0
+  lung_volume:
+    defines: A measurement of the amount of air associated with one respiratory function, such as a single
+      inhalation or exhalation.
+    tier: 0
+  partial_pressure:
+    defines: The pressure exerted by an individual gas within a mixture of gases, proportional to its
+      concentration in the mixture.
+    tier: 0
+  boyles_law:
+    defines: The gas law stating that pressure and volume of a gas are inversely related in a closed space.
+    tier: 0
+  pleura:
+    defines: The tissue layers (visceral and parietal) surrounding the lung and lining the thoracic cavity,
+      with fluid between them reducing friction during breathing.
+    tier: 0
+  respiratory_rate:
+    defines: The number of breaths taken per minute.
+    tier: 0
+  hemoglobin:
+    defines: A four-subunit, iron-containing protein in red blood cells that reversibly binds up to four
+      oxygen molecules for transport.
+    tier: 0
+concepts:
+  respiratory_surface:
+    defines: A specialized tissue (membrane, skin, gill, tracheal tube, or lung) across which gas exchange
+      with the environment occurs.
+    composed_of:
+    - gas_exchange
+    - diffusion
+    tier: 1
+  mammalian_respiratory_tract:
+    defines: The sequence of structures (nasal cavity, pharynx, larynx, trachea, bronchi, bronchioles,
+      alveoli) through which air moves in mammals.
+    composed_of:
+    - respiratory_surface
+    tier: 2
+  alveolus:
+    defines: The terminal, thin-walled air sac of the lung where gas exchange between air and blood occurs.
+    composed_of:
+    - respiratory_surface
+    tier: 2
+  respiratory_protective_mechanisms:
+    defines: Structures such as nasal hairs, mucus, and cilia that trap and remove particulate matter
+      from the airway.
+    composed_of:
+    - mammalian_respiratory_tract
+    tier: 3
+  lung_capacity:
+    defines: A measurement combining two or more lung volumes, such as the total amount of air that can
+      be moved in a breathing cycle.
+    composed_of:
+    - lung_volume
+    tier: 1
+  gas_pressure_gradient_exchange:
+    defines: The principle that oxygen and carbon dioxide diffuse across the alveolar-capillary membrane
+      and between blood and tissues according to their partial pressure gradients.
+    composed_of:
+    - partial_pressure
+    - alveolus
+    tier: 3
+  respiratory_quotient:
+    defines: The ratio of carbon dioxide produced to oxygen consumed by the body's metabolism, used to
+      calculate alveolar oxygen partial pressure.
+    composed_of:
+    - partial_pressure
+    tier: 1
+  mechanics_of_breathing:
+    defines: The coordinated action of the diaphragm, intercostal muscles, and chest wall that changes
+      thoracic volume and pressure to drive inhalation and exhalation, explained by Boyle's Law.
+    composed_of:
+    - boyles_law
+    - pleura
+    tier: 1
+  alveolar_ventilation:
+    defines: The amount of air moving into and out of the alveoli, determined by the combination of respiratory
+      rate and tidal volume.
+    composed_of:
+    - respiratory_rate
+    - lung_volume
+    - alveolus
+    tier: 3
+  surfactant:
+    defines: A phospholipid and lipoprotein mixture that reduces surface tension in the alveoli, easing
+      lung inflation and preventing alveolar collapse.
+    composed_of:
+    - alveolus
+    tier: 2
+  lung_compliance_resistance:
+    defines: Measures of lung elasticity (compliance) and airway obstruction (resistance) that determine
+      ease of gas exchange and are altered in restrictive and obstructive diseases.
+    composed_of:
+    - mechanics_of_breathing
+    - surfactant
+    tier: 3
+  vq_mismatch:
+    defines: An imbalance between the amount of air reaching the alveoli (ventilation) and the amount
+      of blood flowing through the surrounding capillaries (perfusion), creating dead space.
+    composed_of:
+    - alveolar_ventilation
+    tier: 4
+  oxygen_dissociation_curve:
+    defines: A sigmoidal graph relating hemoglobin oxygen saturation to the partial pressure of oxygen,
+      shifted by factors such as CO2, pH, and temperature.
+    composed_of:
+    - hemoglobin
+    - partial_pressure
+    tier: 1
+  oxygen_transport:
+    defines: The process by which oxygen is carried in the blood, mostly bound to hemoglobin and a small
+      fraction dissolved in plasma.
+    composed_of:
+    - hemoglobin
+    - oxygen_dissociation_curve
+    tier: 2
+  bicarbonate_buffer_system:
+    defines: The system in which carbon dioxide is converted by carbonic anhydrase into bicarbonate and
+      hydrogen ions, allowing most CO2 to be transported in blood while buffering pH.
+    composed_of:
+    - diffusion
+    tier: 1
+  carbon_dioxide_transport:
+    defines: The transport of carbon dioxide from tissues to lungs via dissolution in plasma, binding
+      to hemoglobin as carbaminohemoglobin, or conversion to bicarbonate.
+    composed_of:
+    - hemoglobin
+    - bicarbonate_buffer_system
+    tier: 2
+  chloride_shift:
+    defines: The exchange of bicarbonate ions out of and chloride ions into red blood cells (and the reverse
+      in the lungs) that accompanies carbon dioxide transport.
+    composed_of:
+    - bicarbonate_buffer_system
+    tier: 2
+applications:
+  direct_diffusion_respiration:
+    defines: Gas exchange occurring directly across an organism's outer membrane, sufficient for very
+      small or flattened organisms.
+    needs:
+    - respiratory_surface
+    tier: 2
+  cutaneous_respiration:
+    defines: Gas exchange occurring across an organism's moist skin, as in earthworms and amphibians.
+    needs:
+    - respiratory_surface
+    tier: 2
+  gills:
+    defines: Thin, highly branched and folded respiratory organs that allow aquatic organisms to extract
+      dissolved oxygen from water.
+    needs:
+    - respiratory_surface
+    tier: 2
+  tracheal_system:
+    defines: A network of small chitin tubes opening through spiracles that delivers oxygen directly to
+      insect tissues, independent of the circulatory system.
+    needs:
+    - gas_exchange
+    tier: 1
+  spirometry:
+    defines: A technique used to measure lung volumes and capacities and to diagnose lung diseases.
+    needs:
+    - lung_volume
+    - lung_capacity
+    tier: 2
+  fev1_fvc_ratio:
+    defines: The ratio of air forcibly exhaled in one second to the total forced vital capacity, used
+      to diagnose restrictive versus obstructive lung disease.
+    needs:
+    - lung_capacity
+    - spirometry
+    tier: 3
+  hemoglobinopathies:
+    defines: Genetic diseases such as sickle cell anemia and thalassemia that impair hemoglobin structure
+      or production and reduce oxygen-carrying capacity.
+    needs:
+    - hemoglobin
+    - oxygen_transport
+    tier: 3
+  carbon_monoxide_poisoning:
+    defines: A toxic condition in which carbon monoxide preferentially binds hemoglobin over oxygen, drastically
+      reducing oxygen transport in the body.
+    needs:
+    - hemoglobin
+    - oxygen_transport
+    tier: 3

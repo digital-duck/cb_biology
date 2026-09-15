@@ -1,0 +1,297 @@
+domain: biology_2e_ch42
+primitives:
+  pathogen:
+    defines: An agent, usually a microorganism, that causes disease in the organisms it invades.
+    tier: 0
+  antigen:
+    defines: A foreign or "non-self" macromolecule that reacts with cells of the immune system and can
+      trigger an immune response.
+    tier: 0
+  innate_immunity:
+    defines: Immunity that occurs naturally because of genetic factors or physiology and is not induced
+      by infection or vaccination.
+    tier: 0
+  pamp:
+    defines: Carbohydrate, polypeptide, and nucleic acid "signatures" expressed by pathogens but not by
+      host cells.
+    tier: 0
+  phagocyte:
+    defines: An immune cell type that engulfs and digests pathogens and debris through phagocytosis.
+    tier: 0
+  cytokine:
+    defines: A chemical messenger that regulates cell differentiation, proliferation, gene expression,
+      and trafficking to affect immune responses.
+    tier: 0
+  mhc_molecules:
+    defines: Surface proteins that display antigen fragments to immune cells, signaling health status
+      or presenting foreign antigen.
+    tier: 0
+concepts:
+  epitope:
+    defines: A small component of an antigen specifically recognized by antibodies, B cells, and T cells.
+    composed_of:
+    - antigen
+    tier: 1
+  physical_chemical_barriers:
+    defines: Non-specific first-line defenses such as skin, mucus, cilia, low pH, and blood proteins.
+    composed_of:
+    - innate_immunity
+    tier: 1
+  prr:
+    defines: Molecules on macrophages and dendritic cells that bind PAMPs and promote pathogen engulfment.
+    composed_of:
+    - pamp
+    - phagocyte
+    tier: 1
+  natural_killer_cell:
+    defines: A lymphocyte of the innate immune system that kills virus-infected or tumor cells by detecting
+      altered MHC I expression.
+    composed_of:
+    - mhc_molecules
+    - innate_immunity
+    tier: 1
+  interferon:
+    defines: Cytokines released by infected cells that inhibit viral replication and modulate immune response
+      in neighboring cells.
+    composed_of:
+    - cytokine
+    tier: 1
+  inflammation:
+    defines: Localized redness, swelling, heat, and pain from leukocytes and fluid moving through permeable
+      capillaries to an infection site.
+    composed_of:
+    - cytokine
+    - phagocyte
+    tier: 1
+  complement_system:
+    defines: An array of soluble proteins that opsonize pathogens and form membrane attack complexes to
+      destroy extracellular pathogens.
+    composed_of:
+    - pathogen
+    tier: 1
+  adaptive_immunity:
+    defines: Immunity with memory that occurs after exposure to an antigen, more specific and slower-developing
+      than innate immunity.
+    composed_of:
+    - antigen
+    - innate_immunity
+    tier: 1
+  antigen_presenting_cell:
+    defines: An immune cell that engulfs and presents processed antigen on MHC molecules to inform the
+      adaptive immune response.
+    composed_of:
+    - mhc_molecules
+    - phagocyte
+    - antigen
+    tier: 1
+  toll_like_receptor:
+    defines: A type of PRR that recognizes molecules shared by pathogens but distinguishable from host
+      molecules.
+    composed_of:
+    - prr
+    tier: 2
+  macrophage:
+    defines: A large phagocytic cell derived from monocytes that engulfs pathogens and recognizes PAMPs
+      via PRRs.
+    composed_of:
+    - phagocyte
+    - prr
+    tier: 2
+  perforin_granzyme:
+    defines: Destructive proteins secreted by NK cells and cytotoxic T cells that create pores in target
+      cells and induce apoptosis.
+    composed_of:
+    - natural_killer_cell
+    tier: 2
+  opsonization:
+    defines: The process by which proteins mark a pathogen to enhance its engulfment by phagocytic cells.
+    composed_of:
+    - complement_system
+    - phagocyte
+    tier: 2
+  t_cell:
+    defines: A lymphocyte that matures in the thymus and mediates cell-mediated immunity by recognizing
+      antigen via T cell receptors bound to MHC.
+    composed_of:
+    - mhc_molecules
+    - adaptive_immunity
+    tier: 2
+  b_cell:
+    defines: A lymphocyte that matures in the bone marrow, functions as an APC, and differentiates into
+      antibody-secreting plasma cells.
+    composed_of:
+    - adaptive_immunity
+    - antigen
+    tier: 2
+  mucosal_immune_system:
+    defines: Lymphatic tissue combined with epithelial tissue lining mucosal surfaces, functioning as
+      a parallel immune system.
+    composed_of:
+    - adaptive_immunity
+    - innate_immunity
+    tier: 2
+  immune_tolerance:
+    defines: The acquired ability to prevent an unnecessary or harmful immune response to harmless substances
+      or self-antigens.
+    composed_of:
+    - adaptive_immunity
+    - antigen
+    tier: 2
+  immunodeficiency:
+    defines: Failure, insufficiency, or delay in the response of the immune system, which may be acquired
+      or inherited.
+    composed_of:
+    - adaptive_immunity
+    - innate_immunity
+    tier: 2
+  helper_t_cell:
+    defines: A CD4+ T cell that binds APCs via MHC II and stimulates B cells or secretes cytokines to
+      initiate immune responses.
+    composed_of:
+    - t_cell
+    - antigen_presenting_cell
+    - cytokine
+    tier: 3
+  cytotoxic_t_lymphocyte:
+    defines: A CD8+ T cell that directly kills infected or cancerous cells via perforin and granzymes
+      after recognizing MHC I-embedded antigen.
+    composed_of:
+    - t_cell
+    - mhc_molecules
+    - perforin_granzyme
+    tier: 3
+  clonal_selection:
+    defines: The activation and dramatic proliferation of a B or T cell population corresponding to one
+      specific antigen receptor variant.
+    composed_of:
+    - b_cell
+    - t_cell
+    - antigen
+    tier: 3
+  primary_lymphoid_organs:
+    defines: Sites such as bone marrow, thymus, lymph nodes, and spleen where immune cells originate,
+      mature, and communicate.
+    composed_of:
+    - b_cell
+    - t_cell
+    tier: 3
+  regulatory_t_cell:
+    defines: A specialized lymphocyte that suppresses local inflammation and stimulatory immune factors
+      to maintain immune tolerance.
+    composed_of:
+    - t_cell
+    - immune_tolerance
+    tier: 3
+  cell_mediated_immune_response:
+    defines: The adaptive immune response carried out by T cells, including helper T cells and cytotoxic
+      T lymphocytes.
+    composed_of:
+    - helper_t_cell
+    - cytotoxic_t_lymphocyte
+    tier: 4
+  plasma_cell:
+    defines: An antibody-secreting immune cell that arises from a B cell stimulated by antigen and TH2
+      cytokines.
+    composed_of:
+    - b_cell
+    - helper_t_cell
+    - cytokine
+    tier: 4
+  memory_cell:
+    defines: An antigen-specific B or T lymphocyte that persists after a primary immune response and rapidly
+      becomes an effector cell upon reexposure.
+    composed_of:
+    - b_cell
+    - t_cell
+    - clonal_selection
+    tier: 4
+  humoral_immune_response:
+    defines: The adaptive immune response controlled by activated B cells and the antibodies they secrete.
+    composed_of:
+    - b_cell
+    - plasma_cell
+    tier: 5
+  immunological_memory:
+    defines: The adaptive immune system's capacity to mount a faster and stronger response upon reexposure
+      to a previously encountered pathogen.
+    composed_of:
+    - memory_cell
+    tier: 5
+  antibody:
+    defines: A protein produced by plasma cells after antigen stimulation that mediates humoral immunity
+      by binding antigens.
+    composed_of:
+    - plasma_cell
+    - antigen
+    tier: 5
+  antibody_classes:
+    defines: The five immunoglobulin classes (IgM, IgG, IgA, IgD, IgE) distinguished by structure and
+      immunological function.
+    composed_of:
+    - antibody
+    tier: 6
+  antibody_function:
+    defines: The mechanisms by which antibodies neutralize pathogens, opsonize them for phagocytosis,
+      and activate the complement cascade.
+    composed_of:
+    - antibody
+    - opsonization
+    - complement_system
+    tier: 6
+  affinity_avidity_cross_reactivity:
+    defines: Properties describing the strength of antigen-antibody interaction, combined binding strength,
+      and cross-reactive binding.
+    composed_of:
+    - antibody
+    - epitope
+    tier: 6
+  molecular_mimicry:
+    defines: A phenomenon in which antibodies or T cell receptors raised against pathogen antigens cross-react
+      with structurally similar self antigens.
+    composed_of:
+    - epitope
+    - antibody
+    tier: 6
+  hypersensitivity:
+    defines: A spectrum of maladaptive immune responses toward harmless foreign particles or self antigens
+      occurring after tissue sensitization.
+    composed_of:
+    - adaptive_immunity
+    - antibody
+    tier: 6
+applications:
+  vaccination:
+    defines: Delivery of noninfectious antigens derived from known pathogens to generate a mild primary
+      immune response and confer immunological memory.
+    needs:
+    - adaptive_immunity
+    - immunological_memory
+    - antigen
+    tier: 6
+  passive_immunity:
+    defines: Temporary protection against pathogens conferred by transferring antibodies from one individual
+      to another.
+    needs:
+    - antibody
+    tier: 6
+  radioimmunoassay:
+    defines: A medical technique using competitive antigen-antibody binding to detect and measure very
+      small quantities of a substance.
+    needs:
+    - antibody
+    - epitope
+    tier: 6
+  allergy:
+    defines: An immune reaction from immediate hypersensitivity in which an IgE-mediated response occurs
+      within minutes of exposure to a harmless antigen.
+    needs:
+    - hypersensitivity
+    - antibody_classes
+    tier: 7
+  autoimmunity:
+    defines: A type of hypersensitivity in which autoantibodies or self-reactive T cells inappropriately
+      target the body's own "self" antigens.
+    needs:
+    - hypersensitivity
+    - molecular_mimicry
+    tier: 7

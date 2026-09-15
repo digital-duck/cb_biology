@@ -1,0 +1,196 @@
+domain: biology_2e_ch22
+primitives:
+  prokaryote:
+    defines: A unicellular organism (domain Bacteria or Archaea) that lacks a nucleus and other membrane-bound
+      organelles.
+    tier: 0
+  eukaryote:
+    defines: An organism whose cells contain a nucleus and other internal membrane-bound organelles.
+    tier: 0
+  hydrothermal_vent:
+    defines: A fissure in Earth's surface that releases geothermally heated water, providing an early
+      energy source for microbial mats.
+    tier: 0
+  culturing_prokaryotes:
+    defines: The laboratory technique of growing prokaryotes in a medium containing needed nutrients,
+      pioneered by Robert Koch, used to identify and study organisms.
+    tier: 0
+  binary_fission:
+    defines: The asexual reproductive process in prokaryotes in which the circular chromosome is replicated
+      and the cell divides into two identical clones.
+    tier: 0
+  macronutrients_micronutrients:
+    defines: Elements required by prokaryotes in large amounts versus trace amounts for growth and enzyme
+      function.
+    tier: 0
+  pathogen:
+    defines: A bacterium or other infectious agent that causes harm or disease to its host.
+    tier: 0
+  disease_epidemiology_terms:
+    defines: Terms describing disease occurrence patterns in populations, ranging from endemic to epidemic
+      to pandemic.
+    tier: 0
+concepts:
+  domains_of_life:
+    defines: The classification of all cellular life into Bacteria, Archaea, and Eukarya based on fundamental
+      cellular differences.
+    composed_of:
+    - prokaryote
+    - eukaryote
+    tier: 1
+  microbial_mat:
+    defines: A multi-layered sheet of prokaryotes held together by a secreted extracellular matrix, thought
+      to represent the earliest forms of life on Earth.
+    composed_of:
+    - prokaryote
+    - hydrothermal_vent
+    tier: 1
+  extremophile:
+    defines: A bacterium or archaean adapted to grow under extreme conditions such as high/low temperature,
+      pH, salinity, or radiation.
+    composed_of:
+    - prokaryote
+    - hydrothermal_vent
+    tier: 1
+  vbnc_state:
+    defines: A dormant survival state in which prokaryotes facing environmental stress remain alive but
+      cannot be grown in culture until conditions improve.
+    composed_of:
+    - culturing_prokaryotes
+    tier: 1
+  biofilm:
+    defines: A microbial community held together by a gummy-textured polysaccharide matrix, typically
+      growing attached to surfaces and more resistant to antibiotics than free-living cells.
+    composed_of:
+    - prokaryote
+    tier: 1
+  prokaryotic_cell_structure:
+    defines: The basic anatomy of a prokaryotic cell, including plasma membrane, cytoplasm, nucleoid with
+      circular DNA, ribosomes, and optional cell wall, capsule, flagella, pili, and plasmids.
+    composed_of:
+    - prokaryote
+    tier: 1
+  prokaryote_metabolic_diversity:
+    defines: The wide range of energy- and carbon-acquisition strategies that allow prokaryotes to inhabit
+      nearly every environment on Earth.
+    composed_of:
+    - macronutrients_micronutrients
+    tier: 1
+  emerging_and_zoonotic_disease:
+    defines: Diseases newly appearing or rapidly increasing in incidence/range, many of which originate
+      in animals and transmit to humans.
+    composed_of:
+    - pathogen
+    - disease_epidemiology_terms
+    tier: 1
+  foodborne_disease:
+    defines: Illness resulting from consumption of food contaminated with pathogenic bacteria, viruses,
+      or other parasites.
+    composed_of:
+    - pathogen
+    tier: 1
+  stromatolite:
+    defines: A layered sedimentary structure formed when minerals are precipitated out of water by prokaryotes
+      in a microbial mat, representing the earliest fossil record of life.
+    composed_of:
+    - microbial_mat
+    tier: 2
+  ancient_atmosphere_oxygenation:
+    defines: The transition of Earth's atmosphere from anoxic to oxygen-rich, driven by phototrophic and
+      cyanobacterial photosynthesis, enabling evolution of aerobic life forms.
+    composed_of:
+    - microbial_mat
+    tier: 2
+  cell_wall:
+    defines: A protective structure outside the plasma membrane that gives prokaryotic cells shape, rigidity,
+      and resistance to osmotic lysis.
+    composed_of:
+    - prokaryotic_cell_structure
+    tier: 2
+  archaeal_membrane_lipids:
+    defines: Distinctive phytanyl-glycerol ether lipids that distinguish archaeal plasma membranes from
+      bacterial fatty-acid-ester bilayers.
+    composed_of:
+    - prokaryotic_cell_structure
+    tier: 2
+  horizontal_gene_transfer:
+    defines: The transfer of genetic material between prokaryotes outside of reproduction, occurring via
+      transformation, transduction, or conjugation.
+    composed_of:
+    - binary_fission
+    - prokaryotic_cell_structure
+    tier: 2
+  energy_and_carbon_source_classification:
+    defines: The classification of prokaryotes by their energy source and carbon source, combined into
+      nutritional types like photoautotroph and chemoheterotroph.
+    composed_of:
+    - prokaryote_metabolic_diversity
+    tier: 2
+  peptidoglycan:
+    defines: A material composed of polysaccharide chains cross-linked by unusual peptides that forms
+      the primary component of bacterial cell walls.
+    composed_of:
+    - cell_wall
+    tier: 3
+  archaeal_cell_wall:
+    defines: The cell wall of Archaea, which lacks peptidoglycan and instead may be composed of pseudopeptidoglycan,
+      polysaccharides, glycoproteins, or protein.
+    composed_of:
+    - cell_wall
+    tier: 3
+  carbon_cycle:
+    defines: The movement of carbon between atmosphere, land, water, and organisms, driven by producers,
+      consumers, and decomposers, with prokaryotes playing key roles.
+    composed_of:
+    - energy_and_carbon_source_classification
+    tier: 3
+  nitrogen_cycle:
+    defines: The cycling of nitrogen between atmospheric N2, ammonia, ammonium, nitrite, and nitrate through
+      nitrogen fixation, nitrification, ammonification, and denitrification, largely carried out by prokaryotes.
+    composed_of:
+    - energy_and_carbon_source_classification
+    tier: 3
+  antibiotic_resistance:
+    defines: The evolution of bacterial populations to survive antibiotic exposure through natural selection
+      and gene transfer, driven largely by overuse of antibiotics.
+    composed_of:
+    - pathogen
+    - horizontal_gene_transfer
+    tier: 3
+  gram_staining:
+    defines: A staining method that distinguishes bacteria based on cell wall structure into Gram-positive
+      and Gram-negative groups.
+    composed_of:
+    - peptidoglycan
+    tier: 4
+applications:
+  host_associated_beneficial_microbes:
+    defines: Commensal prokaryotes on human skin and in the gut that aid digestion, produce nutrients,
+      protect against pathogens, and support immune function.
+    needs:
+    - biofilm
+    tier: 2
+  food_biotechnology:
+    defines: The use of bacteria (and yeast) in fermentation to produce foods such as cheese, yogurt,
+      bread, wine, and beer.
+    needs:
+    - prokaryote_metabolic_diversity
+    tier: 2
+  bioremediation:
+    defines: The use of microbial metabolism to remove pollutants such as pesticides, toxic metals, and
+      oil spills from the environment.
+    needs:
+    - prokaryote_metabolic_diversity
+    tier: 2
+  biological_nitrogen_fixation:
+    defines: The exclusive conversion of atmospheric N2 into ammonia by prokaryotes, either free-living
+      or in symbiosis with legume root nodules.
+    needs:
+    - nitrogen_cycle
+    tier: 4
+  mrsa:
+    defines: A dangerous strain of Staphylococcus aureus resistant to multiple common antibiotics, illustrating
+      the risks of widespread antibiotic resistance.
+    needs:
+    - antibiotic_resistance
+    tier: 4

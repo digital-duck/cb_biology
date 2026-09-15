@@ -1,0 +1,180 @@
+domain: biology_2e_ch37
+sources:
+  hormone:
+    label: Hormone
+    sections:
+    - id: ch37_s37_1
+      title: 37.1 Types of Hormones
+  endocrine_gland:
+    label: Endocrine Gland
+    sections:
+    - id: ch37_s37_1
+      title: 37.1 Types of Hormones
+    - id: ch37_key_terms
+      title: Key Terms
+  target_cell:
+    label: Target Cell
+    sections:
+    - id: ch37_s37_1
+      title: 37.1 Types of Hormones
+    - id: ch37_s37_2
+      title: 37.2 How Hormones Work
+  lipid_derived_hormone:
+    label: Lipid-Derived Hormone
+    sections:
+    - id: ch37_s37_1
+      title: 37.1 Types of Hormones
+  amino_acid_derived_hormone:
+    label: Amino Acid-Derived Hormone
+    sections:
+    - id: ch37_s37_1
+      title: 37.1 Types of Hormones
+  peptide_hormone:
+    label: Peptide Hormone
+    sections:
+    - id: ch37_s37_1
+      title: 37.1 Types of Hormones
+  hormone_receptor:
+    label: Hormone Receptor
+    sections:
+    - id: ch37_s37_2
+      title: 37.2 How Hormones Work
+  intracellular_hormone_receptor:
+    label: Intracellular Hormone Receptor
+    sections:
+    - id: ch37_s37_2
+      title: 37.2 How Hormones Work
+  plasma_membrane_hormone_receptor:
+    label: Plasma Membrane Hormone Receptor
+    sections:
+    - id: ch37_s37_2
+      title: 37.2 How Hormones Work
+  second_messenger_signaling:
+    label: Second Messenger Signaling (cAMP Pathway)
+    sections:
+    - id: ch37_s37_2
+      title: 37.2 How Hormones Work
+  receptor_regulation:
+    label: Up-Regulation and Down-Regulation
+    sections:
+    - id: ch37_s37_2
+      title: 37.2 How Hormones Work
+  negative_feedback:
+    label: Negative Feedback Regulation
+    sections:
+    - id: ch37_s37_4
+      title: 37.4 Regulation of Hormone Production
+  humoral_stimuli:
+    label: Humoral Stimuli
+    sections:
+    - id: ch37_s37_4
+      title: 37.4 Regulation of Hormone Production
+  hormonal_stimuli:
+    label: Hormonal Stimuli
+    sections:
+    - id: ch37_s37_4
+      title: 37.4 Regulation of Hormone Production
+  neural_stimuli:
+    label: Neural Stimuli
+    sections:
+    - id: ch37_s37_5
+      title: 37.5 Endocrine Glands
+  hypothalamic_pituitary_axis:
+    label: Hypothalamic-Pituitary Axis
+    sections:
+    - id: ch37_s37_5
+      title: 37.5 Endocrine Glands
+  anterior_pituitary:
+    label: Anterior Pituitary
+    sections:
+    - id: ch37_s37_5
+      title: 37.5 Endocrine Glands
+  posterior_pituitary:
+    label: Posterior Pituitary
+    sections:
+    - id: ch37_s37_5
+      title: 37.5 Endocrine Glands
+  water_balance_regulation:
+    label: Hormonal Regulation of Water Balance (ADH and RAAS)
+    sections:
+    - id: ch37_s37_3
+      title: 37.3 Regulation of Body Processes
+  reproductive_hormone_regulation:
+    label: Hormonal Regulation of the Reproductive System
+    sections:
+    - id: ch37_s37_3
+      title: 37.3 Regulation of Body Processes
+  blood_glucose_regulation:
+    label: Hormonal Regulation of Blood Glucose
+    sections:
+    - id: ch37_s37_3
+      title: 37.3 Regulation of Body Processes
+  metabolic_rate_regulation:
+    label: Regulation of Metabolic Rate by Thyroid Hormones
+    sections:
+    - id: ch37_s37_3
+      title: 37.3 Regulation of Body Processes
+  calcium_regulation:
+    label: Hormonal Control of Blood Calcium Levels
+    sections:
+    - id: ch37_s37_3
+      title: 37.3 Regulation of Body Processes
+  growth_hormone_regulation:
+    label: Hormonal Regulation of Growth
+    sections:
+    - id: ch37_s37_3
+      title: 37.3 Regulation of Body Processes
+  stress_response:
+    label: Hormonal Regulation of Stress (Fight-or-Flight)
+    sections:
+    - id: ch37_s37_3
+      title: 37.3 Regulation of Body Processes
+  thyroid_gland:
+    label: Thyroid Gland
+    sections:
+    - id: ch37_s37_5
+      title: 37.5 Endocrine Glands
+  parathyroid_glands:
+    label: Parathyroid Glands
+    sections:
+    - id: ch37_s37_5
+      title: 37.5 Endocrine Glands
+  adrenal_glands:
+    label: Adrenal Glands
+    sections:
+    - id: ch37_s37_5
+      title: 37.5 Endocrine Glands
+  pancreas_endocrine_function:
+    label: Pancreas (Endocrine Function)
+    sections:
+    - id: ch37_s37_5
+      title: 37.5 Endocrine Glands
+  pineal_gland:
+    label: Pineal Gland
+    sections:
+    - id: ch37_s37_5
+      title: 37.5 Endocrine Glands
+  gonads:
+    label: Gonads
+    sections:
+    - id: ch37_s37_5
+      title: 37.5 Endocrine Glands
+  secondary_endocrine_organs:
+    label: Organs with Secondary Endocrine Functions
+    sections:
+    - id: ch37_s37_5
+      title: 37.5 Endocrine Glands
+  endocrine_disorders:
+    label: Endocrine Disorders
+    sections:
+    - id: ch37_s37_2
+      title: 37.2 How Hormones Work
+    - id: ch37_s37_3
+      title: 37.3 Regulation of Body Processes
+    - id: ch37_s37_4
+      title: 37.4 Regulation of Hormone Production
+  performance_enhancing_hormones:
+    label: Synthetic and Performance-Enhancing Hormones
+    sections:
+    - id: ch37_s37_3
+      title: 37.3 Regulation of Body Processes

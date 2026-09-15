@@ -1,0 +1,267 @@
+domain: biology_2e_ch17
+primitives:
+  dna_rna_structure:
+    defines: Nucleic acids are macromolecules made of nucleotides (sugar, phosphate, nitrogenous base)
+      linked by phosphodiester bonds, with DNA having two complementary strands and RNA leaving the nucleus.
+    tier: 0
+  genome:
+    defines: The entire set of DNA molecules present in the nucleus of an organism.
+    tier: 0
+  restriction_endonuclease:
+    defines: An enzyme that recognizes specific DNA sequences and cuts them in a predictable manner, often
+      producing sticky ends.
+    tier: 0
+  plasmid:
+    defines: A small circular DNA molecule that replicates independently of chromosomal DNA and can serve
+      as a vector for foreign DNA.
+    tier: 0
+  genetic_recombination:
+    defines: The exchange of DNA between homologous chromosome pairs through crossing over, underlying
+      linkage analysis.
+    tier: 0
+concepts:
+  biotechnology:
+    defines: The use of biological agents for technological advancement, applied historically and modernly
+      in medicine, agriculture, and industry.
+    composed_of:
+    - dna_rna_structure
+    - genome
+    tier: 1
+  dna_rna_extraction:
+    defines: Techniques to isolate nucleic acids from cells by breaking open cell membranes and enzymatically
+      destroying unwanted macromolecules.
+    composed_of:
+    - dna_rna_structure
+    tier: 1
+  gel_electrophoresis:
+    defines: A technique that separates nucleic acid or protein molecules by size using an electric field,
+      exploiting their negative charge.
+    composed_of:
+    - dna_rna_structure
+    tier: 1
+  pcr:
+    defines: A technique to amplify specific DNA regions using primers, DNA polymerase, and repeated thermal
+      cycling.
+    composed_of:
+    - dna_rna_extraction
+    tier: 2
+  rt_pcr:
+    defines: A PCR variant that first converts an RNA template into cDNA via reverse transcriptase before
+      amplification.
+    composed_of:
+    - pcr
+    tier: 3
+  blotting_techniques:
+    defines: Techniques that transfer size-separated DNA (Southern) or RNA (Northern) fragments from a
+      gel to a nylon membrane for detection with labeled probes.
+    composed_of:
+    - gel_electrophoresis
+    tier: 2
+  molecular_cloning:
+    defines: The process of reproducing desired DNA fragments by inserting them into plasmid vectors using
+      restriction endonucleases and DNA ligase.
+    composed_of:
+    - restriction_endonuclease
+    - plasmid
+    tier: 1
+  recombinant_dna:
+    defines: Artificially created DNA molecules formed by combining foreign DNA fragments with plasmid
+      vectors, used to produce recombinant proteins.
+    composed_of:
+    - molecular_cloning
+    tier: 2
+  cellular_cloning:
+    defines: The natural production of identical cell populations through asexual replication (binary
+      fission) of unicellular organisms.
+    composed_of:
+    - genome
+    tier: 1
+  reproductive_cloning:
+    defines: A technique for cloning an entire multicellular organism by transferring a diploid donor
+      nucleus into an enucleated egg (somatic cell nuclear transfer).
+    composed_of:
+    - cellular_cloning
+    tier: 2
+  genetic_engineering:
+    defines: The alteration of an organism's genotype using recombinant DNA technology to achieve desirable
+      traits, producing GMOs and transgenic organisms.
+    composed_of:
+    - recombinant_dna
+    tier: 3
+  gene_targeting:
+    defines: The use of recombinant DNA vectors to alter a gene's expression by introducing mutations
+      or deleting part of the gene sequence.
+    composed_of:
+    - genetic_engineering
+    tier: 4
+  genomics:
+    defines: The study of entire genomes, including the complete set of genes, their sequence, organization,
+      and interactions within and across species.
+    composed_of:
+    - genome
+    tier: 1
+  linkage_analysis:
+    defines: A procedure analyzing recombination frequency between genes to determine if they are linked
+      or independently assorted.
+    composed_of:
+    - genetic_recombination
+    tier: 1
+  genetic_markers:
+    defines: Polymorphic chromosome regions (RFLPs, VNTRs, microsatellites, SNPs) used as landmarks for
+      genetic mapping.
+    composed_of:
+    - dna_rna_structure
+    tier: 1
+  genetic_map:
+    defines: An illustration listing genes and their approximate locations on a chromosome, based on recombination
+      frequencies and genetic markers.
+    composed_of:
+    - linkage_analysis
+    - genetic_markers
+    tier: 2
+  physical_map:
+    defines: A representation of the physical distance, in nucleotides, between genes or genetic markers,
+      built via cytogenetic, radiation hybrid, or sequence mapping.
+    composed_of:
+    - genetic_markers
+    - genome
+    tier: 2
+  genome_mapping:
+    defines: The process of finding the locations of genes on each chromosome by integrating genetic and
+      physical maps.
+    composed_of:
+    - genetic_map
+    - physical_map
+    tier: 3
+  chain_termination_sequencing:
+    defines: A DNA sequencing method using labeled dideoxynucleotides that terminate replication, producing
+      fragments read by gel electrophoresis.
+    composed_of:
+    - dna_rna_structure
+    - gel_electrophoresis
+    tier: 2
+  shotgun_sequencing:
+    defines: Sequencing strategies that randomly fragment DNA, sequence the pieces, and reassemble the
+      genome by matching overlapping sequences into contigs.
+    composed_of:
+    - chain_termination_sequencing
+    tier: 3
+  next_gen_sequencing:
+    defines: Automated, massively parallel techniques for rapid, low-cost DNA sequencing of large numbers
+      of short fragments.
+    composed_of:
+    - chain_termination_sequencing
+    tier: 3
+  whole_genome_sequencing:
+    defines: A process that determines an entire genome's DNA sequence, used to diagnose and treat genetic
+      disease.
+    composed_of:
+    - shotgun_sequencing
+    - next_gen_sequencing
+    tier: 4
+  dna_microarray:
+    defines: A method to detect gene expression by analyzing many DNA fragments fixed to a glass slide
+      or silicon chip.
+    composed_of:
+    - genomics
+    tier: 2
+  proteome:
+    defines: The entire set of proteins that a given cell type produces, which varies dynamically unlike
+      the constant genome.
+    composed_of:
+    - genome
+    tier: 1
+  proteomics:
+    defines: The study of the function of proteomes, complementing genomics by testing gene-based hypotheses
+      at the protein level.
+    composed_of:
+    - proteome
+    - genomics
+    tier: 2
+  metabolomics:
+    defines: The study of small molecule metabolites in an organism, comprising the complete metabolome
+      related to genetic makeup.
+    composed_of:
+    - genomics
+    tier: 2
+  protein_analysis_techniques:
+    defines: Methods used to identify and determine the structure and characteristics of proteins for
+      proteomic analysis.
+    composed_of:
+    - proteome
+    tier: 2
+  systems_biology:
+    defines: The study of whole biological systems (genomes and proteomes) based on the interactions within
+      the system.
+    composed_of:
+    - genomics
+    - proteomics
+    tier: 3
+applications:
+  genetic_diagnosis_therapy:
+    defines: Testing for disease-causing genes and using genetic engineering to introduce functional genes
+      to cure inheritable disease.
+    needs:
+    - genetic_engineering
+    - gene_targeting
+    tier: 5
+  biotech_products:
+    defines: Recombinant DNA technology used to mass-produce vaccines, antibiotics, and hormones such
+      as insulin and human growth hormone.
+    needs:
+    - recombinant_dna
+    - genetic_engineering
+    tier: 4
+  transgenic_organisms:
+    defines: Organisms modified to express recombinant DNA from another species, used to produce proteins
+      or improve agricultural traits.
+    needs:
+    - genetic_engineering
+    tier: 4
+  model_organisms_annotation:
+    defines: Sequencing genomes of representative species and attaching biological information to gene
+      sequences to support broader research.
+    needs:
+    - whole_genome_sequencing
+    - genomics
+    tier: 5
+  personalized_disease_risk:
+    defines: Using whole-genome analysis of healthy individuals to assess propensity for polygenic and
+      single-gene diseases.
+    needs:
+    - whole_genome_sequencing
+    - genomics
+    tier: 5
+  pharmacogenomics:
+    defines: The evaluation of drug effectiveness and safety based on an individual's genomic sequence,
+      also called toxicogenomics.
+    needs:
+    - whole_genome_sequencing
+    - genomics
+    tier: 5
+  metagenomics:
+    defines: The study of the collective genomes of multiple species that grow and interact within an
+      environmental niche.
+    needs:
+    - genomics
+    - whole_genome_sequencing
+    tier: 5
+  mitochondrial_genomics:
+    defines: The study of mitochondrial DNA's rapid mutation rate and maternal inheritance to trace evolutionary
+      relationships and genealogy.
+    needs:
+    - genomics
+    tier: 2
+  agricultural_genomics:
+    defines: The use of genomic data to link traits to genes and improve crop breeding, yield, and quality.
+    needs:
+    - genomics
+    - genetic_engineering
+    tier: 4
+  cancer_proteomics:
+    defines: The use of biomarkers and protein signatures identified through proteomics to improve cancer
+      screening, detection, and personalized treatment.
+    needs:
+    - proteomics
+    - protein_analysis_techniques
+    tier: 3

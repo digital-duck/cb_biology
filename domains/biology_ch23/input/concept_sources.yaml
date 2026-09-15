@@ -1,0 +1,156 @@
+domain: biology_2e_ch23
+sources:
+  domain_classification:
+    label: Three-Domain Classification
+    sections:
+    - id: ch23_s23_1
+      title: 23.1 Eukaryotic Origins
+  prokaryotic_cell:
+    label: Prokaryotic Cell
+    sections:
+    - id: ch23_s23_1
+      title: 23.1 Eukaryotic Origins
+  nucleus:
+    label: Nucleus
+    sections:
+    - id: ch23_s23_1
+      title: 23.1 Eukaryotic Origins
+  cytoskeleton:
+    label: Cytoskeleton
+    sections:
+    - id: ch23_s23_1
+      title: 23.1 Eukaryotic Origins
+  flagella_cilia:
+    label: Flagella and Cilia
+    sections:
+    - id: ch23_s23_1
+      title: 23.1 Eukaryotic Origins
+    - id: ch23_s23_2
+      title: 23.2 Characteristics of Protists
+    - id: ch23_s23_3
+      title: 23.3 Groups of Protists
+  histone_chromosomes:
+    label: Histone-Organized Chromosomes
+    sections:
+    - id: ch23_s23_1
+      title: 23.1 Eukaryotic Origins
+  mitosis:
+    label: Mitosis
+    sections:
+    - id: ch23_s23_1
+      title: 23.1 Eukaryotic Origins
+  sexual_reproduction:
+    label: Sexual Reproduction (Meiosis)
+    sections:
+    - id: ch23_s23_1
+      title: 23.1 Eukaryotic Origins
+    - id: ch23_s23_3
+      title: 23.3 Groups of Protists
+  cell_wall:
+    label: Cell Wall
+    sections:
+    - id: ch23_s23_1
+      title: 23.1 Eukaryotic Origins
+  eukaryote:
+    label: Eukaryote
+    sections:
+    - id: ch23_s23_1
+      title: 23.1 Eukaryotic Origins
+  prokaryotic_metabolism:
+    label: Prokaryotic Metabolism (Aerobic Respiration and Photosynthesis)
+    sections:
+    - id: ch23_s23_1
+      title: 23.1 Eukaryotic Origins
+  endosymbiosis:
+    label: Endosymbiosis
+    sections:
+    - id: ch23_s23_1
+      title: 23.1 Eukaryotic Origins
+  endosymbiotic_theory:
+    label: Endosymbiotic Theory
+    sections:
+    - id: ch23_s23_1
+      title: 23.1 Eukaryotic Origins
+  mitochondria:
+    label: Mitochondria
+    sections:
+    - id: ch23_s23_1
+      title: 23.1 Eukaryotic Origins
+  primary_endosymbiosis:
+    label: Primary Endosymbiosis
+    sections:
+    - id: ch23_s23_1
+      title: 23.1 Eukaryotic Origins
+  plastid_chloroplast:
+    label: Plastids and Chloroplasts
+    sections:
+    - id: ch23_s23_1
+      title: 23.1 Eukaryotic Origins
+  secondary_endosymbiosis:
+    label: Secondary Endosymbiosis
+    sections:
+    - id: ch23_s23_1
+      title: 23.1 Eukaryotic Origins
+    - id: ch23_s23_3
+      title: 23.3 Groups of Protists
+  protist:
+    label: Protist
+    sections:
+    - id: ch23_s23_2
+      title: 23.2 Characteristics of Protists
+  phagocytosis:
+    label: Phagocytosis
+    sections:
+    - id: ch23_s23_2
+      title: 23.2 Characteristics of Protists
+  mixotroph:
+    label: Mixotrophy
+    sections:
+    - id: ch23_s23_2
+      title: 23.2 Characteristics of Protists
+    - id: ch23_s23_3
+      title: 23.3 Groups of Protists
+  taxis:
+    label: Taxis
+    sections:
+    - id: ch23_s23_2
+      title: 23.2 Characteristics of Protists
+  alternation_of_generations:
+    label: Alternation of Generations
+    sections:
+    - id: ch23_s23_2
+      title: 23.2 Characteristics of Protists
+    - id: ch23_s23_3
+      title: 23.3 Groups of Protists
+  convergent_evolution:
+    label: Convergent Evolution
+    sections:
+    - id: ch23_s23_3
+      title: 23.3 Groups of Protists
+  eukaryotic_supergroups:
+    label: Eukaryotic Supergroups
+    sections:
+    - id: ch23_s23_3
+      title: 23.3 Groups of Protists
+  biological_carbon_pump:
+    label: Biological Carbon Pump
+    sections:
+    - id: ch23_s23_3
+      title: 23.3 Groups of Protists
+    - id: ch23_s23_4
+      title: 23.4 Ecology of Protists
+  coral_dinoflagellate_symbiosis:
+    label: Coral-Dinoflagellate Symbiosis
+    sections:
+    - id: ch23_s23_4
+      title: 23.4 Ecology of Protists
+  protist_pathogens:
+    label: Protist Pathogens
+    sections:
+    - id: ch23_s23_4
+      title: 23.4 Ecology of Protists
+  protist_decomposers:
+    label: Protist Decomposers
+    sections:
+    - id: ch23_s23_4
+      title: 23.4 Ecology of Protists

@@ -1,0 +1,145 @@
+domain: biology_2e_ch32
+primitives:
+  alternation_of_generations:
+    defines: Plant life cycle alternating between a haploid gametophyte stage that produces gametes and
+      a diploid sporophyte stage that produces spores.
+    tier: 0
+  gametophyte:
+    defines: The multicellular haploid stage of the plant life cycle that produces gametes by mitosis.
+    tier: 0
+  sporophyte:
+    defines: The multicellular diploid stage of the plant life cycle, formed after fusion of gametes,
+      that produces spores by meiosis.
+    tier: 0
+  pollination:
+    defines: The transfer of pollen from the anther to the stigma of a flower (or from male to female
+      cone in gymnosperms).
+    tier: 0
+  asexual_reproduction:
+    defines: Reproduction that produces genetically identical offspring from a single parent plant without
+      gamete fusion.
+    tier: 0
+concepts:
+  flower_structure:
+    defines: A typical flower has four whorls—calyx, corolla, androecium, and gynoecium—that make up its
+      reproductive and protective structures.
+    composed_of:
+    - sporophyte
+    tier: 1
+  gymnosperm_reproduction:
+    defines: Reproduction in gymnosperms occurs via male and female cones bearing exposed gametophytes,
+      without enclosed ovaries or double fertilization.
+    composed_of:
+    - alternation_of_generations
+    - pollination
+    tier: 1
+  pollination_agents:
+    defines: Pollen is transferred by biotic agents such as insects, bats, and birds, or abiotic agents
+      such as wind and water, each associated with characteristic flower adaptations.
+    composed_of:
+    - pollination
+    tier: 1
+  natural_asexual_reproduction:
+    defines: Plant self-propagation strategies such as bulbs, corms, rhizomes, stolons, and adventitious
+      buds that generate new individuals without fertilization.
+    composed_of:
+    - asexual_reproduction
+    tier: 1
+  plant_life_span_classification:
+    defines: Plants are classified by life span (annual, biennial, perennial) and flowering frequency
+      (monocarpic, polycarpic).
+    composed_of:
+    - sporophyte
+    tier: 1
+  complete_incomplete_flowers:
+    defines: Flowers are classified as complete if all four whorls are present, incomplete if any are
+      missing, and perfect (hermaphroditic) if both androecium and gynoecium are present.
+    composed_of:
+    - flower_structure
+    tier: 2
+  monoecious_dioecious:
+    defines: Monoecious species bear both male and female flowers on the same plant, while dioecious species
+      bear them on separate plants.
+    composed_of:
+    - flower_structure
+    tier: 2
+  male_gametophyte_development:
+    defines: Development of pollen within the microsporangium of the anther, where microspore mother cells
+      undergo meiosis to form microspores that mature into pollen grains.
+    composed_of:
+    - flower_structure
+    - gametophyte
+    tier: 2
+  female_gametophyte_development:
+    defines: Formation of the female gametophyte through megasporogenesis and megagametogenesis, producing
+      an eight-nucleate embryo sac containing the egg cell, synergids, polar nuclei, and antipodal cells.
+    composed_of:
+    - flower_structure
+    - gametophyte
+    tier: 2
+  self_pollination:
+    defines: Transfer of pollen from the anther to the stigma of the same flower or another flower on
+      the same plant.
+    composed_of:
+    - pollination
+    - flower_structure
+    tier: 2
+  cross_pollination:
+    defines: Transfer of pollen from the anther of one flower to the stigma of a flower on a different
+      individual of the same species, increasing genetic diversity.
+    composed_of:
+    - pollination
+    - flower_structure
+    tier: 2
+  senescence:
+    defines: The aging process in plant tissues, marked by chloroplast breakdown and nutrient recycling,
+      regulated in part by hormones.
+    composed_of:
+    - plant_life_span_classification
+    tier: 2
+  double_fertilization:
+    defines: Two fertilization events unique to angiosperms in which one sperm fuses with the egg to form
+      the diploid zygote and the other fuses with the polar nuclei to form the triploid endosperm.
+    composed_of:
+    - pollination
+    - male_gametophyte_development
+    - female_gametophyte_development
+    tier: 3
+  embryo_development:
+    defines: Post-fertilization division of the zygote into terminal and basal cells, giving rise to the
+      embryo, suspensor, and cotyledons.
+    composed_of:
+    - double_fertilization
+    tier: 4
+  fruit_development_types:
+    defines: After fertilization, the ovary (or other floral tissue) develops into fruit, classified as
+      simple, aggregate, multiple, or accessory based on origin.
+    composed_of:
+    - double_fertilization
+    tier: 4
+  seed_structure_development:
+    defines: The mature ovule develops into a seed containing a seed coat, cotyledons, endosperm, and
+      embryo, with differing food storage strategies in monocots and dicots.
+    composed_of:
+    - embryo_development
+    tier: 5
+  seed_germination:
+    defines: The process by which a dormant seed resumes growth under favorable conditions, sometimes
+      requiring vernalization or scarification to break dormancy.
+    composed_of:
+    - seed_structure_development
+    tier: 6
+applications:
+  artificial_asexual_reproduction:
+    defines: Human-assisted asexual propagation techniques including grafting, cutting, layering, and
+      micropropagation.
+    needs:
+    - asexual_reproduction
+    tier: 1
+  fruit_seed_dispersal:
+    defines: Mechanisms, including wind, water, and animals, by which fruits disperse seeds away from
+      the parent plant to reduce competition.
+    needs:
+    - fruit_development_types
+    - seed_structure_development
+    tier: 6

@@ -1,0 +1,235 @@
+domain: biology_2e_ch30
+primitives:
+  plant_cell_structures:
+    defines: Plant cells contain organelles including cell walls, plastids, and a large central vacuole,
+      which are not found in animal cells.
+    tier: 0
+  shoot_system:
+    defines: The aboveground organ system of a plant consisting of vegetative parts (leaves, stems) and
+      reproductive parts (flowers, fruits).
+    tier: 0
+  root_system:
+    defines: The usually underground organ system that anchors the plant and absorbs water and minerals.
+    tier: 0
+  meristematic_tissue:
+    defines: Plant tissue of undifferentiated or incompletely differentiated cells located in meristems
+      that continuously divide and drive growth.
+    tier: 0
+  parenchyma_cell:
+    defines: The most common plant cell type, responsible for metabolic functions such as photosynthesis
+      and starch storage.
+    tier: 0
+  collenchyma_cell:
+    defines: Elongated, living plant cells with unevenly thickened walls that provide structural support
+      to stems and leaves.
+    tier: 0
+  sclerenchyma_cell:
+    defines: Plant cells with lignified secondary walls, often dead at maturity, that provide structural
+      support (fibers and sclereids).
+    tier: 0
+  water_potential:
+    defines: A measure of the potential energy of water, expressed relative to pure water, determined
+      by solute, pressure, gravity, and matric components.
+    tier: 0
+  phytochrome_system:
+    defines: A photoreceptor system with interconvertible Pr and Pfr forms that mediates plant responses
+      to red and far-red light, such as germination and flowering timing.
+    tier: 0
+  plant_hormones:
+    defines: Chemical messengers (auxins, cytokinins, gibberellins, abscisic acid, ethylene, and others)
+      that regulate plant growth, development, and stress responses.
+    tier: 0
+concepts:
+  permanent_tissue:
+    defines: Plant tissue consisting of cells that are no longer actively dividing, differentiated from
+      meristematic tissue into dermal, vascular, and ground tissue.
+    composed_of:
+    - meristematic_tissue
+    tier: 1
+  dermal_tissue:
+    defines: Simple permanent tissue that covers and protects the outer surface of the plant and controls
+      gas exchange.
+    composed_of:
+    - permanent_tissue
+    tier: 2
+  ground_tissue:
+    defines: Permanent tissue that carries out photosynthesis, provides a supporting matrix for vascular
+      tissue, and stores water and sugars.
+    composed_of:
+    - permanent_tissue
+    tier: 2
+  xylem:
+    defines: Conducting tissue composed of vessel elements, tracheids, and xylem parenchyma that transports
+      water and minerals from roots to the rest of the plant.
+    composed_of:
+    - permanent_tissue
+    tier: 2
+  phloem:
+    defines: Living conducting tissue composed of sieve-tube cells, companion cells, phloem parenchyma,
+      and phloem fibers that transports organic compounds from photosynthetic tissue.
+    composed_of:
+    - permanent_tissue
+    tier: 2
+  vascular_tissue:
+    defines: Complex permanent tissue made of xylem and phloem that transports water, minerals, and sugars
+      throughout the plant.
+    composed_of:
+    - xylem
+    - phloem
+    tier: 3
+  stem_anatomy:
+    defines: The organization of a stem into dermal, vascular, and ground tissue, characterized by nodes,
+      internodes, and vascular bundles.
+    composed_of:
+    - dermal_tissue
+    - vascular_tissue
+    - ground_tissue
+    tier: 4
+  primary_growth:
+    defines: Increase in length of shoots and roots resulting from cell division in the apical meristem.
+    composed_of:
+    - meristematic_tissue
+    - shoot_system
+    - root_system
+    tier: 1
+  secondary_growth:
+    defines: Increase in stem or root thickness caused by cell division in lateral meristems (vascular
+      cambium and cork cambium).
+    composed_of:
+    - meristematic_tissue
+    - vascular_tissue
+    tier: 4
+  annual_rings:
+    defines: Visible growth rings formed by alternating early (spring) and late (autumn) wood produced
+      by seasonal vascular cambium activity.
+    composed_of:
+    - secondary_growth
+    tier: 5
+  root_systems:
+    defines: The two main root architectures - a deep-penetrating tap root system in dicots and a shallow,
+      dense fibrous root system in monocots.
+    composed_of:
+    - root_system
+    tier: 1
+  root_growth_zones:
+    defines: The three zones of the root tip - cell division, elongation, and maturation - that together
+      produce root growth, protected by the root cap.
+    composed_of:
+    - root_system
+    - meristematic_tissue
+    tier: 1
+  root_anatomy:
+    defines: The internal organization of the root into epidermis, cortex, endodermis (with the Casparian
+      strip), pericycle, and vascular stele.
+    composed_of:
+    - dermal_tissue
+    - ground_tissue
+    - vascular_tissue
+    - root_system
+    tier: 4
+  leaf_structure:
+    defines: The organization of a typical leaf into lamina, petiole, epidermis, mesophyll (palisade and
+      spongy parenchyma), and vascular bundles.
+    composed_of:
+    - dermal_tissue
+    - ground_tissue
+    - vascular_tissue
+    - shoot_system
+    tier: 4
+  leaf_venation:
+    defines: The characteristic pattern of leaf veins - parallel in monocots, reticulate in dicots, dichotomous
+      in Ginkgo - formed by vascular tissue.
+    composed_of:
+    - vascular_tissue
+    - leaf_structure
+    tier: 5
+  leaf_form:
+    defines: Classification of leaves as simple (undivided blade) or compound (blade divided into leaflets,
+      palmate or pinnate).
+    composed_of:
+    - leaf_structure
+    tier: 5
+  stomata_guard_cells:
+    defines: Epidermal pores flanked by guard cells that regulate gas exchange and water vapor release
+      in leaves and stems.
+    composed_of:
+    - dermal_tissue
+    tier: 2
+  transpiration:
+    defines: The passive loss of water vapor from the plant through stomata, driven by differences in
+      water potential between soil and atmosphere.
+    composed_of:
+    - stomata_guard_cells
+    - water_potential
+    tier: 3
+  cohesion_tension_theory:
+    defines: The mechanism by which transpiration-driven tension, combined with water cohesion and adhesion
+      in xylem, pulls water and minerals up the plant.
+    composed_of:
+    - transpiration
+    - xylem
+    tier: 4
+  translocation:
+    defines: The pressure-driven bulk flow transport of photosynthates (mainly sucrose) from source tissues
+      to sink tissues through the phloem.
+    composed_of:
+    - phloem
+    - water_potential
+    tier: 3
+  photomorphogenesis:
+    defines: Growth and development of plants in response to light, mediated by photoreceptors such as
+      phytochromes, cryptochromes, and phototropins.
+    composed_of:
+    - phytochrome_system
+    tier: 1
+  phototropism:
+    defines: Directional bending of a plant toward or away from a light source, mediated by blue-light
+      photoreceptors (phototropins) and auxin redistribution.
+    composed_of:
+    - plant_hormones
+    tier: 1
+  gravitropism:
+    defines: Directional plant growth response to gravity, mediated by amyloplast settling and auxin redistribution,
+      causing negative gravitropism in shoots and positive in roots.
+    composed_of:
+    - plant_hormones
+    tier: 1
+  thigmo_responses:
+    defines: Plant responses to touch, ranging from directional growth toward contact, direction-independent
+      rapid movement, and slow developmental changes from continuous mechanical stress.
+    composed_of:
+    - plant_hormones
+    tier: 1
+applications:
+  stem_modifications:
+    defines: Specialized stem forms such as rhizomes, corms, stolons, runners, tubers, bulbs, tendrils,
+      and thorns adapted to particular functions or habitats.
+    needs:
+    - stem_anatomy
+    tier: 5
+  root_modifications:
+    defines: Specialized root forms such as storage tap roots, aerial roots, prop roots, and epiphytic
+      roots adapted for specific functions.
+    needs:
+    - root_anatomy
+    tier: 5
+  leaf_adaptations:
+    defines: Modifications of leaf size, shape, and surface (needles, spines, thick cuticle, trichomes)
+      that adapt plants to their habitat's water and light availability.
+    needs:
+    - leaf_structure
+    tier: 5
+  plant_defense_responses:
+    defines: Physical barriers and chemical defenses (secondary metabolites, jasmonates, oligosaccharins)
+      that plants use to deter herbivores and pathogens.
+    needs:
+    - plant_hormones
+    tier: 1
+  horticultural_applications:
+    defines: Practical manipulation of plant hormones (auxins, gibberellins, ethylene) and light cycles
+      to control rooting, fruiting, flowering, and ripening in agriculture.
+    needs:
+    - plant_hormones
+    - phototropism
+    - gravitropism
+    tier: 2

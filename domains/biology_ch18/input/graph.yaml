@@ -1,0 +1,232 @@
+domain: biology_2e_ch18
+primitives:
+  heritable_variation:
+    defines: Genetic differences among individuals in a population that can be passed from parent to offspring.
+    tier: 0
+  mutation:
+    defines: A change in DNA that is the ultimate source of new alleles and genetic variation in a population.
+    tier: 0
+  sexual_reproduction:
+    defines: Combination of genetic material from two parents to produce offspring with unique genotypes,
+      generating genetic diversity.
+    tier: 0
+  gene_pool:
+    defines: The collection of all gene variants present in a species or population.
+    tier: 0
+concepts:
+  gene_flow:
+    defines: The movement of alleles across a species' geographic range through migration and interbreeding.
+    composed_of:
+    - gene_pool
+    tier: 1
+  natural_selection:
+    defines: The more prolific reproduction of individuals with favorable heritable traits that survive
+      environmental change, leading to evolutionary change.
+    composed_of:
+    - heritable_variation
+    - mutation
+    tier: 1
+  species:
+    defines: A group of individual organisms that interbreed and produce fertile, viable offspring.
+    composed_of:
+    - sexual_reproduction
+    - gene_pool
+    tier: 1
+  polyploidy:
+    defines: A condition in which a cell or organism has one or more extra complete sets of chromosomes.
+    composed_of:
+    - mutation
+    tier: 1
+  adaptation:
+    defines: A heritable trait that helps an organism's survival and reproduction in its present environment.
+    composed_of:
+    - natural_selection
+    tier: 2
+  divergent_evolution:
+    defines: The process by which groups of organisms evolve in diverse directions from a common ancestral
+      point.
+    composed_of:
+    - natural_selection
+    - gene_pool
+    tier: 2
+  hybrid:
+    defines: The offspring produced by mating between two closely related but separate species.
+    composed_of:
+    - species
+    tier: 2
+  speciation:
+    defines: The formation of two or more new species from one original species.
+    composed_of:
+    - species
+    - gene_flow
+    tier: 2
+  reproductive_isolation:
+    defines: The inability of populations to interbreed, making them reproductively independent species.
+    composed_of:
+    - species
+    - gene_flow
+    tier: 2
+  autopolyploidy:
+    defines: Polyploidy in which an individual has multiple complete chromosome sets originating from
+      its own species.
+    composed_of:
+    - polyploidy
+    tier: 2
+  convergent_evolution:
+    defines: The process by which similar traits evolve independently in species that do not share a recent
+      common ancestor.
+    composed_of:
+    - adaptation
+    tier: 3
+  homologous_structures:
+    defines: Parallel anatomical structures in diverse organisms that share a common ancestor.
+    composed_of:
+    - divergent_evolution
+    tier: 3
+  allopatric_speciation:
+    defines: Speciation that occurs via geographic separation of populations from a parent species.
+    composed_of:
+    - speciation
+    - gene_flow
+    tier: 3
+  sympatric_speciation:
+    defines: Speciation that occurs within a parent species that remains in one shared location, without
+      geographic separation.
+    composed_of:
+    - speciation
+    tier: 3
+  allopolyploidy:
+    defines: Polyploidy resulting from the combination of gametes from two different species.
+    composed_of:
+    - polyploidy
+    - hybrid
+    tier: 3
+  prezygotic_barrier:
+    defines: A reproductive isolation mechanism that blocks reproduction before a zygote forms.
+    composed_of:
+    - reproductive_isolation
+    tier: 3
+  postzygotic_barrier:
+    defines: A reproductive isolation mechanism that acts after zygote formation, such as hybrid inviability
+      or sterility.
+    composed_of:
+    - reproductive_isolation
+    tier: 3
+  hybrid_zone:
+    defines: An area where two closely related species continue to interact and reproduce, forming hybrid
+      offspring.
+    composed_of:
+    - hybrid
+    - reproductive_isolation
+    tier: 3
+  gradual_speciation_model:
+    defines: A model in which species diverge gradually over time through small incremental steps.
+    composed_of:
+    - speciation
+    tier: 3
+  punctuated_equilibrium:
+    defines: A model in which a new species changes rapidly from its parent species and then remains largely
+      unchanged for long periods.
+    composed_of:
+    - speciation
+    tier: 3
+  vestigial_structures:
+    defines: Physical structures present in an organism that have no apparent function, remaining from
+      a functional structure in a distant ancestor.
+    composed_of:
+    - homologous_structures
+    tier: 4
+  analogous_structures:
+    defines: Structures that are similar in function but evolved independently rather than from a common
+      ancestor, resulting from convergent evolution.
+    composed_of:
+    - convergent_evolution
+    tier: 4
+  dispersal:
+    defines: An allopatric speciation process in which a few members of a species move to a new geographical
+      area.
+    composed_of:
+    - allopatric_speciation
+    tier: 4
+  vicariance:
+    defines: An allopatric speciation process in which a natural event physically divides a population
+      into separate groups.
+    composed_of:
+    - allopatric_speciation
+    tier: 4
+  temporal_isolation:
+    defines: A prezygotic barrier in which differences in breeding schedules prevent interbreeding between
+      related species.
+    composed_of:
+    - prezygotic_barrier
+    tier: 4
+  habitat_isolation:
+    defines: Reproductive isolation resulting from populations occupying different habitats so they no
+      longer overlap.
+    composed_of:
+    - prezygotic_barrier
+    tier: 4
+  behavioral_isolation:
+    defines: A prezygotic barrier in which differences in mating behaviors or signals prevent reproduction
+      between species.
+    composed_of:
+    - prezygotic_barrier
+    tier: 4
+  gametic_barrier:
+    defines: A prezygotic barrier in which incompatibilities between egg and sperm cells prevent fertilization.
+    composed_of:
+    - prezygotic_barrier
+    tier: 4
+  hybrid_inviability:
+    defines: A postzygotic barrier in which hybrid offspring fail to develop normally and do not survive
+      to maturity.
+    composed_of:
+    - postzygotic_barrier
+    - hybrid
+    tier: 4
+  hybrid_sterility:
+    defines: A postzygotic barrier in which hybrid offspring survive but are unable to reproduce.
+    composed_of:
+    - postzygotic_barrier
+    - hybrid
+    tier: 4
+  reinforcement:
+    defines: Continued divergence between two related species driven by the low fitness of their hybrid
+      offspring.
+    composed_of:
+    - hybrid_zone
+    tier: 4
+  fusion:
+    defines: The recombination of two closely related species back into one species when reproductive
+      barriers weaken.
+    composed_of:
+    - hybrid_zone
+    tier: 4
+applications:
+  fossil_evidence:
+    defines: The fossil record showing gradual evolutionary change in organismal form over millions of
+      years.
+    needs:
+    - natural_selection
+    tier: 2
+  biogeography_evidence:
+    defines: Patterns in the geographic distribution of organisms, explained by evolution together with
+      tectonic plate movement over geological time.
+    needs:
+    - gene_flow
+    - natural_selection
+    tier: 2
+  molecular_evidence:
+    defines: Similarity of DNA sequences among organisms reflecting descent with modification from a common
+      ancestor.
+    needs:
+    - mutation
+    - heritable_variation
+    tier: 1
+  adaptive_radiation:
+    defines: Rapid speciation from a single ancestral species into many new species as populations adapt
+      to varied niches.
+    needs:
+    - allopatric_speciation
+    - adaptation
+    tier: 4

@@ -1,0 +1,179 @@
+domain: biology_2e_ch16
+sources:
+  gene_expression:
+    label: Gene Expression
+    sections:
+    - id: ch16_s16_1
+      title: 16.1 Regulation of Gene Expression
+  transcription:
+    label: Transcription
+    sections:
+    - id: ch16_s16_1
+      title: 16.1 Regulation of Gene Expression
+  translation:
+    label: Translation
+    sections:
+    - id: ch16_s16_1
+      title: 16.1 Regulation of Gene Expression
+  prokaryotic_vs_eukaryotic_regulation:
+    label: Prokaryotic versus Eukaryotic Gene Regulation
+    sections:
+    - id: ch16_s16_1
+      title: 16.1 Regulation of Gene Expression
+    - id: ch16_s16_2
+      title: 16.2 Prokaryotic Gene Regulation
+  operon:
+    label: Operon
+    sections:
+    - id: ch16_s16_2
+      title: 16.2 Prokaryotic Gene Regulation
+  repressor:
+    label: Repressor
+    sections:
+    - id: ch16_s16_2
+      title: 16.2 Prokaryotic Gene Regulation
+  activator:
+    label: Activator
+    sections:
+    - id: ch16_s16_2
+      title: 16.2 Prokaryotic Gene Regulation
+  inducer:
+    label: Inducer
+    sections:
+    - id: ch16_s16_2
+      title: 16.2 Prokaryotic Gene Regulation
+  trp_operon:
+    label: trp Operon (Repressible Operon)
+    sections:
+    - id: ch16_s16_2
+      title: 16.2 Prokaryotic Gene Regulation
+  cap_protein:
+    label: Catabolite Activator Protein (CAP)
+    sections:
+    - id: ch16_s16_2
+      title: 16.2 Prokaryotic Gene Regulation
+  lac_operon:
+    label: lac Operon (Inducible Operon)
+    sections:
+    - id: ch16_s16_2
+      title: 16.2 Prokaryotic Gene Regulation
+  epigenetic_regulation:
+    label: Epigenetic Gene Regulation
+    sections:
+    - id: ch16_s16_3
+      title: 16.3 Eukaryotic Epigenetic Gene Regulation
+  chromatin_remodeling:
+    label: Chromatin Remodeling
+    sections:
+    - id: ch16_s16_3
+      title: 16.3 Eukaryotic Epigenetic Gene Regulation
+  histone:
+    label: Histone Protein
+    sections:
+    - id: ch16_s16_3
+      title: 16.3 Eukaryotic Epigenetic Gene Regulation
+  nucleosome:
+    label: Nucleosome
+    sections:
+    - id: ch16_s16_3
+      title: 16.3 Eukaryotic Epigenetic Gene Regulation
+  histone_modification:
+    label: Histone Modification
+    sections:
+    - id: ch16_s16_3
+      title: 16.3 Eukaryotic Epigenetic Gene Regulation
+  dna_methylation:
+    label: DNA Methylation
+    sections:
+    - id: ch16_s16_3
+      title: 16.3 Eukaryotic Epigenetic Gene Regulation
+  transcription_factor:
+    label: Transcription Factor
+    sections:
+    - id: ch16_s16_4
+      title: 16.4 Eukaryotic Transcription Gene Regulation
+  promoter:
+    label: Promoter
+    sections:
+    - id: ch16_s16_4
+      title: 16.4 Eukaryotic Transcription Gene Regulation
+  tata_box:
+    label: TATA Box
+    sections:
+    - id: ch16_s16_4
+      title: 16.4 Eukaryotic Transcription Gene Regulation
+  enhancer:
+    label: Enhancer
+    sections:
+    - id: ch16_s16_4
+      title: 16.4 Eukaryotic Transcription Gene Regulation
+  transcriptional_repressor_eukaryotic:
+    label: Eukaryotic Transcriptional Repressor
+    sections:
+    - id: ch16_s16_4
+      title: 16.4 Eukaryotic Transcription Gene Regulation
+  post_transcriptional_regulation:
+    label: Post-transcriptional Gene Regulation
+    sections:
+    - id: ch16_s16_5
+      title: 16.5 Eukaryotic Post-transcriptional Gene Regulation
+  rna_splicing:
+    label: RNA Splicing
+    sections:
+    - id: ch16_s16_5
+      title: 16.5 Eukaryotic Post-transcriptional Gene Regulation
+  alternative_splicing:
+    label: Alternative RNA Splicing
+    sections:
+    - id: ch16_s16_5
+      title: 16.5 Eukaryotic Post-transcriptional Gene Regulation
+  rna_stability:
+    label: RNA Stability
+    sections:
+    - id: ch16_s16_5
+      title: 16.5 Eukaryotic Post-transcriptional Gene Regulation
+  rna_binding_proteins:
+    label: RNA-Binding Proteins (RBPs)
+    sections:
+    - id: ch16_s16_5
+      title: 16.5 Eukaryotic Post-transcriptional Gene Regulation
+  microrna_regulation:
+    label: microRNA (miRNA) Regulation
+    sections:
+    - id: ch16_s16_5
+      title: 16.5 Eukaryotic Post-transcriptional Gene Regulation
+  translational_regulation:
+    label: Translational Gene Regulation
+    sections:
+    - id: ch16_s16_6
+      title: 16.6 Eukaryotic Translational and Post-translational Gene Regulation
+  post_translational_regulation:
+    label: Post-translational Gene Regulation
+    sections:
+    - id: ch16_s16_6
+      title: 16.6 Eukaryotic Translational and Post-translational Gene Regulation
+  ubiquitination_degradation:
+    label: Ubiquitination and Protein Degradation
+    sections:
+    - id: ch16_s16_6
+      title: 16.6 Eukaryotic Translational and Post-translational Gene Regulation
+  cancer_gene_regulation:
+    label: Cancer as a Disease of Altered Gene Regulation
+    sections:
+    - id: ch16_s16_7
+      title: 16.7 Cancer and Gene Regulation
+  tumor_suppressor_genes:
+    label: Tumor Suppressor Genes
+    sections:
+    - id: ch16_s16_7
+      title: 16.7 Cancer and Gene Regulation
+  oncogenes:
+    label: Oncogenes
+    sections:
+    - id: ch16_s16_7
+      title: 16.7 Cancer and Gene Regulation
+  targeted_cancer_therapy:
+    label: Targeted Cancer Therapies
+    sections:
+    - id: ch16_s16_7
+      title: 16.7 Cancer and Gene Regulation

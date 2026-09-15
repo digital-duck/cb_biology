@@ -1,0 +1,198 @@
+domain: biology_2e_ch34
+sources:
+  dietary_classification:
+    label: Dietary Classification (Herbivore/Carnivore/Omnivore)
+    sections:
+    - id: ch34_s34_1
+      title: 34.1 Digestive Systems
+  ingestion:
+    label: Ingestion
+    sections:
+    - id: ch34_s34_3
+      title: 34.3 Digestive System Processes
+  digestion:
+    label: Digestion
+    sections:
+    - id: ch34_s34_3
+      title: 34.3 Digestive System Processes
+  absorption:
+    label: Absorption
+    sections:
+    - id: ch34_s34_3
+      title: 34.3 Digestive System Processes
+  elimination:
+    label: Elimination
+    sections:
+    - id: ch34_s34_3
+      title: 34.3 Digestive System Processes
+  enzyme:
+    label: Digestive Enzyme
+    sections: []
+  peristalsis:
+    label: Peristalsis
+    sections:
+    - id: ch34_s34_1
+      title: 34.1 Digestive Systems
+  sphincter:
+    label: Sphincter
+    sections:
+    - id: ch34_s34_1
+      title: 34.1 Digestive Systems
+  homeostasis:
+    label: Homeostasis
+    sections:
+    - id: ch34_s34_2
+      title: 34.2 Nutrition and Energy Production
+  atp:
+    label: Adenosine Triphosphate (ATP)
+    sections:
+    - id: ch34_s34_2
+      title: 34.2 Nutrition and Energy Production
+  essential_nutrient:
+    label: Essential Nutrient
+    sections:
+    - id: ch34_s34_2
+      title: 34.2 Nutrition and Energy Production
+  vitamin:
+    label: Vitamin
+    sections:
+    - id: ch34_s34_2
+      title: 34.2 Nutrition and Energy Production
+  mineral:
+    label: Mineral
+    sections:
+    - id: ch34_s34_2
+      title: 34.2 Nutrition and Energy Production
+  hormone:
+    label: Digestive Hormone
+    sections:
+    - id: ch34_s34_4
+      title: 34.4 Digestive System Regulation
+  gastrovascular_cavity:
+    label: Gastrovascular Cavity
+    sections:
+    - id: ch34_s34_1
+      title: 34.1 Digestive Systems
+  alimentary_canal:
+    label: Alimentary Canal
+    sections:
+    - id: ch34_s34_1
+      title: 34.1 Digestive Systems
+  monogastric_system:
+    label: Monogastric Digestive System
+    sections:
+    - id: ch34_s34_1
+      title: 34.1 Digestive Systems
+  avian_digestive_system:
+    label: Avian Digestive System
+    sections:
+    - id: ch34_s34_1
+      title: 34.1 Digestive Systems
+  ruminant_digestion:
+    label: Ruminant Digestive System
+    sections:
+    - id: ch34_s34_1
+      title: 34.1 Digestive Systems
+  pseudo_ruminant_digestion:
+    label: Pseudo-ruminant Digestive System
+    sections:
+    - id: ch34_s34_1
+      title: 34.1 Digestive Systems
+  oral_cavity:
+    label: Oral Cavity
+    sections:
+    - id: ch34_s34_1
+      title: 34.1 Digestive Systems
+  esophagus:
+    label: Esophagus
+    sections:
+    - id: ch34_s34_1
+      title: 34.1 Digestive Systems
+  stomach:
+    label: Stomach
+    sections:
+    - id: ch34_s34_1
+      title: 34.1 Digestive Systems
+    - id: ch34_s34_3
+      title: 34.3 Digestive System Processes
+  small_intestine:
+    label: Small Intestine
+    sections:
+    - id: ch34_s34_1
+      title: 34.1 Digestive Systems
+    - id: ch34_s34_3
+      title: 34.3 Digestive System Processes
+  large_intestine:
+    label: Large Intestine
+    sections:
+    - id: ch34_s34_1
+      title: 34.1 Digestive Systems
+    - id: ch34_s34_3
+      title: 34.3 Digestive System Processes
+  accessory_organs:
+    label: Accessory Digestive Organs
+    sections:
+    - id: ch34_s34_1
+      title: 34.1 Digestive Systems
+    - id: ch34_s34_2
+      title: 34.2 Nutrition and Energy Production
+  carbohydrate_digestion:
+    label: Carbohydrate Digestion
+    sections:
+    - id: ch34_s34_3
+      title: 34.3 Digestive System Processes
+  protein_digestion:
+    label: Protein Digestion
+    sections:
+    - id: ch34_s34_3
+      title: 34.3 Digestive System Processes
+  lipid_digestion:
+    label: Lipid Digestion
+    sections:
+    - id: ch34_s34_3
+      title: 34.3 Digestive System Processes
+  glycogen_storage:
+    label: Glycogen Storage
+    sections:
+    - id: ch34_s34_2
+      title: 34.2 Nutrition and Energy Production
+  cellular_respiration:
+    label: Cellular Respiration
+    sections:
+    - id: ch34_s34_2
+      title: 34.2 Nutrition and Energy Production
+  digestive_phases:
+    label: Digestive Phases (Cephalic, Gastric, Intestinal)
+    sections:
+    - id: ch34_s34_4
+      title: 34.4 Digestive System Regulation
+  hormonal_regulation_of_digestion:
+    label: Hormonal Regulation of Digestion
+    sections:
+    - id: ch34_s34_4
+      title: 34.4 Digestive System Regulation
+  neural_regulation_of_digestion:
+    label: Neural Regulation of Digestion
+    sections:
+    - id: ch34_s34_4
+      title: 34.4 Digestive System Regulation
+  obesity:
+    label: Obesity
+    sections:
+    - id: ch34_s34_2
+      title: 34.2 Nutrition and Energy Production
+  ulcers:
+    label: Ulcers
+    sections:
+    - id: ch34_s34_1
+      title: 34.1 Digestive Systems
+  constipation_diarrhea:
+    label: Constipation and Diarrhea
+    sections:
+    - id: ch34_s34_3
+      title: 34.3 Digestive System Processes
+  avian_evolutionary_adaptation:
+    label: Avian Digestive Adaptation
+    sections:
+    - id: ch34_s34_1
+      title: 34.1 Digestive Systems

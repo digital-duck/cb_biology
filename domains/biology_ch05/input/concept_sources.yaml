@@ -1,0 +1,154 @@
+domain: biology_2e_ch5
+sources:
+  plasma_membrane:
+    label: Plasma Membrane
+    sections:
+    - id: ch05_s5_1
+      title: 5.1 Components and Structure
+  fluid_mosaic_model:
+    label: Fluid Mosaic Model
+    sections:
+    - id: ch05_s5_1
+      title: 5.1 Components and Structure
+  phospholipid:
+    label: Phospholipid
+    sections:
+    - id: ch05_s5_1
+      title: 5.1 Components and Structure
+  amphiphilic_molecule:
+    label: Amphiphilic Molecule
+    sections:
+    - id: ch05_s5_1
+      title: 5.1 Components and Structure
+  lipid_bilayer:
+    label: Lipid Bilayer
+    sections:
+    - id: ch05_s5_1
+      title: 5.1 Components and Structure
+  cholesterol_membrane_role:
+    label: Cholesterol in the Membrane
+    sections:
+    - id: ch05_s5_1
+      title: 5.1 Components and Structure
+  membrane_protein_types:
+    label: Membrane Proteins (Integral and Peripheral)
+    sections:
+    - id: ch05_s5_1
+      title: 5.1 Components and Structure
+  glycocalyx:
+    label: Glycocalyx
+    sections:
+    - id: ch05_s5_1
+      title: 5.1 Components and Structure
+  membrane_fluidity:
+    label: Membrane Fluidity
+    sections:
+    - id: ch05_s5_1
+      title: 5.1 Components and Structure
+  selective_permeability:
+    label: Selective Permeability
+    sections:
+    - id: ch05_s5_1
+      title: 5.1 Components and Structure
+    - id: ch05_s5_2
+      title: 5.2 Passive Transport
+  concentration_gradient:
+    label: Concentration Gradient
+    sections:
+    - id: ch05_s5_2
+      title: 5.2 Passive Transport
+  passive_transport:
+    label: Passive Transport
+    sections:
+    - id: ch05_s5_2
+      title: 5.2 Passive Transport
+  diffusion:
+    label: Diffusion
+    sections:
+    - id: ch05_s5_2
+      title: 5.2 Passive Transport
+  facilitated_transport:
+    label: Facilitated Transport (Diffusion)
+    sections:
+    - id: ch05_s5_2
+      title: 5.2 Passive Transport
+  channel_protein:
+    label: Channel Protein
+    sections:
+    - id: ch05_s5_2
+      title: 5.2 Passive Transport
+  carrier_protein:
+    label: Carrier Protein
+    sections:
+    - id: ch05_s5_2
+      title: 5.2 Passive Transport
+  osmosis:
+    label: Osmosis
+    sections:
+    - id: ch05_s5_2
+      title: 5.2 Passive Transport
+  osmolarity:
+    label: Osmolarity
+    sections:
+    - id: ch05_s5_2
+      title: 5.2 Passive Transport
+  tonicity:
+    label: Tonicity
+    sections:
+    - id: ch05_s5_2
+      title: 5.2 Passive Transport
+  electrochemical_gradient:
+    label: Electrochemical Gradient
+    sections:
+    - id: ch05_s5_3
+      title: 5.3 Active Transport
+  active_transport:
+    label: Active Transport
+    sections:
+    - id: ch05_s5_3
+      title: 5.3 Active Transport
+  primary_active_transport:
+    label: Primary Active Transport
+    sections:
+    - id: ch05_s5_3
+      title: 5.3 Active Transport
+  secondary_active_transport:
+    label: Secondary Active Transport
+    sections:
+    - id: ch05_s5_3
+      title: 5.3 Active Transport
+  sodium_potassium_pump:
+    label: Sodium-Potassium Pump
+    sections:
+    - id: ch05_s5_3
+      title: 5.3 Active Transport
+  bulk_transport:
+    label: Bulk Transport
+    sections:
+    - id: ch05_s5_4
+      title: 5.4 Bulk Transport
+  endocytosis:
+    label: Endocytosis
+    sections:
+    - id: ch05_s5_4
+      title: 5.4 Bulk Transport
+  phagocytosis:
+    label: Phagocytosis
+    sections:
+    - id: ch05_s5_4
+      title: 5.4 Bulk Transport
+  pinocytosis:
+    label: Pinocytosis
+    sections:
+    - id: ch05_s5_4
+      title: 5.4 Bulk Transport
+  receptor_mediated_endocytosis:
+    label: Receptor-Mediated Endocytosis
+    sections:
+    - id: ch05_s5_4
+      title: 5.4 Bulk Transport
+  exocytosis:
+    label: Exocytosis
+    sections:
+    - id: ch05_s5_4
+      title: 5.4 Bulk Transport

@@ -1,0 +1,179 @@
+domain: biology_2e_ch5
+primitives:
+  plasma_membrane:
+    defines: The selectively permeable membrane that defines a cell's borders and controls its interaction
+      with the environment.
+    tier: 0
+  phospholipid:
+    defines: An amphiphilic molecule with a glycerol backbone, two fatty acid tails, and a phosphate-containing
+      head group that forms the main fabric of the membrane.
+    tier: 0
+  amphiphilic_molecule:
+    defines: A molecule possessing both a polar/charged (hydrophilic) region and a nonpolar/uncharged
+      (hydrophobic) region.
+    tier: 0
+  cholesterol_membrane_role:
+    defines: A four-ringed lipid situated among the phospholipids that buffers temperature effects on
+      membrane fluidity and organizes lipid rafts.
+    tier: 0
+  membrane_protein_types:
+    defines: Integral proteins that span or embed within the phospholipid layer and peripheral proteins
+      attached to the membrane surface, serving structural, enzymatic, or recognition roles.
+    tier: 0
+  concentration_gradient:
+    defines: A physical space in which a substance's concentration varies, creating a difference in concentration
+      between regions.
+    tier: 0
+  channel_protein:
+    defines: A transmembrane protein with a hydrophilic core that forms a pore allowing specific substances
+      to pass through the membrane, sometimes in a gated manner.
+    tier: 0
+  carrier_protein:
+    defines: A membrane protein that binds a specific substance and changes shape to move it across the
+      plasma membrane.
+    tier: 0
+  osmolarity:
+    defines: A measure of the total solute concentration in a solution.
+    tier: 0
+concepts:
+  lipid_bilayer:
+    defines: A double-layered phospholipid barrier, formed because phospholipids arrange with hydrophobic
+      tails facing each other and hydrophilic heads facing outward, that separates fluid on either side.
+    composed_of:
+    - phospholipid
+    - amphiphilic_molecule
+    tier: 1
+  membrane_fluidity:
+    defines: The fluid, dynamic character of the membrane resulting from the mosaic arrangement of loosely
+      attached lipids and proteins, fatty acid saturation, and cholesterol content.
+    composed_of:
+    - phospholipid
+    - cholesterol_membrane_role
+    tier: 1
+  glycocalyx:
+    defines: The carbohydrate coating on the cell's exterior surface, formed by glycoproteins and glycolipids,
+      that enables cell recognition and interaction with the watery environment.
+    composed_of:
+    - plasma_membrane
+    - membrane_protein_types
+    tier: 1
+  electrochemical_gradient:
+    defines: The combined concentration gradient and electrical charge difference that affects the movement
+      of an ion across a membrane.
+    composed_of:
+    - concentration_gradient
+    tier: 1
+  fluid_mosaic_model:
+    defines: The model describing the plasma membrane as a mosaic of phospholipids, cholesterol, proteins,
+      and carbohydrates that gives the membrane a fluid character.
+    composed_of:
+    - lipid_bilayer
+    - cholesterol_membrane_role
+    - membrane_protein_types
+    tier: 2
+  selective_permeability:
+    defines: The membrane property that allows some substances to pass through freely while restricting
+      others, based on polarity, size, and charge.
+    composed_of:
+    - plasma_membrane
+    - lipid_bilayer
+    tier: 2
+  active_transport:
+    defines: Transport mechanisms that require the cell to expend energy, usually from ATP, to move substances
+      against their concentration or electrochemical gradient.
+    composed_of:
+    - electrochemical_gradient
+    - concentration_gradient
+    tier: 2
+  passive_transport:
+    defines: Movement of substances across the membrane from high to low concentration that does not require
+      the cell to expend energy.
+    composed_of:
+    - concentration_gradient
+    - selective_permeability
+    tier: 3
+  primary_active_transport:
+    defines: Active transport that directly uses ATP hydrolysis to move ions across a membrane, creating
+      a charge difference.
+    composed_of:
+    - active_transport
+    tier: 3
+  bulk_transport:
+    defines: Active transport mechanisms that move large particles or molecules into or out of a cell
+      via membrane vesicle formation.
+    composed_of:
+    - active_transport
+    - plasma_membrane
+    tier: 3
+  diffusion:
+    defines: The passive movement of a single substance from an area of high concentration to an area
+      of low concentration until evenly distributed.
+    composed_of:
+    - passive_transport
+    tier: 4
+  facilitated_transport:
+    defines: Passive diffusion of polar or charged materials across the membrane with the help of channel
+      or carrier proteins.
+    composed_of:
+    - passive_transport
+    - channel_protein
+    - carrier_protein
+    tier: 4
+  osmosis:
+    defines: The passive movement of free water molecules through a semipermeable membrane from an area
+      of higher water concentration to lower water concentration.
+    composed_of:
+    - passive_transport
+    tier: 4
+  secondary_active_transport:
+    defines: Active transport of a substance driven by the electrochemical gradient established by primary
+      active transport, rather than direct ATP use.
+    composed_of:
+    - primary_active_transport
+    - electrochemical_gradient
+    tier: 4
+  endocytosis:
+    defines: A type of active transport in which the plasma membrane invaginates and pinches off to bring
+      particles or fluid into the cell within a vesicle.
+    composed_of:
+    - bulk_transport
+    tier: 4
+  exocytosis:
+    defines: The process by which a cell expels material to the extracellular fluid by fusing a membrane-bound
+      vesicle with the plasma membrane.
+    composed_of:
+    - bulk_transport
+    tier: 4
+  tonicity:
+    defines: The property describing how an extracellular solution's osmolarity relative to a cell affects
+      the cell's volume via osmosis, categorized as hypotonic, isotonic, or hypertonic.
+    composed_of:
+    - osmosis
+    - osmolarity
+    tier: 5
+applications:
+  sodium_potassium_pump:
+    defines: An electrogenic primary active transport pump (Na+-K+ ATPase) that moves three sodium ions
+      out and two potassium ions into the cell per cycle, using ATP.
+    needs:
+    - primary_active_transport
+    tier: 4
+  phagocytosis:
+    defines: A form of endocytosis in which a cell engulfs large particles, such as other cells, into
+      a vesicle that merges with a lysosome.
+    needs:
+    - endocytosis
+    tier: 5
+  pinocytosis:
+    defines: A form of endocytosis in which a cell takes in small volumes of extracellular fluid and dissolved
+      molecules via small vesicles.
+    needs:
+    - endocytosis
+    tier: 5
+  receptor_mediated_endocytosis:
+    defines: A targeted form of endocytosis using specific membrane receptor proteins and clathrin-coated
+      pits to import particular substances.
+    needs:
+    - endocytosis
+    - membrane_protein_types
+    tier: 5

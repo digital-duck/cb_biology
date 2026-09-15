@@ -1,0 +1,113 @@
+domain: biology_2e_ch11
+sources:
+  haploid_diploid:
+    label: Haploid and Diploid Cells
+    sections:
+    - id: ch11_s11_1
+      title: 11.1 The Process of Meiosis
+  homologous_chromosomes:
+    label: Homologous Chromosomes
+    sections:
+    - id: ch11_s11_1
+      title: 11.1 The Process of Meiosis
+  gametes:
+    label: Gametes
+    sections:
+    - id: ch11_s11_1
+      title: 11.1 The Process of Meiosis
+    - id: ch11_s11_2
+      title: 11.2 Sexual Reproduction
+  sister_chromatids:
+    label: Sister Chromatids
+    sections:
+    - id: ch11_s11_1
+      title: 11.1 The Process of Meiosis
+  mitosis:
+    label: Mitosis
+    sections:
+    - id: ch11_s11_1
+      title: 11.1 The Process of Meiosis
+  synapsis:
+    label: Synapsis
+    sections:
+    - id: ch11_s11_1
+      title: 11.1 The Process of Meiosis
+  crossing_over:
+    label: Crossing Over
+    sections:
+    - id: ch11_s11_1
+      title: 11.1 The Process of Meiosis
+  tetrad:
+    label: Tetrad
+    sections:
+    - id: ch11_s11_1
+      title: 11.1 The Process of Meiosis
+  independent_assortment:
+    label: Random (Independent) Assortment
+    sections:
+    - id: ch11_s11_1
+      title: 11.1 The Process of Meiosis
+  meiosis_i:
+    label: Meiosis I
+    sections:
+    - id: ch11_s11_1
+      title: 11.1 The Process of Meiosis
+  meiosis_ii:
+    label: Meiosis II
+    sections:
+    - id: ch11_s11_1
+      title: 11.1 The Process of Meiosis
+  meiosis:
+    label: Meiosis
+    sections:
+    - id: ch11_s11_1
+      title: 11.1 The Process of Meiosis
+  genetic_variation_in_meiosis:
+    label: Genetic Variation from Meiosis
+    sections:
+    - id: ch11_s11_1
+      title: 11.1 The Process of Meiosis
+    - id: ch11_s11_2
+      title: 11.2 Sexual Reproduction
+  meiosis_vs_mitosis:
+    label: Comparison of Meiosis and Mitosis
+    sections:
+    - id: ch11_s11_1
+      title: 11.1 The Process of Meiosis
+  fertilization:
+    label: Fertilization
+    sections:
+    - id: ch11_s11_2
+      title: 11.2 Sexual Reproduction
+  sexual_reproduction:
+    label: Sexual Reproduction
+    sections:
+    - id: ch11_s11_1
+      title: 11.1 The Process of Meiosis
+    - id: ch11_s11_2
+      title: 11.2 Sexual Reproduction
+  life_cycle:
+    label: Life Cycle
+    sections:
+    - id: ch11_s11_2
+      title: 11.2 Sexual Reproduction
+  diploid_dominant_life_cycle:
+    label: Diploid-Dominant Life Cycle
+    sections:
+    - id: ch11_s11_2
+      title: 11.2 Sexual Reproduction
+  haploid_dominant_life_cycle:
+    label: Haploid-Dominant Life Cycle
+    sections:
+    - id: ch11_s11_2
+      title: 11.2 Sexual Reproduction
+  alternation_of_generations:
+    label: Alternation of Generations
+    sections:
+    - id: ch11_s11_2
+      title: 11.2 Sexual Reproduction
+  evolutionary_advantage_of_sex:
+    label: Evolutionary Advantage of Sexual Reproduction
+    sections:
+    - id: ch11_s11_2
+      title: 11.2 Sexual Reproduction

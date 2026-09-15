@@ -1,0 +1,144 @@
+domain: biology_2e_ch47
+sources:
+  biodiversity:
+    label: Biodiversity
+    sections:
+    - id: ch47_s47_1
+      title: 47.1 The Biodiversity Crisis
+  genetic_diversity:
+    label: Genetic Diversity
+    sections:
+    - id: ch47_s47_1
+      title: 47.1 The Biodiversity Crisis
+  chemical_diversity:
+    label: Chemical Diversity
+    sections:
+    - id: ch47_s47_1
+      title: 47.1 The Biodiversity Crisis
+  ecosystem_diversity:
+    label: Ecosystem Diversity
+    sections:
+    - id: ch47_s47_1
+      title: 47.1 The Biodiversity Crisis
+  endemic_species:
+    label: Endemic Species
+    sections:
+    - id: ch47_s47_1
+      title: 47.1 The Biodiversity Crisis
+  adaptive_radiation:
+    label: Adaptive Radiation
+    sections:
+    - id: ch47_s47_1
+      title: 47.1 The Biodiversity Crisis
+  extinction:
+    label: Extinction
+    sections:
+    - id: ch47_s47_1
+      title: 47.1 The Biodiversity Crisis
+  speciation:
+    label: Speciation
+    sections:
+    - id: ch47_s47_1
+      title: 47.1 The Biodiversity Crisis
+  mass_extinction:
+    label: Mass Extinction
+    sections:
+    - id: ch47_s47_1
+      title: 47.1 The Biodiversity Crisis
+  extinction_rate:
+    label: Extinction Rate
+    sections:
+    - id: ch47_s47_1
+      title: 47.1 The Biodiversity Crisis
+  species_area_relationship:
+    label: Species-Area Relationship
+    sections:
+    - id: ch47_s47_1
+      title: 47.1 The Biodiversity Crisis
+    - id: ch47_s47_2
+      title: 47.2 The Importance of Biodiversity to Human Life
+  biodiversity_hotspot:
+    label: Biodiversity Hotspot
+    sections:
+    - id: ch47_s47_1
+      title: 47.1 The Biodiversity Crisis
+  latitudinal_diversity_gradient:
+    label: Latitudinal Diversity Gradient
+    sections:
+    - id: ch47_s47_1
+      title: 47.1 The Biodiversity Crisis
+  ecosystem_services:
+    label: Ecosystem Services
+    sections:
+    - id: ch47_s47_2
+      title: 47.2 The Importance of Biodiversity to Human Life
+  secondary_plant_compounds:
+    label: Secondary Plant Compounds
+    sections:
+    - id: ch47_s47_2
+      title: 47.2 The Importance of Biodiversity to Human Life
+  agricultural_diversity:
+    label: Agricultural/Crop Diversity
+    sections:
+    - id: ch47_s47_2
+      title: 47.2 The Importance of Biodiversity to Human Life
+  habitat_loss:
+    label: Habitat Loss
+    sections:
+    - id: ch47_s47_3
+      title: 47.3 Threats to Biodiversity
+  overharvesting:
+    label: Overharvesting
+    sections:
+    - id: ch47_s47_3
+      title: 47.3 Threats to Biodiversity
+  tragedy_of_the_commons:
+    label: Tragedy of the Commons
+    sections:
+    - id: ch47_s47_3
+      title: 47.3 Threats to Biodiversity
+  exotic_species:
+    label: Exotic (Invasive) Species
+    sections:
+    - id: ch47_s47_3
+      title: 47.3 Threats to Biodiversity
+  climate_change_threat:
+    label: Climate Change as an Extinction Threat
+    sections:
+    - id: ch47_s47_3
+      title: 47.3 Threats to Biodiversity
+  keystone_species:
+    label: Keystone Species
+    sections:
+    - id: ch47_s47_4
+      title: 47.4 Preserving Biodiversity
+  dna_barcoding:
+    label: DNA Barcoding
+    sections:
+    - id: ch47_s47_4
+      title: 47.4 Preserving Biodiversity
+  conservation_legislation:
+    label: Conservation Legislation and Treaties
+    sections:
+    - id: ch47_s47_4
+      title: 47.4 Preserving Biodiversity
+  island_biogeography:
+    label: Theory of Island Biogeography
+    sections:
+    - id: ch47_s47_4
+      title: 47.4 Preserving Biodiversity
+  preserve_design:
+    label: Conservation Preserve Design
+    sections:
+    - id: ch47_s47_4
+      title: 47.4 Preserving Biodiversity
+  habitat_restoration:
+    label: Habitat Restoration
+    sections:
+    - id: ch47_s47_4
+      title: 47.4 Preserving Biodiversity
+  captive_breeding:
+    label: Captive Breeding
+    sections:
+    - id: ch47_s47_4
+      title: 47.4 Preserving Biodiversity

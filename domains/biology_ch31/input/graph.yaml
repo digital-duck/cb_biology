@@ -1,0 +1,137 @@
+domain: biology_2e_ch31
+primitives:
+  plant_nutrient:
+    defines: An essential substance, organic or inorganic, that plant cells require to sustain life and
+      complete their biochemical functions.
+    tier: 0
+  organic_compound:
+    defines: A chemical compound that contains carbon and is made by a living organism, such as carbohydrates,
+      lipids, proteins, and nucleic acids.
+    tier: 0
+  inorganic_compound:
+    defines: A chemical compound that does not contain carbon (except CO2) and is not part of, or produced
+      by, a living organism.
+    tier: 0
+  soil:
+    defines: The outer loose layer covering the surface of Earth that serves as a natural medium for land
+      plants, supplying water and inorganic nutrients.
+    tier: 0
+  parent_material:
+    defines: The organic and inorganic material, such as weathered bedrock or transported sediment, from
+      which soil forms.
+    tier: 0
+concepts:
+  essential_nutrient:
+    defines: One of about 20 elements a plant requires to complete its life cycle, where no other element
+      can substitute and the element is directly involved in plant nutrition.
+    composed_of:
+    - plant_nutrient
+    tier: 1
+  macronutrient:
+    defines: An essential nutrient required by plants in large amounts, including carbon, hydrogen, oxygen,
+      nitrogen, phosphorus, potassium, calcium, magnesium, and sulfur.
+    composed_of:
+    - essential_nutrient
+    tier: 2
+  micronutrient:
+    defines: An essential nutrient, or trace element, required by plants in very small quantities, such
+      as iron, manganese, boron, and zinc.
+    composed_of:
+    - essential_nutrient
+    tier: 2
+  soil_composition:
+    defines: The mixture of inorganic mineral matter, organic matter, water, and air that makes up soil,
+      with proportions that determine soil quality.
+    composed_of:
+    - soil
+    - inorganic_compound
+    - organic_compound
+    tier: 1
+  humus:
+    defines: The organic material of soil, made up of dead and living microorganisms and decaying animals
+      and plants, which improves soil structure and moisture retention.
+    composed_of:
+    - soil_composition
+    - organic_compound
+    tier: 2
+  soil_particle_classification:
+    defines: The categorization of inorganic soil particles by size—sand, silt, and clay—and the classification
+      of soils with no dominant particle size as loams.
+    composed_of:
+    - soil_composition
+    tier: 2
+  soil_formation:
+    defines: The slow development of soil from biological, physical, and chemical processes acting on
+      parent material, influenced by climate, topography, biological factors, and time.
+    composed_of:
+    - soil
+    - parent_material
+    tier: 1
+  soil_profile:
+    defines: The vertical section of soil composed of distinct layers, called horizons, that differ in
+      physical and chemical properties.
+    composed_of:
+    - soil_formation
+    tier: 2
+  soil_horizon:
+    defines: A soil layer (O, A, B, or C horizon) with distinct physical and chemical properties that
+      differ from other layers, formed through a soil profile.
+    composed_of:
+    - soil_profile
+    tier: 3
+  rhizosphere:
+    defines: The area of soil affected by root secretions and the microorganisms that develop around plant
+      roots as a biological factor in soil formation.
+    composed_of:
+    - soil_formation
+    tier: 2
+  autotrophic_heterotrophic_nutrition:
+    defines: The two ways plants obtain food, autotrophic plants synthesize organic compounds via photosynthesis,
+      while heterotrophic (parasitic) plants draw nutrients from a host.
+    composed_of:
+    - plant_nutrient
+    - organic_compound
+    tier: 1
+  nitrogen_fixation:
+    defines: The conversion of atmospheric nitrogen (N2) into ammonia (NH3), carried out by prokaryotes
+      such as soil bacteria, making nitrogen biologically usable by plants.
+    composed_of:
+    - macronutrient
+    - rhizosphere
+    tier: 3
+  mycorrhizae:
+    defines: A symbiotic association between fungi and plant roots in which the fungus helps the plant
+      absorb minerals like phosphate, while obtaining sugars from the plant root.
+    composed_of:
+    - rhizosphere
+    - macronutrient
+    tier: 3
+  ecto_endo_mycorrhizae:
+    defines: The two structural types of mycorrhizae, ectomycorrhizae form a dense sheath (mantle) around
+      roots, while endomycorrhizae embed fungal mycelium within root tissue.
+    composed_of:
+    - mycorrhizae
+    tier: 4
+applications:
+  nutrient_deficiency:
+    defines: A lack of an essential macronutrient or micronutrient that adversely affects plant growth,
+      causing symptoms such as stunted growth or chlorosis.
+    needs:
+    - macronutrient
+    - micronutrient
+    tier: 3
+  rhizobia_nodule_symbiosis:
+    defines: The mutualistic relationship in which rhizobia soil bacteria form nodules on legume roots
+      and fix atmospheric nitrogen using the enzyme nitrogenase, in exchange for carbon compounds from
+      the plant.
+    needs:
+    - nitrogen_fixation
+    tier: 4
+  alternative_nutrient_sources:
+    defines: Plant nutritional adaptations—including parasites, saprophytes, symbionts, epiphytes, and
+      insectivorous plants—that obtain organic or mineral nutrition from sources other than typical soil
+      uptake and photosynthesis.
+    needs:
+    - autotrophic_heterotrophic_nutrition
+    - mycorrhizae
+    tier: 4

@@ -1,0 +1,186 @@
+domain: biology_2e_ch41
+sources:
+  electrolyte:
+    label: Electrolyte
+    sections:
+    - id: ch41_s41_1
+      title: 41.1 Osmoregulation and Osmotic Balance
+  non_electrolyte:
+    label: Non-electrolyte
+    sections:
+    - id: ch41_s41_1
+      title: 41.1 Osmoregulation and Osmotic Balance
+  semi_permeable_membrane:
+    label: Semi-permeable Membrane
+    sections:
+    - id: ch41_s41_1
+      title: 41.1 Osmoregulation and Osmotic Balance
+  osmosis:
+    label: Osmosis
+    sections:
+    - id: ch41_s41_1
+      title: 41.1 Osmoregulation and Osmotic Balance
+  osmotic_pressure:
+    label: Osmotic Pressure
+    sections:
+    - id: ch41_s41_1
+      title: 41.1 Osmoregulation and Osmotic Balance
+  tonicity:
+    label: Tonicity (Hypotonic/Hypertonic/Isotonic)
+    sections:
+    - id: ch41_s41_1
+      title: 41.1 Osmoregulation and Osmotic Balance
+  osmoregulation:
+    label: Osmoregulation
+    sections:
+    - id: ch41_s41_1
+      title: 41.1 Osmoregulation and Osmotic Balance
+  passive_diffusion:
+    label: Passive Diffusion
+    sections:
+    - id: ch41_s41_1
+      title: 41.1 Osmoregulation and Osmotic Balance
+  facilitated_diffusion:
+    label: Facilitated Diffusion
+    sections:
+    - id: ch41_s41_1
+      title: 41.1 Osmoregulation and Osmotic Balance
+  active_transport:
+    label: Active Transport
+    sections:
+    - id: ch41_s41_1
+      title: 41.1 Osmoregulation and Osmotic Balance
+  mole_molarity_molality:
+    label: Mole, Molarity, and Molality
+    sections:
+    - id: ch41_s41_1
+      title: 41.1 Osmoregulation and Osmotic Balance
+  milliequivalent_milliosmole:
+    label: Milliequivalent and Milliosmole
+    sections:
+    - id: ch41_s41_1
+      title: 41.1 Osmoregulation and Osmotic Balance
+  osmoregulator_osmoconformer:
+    label: Osmoregulators and Osmoconformers
+    sections:
+    - id: ch41_s41_1
+      title: 41.1 Osmoregulation and Osmotic Balance
+  kidney:
+    label: Kidney
+    sections:
+    - id: ch41_s41_2
+      title: 41.2 The Kidneys and Osmoregulatory Organs
+  kidney_structure:
+    label: Kidney Structure
+    sections:
+    - id: ch41_s41_2
+      title: 41.2 The Kidneys and Osmoregulatory Organs
+  renal_blood_supply:
+    label: Renal Blood Supply
+    sections:
+    - id: ch41_s41_2
+      title: 41.2 The Kidneys and Osmoregulatory Organs
+  nephron:
+    label: Nephron
+    sections:
+    - id: ch41_s41_2
+      title: 41.2 The Kidneys and Osmoregulatory Organs
+  renal_corpuscle:
+    label: Renal Corpuscle
+    sections:
+    - id: ch41_s41_2
+      title: 41.2 The Kidneys and Osmoregulatory Organs
+  renal_tubule:
+    label: Renal Tubule
+    sections:
+    - id: ch41_s41_2
+      title: 41.2 The Kidneys and Osmoregulatory Organs
+  nephron_capillary_network:
+    label: Nephron Capillary Network
+    sections:
+    - id: ch41_s41_2
+      title: 41.2 The Kidneys and Osmoregulatory Organs
+  urine_formation:
+    label: Urine Formation
+    sections:
+    - id: ch41_s41_2
+      title: 41.2 The Kidneys and Osmoregulatory Organs
+    - id: ch41_s41_3
+      title: 41.3 Excretion Systems
+  glomerular_filtration:
+    label: Glomerular Filtration
+    sections:
+    - id: ch41_s41_2
+      title: 41.2 The Kidneys and Osmoregulatory Organs
+  tubular_reabsorption:
+    label: Tubular Reabsorption
+    sections:
+    - id: ch41_s41_2
+      title: 41.2 The Kidneys and Osmoregulatory Organs
+  tubular_secretion:
+    label: Tubular Secretion
+    sections:
+    - id: ch41_s41_2
+      title: 41.2 The Kidneys and Osmoregulatory Organs
+    - id: ch41_s41_3
+      title: 41.3 Excretion Systems
+  countercurrent_multiplier_exchanger:
+    label: Countercurrent Multiplier and Exchanger
+    sections:
+    - id: ch41_s41_2
+      title: 41.2 The Kidneys and Osmoregulatory Organs
+  juxtaglomerular_complex:
+    label: Juxtaglomerular Complex (JGC)
+    sections:
+    - id: ch41_s41_3
+      title: 41.3 Excretion Systems
+  invertebrate_excretory_systems:
+    label: Invertebrate Excretory Systems
+    sections:
+    - id: ch41_s41_3
+      title: 41.3 Excretion Systems
+  nitrogenous_waste:
+    label: Nitrogenous Waste
+    sections:
+    - id: ch41_s41_4
+      title: 41.4 Nitrogenous Wastes
+  ammonotelism:
+    label: Ammonotelism
+    sections:
+    - id: ch41_s41_4
+      title: 41.4 Nitrogenous Wastes
+  urea_cycle:
+    label: Urea Cycle
+    sections:
+    - id: ch41_s41_4
+      title: 41.4 Nitrogenous Wastes
+  uric_acid_pathway:
+    label: Uric Acid Pathway
+    sections:
+    - id: ch41_s41_4
+      title: 41.4 Nitrogenous Wastes
+  osmoregulatory_hormones:
+    label: Osmoregulatory Hormones
+    sections:
+    - id: ch41_s41_5
+      title: 41.5 Hormonal Control of Osmoregulatory Functions
+  renin_angiotensin_aldosterone_system:
+    label: Renin-Angiotensin-Aldosterone System
+    sections:
+    - id: ch41_s41_5
+      title: 41.5 Hormonal Control of Osmoregulatory Functions
+  aldosterone_function:
+    label: Aldosterone Function
+    sections:
+    - id: ch41_s41_5
+      title: 41.5 Hormonal Control of Osmoregulatory Functions
+  antidiuretic_hormone_function:
+    label: Antidiuretic Hormone (ADH) Function
+    sections:
+    - id: ch41_s41_5
+      title: 41.5 Hormonal Control of Osmoregulatory Functions
+  atrial_natriuretic_peptide_function:
+    label: Atrial Natriuretic Peptide (ANP) Function
+    sections:
+    - id: ch41_s41_5
+      title: 41.5 Hormonal Control of Osmoregulatory Functions

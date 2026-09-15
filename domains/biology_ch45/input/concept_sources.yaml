@@ -1,0 +1,198 @@
+domain: biology_2e_ch45
+sources:
+  ecology:
+    label: Ecology
+    sections:
+    - id: ch45_s45_1
+      title: 45.1 Population Demography
+  population:
+    label: Population
+    sections:
+    - id: ch45_s45_1
+      title: 45.1 Population Demography
+  population_size_and_density:
+    label: Population Size and Density
+    sections:
+    - id: ch45_s45_1
+      title: 45.1 Population Demography
+  population_sampling_methods:
+    label: Population Research Methods (Quadrat and Mark-Recapture)
+    sections:
+    - id: ch45_s45_1
+      title: 45.1 Population Demography
+  species_dispersion_pattern:
+    label: Species Dispersion Pattern
+    sections:
+    - id: ch45_s45_1
+      title: 45.1 Population Demography
+  demography:
+    label: Demography
+    sections:
+    - id: ch45_s45_1
+      title: 45.1 Population Demography
+  life_table:
+    label: Life Table
+    sections:
+    - id: ch45_s45_1
+      title: 45.1 Population Demography
+  survivorship_curve:
+    label: Survivorship Curve
+    sections:
+    - id: ch45_s45_1
+      title: 45.1 Population Demography
+  life_history:
+    label: Life History
+    sections:
+    - id: ch45_s45_2
+      title: 45.2 Life Histories and Natural Selection
+  energy_budget:
+    label: Energy Budget
+    sections:
+    - id: ch45_s45_2
+      title: 45.2 Life Histories and Natural Selection
+  fecundity_and_parental_care_tradeoff:
+    label: Fecundity and Parental Care Tradeoff
+    sections:
+    - id: ch45_s45_2
+      title: 45.2 Life Histories and Natural Selection
+  reproductive_timing:
+    label: Early versus Late Reproduction
+    sections:
+    - id: ch45_s45_2
+      title: 45.2 Life Histories and Natural Selection
+  semelparity_and_iteroparity:
+    label: Semelparity and Iteroparity
+    sections:
+    - id: ch45_s45_2
+      title: 45.2 Life Histories and Natural Selection
+  exponential_growth:
+    label: Exponential Growth
+    sections:
+    - id: ch45_s45_3
+      title: 45.3 Environmental Limits to Population Growth
+  intrinsic_rate_of_increase:
+    label: Intrinsic Rate of Increase and Biotic Potential
+    sections:
+    - id: ch45_s45_3
+      title: 45.3 Environmental Limits to Population Growth
+  carrying_capacity:
+    label: Carrying Capacity
+    sections:
+    - id: ch45_s45_3
+      title: 45.3 Environmental Limits to Population Growth
+    - id: ch45_s45_4
+      title: 45.4 Population Dynamics and Regulation
+  logistic_growth:
+    label: Logistic Growth
+    sections:
+    - id: ch45_s45_3
+      title: 45.3 Environmental Limits to Population Growth
+  intraspecific_competition:
+    label: Intraspecific Competition
+    sections:
+    - id: ch45_s45_3
+      title: 45.3 Environmental Limits to Population Growth
+    - id: ch45_s45_4
+      title: 45.4 Population Dynamics and Regulation
+  interspecific_competition:
+    label: Interspecific Competition
+    sections:
+    - id: ch45_s45_4
+      title: 45.4 Population Dynamics and Regulation
+  density_dependent_and_independent_regulation:
+    label: Density-Dependent and Density-Independent Regulation
+    sections:
+    - id: ch45_s45_4
+      title: 45.4 Population Dynamics and Regulation
+  r_and_k_selected_species:
+    label: r-Selected and K-Selected Species
+    sections:
+    - id: ch45_s45_4
+      title: 45.4 Population Dynamics and Regulation
+  human_population_growth:
+    label: Human Population Growth
+    sections:
+    - id: ch45_s45_5
+      title: 45.5 Human Population Growth
+  age_structure:
+    label: Age Structure
+    sections:
+    - id: ch45_s45_1
+      title: 45.1 Population Demography
+    - id: ch45_s45_5
+      title: 45.5 Human Population Growth
+  community:
+    label: Community
+    sections:
+    - id: ch45_s45_6
+      title: 45.6 Community Ecology
+  species_diversity:
+    label: Species Diversity (Richness and Abundance)
+    sections:
+    - id: ch45_s45_6
+      title: 45.6 Community Ecology
+  predation_and_herbivory:
+    label: Predation and Herbivory
+    sections:
+    - id: ch45_s45_6
+      title: 45.6 Community Ecology
+  antipredator_defense_mechanisms:
+    label: Antipredator Defense Mechanisms
+    sections:
+    - id: ch45_s45_6
+      title: 45.6 Community Ecology
+  competitive_exclusion_principle:
+    label: Competitive Exclusion Principle
+    sections:
+    - id: ch45_s45_6
+      title: 45.6 Community Ecology
+  symbiosis:
+    label: Symbiosis (Commensalism, Mutualism, Parasitism)
+    sections:
+    - id: ch45_s45_6
+      title: 45.6 Community Ecology
+  foundation_and_keystone_species:
+    label: Foundation and Keystone Species
+    sections:
+    - id: ch45_s45_6
+      title: 45.6 Community Ecology
+  ecological_succession:
+    label: Ecological Succession
+    sections:
+    - id: ch45_s45_6
+      title: 45.6 Community Ecology
+  behavior:
+    label: Behavior
+    sections:
+    - id: ch45_s45_7
+      title: '45.7 Behavioral Biology: Proximate and Ultimate Causes of Behavior'
+  innate_behavior:
+    label: Innate Behavior
+    sections:
+    - id: ch45_s45_7
+      title: '45.7 Behavioral Biology: Proximate and Ultimate Causes of Behavior'
+  migration_and_foraging:
+    label: Migration and Foraging
+    sections:
+    - id: ch45_s45_7
+      title: '45.7 Behavioral Biology: Proximate and Ultimate Causes of Behavior'
+  communication_and_mating_behavior:
+    label: Communication and Mating Behavior
+    sections:
+    - id: ch45_s45_7
+      title: '45.7 Behavioral Biology: Proximate and Ultimate Causes of Behavior'
+  altruistic_behavior_and_kin_selection:
+    label: Altruistic Behavior and Kin Selection
+    sections:
+    - id: ch45_s45_7
+      title: '45.7 Behavioral Biology: Proximate and Ultimate Causes of Behavior'
+  learned_behavior:
+    label: Learned Behavior
+    sections:
+    - id: ch45_s45_7
+      title: '45.7 Behavioral Biology: Proximate and Ultimate Causes of Behavior'
+  sociobiology:
+    label: Sociobiology
+    sections:
+    - id: ch45_s45_7
+      title: '45.7 Behavioral Biology: Proximate and Ultimate Causes of Behavior'

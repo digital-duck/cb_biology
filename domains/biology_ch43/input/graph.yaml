@@ -1,0 +1,232 @@
+domain: biology_2e_ch43
+primitives:
+  asexual_reproduction:
+    defines: A form of reproduction that produces offspring genetically identical to a single parent.
+    tier: 0
+  sexual_reproduction:
+    defines: The combination of genetic material from two individuals to produce genetically diverse offspring.
+    tier: 0
+  fertilization:
+    defines: The process in which sperm and egg fuse to form a zygote, occurring internally or externally.
+    tier: 0
+  gonads:
+    defines: Reproductive organs (testes or ovaries) that produce gametes and reproductive hormones.
+    tier: 0
+  meiosis:
+    defines: A cell division process that reduces chromosome number by half to produce haploid gametes.
+    tier: 0
+concepts:
+  fission:
+    defines: Asexual reproduction in which an organism splits into two separate, similarly sized organisms.
+    composed_of:
+    - asexual_reproduction
+    tier: 1
+  budding:
+    defines: Asexual reproduction in which an outgrowth of part of the parent separates to form a new
+      individual.
+    composed_of:
+    - asexual_reproduction
+    tier: 1
+  fragmentation:
+    defines: Asexual reproduction in which the body breaks into parts, each capable of regenerating into
+      a new individual.
+    composed_of:
+    - asexual_reproduction
+    tier: 1
+  parthenogenesis:
+    defines: Asexual reproduction in which an unfertilized egg develops into a complete individual.
+    composed_of:
+    - asexual_reproduction
+    tier: 1
+  hermaphroditism:
+    defines: A condition in which one individual possesses both male and female reproductive structures.
+    composed_of:
+    - sexual_reproduction
+    tier: 1
+  sex_determination:
+    defines: The genetic or environmental mechanisms that establish an individual's sex.
+    composed_of:
+    - sexual_reproduction
+    tier: 1
+  external_fertilization:
+    defines: Fertilization occurring outside the female's body, typically in aquatic environments via
+      spawning.
+    composed_of:
+    - fertilization
+    tier: 1
+  internal_fertilization:
+    defines: Fertilization occurring inside the female's body, encompassing oviparity, ovoviviparity,
+      and viviparity.
+    composed_of:
+    - fertilization
+    tier: 1
+  male_reproductive_anatomy:
+    defines: The structures that produce, store, and deliver sperm.
+    composed_of:
+    - gonads
+    tier: 1
+  female_reproductive_anatomy:
+    defines: The structures that produce eggs and support embryonic development.
+    composed_of:
+    - gonads
+    tier: 1
+  gametogenesis:
+    defines: The production of sperm and eggs through meiosis.
+    composed_of:
+    - meiosis
+    - gonads
+    tier: 1
+  hpg_axis_hormones:
+    defines: The regulatory hormone cascade from hypothalamus and anterior pituitary that controls reproduction
+      in both sexes.
+    composed_of:
+    - gonads
+    tier: 1
+  acrosomal_reaction:
+    defines: The biochemical process by which sperm digest the zona pellucida to fuse with and fertilize
+      the egg.
+    composed_of:
+    - fertilization
+    tier: 1
+  cleavage:
+    defines: Rapid mitotic cell divisions of the zygote that produce a multicellular blastula without
+      increasing overall mass.
+    composed_of:
+    - fertilization
+    tier: 1
+  oviparity:
+    defines: Reproductive strategy in which fertilized eggs are laid outside the body and develop using
+      yolk nourishment.
+    composed_of:
+    - internal_fertilization
+    tier: 2
+  ovoviviparity:
+    defines: Reproductive strategy in which fertilized eggs are retained in the parent, nourished by yolk,
+      and hatch fully developed.
+    composed_of:
+    - internal_fertilization
+    tier: 2
+  viviparity:
+    defines: Reproductive strategy in which young develop within the female and receive nourishment via
+      a placenta.
+    composed_of:
+    - internal_fertilization
+    tier: 2
+  spermatogenesis:
+    defines: The process by which primary spermatocytes undergo meiosis to produce four haploid sperm
+      cells.
+    composed_of:
+    - gametogenesis
+    - male_reproductive_anatomy
+    tier: 2
+  oogenesis:
+    defines: The process by which a primary oocyte undergoes unequal meiotic division to produce one haploid
+      egg and polar bodies.
+    composed_of:
+    - gametogenesis
+    - female_reproductive_anatomy
+    tier: 2
+  blastula_and_blastocyst:
+    defines: The hollow ball of cells resulting from cleavage, which in mammals organizes into inner cell
+      mass and trophoblast.
+    composed_of:
+    - cleavage
+    tier: 2
+  male_hormonal_regulation:
+    defines: The FSH/LH/testosterone/inhibin negative feedback system that controls spermatogenesis and
+      male secondary sex characteristics.
+    composed_of:
+    - hpg_axis_hormones
+    - spermatogenesis
+    tier: 3
+  female_hormonal_regulation:
+    defines: The FSH/LH/estrogen/progesterone system that controls follicle development, ovulation, and
+      secondary sex characteristics.
+    composed_of:
+    - hpg_axis_hormones
+    - oogenesis
+    tier: 3
+  human_gestation:
+    defines: The period of fetal development from fertilization to birth, divided into three trimesters.
+    composed_of:
+    - viviparity
+    - fertilization
+    tier: 3
+  gastrulation:
+    defines: The process in which the blastula folds upon itself to form the three germ layers.
+    composed_of:
+    - blastula_and_blastocyst
+    tier: 3
+  ovarian_cycle:
+    defines: The cyclic preparation of an egg for ovulation and conversion of the follicle into the corpus
+      luteum.
+    composed_of:
+    - female_hormonal_regulation
+    tier: 4
+  placenta_function:
+    defines: The organ that mediates nutrient and waste exchange between parent and fetus during pregnancy.
+    composed_of:
+    - human_gestation
+    tier: 4
+  germ_layers:
+    defines: The three primary cell layers formed during gastrulation that give rise to all body tissues.
+    composed_of:
+    - gastrulation
+    tier: 4
+  menstrual_cycle:
+    defines: The cyclic degradation and regrowth of the uterine endometrium coordinated with the ovarian
+      cycle.
+    composed_of:
+    - ovarian_cycle
+    tier: 5
+  organogenesis:
+    defines: The process by which germ layers differentiate into specific organs and tissues.
+    composed_of:
+    - germ_layers
+    tier: 5
+  neural_tube_formation:
+    defines: The process by which the ectodermal neural plate rolls up into a tube that gives rise to
+      the brain and spinal cord.
+    composed_of:
+    - germ_layers
+    tier: 5
+  somites_and_notochord:
+    defines: Mesodermal structures that give rise to vertebrae, muscle, and body axis.
+    composed_of:
+    - germ_layers
+    tier: 5
+  vertebrate_axis_formation:
+    defines: The establishment of the lateral-medial, dorsal-ventral, and anterior-posterior body axes
+      during development.
+    composed_of:
+    - germ_layers
+    tier: 5
+applications:
+  sexual_response:
+    defines: The four-phase physiological and psychological sequence during intercourse.
+    needs:
+    - male_reproductive_anatomy
+    - female_reproductive_anatomy
+    tier: 2
+  infertility_and_art:
+    defines: The inability to conceive or carry a pregnancy, and technologies used to assist conception.
+    needs:
+    - fertilization
+    - gametogenesis
+    tier: 2
+  labor_and_birth:
+    defines: The hormonally driven, three-stage process of expelling the fetus and placenta.
+    needs:
+    - human_gestation
+    tier: 4
+  contraception:
+    defines: Methods used to prevent pregnancy by blocking fertilization or implantation.
+    needs:
+    - fertilization
+    - female_hormonal_regulation
+    tier: 4
+  menopause:
+    defines: The loss of reproductive cycling due to decreased ovarian sensitivity to FSH and LH.
+    needs:
+    - menstrual_cycle
+    tier: 6

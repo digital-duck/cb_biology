@@ -1,0 +1,156 @@
+domain: biology_2e_ch15
+primitives:
+  dna:
+    defines: The molecule composed of nucleotides (A, T, C, G) that is linearly organized into genes carried
+      on chromosomes.
+    tier: 0
+  amino_acid:
+    defines: A building block of proteins, of which 20 commonly occurring types exist, each with distinct
+      side-chain chemistry.
+    tier: 0
+  gene:
+    defines: A molecular unit of DNA capable of replication, expression, and mutation that specifies the
+      sequence of a protein or RNA product.
+    tier: 0
+  nucleotide_triplet:
+    defines: A group of three consecutive nucleotides, the basic unit by which nucleic acid sequence is
+      read during transcription and translation.
+    tier: 0
+concepts:
+  central_dogma:
+    defines: The principle that genes specify the sequence of mRNAs, which in turn specify the sequence
+      of amino acids making up proteins (DNA -> RNA -> protein).
+    composed_of:
+    - dna
+    - gene
+    - amino_acid
+    tier: 1
+  codon:
+    defines: A three-nucleotide sequence in mRNA that specifies the insertion of a particular amino acid
+      or signals translation initiation/termination.
+    composed_of:
+    - nucleotide_triplet
+    - amino_acid
+    tier: 1
+  genetic_code:
+    defines: The correspondence between triplet nucleotide codons in mRNA and the 20 amino acids (plus
+      stop signals) they specify, which is degenerate and nearly universal across species.
+    composed_of:
+    - codon
+    - amino_acid
+    tier: 2
+  reading_frame:
+    defines: The sequence of triplet codons in mRNA, set by the start codon, that determines how nucleotides
+      are grouped into amino acid specifications.
+    composed_of:
+    - codon
+    tier: 2
+  template_strand:
+    defines: The DNA strand used to direct mRNA synthesis, accessed via a locally unwound region of DNA
+      called the transcription bubble.
+    composed_of:
+    - dna
+    - gene
+    tier: 1
+  promoter:
+    defines: A DNA sequence upstream of a gene onto which RNA polymerase and associated factors bind to
+      initiate transcription.
+    composed_of:
+    - dna
+    - gene
+    tier: 1
+  rna_polymerase:
+    defines: The enzyme complex that synthesizes mRNA from a DNA template in the 5' to 3' direction; composed
+      of a core enzyme (prokaryotes) or one of three distinct polymerases (eukaryotes).
+    composed_of:
+    - template_strand
+    - promoter
+    tier: 2
+  transcription_initiation:
+    defines: The phase of transcription in which polymerase (with sigma factor in prokaryotes, or transcription
+      factors in eukaryotes) binds the promoter to begin mRNA synthesis.
+    composed_of:
+    - rna_polymerase
+    - promoter
+    tier: 3
+  transcription_elongation_termination:
+    defines: The process by which polymerase extends the mRNA chain 5' to 3' and is subsequently released
+      from the DNA template via protein- or sequence-dependent termination signals.
+    composed_of:
+    - rna_polymerase
+    - transcription_initiation
+    tier: 4
+  prokaryotic_transcription:
+    defines: Transcription in bacteria/archaea using a single five-subunit RNA polymerase holoenzyme,
+      occurring simultaneously with translation due to the absence of a nucleus.
+    composed_of:
+    - transcription_initiation
+    - transcription_elongation_termination
+    tier: 5
+  eukaryotic_transcription_factors:
+    defines: Proteins required to bind eukaryotic promoter regions and recruit the appropriate RNA polymerase,
+      forming a preinitiation complex before transcription begins.
+    composed_of:
+    - promoter
+    - rna_polymerase
+    tier: 2
+  eukaryotic_transcription:
+    defines: Transcription in eukaryotic cells using three distinct RNA polymerases (I, II, III) each
+      transcribing different gene classes, requiring transcription factors and coordinated with nucleosome
+      remodeling.
+    composed_of:
+    - eukaryotic_transcription_factors
+    - transcription_initiation
+    - transcription_elongation_termination
+    tier: 5
+  mrna_processing:
+    defines: The set of modifications made to eukaryotic pre-mRNA, including 5' cap addition, 3' poly-A
+      tail addition, and intron removal, required before export and translation.
+    composed_of:
+    - eukaryotic_transcription
+    tier: 6
+  splicing:
+    defines: The process, carried out by spliceosomes, of precisely removing introns and reconnecting
+      exons in a pre-mRNA transcript.
+    composed_of:
+    - mrna_processing
+    tier: 7
+  trna_rrna_processing:
+    defines: Post-transcriptional modification of precursor tRNA and rRNA molecules through cleavage,
+      methylation, and structural folding to produce functional structural RNAs.
+    composed_of:
+    - eukaryotic_transcription
+    tier: 6
+  ribosome:
+    defines: A macromolecular complex of rRNAs and proteins, organized into large and small subunits,
+      that catalyzes protein synthesis by reading mRNA and forming peptide bonds.
+    composed_of:
+    - trna_rrna_processing
+    - amino_acid
+    tier: 7
+  trna_and_charging:
+    defines: Adaptor RNA molecules with an anticodon that pair with mRNA codons and, once "charged" by
+      aminoacyl tRNA synthetases with their corresponding amino acid, deliver amino acids to the ribosome.
+    composed_of:
+    - trna_rrna_processing
+    - codon
+    - amino_acid
+    tier: 7
+  translation:
+    defines: The process by which ribosomes decode an mRNA message via tRNAs into a polypeptide, proceeding
+      through initiation, elongation, and termination phases.
+    composed_of:
+    - ribosome
+    - trna_and_charging
+    - reading_frame
+    - genetic_code
+    - splicing
+    tier: 8
+applications:
+  protein_folding_targeting:
+    defines: The post/co-translational processes by which a nascent polypeptide is chemically modified,
+      folded into a functional three-dimensional structure, and directed to a specific cellular compartment
+      via signal sequences.
+    needs:
+    - translation
+    tier: 9

@@ -1,0 +1,148 @@
+domain: biology_2e_ch9
+sources:
+  ligand:
+    label: Ligand
+    sections:
+    - id: ch09_s9_1
+      title: 9.1 Signaling Molecules and Cellular Receptors
+  receptor:
+    label: Receptor
+    sections:
+    - id: ch09_s9_1
+      title: 9.1 Signaling Molecules and Cellular Receptors
+  intercellular_signaling:
+    label: Intercellular Signaling
+    sections:
+    - id: ch09_s9_1
+      title: 9.1 Signaling Molecules and Cellular Receptors
+  intracellular_signaling:
+    label: Intracellular Signaling
+    sections:
+    - id: ch09_s9_1
+      title: 9.1 Signaling Molecules and Cellular Receptors
+    - id: ch09_s9_2
+      title: 9.2 Propagation of the Signal
+  paracrine_signaling:
+    label: Paracrine Signaling
+    sections:
+    - id: ch09_s9_1
+      title: 9.1 Signaling Molecules and Cellular Receptors
+  endocrine_signaling:
+    label: Endocrine Signaling
+    sections:
+    - id: ch09_s9_1
+      title: 9.1 Signaling Molecules and Cellular Receptors
+  autocrine_signaling:
+    label: Autocrine Signaling
+    sections:
+    - id: ch09_s9_1
+      title: 9.1 Signaling Molecules and Cellular Receptors
+  gap_junction_signaling:
+    label: Direct Signaling Across Gap Junctions
+    sections:
+    - id: ch09_s9_1
+      title: 9.1 Signaling Molecules and Cellular Receptors
+  internal_receptor:
+    label: Internal Receptor
+    sections:
+    - id: ch09_s9_1
+      title: 9.1 Signaling Molecules and Cellular Receptors
+  cell_surface_receptor:
+    label: Cell-Surface Receptor
+    sections:
+    - id: ch09_s9_1
+      title: 9.1 Signaling Molecules and Cellular Receptors
+  ion_channel_linked_receptor:
+    label: Ion Channel-Linked Receptor
+    sections:
+    - id: ch09_s9_1
+      title: 9.1 Signaling Molecules and Cellular Receptors
+  g_protein_linked_receptor:
+    label: G-Protein-Linked Receptor
+    sections:
+    - id: ch09_s9_1
+      title: 9.1 Signaling Molecules and Cellular Receptors
+  enzyme_linked_receptor:
+    label: Enzyme-Linked Receptor
+    sections:
+    - id: ch09_s9_1
+      title: 9.1 Signaling Molecules and Cellular Receptors
+  receptor_dimerization:
+    label: Receptor Dimerization
+    sections:
+    - id: ch09_s9_2
+      title: 9.2 Propagation of the Signal
+  signal_transduction:
+    label: Signal Transduction
+    sections:
+    - id: ch09_s9_2
+      title: 9.2 Propagation of the Signal
+  signaling_pathway:
+    label: Signaling Pathway (Cascade)
+    sections:
+    - id: ch09_s9_2
+      title: 9.2 Propagation of the Signal
+    - id: ch09_s9_3
+      title: 9.3 Response to the Signal
+  phosphorylation:
+    label: Phosphorylation
+    sections:
+    - id: ch09_s9_2
+      title: 9.2 Propagation of the Signal
+  kinase:
+    label: Kinase
+    sections:
+    - id: ch09_s9_2
+      title: 9.2 Propagation of the Signal
+  dephosphorylation:
+    label: Dephosphorylation
+    sections:
+    - id: ch09_s9_2
+      title: 9.2 Propagation of the Signal
+    - id: ch09_s9_3
+      title: 9.3 Response to the Signal
+  second_messenger:
+    label: Second Messenger
+    sections:
+    - id: ch09_s9_2
+      title: 9.2 Propagation of the Signal
+  signal_amplification:
+    label: Signal Amplification and Integration
+    sections:
+    - id: ch09_s9_2
+      title: 9.2 Propagation of the Signal
+  gene_expression_response:
+    label: Gene Expression Response
+    sections:
+    - id: ch09_s9_3
+      title: 9.3 Response to the Signal
+  cellular_metabolism_response:
+    label: Cellular Metabolism Response
+    sections:
+    - id: ch09_s9_3
+      title: 9.3 Response to the Signal
+  cell_growth_response:
+    label: Cell Growth Response
+    sections:
+    - id: ch09_s9_3
+      title: 9.3 Response to the Signal
+  apoptosis:
+    label: Apoptosis
+    sections:
+    - id: ch09_s9_3
+      title: 9.3 Response to the Signal
+  signal_termination:
+    label: Signal Termination
+    sections:
+    - id: ch09_s9_3
+      title: 9.3 Response to the Signal
+  quorum_sensing:
+    label: Quorum Sensing
+    sections:
+    - id: ch09_s9_4
+      title: 9.4 Signaling in Single-Celled Organisms
+  yeast_mating_signaling:
+    label: Yeast Mating Signaling
+    sections:
+    - id: ch09_s9_4
+      title: 9.4 Signaling in Single-Celled Organisms

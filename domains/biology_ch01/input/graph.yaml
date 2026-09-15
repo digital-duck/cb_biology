@@ -1,0 +1,210 @@
+domain: biology
+primitives:
+  biology:
+    defines: The study of life, encompassing scales from microscopic cells to the whole living planet.
+    tier: 0
+  science:
+    defines: Knowledge covering general truths or the operation of general laws, especially when acquired
+      and tested by the scientific method.
+    tier: 0
+  hypothesis:
+    defines: A suggested, testable explanation for an observed event.
+    tier: 0
+  inductive_reasoning:
+    defines: A form of logical thinking that uses related observations to arrive at a general conclusion.
+    tier: 0
+  deductive_reasoning:
+    defines: A form of logical thinking that uses a general principle or law to predict specific results.
+    tier: 0
+  variable:
+    defines: Any part of an experiment that can vary or change during the experiment.
+    tier: 0
+  atom:
+    defines: The smallest and most fundamental unit of matter that retains the properties of an element.
+    tier: 0
+concepts:
+  natural_science:
+    defines: A field of science related to the physical world and its phenomena and processes.
+    composed_of:
+    - science
+    tier: 1
+  theory:
+    defines: A tested and confirmed explanation for observations or phenomena, often arising from a verified
+      hypothesis.
+    composed_of:
+    - hypothesis
+    tier: 1
+  falsifiability:
+    defines: The requirement that a valid hypothesis be able to be disproven by experimental results.
+    composed_of:
+    - hypothesis
+    tier: 1
+  descriptive_science:
+    defines: A usually inductive approach to science that aims to observe, explore, and discover.
+    composed_of:
+    - inductive_reasoning
+    - science
+    tier: 1
+  hypothesis_based_science:
+    defines: A usually deductive approach to science that begins with a specific question and a testable
+      potential answer.
+    composed_of:
+    - deductive_reasoning
+    - hypothesis
+    tier: 1
+  basic_science:
+    defines: Science that seeks to expand knowledge and understanding regardless of short-term application.
+    composed_of:
+    - science
+    tier: 1
+  peer_review:
+    defines: The process by which colleagues evaluate a scientific paper or grant proposal for originality,
+      significance, logic, and thoroughness.
+    composed_of:
+    - science
+    tier: 1
+  properties_of_life:
+    defines: The eight shared characteristics that together define a living organism.
+    composed_of:
+    - biology
+    tier: 1
+  molecule:
+    defines: A chemical structure consisting of at least two atoms held together by one or more chemical
+      bonds.
+    composed_of:
+    - atom
+    tier: 1
+  scientific_method:
+    defines: A defined-step method of research involving observation, hypothesis formulation, testing,
+      and confirming or falsifying the hypothesis.
+    composed_of:
+    - hypothesis_based_science
+    - falsifiability
+    tier: 2
+  applied_science:
+    defines: A form of science, aided by basic science findings, that aims to solve real-world problems.
+    composed_of:
+    - basic_science
+    tier: 2
+  scientific_paper_structure:
+    defines: The standard organization of a peer-reviewed scientific paper into introduction, methods,
+      results, and discussion sections.
+    composed_of:
+    - peer_review
+    tier: 2
+  homeostasis:
+    defines: The ability of an organism to maintain a relatively stable internal environment despite external
+      changes.
+    composed_of:
+    - properties_of_life
+    tier: 2
+  evolution:
+    defines: The process of gradual change in a population or species over time, driven by mutations and
+      natural selection.
+    composed_of:
+    - properties_of_life
+    tier: 2
+  macromolecule:
+    defines: A large molecule, such as DNA, typically formed by polymerization of smaller monomer units.
+    composed_of:
+    - molecule
+    tier: 2
+  control_group:
+    defines: The part of an experiment that contains every feature of the experimental group except the
+      manipulation being tested.
+    composed_of:
+    - variable
+    - scientific_method
+    tier: 3
+  adaptation:
+    defines: A "fit" between an organism and its environment that results from evolution by natural selection.
+    composed_of:
+    - evolution
+    tier: 3
+  organelle:
+    defines: A small membrane-bound structure within a cell that carries out a specific cellular function.
+    composed_of:
+    - macromolecule
+    tier: 3
+  cell:
+    defines: The smallest fundamental unit of structure and function in living organisms.
+    composed_of:
+    - organelle
+    tier: 4
+  prokaryote_eukaryote:
+    defines: The classification of cells as prokaryotes or eukaryotes.
+    composed_of:
+    - cell
+    tier: 5
+  tissue:
+    defines: A group of similar cells carrying out related functions.
+    composed_of:
+    - cell
+    tier: 5
+  organ:
+    defines: A collection of related tissues grouped together to perform a common function.
+    composed_of:
+    - tissue
+    tier: 6
+  organ_system:
+    defines: A level of organization consisting of functionally related, interacting organs.
+    composed_of:
+    - organ
+    tier: 7
+  organism:
+    defines: An individual living entity.
+    composed_of:
+    - organ_system
+    tier: 8
+  population:
+    defines: All the individuals of a species living within a specific area.
+    composed_of:
+    - organism
+    tier: 9
+  community:
+    defines: The sum of populations inhabiting a particular area.
+    composed_of:
+    - population
+    tier: 10
+  ecosystem:
+    defines: All the living things in a particular area together with the abiotic parts of that environment.
+    composed_of:
+    - community
+    tier: 11
+  biosphere:
+    defines: The collection of all ecosystems on Earth.
+    composed_of:
+    - ecosystem
+    tier: 12
+  levels_of_biological_organization:
+    defines: The hierarchy of living structure from atom to biosphere.
+    composed_of:
+    - atom
+    - biosphere
+    tier: 13
+applications:
+  bioethics:
+    defines: An evolving field establishing guidelines to ensure life-science research treats humans,
+      animals, and the environment ethically.
+    needs:
+    - applied_science
+    - natural_science
+    tier: 3
+  phylogenetic_tree:
+    defines: A diagram showing evolutionary relationships among biological species based on similarities
+      and differences in traits.
+    needs:
+    - evolution
+    tier: 3
+  three_domain_system:
+    defines: Carl Woese's classification of life into three domains based on genetic sequence comparison.
+    needs:
+    - phylogenetic_tree
+    - cell
+    tier: 5
+  branches_of_biology:
+    defines: The many biology subdisciplines, each focusing on a specific aspect or scale of life.
+    needs:
+    - biology
+    - levels_of_biological_organization
+    tier: 14

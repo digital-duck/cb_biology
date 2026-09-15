@@ -1,0 +1,271 @@
+domain: biology_2e_ch2
+sources:
+  matter:
+    label: Matter
+    sections:
+    - id: ch02_s2_1
+      title: '2.1 Atoms, Isotopes, Ions, and Molecules: The Building Blocks'
+  element:
+    label: Element
+    sections:
+    - id: ch02_s2_1
+      title: '2.1 Atoms, Isotopes, Ions, and Molecules: The Building Blocks'
+  atom:
+    label: Atom
+    sections:
+    - id: ch02_s2_1
+      title: '2.1 Atoms, Isotopes, Ions, and Molecules: The Building Blocks'
+  proton:
+    label: Proton
+    sections:
+    - id: ch02_s2_1
+      title: '2.1 Atoms, Isotopes, Ions, and Molecules: The Building Blocks'
+  neutron:
+    label: Neutron
+    sections:
+    - id: ch02_s2_1
+      title: '2.1 Atoms, Isotopes, Ions, and Molecules: The Building Blocks'
+  electron:
+    label: Electron
+    sections:
+    - id: ch02_s2_1
+      title: '2.1 Atoms, Isotopes, Ions, and Molecules: The Building Blocks'
+  atomic_number:
+    label: Atomic Number
+    sections:
+    - id: ch02_s2_1
+      title: '2.1 Atoms, Isotopes, Ions, and Molecules: The Building Blocks'
+  mass_number:
+    label: Mass Number
+    sections:
+    - id: ch02_s2_1
+      title: '2.1 Atoms, Isotopes, Ions, and Molecules: The Building Blocks'
+  isotope:
+    label: Isotope
+    sections:
+    - id: ch02_s2_1
+      title: '2.1 Atoms, Isotopes, Ions, and Molecules: The Building Blocks'
+  atomic_weight:
+    label: Atomic Weight
+    sections:
+    - id: ch02_s2_1
+      title: '2.1 Atoms, Isotopes, Ions, and Molecules: The Building Blocks'
+  radioisotope:
+    label: Radioisotope
+    sections:
+    - id: ch02_s2_1
+      title: '2.1 Atoms, Isotopes, Ions, and Molecules: The Building Blocks'
+  half_life:
+    label: Half-Life
+    sections:
+    - id: ch02_s2_1
+      title: '2.1 Atoms, Isotopes, Ions, and Molecules: The Building Blocks'
+  carbon_dating:
+    label: Carbon Dating
+    sections:
+    - id: ch02_s2_1
+      title: '2.1 Atoms, Isotopes, Ions, and Molecules: The Building Blocks'
+  periodic_table:
+    label: Periodic Table
+    sections:
+    - id: ch02_s2_1
+      title: '2.1 Atoms, Isotopes, Ions, and Molecules: The Building Blocks'
+  electron_shell:
+    label: Electron Shell (Bohr Model)
+    sections:
+    - id: ch02_s2_1
+      title: '2.1 Atoms, Isotopes, Ions, and Molecules: The Building Blocks'
+  electron_orbital:
+    label: Electron Orbital
+    sections:
+    - id: ch02_s2_1
+      title: '2.1 Atoms, Isotopes, Ions, and Molecules: The Building Blocks'
+  electron_configuration:
+    label: Electron Configuration
+    sections:
+    - id: ch02_s2_1
+      title: '2.1 Atoms, Isotopes, Ions, and Molecules: The Building Blocks'
+  valence_shell:
+    label: Valence Shell
+    sections:
+    - id: ch02_s2_1
+      title: '2.1 Atoms, Isotopes, Ions, and Molecules: The Building Blocks'
+  octet_rule:
+    label: Octet Rule
+    sections:
+    - id: ch02_s2_1
+      title: '2.1 Atoms, Isotopes, Ions, and Molecules: The Building Blocks'
+  molecule:
+    label: Molecule
+    sections:
+    - id: ch02_s2_1
+      title: '2.1 Atoms, Isotopes, Ions, and Molecules: The Building Blocks'
+  chemical_bond:
+    label: Chemical Bond
+    sections:
+    - id: ch02_s2_1
+      title: '2.1 Atoms, Isotopes, Ions, and Molecules: The Building Blocks'
+  chemical_reaction:
+    label: Chemical Reaction
+    sections:
+    - id: ch02_s2_1
+      title: '2.1 Atoms, Isotopes, Ions, and Molecules: The Building Blocks'
+  ion:
+    label: Ion
+    sections:
+    - id: ch02_s2_1
+      title: '2.1 Atoms, Isotopes, Ions, and Molecules: The Building Blocks'
+  ionic_bond:
+    label: Ionic Bond
+    sections:
+    - id: ch02_s2_1
+      title: '2.1 Atoms, Isotopes, Ions, and Molecules: The Building Blocks'
+  electrolytes:
+    label: Electrolytes
+    sections:
+    - id: ch02_s2_1
+      title: '2.1 Atoms, Isotopes, Ions, and Molecules: The Building Blocks'
+  covalent_bond:
+    label: Covalent Bond
+    sections:
+    - id: ch02_s2_1
+      title: '2.1 Atoms, Isotopes, Ions, and Molecules: The Building Blocks'
+  electronegativity:
+    label: Electronegativity
+    sections:
+    - id: ch02_s2_1
+      title: '2.1 Atoms, Isotopes, Ions, and Molecules: The Building Blocks'
+    - id: ch02_s2_2
+      title: 2.2 Water
+  polar_covalent_bond:
+    label: Polar Covalent Bond
+    sections:
+    - id: ch02_s2_1
+      title: '2.1 Atoms, Isotopes, Ions, and Molecules: The Building Blocks'
+  nonpolar_covalent_bond:
+    label: Nonpolar Covalent Bond
+    sections:
+    - id: ch02_s2_1
+      title: '2.1 Atoms, Isotopes, Ions, and Molecules: The Building Blocks'
+  hydrogen_bond:
+    label: Hydrogen Bond
+    sections:
+    - id: ch02_s2_1
+      title: '2.1 Atoms, Isotopes, Ions, and Molecules: The Building Blocks'
+    - id: ch02_s2_2
+      title: 2.2 Water
+  van_der_waals_interaction:
+    label: Van der Waals Interaction
+    sections:
+    - id: ch02_s2_1
+      title: '2.1 Atoms, Isotopes, Ions, and Molecules: The Building Blocks'
+  water_polarity:
+    label: Water's Polarity
+    sections:
+    - id: ch02_s2_2
+      title: 2.2 Water
+  specific_heat_capacity:
+    label: Specific Heat Capacity
+    sections:
+    - id: ch02_s2_2
+      title: 2.2 Water
+  heat_of_vaporization:
+    label: Heat of Vaporization
+    sections:
+    - id: ch02_s2_2
+      title: 2.2 Water
+  solvent:
+    label: Solvent
+    sections:
+    - id: ch02_s2_2
+      title: 2.2 Water
+  sphere_of_hydration:
+    label: Sphere of Hydration
+    sections:
+    - id: ch02_s2_2
+      title: 2.2 Water
+  dissociation:
+    label: Dissociation
+    sections:
+    - id: ch02_s2_2
+      title: 2.2 Water
+  cohesion:
+    label: Cohesion
+    sections:
+    - id: ch02_s2_2
+      title: 2.2 Water
+  surface_tension:
+    label: Surface Tension
+    sections:
+    - id: ch02_s2_2
+      title: 2.2 Water
+  adhesion:
+    label: Adhesion
+    sections:
+    - id: ch02_s2_2
+      title: 2.2 Water
+  capillary_action:
+    label: Capillary Action
+    sections:
+    - id: ch02_s2_2
+      title: 2.2 Water
+  ph_scale:
+    label: pH Scale
+    sections:
+    - id: ch02_s2_2
+      title: 2.2 Water
+  acid:
+    label: Acid
+    sections:
+    - id: ch02_s2_2
+      title: 2.2 Water
+  base:
+    label: Base
+    sections:
+    - id: ch02_s2_2
+      title: 2.2 Water
+  buffer:
+    label: Buffer
+    sections:
+    - id: ch02_s2_2
+      title: 2.2 Water
+  blood_ph_buffering:
+    label: Blood pH Buffering System
+    sections:
+    - id: ch02_s2_2
+      title: 2.2 Water
+  carbon_bonding:
+    label: Carbon's Tetravalent Bonding
+    sections:
+    - id: ch02_s2_3
+      title: 2.3 Carbon
+  hydrocarbon:
+    label: Hydrocarbon
+    sections:
+    - id: ch02_s2_3
+      title: 2.3 Carbon
+  isomer:
+    label: Isomer
+    sections:
+    - id: ch02_s2_3
+      title: 2.3 Carbon
+  structural_isomer:
+    label: Structural Isomer
+    sections:
+    - id: ch02_s2_3
+      title: 2.3 Carbon
+  geometric_isomer:
+    label: Geometric (Cis-Trans) Isomer
+    sections:
+    - id: ch02_s2_3
+      title: 2.3 Carbon
+  enantiomer:
+    label: Enantiomer
+    sections:
+    - id: ch02_s2_3
+      title: 2.3 Carbon
+  functional_group:
+    label: Functional Group
+    sections:
+    - id: ch02_s2_3
+      title: 2.3 Carbon

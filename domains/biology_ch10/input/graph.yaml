@@ -1,0 +1,169 @@
+domain: biology_2e_ch10
+primitives:
+  dna:
+    defines: The double-stranded DNA molecule that carries a cell's genetic information, packaged as a
+      genome.
+    tier: 0
+  gene:
+    defines: A segment of DNA that codes for a specific protein and occupies a specific locus on a chromosome.
+    tier: 0
+  trait:
+    defines: A variation of a characteristic determined by the specific combination of alleles of a gene
+      inherited from both parents.
+    tier: 0
+  histone:
+    defines: A low molecular weight, conserved protein that DNA wraps around to form the first level of
+      chromosome compaction.
+    tier: 0
+  mitotic_spindle:
+    defines: The microtubule-based apparatus, organized by centrosomes, that orchestrates chromosome movement
+      during mitosis.
+    tier: 0
+  cyclin:
+    defines: A protein whose fluctuating concentration, when bound to a Cdk, drives progression of the
+      cell cycle through its checkpoints.
+    tier: 0
+  cdk:
+    defines: An enzyme that, when bound to cyclin and phosphorylated, phosphorylates other proteins to
+      advance the cell cycle.
+    tier: 0
+  negative_regulators:
+    defines: Tumor-suppressor proteins including retinoblastoma protein, p53, and p21 that halt the cell
+      cycle, primarily at the G1 checkpoint, until conditions are met.
+    tier: 0
+  ftsz:
+    defines: A tubulin-homologous prokaryotic protein that assembles into a ring directing cytokinesis
+      during binary fission.
+    tier: 0
+concepts:
+  chromosome:
+    defines: A structure of packaged genetic material; a single circular DNA molecule in prokaryotes or
+      multiple linear DNA-protein complexes in eukaryotes.
+    composed_of:
+    - dna
+    - gene
+    tier: 1
+  chromatin:
+    defines: The DNA-histone complex that forms the basic packaging structure of eukaryotic chromosomes.
+    composed_of:
+    - dna
+    - histone
+    tier: 1
+  nucleosome:
+    defines: The beadlike subunit of chromatin formed by a short stretch of DNA wrapped around a core
+      of eight histone proteins.
+    composed_of:
+    - dna
+    - histone
+    tier: 1
+  cdk_cyclin_complex:
+    defines: The activated pairing of a Cdk with its cyclin partner that positively drives the cell past
+      cell-cycle checkpoints.
+    composed_of:
+    - cdk
+    - cyclin
+    tier: 1
+  gene_mutation:
+    defines: An uncorrected change in the nucleotide sequence within the coding portion of a gene, arising
+      from replication errors.
+    composed_of:
+    - gene
+    - dna
+    tier: 1
+  homologous_chromosomes:
+    defines: Matched pairs of chromosomes, one from each parent, that carry genes for the same traits
+      at the same loci.
+    composed_of:
+    - chromosome
+    - gene
+    - trait
+    tier: 2
+  sister_chromatids:
+    defines: The two identical, cohesin-linked copies of a replicated chromosome joined at the centromere.
+    composed_of:
+    - chromosome
+    tier: 2
+  interphase:
+    defines: The preparatory portion of the cell cycle, comprising G1, S, and G2 phases, during which
+      the cell grows and replicates its DNA.
+    composed_of:
+    - chromosome
+    tier: 2
+  tumor_suppressor_gene:
+    defines: A gene coding for a negative regulator protein that, when functional, prevents uncontrolled
+      cell division; loss of function contributes to cancer.
+    composed_of:
+    - gene_mutation
+    - negative_regulators
+    tier: 2
+  proto_oncogene_oncogene:
+    defines: Normal genes coding for positive cell-cycle regulators (proto-oncogenes) that become cancer-causing
+      oncogenes when mutated to increase cell-cycle progression.
+    composed_of:
+    - gene_mutation
+    - cdk_cyclin_complex
+    tier: 2
+  ploidy:
+    defines: The number of chromosome sets in a cell, with diploid (2n) somatic cells containing two sets
+      and haploid (1n) gametes containing one.
+    composed_of:
+    - chromosome
+    - homologous_chromosomes
+    tier: 3
+  mitosis:
+    defines: Nuclear division consisting of prophase, prometaphase, metaphase, anaphase, and telophase,
+      in which duplicated chromosomes are separated into two identical nuclei.
+    composed_of:
+    - chromosome
+    - sister_chromatids
+    - mitotic_spindle
+    tier: 3
+  cytokinesis:
+    defines: The physical division of the cytoplasm into two daughter cells, following mitosis via an
+      actin contractile ring in animal cells or cell plate formation in plant cells.
+    composed_of:
+    - mitosis
+    tier: 4
+  cell_cycle:
+    defines: The ordered sequence of interphase and the mitotic phase (mitosis plus cytokinesis) that
+      produces two genetically identical daughter cells.
+    composed_of:
+    - interphase
+    - mitosis
+    - cytokinesis
+    tier: 5
+  g0_phase:
+    defines: A quiescent state in which a cell exits the cell cycle and is not actively preparing to divide.
+    composed_of:
+    - cell_cycle
+    tier: 6
+  cell_cycle_checkpoints:
+    defines: Internal control points near the end of G1, at the G2/M transition, and during metaphase
+      where cell-cycle progression can be halted until conditions are favorable.
+    composed_of:
+    - cell_cycle
+    tier: 6
+  apoptosis:
+    defines: Programmed cell death triggered by p53 when DNA damage cannot be repaired, preventing propagation
+      of damaged chromosomes.
+    composed_of:
+    - negative_regulators
+    - cell_cycle_checkpoints
+    tier: 7
+applications:
+  binary_fission:
+    defines: The prokaryotic cell division process in which a single circular chromosome is replicated
+      and segregated, and the cytoplasm is divided by an FtsZ ring without karyokinesis.
+    needs:
+    - ftsz
+    - dna
+    tier: 1
+  cancer:
+    defines: A disease of uncontrolled cell growth resulting from accumulated mutations that disable cell-cycle
+      checkpoint controls.
+    needs:
+    - proto_oncogene_oncogene
+    - tumor_suppressor_gene
+    - cell_cycle_checkpoints
+    - apoptosis
+    tier: 8

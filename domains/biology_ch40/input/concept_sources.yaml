@@ -1,0 +1,157 @@
+domain: biology_2e_ch40
+sources:
+  diffusion_gas_exchange:
+    label: Diffusion-Based Gas Exchange
+    sections:
+    - id: ch40_s40_1
+      title: 40.1 Overview of the Circulatory System
+  open_circulatory_system:
+    label: Open Circulatory System
+    sections:
+    - id: ch40_s40_1
+      title: 40.1 Overview of the Circulatory System
+  closed_circulatory_system:
+    label: Closed Circulatory System
+    sections:
+    - id: ch40_s40_1
+      title: 40.1 Overview of the Circulatory System
+  hemolymph_interstitial_fluid:
+    label: Hemolymph and Interstitial Fluid
+    sections:
+    - id: ch40_s40_1
+      title: 40.1 Overview of the Circulatory System
+  vertebrate_heart_evolution:
+    label: Vertebrate Heart Chamber Evolution
+    sections:
+    - id: ch40_s40_1
+      title: 40.1 Overview of the Circulatory System
+    - id: ch40_s40_2
+      title: 40.2 Components of the Blood
+  unidirectional_circulation:
+    label: Unidirectional (Single) Circulation
+    sections:
+    - id: ch40_s40_1
+      title: 40.1 Overview of the Circulatory System
+  double_circulation:
+    label: Double Circulation
+    sections:
+    - id: ch40_s40_1
+      title: 40.1 Overview of the Circulatory System
+    - id: ch40_s40_3
+      title: 40.3 Mammalian Heart and Blood Vessels
+  pulmonary_circulation:
+    label: Pulmonary Circulation
+    sections:
+    - id: ch40_s40_1
+      title: 40.1 Overview of the Circulatory System
+    - id: ch40_s40_3
+      title: 40.3 Mammalian Heart and Blood Vessels
+  systemic_circulation:
+    label: Systemic Circulation
+    sections:
+    - id: ch40_s40_1
+      title: 40.1 Overview of the Circulatory System
+    - id: ch40_s40_3
+      title: 40.3 Mammalian Heart and Blood Vessels
+  coronary_circulation:
+    label: Coronary Circulation
+    sections:
+    - id: ch40_s40_3
+      title: 40.3 Mammalian Heart and Blood Vessels
+  blood_composition:
+    label: Blood Composition
+    sections:
+    - id: ch40_s40_2
+      title: 40.2 Components of the Blood
+  red_blood_cells:
+    label: Red Blood Cells (Erythrocytes)
+    sections:
+    - id: ch40_s40_2
+      title: 40.2 Components of the Blood
+  hemoglobin_respiratory_pigments:
+    label: Hemoglobin and Respiratory Pigments
+    sections:
+    - id: ch40_s40_2
+      title: 40.2 Components of the Blood
+  white_blood_cells:
+    label: White Blood Cells (Leukocytes)
+    sections:
+    - id: ch40_s40_2
+      title: 40.2 Components of the Blood
+  platelets_coagulation:
+    label: Platelets and Coagulation
+    sections:
+    - id: ch40_s40_2
+      title: 40.2 Components of the Blood
+  plasma_and_serum:
+    label: Plasma and Serum
+    sections:
+    - id: ch40_s40_2
+      title: 40.2 Components of the Blood
+  blood_type_groups:
+    label: Blood Type Groups (ABO and Rh)
+    sections:
+    - id: ch40_s40_2
+      title: 40.2 Components of the Blood
+  heart_chambers_valves:
+    label: Heart Chambers and Valves
+    sections:
+    - id: ch40_s40_3
+      title: 40.3 Mammalian Heart and Blood Vessels
+  heart_wall_layers:
+    label: Heart Wall Layers
+    sections:
+    - id: ch40_s40_3
+      title: 40.3 Mammalian Heart and Blood Vessels
+  cardiac_cycle:
+    label: Cardiac Cycle
+    sections:
+    - id: ch40_s40_3
+      title: 40.3 Mammalian Heart and Blood Vessels
+  cardiomyocytes:
+    label: Cardiomyocytes
+    sections:
+    - id: ch40_s40_3
+      title: 40.3 Mammalian Heart and Blood Vessels
+  cardiac_conduction_system:
+    label: Cardiac Conduction System
+    sections:
+    - id: ch40_s40_3
+      title: 40.3 Mammalian Heart and Blood Vessels
+  blood_vessel_types:
+    label: Blood Vessel Types (Arteries, Veins, Capillaries)
+    sections:
+    - id: ch40_s40_3
+      title: 40.3 Mammalian Heart and Blood Vessels
+  vasoconstriction_vasodilation:
+    label: Vasoconstriction and Vasodilation
+    sections:
+    - id: ch40_s40_3
+      title: 40.3 Mammalian Heart and Blood Vessels
+    - id: ch40_s40_4
+      title: 40.4 Blood Flow and Blood Pressure Regulation
+  blood_pressure:
+    label: Blood Pressure
+    sections:
+    - id: ch40_s40_4
+      title: 40.4 Blood Flow and Blood Pressure Regulation
+  blood_flow_regulation:
+    label: Blood Flow Regulation
+    sections:
+    - id: ch40_s40_4
+      title: 40.4 Blood Flow and Blood Pressure Regulation
+  capillary_exchange:
+    label: Capillary Exchange and Lymphatic Return
+    sections:
+    - id: ch40_s40_4
+      title: 40.4 Blood Flow and Blood Pressure Regulation
+  cardiac_output:
+    label: Cardiac Output
+    sections:
+    - id: ch40_s40_4
+      title: 40.4 Blood Flow and Blood Pressure Regulation
+  peripheral_resistance:
+    label: Peripheral Resistance
+    sections:
+    - id: ch40_s40_4
+      title: 40.4 Blood Flow and Blood Pressure Regulation
