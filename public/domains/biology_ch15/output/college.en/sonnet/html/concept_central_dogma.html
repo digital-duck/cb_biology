@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Central Dogma | Biology Ch15</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="central-dogma">Central Dogma</h2>
+<p>The central dogma is the rule that genetic information in a cell flows in one direction only: DNA → RNA → protein, never the reverse. Francis Crick proposed this in 1958 to capture a simple but far-reaching fact — a cell can copy DNA into RNA and translate RNA into protein, but it has no mechanism to read a protein's amino acid sequence and reconstruct DNA from it. This directionality is the one new idea this section introduces; everything else — transcription copying DNA into mRNA, and translation reading mRNA codons via tRNA at the ribosome to build a protein — you have already seen and can now view as the two steps that make this one-way flow happen in practice.</p>
+<p><strong>Worked example.</strong> Take the DNA template strand 3′-TAC GGG ATC-5′. Transcription produces the complementary mRNA 5′-AUG CCC UAG-3′, and translation reads it codon by codon: AUG (methionine, start), CCC (proline), UAG (stop). The finished dipeptide is Met-Pro. Notice the traffic is strictly one-way — the sequence of DNA bases determined the mRNA sequence, which determined the amino acid sequence, but knowing the dipeptide Met-Pro alone would never let you recover the original DNA strand, since several different codons (and several different DNA sequences) can code for the same amino acid.</p>
+<p><strong>Problem-solving application.</strong> Because information only flows forward, any change introduced at the DNA level propagates predictably downstream to the protein, and biologists exploit this to reason backward from a phenotype to its genetic cause. If a single DNA base is altered, the corresponding mRNA codon changes, which can change the amino acid inserted at that position, which can change how the protein folds and functions. Sickle cell disease is a classic case: one base substitution in the hemoglobin gene alters one codon, swapping one amino acid, which distorts the hemoglobin protein's shape and its ability to carry oxygen normally. Applying the central dogma this way — DNA change → RNA change → protein change → observable trait — is the basic move behind interpreting genetic test results, predicting the effects of a mutation, and explaining why altering a gene has consequences for an organism's biology.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Biology 2e Ch15: Genes and Proteins (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

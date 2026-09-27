@@ -2253,6 +2253,12 @@
         "file": "output/college.en/sonnet/html/book_protein_folding_targeting.html",
         "model": "sonnet",
         "language": "en"
+      },
+      {
+        "target": "central_dogma",
+        "file": "output/college.en/sonnet/html/book_central_dogma.html",
+        "model": "sonnet",
+        "language": "en"
       }
     ],
     "generated_concepts": [
@@ -2260,6 +2266,13 @@
         "name": "amino_acid",
         "label": "Amino Acid",
         "file": "output/college.en/sonnet/html/concept_amino_acid.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "central_dogma",
+        "label": "Central Dogma",
+        "file": "output/college.en/sonnet/html/concept_central_dogma.html",
         "model": "sonnet",
         "language": "en"
       },
