@@ -11,6 +11,8 @@ MathJax = {
 };
 </script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
@@ -26,6 +28,12 @@ p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
 footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
       font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
 footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
 .page{max-width:780px;margin:0 auto;padding:40px 32px}
 section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
 section:first-of-type{border-top:none;padding-top:0}
@@ -35,24 +43,12 @@ section:first-of-type{border-top:none;padding-top:0}
 <div class="page">
   <main>
     <h2 id="chloroplast">Chloroplast</h2>
-<p><strong>Definition.</strong> A chloroplast is a double-membrane-bound organelle in plant and algal cells, containing its own circular DNA, ribosomes, and internal thylakoid membranes stacked into grana, surrounded by a fluid matrix called the stroma. Its function is <strong>photosynthesis</strong>, the single new concept this section introduces: the conversion of light energy into chemical energy stored in the bonds of carbohydrates. The chloroplast's semi-autonomous features (its own genome and replication by fission) reflect its evolutionary origin from a once free-living bacterium, a historical detail that does not itself require separate definition here.</p>
-<p><strong>Worked example.</strong> Consider a mesophyll cell absorbing light of wavelength $\lambda = 680\ \text{nm}$. Using the standard photon-energy relation from physics,</p>
-$$E = \frac{hc}{\lambda} = \frac{(6.626\times10^{-34}\,\text{J·s})(3.00\times10^{8}\,\text{m/s})}{680\times10^{-9}\,\text{m}} \approx 2.92\times10^{-19}\ \text{J per photon},$$
-<p>so one mole of such photons carries $\approx 176\ \text{kJ}$. This is the energy input that photosynthesis converts into chemical energy: it drives reactions in the thylakoid membrane that ultimately store energy in NADPH and ATP, which the stroma then uses to build sugar.</p>
-<p><strong>Key theorem (stoichiometric balance).</strong> The net photosynthetic reaction,</p>
-$$6\,\mathrm{CO_2} + 6\,\mathrm{H_2O} + \text{light energy} \longrightarrow \mathrm{C_6H_{12}O_6} + 6\,\mathrm{O_2},$$
-<p>is simply a statement of mass conservation: photosynthesis rearranges the same carbon, hydrogen, and oxygen atoms present in the reactants into products, with no atoms created or destroyed.</p>
-<p><strong>Lab cell (SymPy).</strong></p>
-<pre><code>from sympy import symbols, Eq
-
-CO2, H2O, C6H12O6, O2 = symbols('CO2 H2O C6H12O6 O2', positive=True)
-# Verify atom balance for the fixed stoichiometry 6:6:1:6
-carbon = Eq(6*1, 1*6)
-hydrogen = Eq(6*2, 1*12)
-oxygen = Eq(6*2 + 6*1, 1*6 + 6*2)
-print(carbon, hydrogen, oxygen)</code></pre>
+<p>The chloroplast is the organelle in plant and algal cells responsible for photosynthesis — the conversion of light energy into the chemical energy stored in glucose. Like the mitochondrion, it is enclosed by a double membrane and carries its own circular DNA and ribosomes, a legacy of its origin as a free-living cyanobacterium engulfed by an ancestral eukaryotic cell roughly 1.5 billion years ago, the same endosymbiotic origin that explains mitochondrial ancestry.</p>
+<p>What makes the chloroplast structurally distinct is a third internal membrane, the thylakoid, folded into flattened, stacked sacs and bathed in a surrounding fluid. Photosynthesis unfolds in two connected stages tied to this layout. Embedded in the thylakoid membrane, chlorophyll and its accessory pigments absorb light and use that energy to split water molecules ($2H_2O \rightarrow O_2 + 4H^+ + 4e^-$), releasing oxygen and producing ATP and NADPH. Those energy carriers then diffuse into the surrounding fluid, where carbon dioxide is captured and built, step by step, into glucose.</p>
+<p>Worked example: A greenhouse grower notices that plants under red-blue LED light grow faster than under green light alone. Chlorophyll absorbs red and blue wavelengths strongly but reflects green light — which is why leaves appear green. Since absorbed light drives the water-splitting, ATP-generating step, green-dominant light supplies less usable energy, slowing sugar production and overall growth. This explains the grower's observation directly from chloroplast pigment chemistry.</p>
+<p>Problem-solving application: If a herbicide blocks electron transport in the thylakoid membrane, predict the immediate effect on both stages of photosynthesis. Because ATP and NADPH production would halt, sugar synthesis in the surrounding fluid — despite happening in a separate compartment — would also stop, since it depends entirely on those two products. This illustrates a key exam-style reasoning skill: tracing how a disruption in one part of the chloroplast cascades into a spatially separate but chemically dependent process.</p>
   </main>
-  <footer class="spl-credit">Generated by SPL &middot; Powered by SPL.py</footer>
+  <footer class="spl-credit"><span class="spl-credit__meta">Biology 2e Ch4: Cell Structure (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
 </div>
 </body>
 </html>

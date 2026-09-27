@@ -11,6 +11,8 @@ MathJax = {
 };
 </script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
@@ -26,6 +28,12 @@ p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
 footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
       font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
 footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
 .page{max-width:780px;margin:0 auto;padding:40px 32px}
 section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
 section:first-of-type{border-top:none;padding-top:0}
@@ -35,21 +43,18 @@ section:first-of-type{border-top:none;padding-top:0}
 <div class="page">
   <main>
     <h2 id="centrosome">Centrosome</h2>
-<p><strong>Definition.</strong> The centrosome is the primary microtubule-organizing center (MTOC) of most animal cells, typically positioned adjacent to the nuclear envelope. It consists of a pair of centrioles surrounded by a protein matrix that nucleates microtubule growth by templating the addition of tubulin subunits at one end of each filament, so that microtubules radiate outward with their free ends able to explore the cytoplasm. The centrosome is the only new structural term introduced here; its internal architecture (centriole substructure, the specific nucleating complex) is treated as a mechanistic detail rather than a separate object of study.</p>
-<p><strong>Worked example.</strong> Consider a centrosome nucleating $n$ microtubules that grow radially at a constant rate $v$ (in $\mu\text{m/min}$). If the cell radius is $R$, the time $\tau$ for a microtubule to reach the cell cortex is</p>
-$$
-\tau = \frac{R}{v}.
-$$
-<p>For $R = 10\ \mu\text{m}$ and $v = 0.5\ \mu\text{m/min}$ (typical interphase growth rate), $\tau = 20$ minutes. This estimate illustrates why centrosome positioning near the nucleus allows the microtubule array to survey the entire cell interior within a biologically reasonable timescale, supporting organelle positioning and, later, spindle formation.</p>
-<p><strong>Key theorem (duplication constraint).</strong> Centrosome duplication is licensed to occur exactly once per cell cycle, coordinated with chromosome replication. This "once-and-only-once" rule can be stated formally as an invariant on the centrosome count $C(t)$ at the start of mitosis, $C(t) = 2 \times C(t_0)$, where $C(t_0) = 1$ at the previous division. Its violation — through multiple rounds of duplication — produces extra centrosomes, a hallmark of chromosomal instability in cancer cells.</p>
-<p><strong>Lab cell (SymPy).</strong></p>
-<pre><code>from sympy import symbols, Eq, solve
-
-R, v, tau = symbols('R v tau', positive=True)
-eq = Eq(tau, R / v)
-solve(eq.subs({R: 10, v: 0.5}), tau)  # -&gt; [20]</code></pre>
+<p>The centrosome is the primary microtubule-organizing center of animal cells, usually positioned just next to the nucleus. It is built from two small cylindrical structures surrounded by a protein-rich region that nucleates new microtubules — filaments that radiate outward like spokes from a hub. Because nearly all of a cell's microtubules originate from this one structure, the centrosome effectively sets the internal routing system of the cell, the tracks along which vesicles, organelles, and eventually chromosomes travel.</p>
+<p>Consider what happens as a cell prepares to divide. During interphase the single centrosome copies itself, and the two resulting centrosomes move to opposite ends of the cell as mitosis begins. Each one radiates its own array of microtubules, and together the two arrays form the two poles of the spindle apparatus that pulls the cell's duplicated chromosomes apart. Fibers extending from each pole attach to the duplicated chromosomes, and the balanced, opposing pull from the two poles is what lets each daughter cell end up with one full, matched set of chromosomes. If the centrosome fails to duplicate correctly or migrate to the correct position, the spindle assembles unevenly, raising the risk that a daughter cell receives too many or too few chromosomes.</p>
+<p>This connects directly to a practical diagnostic application: centrosome number is used in practice as a marker of genomic instability. Many cancer cells contain three, four, or more centrosomes instead of the normal one or two, and each extra centrosome pulls chromosomes toward it during division, so the resulting daughter cells end up with unbalanced, abnormal chromosome counts. Pathologists can stain centrosomal proteins and count centrosomes per cell under a microscope; an elevated count in a tumor biopsy is a recognized indicator of chromosomal instability and is studied as a possible predictor of how aggressively a cancer will progress. Understanding how the centrosome duplicates and organizes the spindle therefore provides a mechanistic link between a single organelle's behavior and a measurable, clinically relevant feature of cancer progression.</p>
+<pre class="mermaid">flowchart LR
+    A[Single centrosome in interphase] --> B[Centrosome duplicates]
+    B --> C[Two centrosomes move to opposite ends of the cell]
+    C --> D[Each radiates microtubules toward the chromosomes]
+    D --> E[Two-sided spindle forms]
+    E --> F[Chromosomes pulled apart evenly]</pre>
+<p><em>The centrosome duplication cycle and its role in building a balanced spindle for cell division.</em></p>
   </main>
-  <footer class="spl-credit">Generated by SPL &middot; Powered by SPL.py</footer>
+  <footer class="spl-credit"><span class="spl-credit__meta">Biology 2e Ch4: Cell Structure (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
 </div>
 </body>
 </html>

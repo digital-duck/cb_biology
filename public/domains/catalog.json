@@ -818,6 +818,13 @@
         "language": "en"
       },
       {
+        "name": "prokaryotic_cell",
+        "label": "Prokaryotic Cell",
+        "file": "output/college.en/sonnet/html/concept_prokaryotic_cell.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
         "name": "ribosome",
         "label": "Ribosome",
         "file": "output/college.en/sonnet/html/concept_ribosome.html",

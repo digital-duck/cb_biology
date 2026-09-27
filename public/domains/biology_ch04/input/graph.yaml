@@ -8,6 +8,9 @@ primitives:
       the naked eye.
     tier: 0
   prokaryotic_cell:
+    diagram:
+      type: image
+      hint: "side-by-side comparison of prokaryotic cell (no nucleus, circular DNA, 70S ribosomes) vs eukaryotic cell (membrane-bound nucleus, linear DNA, organelles) — Wikimedia Commons labeled diagram"
     defines: A simple, mostly single-celled organism that lacks a nucleus or any other membrane-bound
       organelle.
     tier: 0
@@ -15,6 +18,9 @@ primitives:
     defines: A cell that has a membrane-bound nucleus and several other membrane-bound organelles.
     tier: 0
   plasma_membrane:
+    diagram:
+      type: flowchart LR
+      hint: "phospholipid bilayer cross-section: outer hydrophilic head → hydrophobic fatty acid tail core (two layers back to back) → inner hydrophilic head; embed a protein channel spanning both layers"
     defines: A phospholipid bilayer with embedded proteins that separates a cell's interior from its surrounding
       environment.
     tier: 0
@@ -238,6 +244,7 @@ applications:
     - central_vacuole
     - centrosome
     - lysosome
+    - prokaryotic_cell
     tier: 3
   cell_communication_and_signaling:
     defines: The real-world process by which cells use the extracellular matrix and intercellular junctions

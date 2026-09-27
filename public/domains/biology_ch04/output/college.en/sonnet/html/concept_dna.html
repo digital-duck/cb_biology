@@ -11,6 +11,8 @@ MathJax = {
 };
 </script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
@@ -26,6 +28,12 @@ p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
 footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
       font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
 footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
 .page{max-width:780px;margin:0 auto;padding:40px 32px}
 section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
 section:first-of-type{border-top:none;padding-top:0}
@@ -35,19 +43,12 @@ section:first-of-type{border-top:none;padding-top:0}
 <div class="page">
   <main>
     <h2 id="dna">Dna</h2>
-<p><strong>Definition.</strong> Deoxyribonucleic acid (DNA) is the polymeric molecule that encodes the hereditary information of a cell. Structurally, DNA is a double helix composed of two antiparallel strands, each a chain of nucleotides linked by phosphodiester bonds. Each nucleotide consists of a deoxyribose sugar, a phosphate group, and one of four nitrogenous bases: adenine (A), thymine (T), guanine (G), or cytosine (C). The two strands are held together by hydrogen bonds between complementary base pairs, following the pairing rule $A \leftrightarrow T$ and $G \leftrightarrow C$, with A–T pairs forming two hydrogen bonds and G–C pairs forming three. This complementarity underlies both the stability of the molecule and the mechanism of accurate replication.</p>
-<p><strong>Worked example.</strong> Given one strand of DNA with sequence $5'\text{-ATGCCGTA-}3'$, the complementary strand is obtained by pairing each base and reversing the direction: $3'\text{-TACGGCAT-}5'$, equivalently written $5'\text{-TACGGCAT-}3'$ read in the standard orientation. If the strand contains $n_A$ adenines, $n_T$ thymines, $n_G$ guanines, and $n_C$ cytosines, then for double-stranded DNA the total base pairing constraint $n_A = n_T$ and $n_G = n_C$ (Chargaff's rule) must hold across both strands combined.</p>
-<p><strong>Key theorem.</strong> <em>Chargaff's rule</em>: in any double-stranded DNA molecule, the total amount of adenine equals the total amount of thymine, and the total amount of guanine equals the total amount of cytosine — that is, $[A] = [T]$ and $[G] = [C]$. This follows directly from strict Watson–Crick base pairing and provides the theoretical basis for calculating base composition and estimating GC content, $\text{GC\%} = \dfrac{n_G + n_C}{n_A + n_T + n_G + n_C} \times 100$.</p>
-<p><strong>Lab cell (SymPy).</strong></p>
-<pre><code>from sympy import symbols, Eq, solve
-
-nA, nT, nG, nC = symbols('nA nT nG nC', positive=True)
-seq = "ATGCCGTAGGCCATTAG"
-counts = {b: seq.count(b) for b in "ATGC"}
-gc_content = 100 * (counts['G'] + counts['C']) / len(seq)
-print(counts, gc_content)</code></pre>
+<p>Deoxyribonucleic acid (DNA) is the molecule that stores and transmits genetic information in every living cell. It is a double-stranded polymer built from four types of nucleotides, each composed of a deoxyribose sugar, a phosphate group, and one of four nitrogenous bases: adenine (A), thymine (T), guanine (G), and cytosine (C). The two strands wind around each other in a double helix, held together by hydrogen bonds between complementary base pairs — A pairs with T (two hydrogen bonds), and G pairs with C (three hydrogen bonds). This complementarity is the chemical basis for both accurate replication and reliable information storage: knowing the sequence of one strand tells you the sequence of the other.</p>
+<p>Organization differs sharply between the two domains of cellular life. In prokaryotes (bacteria and archaea), DNA typically exists as a single circular chromosome located in a nucleoid region, not enclosed by a membrane, often supplemented by small circular plasmids that can carry extra genes such as antibiotic resistance. In eukaryotes, DNA is linear, divided among multiple chromosomes, and packaged tightly around histone proteins into chromatin, all enclosed within a membrane-bound nucleus. This packaging is not just for storage efficiency — it also regulates which genes are accessible for transcription at a given time.</p>
+<p>Worked example: A double-stranded DNA segment reads 5′-ATG CGT ACA-3′ on one strand. Using the base-pairing rule, the complementary strand, read 3′ to 5′, is TAC GCA TGT — or written conventionally in the 5′→3′ direction, TGT ACG CAT. This antiparallel, complementary relationship is exactly what DNA polymerase relies on during replication, and what primers and probes rely on in techniques like PCR.</p>
+<p>Problem-solving application: Suppose a bacterial genome sample is contaminated with plasmid DNA, and you need to distinguish the two using a restriction enzyme digest and gel electrophoresis. Because the chromosome is one large circular molecule and plasmids are much smaller circles, cutting both with the same enzyme and running the fragments on a gel lets you separate them by size — smaller plasmid fragments migrate farther. Recognizing that prokaryotic genomes are organized as circular DNA (unlike the linear, chromatin-packaged DNA of eukaryotes) is essential to correctly interpreting the banding pattern and designing the experiment.</p>
   </main>
-  <footer class="spl-credit">Generated by SPL &middot; Powered by SPL.py</footer>
+  <footer class="spl-credit"><span class="spl-credit__meta">Biology 2e Ch4: Cell Structure (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
 </div>
 </body>
 </html>

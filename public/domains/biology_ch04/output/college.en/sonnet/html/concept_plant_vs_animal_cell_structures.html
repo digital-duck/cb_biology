@@ -11,6 +11,8 @@ MathJax = {
 };
 </script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
@@ -26,6 +28,12 @@ p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
 footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
       font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
 footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
 .page{max-width:780px;margin:0 auto;padding:40px 32px}
 section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
 section:first-of-type{border-top:none;padding-top:0}
@@ -35,21 +43,30 @@ section:first-of-type{border-top:none;padding-top:0}
 <div class="page">
   <main>
     <h2 id="plant-vs-animal-cell-structures">Plant Vs Animal Cell Structures</h2>
-<p><strong>Definition.</strong> Plant and animal cells are both eukaryotic, sharing a plasma membrane, nucleus, mitochondria, ribosomes, and endomembrane system. This section introduces one new structural primitive: the <strong>central vacuole</strong>, a large membrane-bound compartment (bounded by the tonoplast) that occupies up to 90% of a mature plant cell's volume and maintains <strong>turgor pressure</strong> through osmotic water uptake. Plant cells also feature a rigid cellulose cell wall and chloroplasts, while animal cells feature a centrosome and lysosomes; these organelles are named here for contrast but are treated as given features rather than developed in depth — each merits its own dedicated treatment (cell wall mechanics, photosynthesis, cytoskeletal organization, and lysosomal digestion, respectively) in later sections. The functional distinction driving these differences is lifestyle: plants are stationary photoautotrophs requiring rigid support, while animals are motile heterotrophs requiring flexible shape.</p>
-<p><strong>Worked example.</strong> Consider a wilted lettuce leaf placed in water. Water enters the central vacuole by osmosis, increasing internal pressure until it is balanced by the resistive tension of the surrounding cell wall — the cell becomes turgid, and the leaf stiffens. An animal cell placed in the analogous hypotonic solution has no wall to resist expansion; unchecked water influx causes it to swell and potentially lyse. The vacuole is thus the operative structure in plant water balance, functioning as a pressurized reservoir, whereas the animal cell instead relies on ion pumps to regulate volume.</p>
-<p><strong>Key theorem (turgor pressure balance).</strong> At osmotic equilibrium, the wall pressure $P_w$ exactly balances the osmotic pressure difference $\Delta \Pi$ across the tonoplast and plasma membrane:</p>
-$$P_w = \Delta \Pi = RT\,(C_{in} - C_{out})$$
-<p>where $R$ is the gas constant, $T$ is temperature, and $C_{in}, C_{out}$ are solute concentrations inside the vacuole and in the external medium.</p>
-<p><strong>Lab cell (SymPy).</strong></p>
-<pre><code>import sympy as sp
-
-R, T, C_in, C_out = sp.symbols('R T C_in C_out', positive=True)
-P_w = R * T * (C_in - C_out)
-print("Turgor pressure P_w =", P_w)
-print("At C_in = 0.3 M, C_out = 0.1 M, T = 298 K:",
-      P_w.subs({R: 0.0821, T: 298, C_in: 0.3, C_out: 0.1}), "atm")</code></pre>
+<p>Both plant and animal cells are eukaryotic: each has a nucleus, mitochondria, ribosomes, and an endomembrane system (endoplasmic reticulum and Golgi apparatus) that manufacture and route proteins. What distinguishes them is a small set of specialized organelles tied to each organism's lifestyle. Plants are stationary and make their own food, so their cells carry structures for support and photosynthesis. Animals move, hunt, and digest other organisms, so their cells carry structures for flexibility and intracellular digestion.</p>
+<p>Plant cells are built around one defining feature: a rigid cell wall made of cellulose fibers, positioned just outside the plasma membrane. This wall gives the cell a fixed shape and lets it push back against incoming water pressure, so the cell fills with water and stays firm rather than swelling until it bursts — this is why a well-watered plant stands upright while a wilted one goes limp. Two other structures support the plant's lifestyle: chloroplasts, which contain chlorophyll and convert light energy into the chemical energy (glucose) the plant runs on, and a large central vacuole that stores water, nutrients, and waste and, together with the wall, keeps non-woody tissue rigid.</p>
+<p>Animal cells lack a wall, so the plasma membrane alone bounds the cell — this is what allows animal cells to change shape for movement, muscle contraction, and tissue folding during development. Two organelles reflect this animal-specific lifestyle: the centrosome, which coordinates the even splitting of genetic material when a cell divides, and lysosomes, membrane-bound sacs of digestive enzymes that break down worn-out cell parts, engulfed food, and invading pathogens.</p>
+<p>A useful problem-solving approach: given a micrograph or cell description, identify which organelles are present and absent, then infer the organism's biology. A cell with a thick outer wall, a large fluid-filled sac, and green organelles must be autotrophic (self-feeding) and structurally rigid — a plant cell. A cell lacking a wall but containing enzyme-filled sacs near a nucleus preparing to divide is likely an animal cell actively engaged in digestion or division. This same organelle-to-function reasoning is used to interpret real electron micrographs in a lab setting.</p>
+<pre class="mermaid">flowchart LR
+    subgraph Shared["Shared Organelles"]
+        N[Nucleus]
+        M[Mitochondria]
+        R[Ribosomes]
+        ER[Endoplasmic Reticulum]
+        G[Golgi Apparatus]
+    end
+    subgraph Plant["Plant-Specific"]
+        CW[Cell Wall]
+        CH[Chloroplasts]
+        CV[Central Vacuole]
+    end
+    subgraph Animal["Animal-Specific"]
+        CS[Centrosome]
+        LY[Lysosomes]
+    end</pre>
+<p><em>Comparison of eukaryotic organelles shared by plant and animal cells versus those unique to each cell type.</em></p>
   </main>
-  <footer class="spl-credit">Generated by SPL &middot; Powered by SPL.py</footer>
+  <footer class="spl-credit"><span class="spl-credit__meta">Biology 2e Ch4: Cell Structure (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
 </div>
 </body>
 </html>
