@@ -695,6 +695,12 @@
         "file": "output/college.en/sonnet/html/book_medical_applications_of_cell_biology.html",
         "model": "sonnet",
         "language": "en"
+      },
+      {
+        "target": "plant_vs_animal_cell_structures",
+        "file": "output/college.zh/sonnet/html/book_plant_vs_animal_cell_structures_zh.html",
+        "model": "sonnet",
+        "language": "zh"
       }
     ],
     "generated_concepts": [
@@ -713,11 +719,25 @@
         "language": "en"
       },
       {
+        "name": "cell_wall",
+        "label": "Cell Wall",
+        "file": "output/college.zh/sonnet/html/concept_cell_wall_zh.html",
+        "model": "sonnet",
+        "language": "zh"
+      },
+      {
         "name": "central_vacuole",
         "label": "Central Vacuole",
         "file": "output/college.en/sonnet/html/concept_central_vacuole.html",
         "model": "sonnet",
         "language": "en"
+      },
+      {
+        "name": "central_vacuole",
+        "label": "Central Vacuole",
+        "file": "output/college.zh/sonnet/html/concept_central_vacuole_zh.html",
+        "model": "sonnet",
+        "language": "zh"
       },
       {
         "name": "centrosome",
@@ -727,6 +747,13 @@
         "language": "en"
       },
       {
+        "name": "centrosome",
+        "label": "Centrosome",
+        "file": "output/college.zh/sonnet/html/concept_centrosome_zh.html",
+        "model": "sonnet",
+        "language": "zh"
+      },
+      {
         "name": "chloroplast",
         "label": "Chloroplast",
         "file": "output/college.en/sonnet/html/concept_chloroplast.html",
@@ -734,11 +761,25 @@
         "language": "en"
       },
       {
+        "name": "chloroplast",
+        "label": "Chloroplast",
+        "file": "output/college.zh/sonnet/html/concept_chloroplast_zh.html",
+        "model": "sonnet",
+        "language": "zh"
+      },
+      {
         "name": "dna",
         "label": "Dna",
         "file": "output/college.en/sonnet/html/concept_dna.html",
         "model": "sonnet",
         "language": "en"
+      },
+      {
+        "name": "dna",
+        "label": "Dna",
+        "file": "output/college.zh/sonnet/html/concept_dna_zh.html",
+        "model": "sonnet",
+        "language": "zh"
       },
       {
         "name": "endoplasmic_reticulum",
@@ -753,6 +794,13 @@
         "file": "output/college.en/sonnet/html/concept_eukaryotic_cell.html",
         "model": "sonnet",
         "language": "en"
+      },
+      {
+        "name": "eukaryotic_cell",
+        "label": "Eukaryotic Cell",
+        "file": "output/college.zh/sonnet/html/concept_eukaryotic_cell_zh.html",
+        "model": "sonnet",
+        "language": "zh"
       },
       {
         "name": "extracellular_matrix",
@@ -783,6 +831,13 @@
         "language": "en"
       },
       {
+        "name": "lysosome",
+        "label": "Lysosome",
+        "file": "output/college.zh/sonnet/html/concept_lysosome_zh.html",
+        "model": "sonnet",
+        "language": "zh"
+      },
+      {
         "name": "medical_applications_of_cell_biology",
         "label": "Medical Applications Of Cell Biology",
         "file": "output/college.en/sonnet/html/concept_medical_applications_of_cell_biology.html",
@@ -811,11 +866,25 @@
         "language": "en"
       },
       {
+        "name": "plant_vs_animal_cell_structures",
+        "label": "Plant Vs Animal Cell Structures",
+        "file": "output/college.zh/sonnet/html/concept_plant_vs_animal_cell_structures_zh.html",
+        "model": "sonnet",
+        "language": "zh"
+      },
+      {
         "name": "plasma_membrane",
         "label": "Plasma Membrane",
         "file": "output/college.en/sonnet/html/concept_plasma_membrane.html",
         "model": "sonnet",
         "language": "en"
+      },
+      {
+        "name": "plasma_membrane",
+        "label": "Plasma Membrane",
+        "file": "output/college.zh/sonnet/html/concept_plasma_membrane_zh.html",
+        "model": "sonnet",
+        "language": "zh"
       },
       {
         "name": "prokaryotic_cell",
@@ -825,6 +894,13 @@
         "language": "en"
       },
       {
+        "name": "prokaryotic_cell",
+        "label": "Prokaryotic Cell",
+        "file": "output/college.zh/sonnet/html/concept_prokaryotic_cell_zh.html",
+        "model": "sonnet",
+        "language": "zh"
+      },
+      {
         "name": "ribosome",
         "label": "Ribosome",
         "file": "output/college.en/sonnet/html/concept_ribosome.html",
@@ -832,11 +908,25 @@
         "language": "en"
       },
       {
+        "name": "ribosome",
+        "label": "Ribosome",
+        "file": "output/college.zh/sonnet/html/concept_ribosome_zh.html",
+        "model": "sonnet",
+        "language": "zh"
+      },
+      {
         "name": "vesicle_and_vacuole",
         "label": "Vesicle And Vacuole",
         "file": "output/college.en/sonnet/html/concept_vesicle_and_vacuole.html",
         "model": "sonnet",
         "language": "en"
+      },
+      {
+        "name": "vesicle_and_vacuole",
+        "label": "Vesicle And Vacuole",
+        "file": "output/college.zh/sonnet/html/concept_vesicle_and_vacuole_zh.html",
+        "model": "sonnet",
+        "language": "zh"
       }
     ]
   },

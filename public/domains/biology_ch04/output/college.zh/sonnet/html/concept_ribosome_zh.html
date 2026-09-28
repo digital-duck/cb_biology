@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ribosome | Biology Ch04</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="核糖体">核糖体</h2>
+<p>核糖体（ribosome）是存在于所有细胞（包括细菌、古菌和真核细胞）中的分子机器，负责将信使RNA（mRNA）携带的遗传信息翻译成蛋白质。它由核糖体RNA（rRNA）和多种蛋白质组成，分为大、小两个亚基：真核细胞的核糖体为80S（由60S大亚基和40S小亚基组成），原核细胞的核糖体为70S（由50S大亚基和30S小亚基组成）。核糖体既可以游离于细胞质中合成细胞内使用的蛋白质，也可以附着在内质网上（形成粗面内质网），合成分泌蛋白或膜蛋白。</p>
+<p><strong>工作实例</strong>：翻译开始时，小亚基先与mRNA结合，识别起始密码子AUG；携带甲硫氨酸的起始tRNA与之配对后，大亚基随即结合，形成完整核糖体。核糖体内部有三个关键位点——A位（氨基酸位）、P位（肽键位）和E位（排出位）。核糖体沿mRNA每移动一个密码子（3个核苷酸），就催化相邻氨基酸之间形成肽键，肽链随之延伸一个氨基酸残基，直到遇到终止密码子（UAA、UAG或UGA），肽链释放，核糖体解离。这一过程平均每秒可添加约2–20个氨基酸，具体速率因物种和细胞状态而异。</p>
+<p><strong>问题解决应用</strong>：假设一个蛋白质由300个氨基酸组成，其对应的mRNA编码区（不含起始和终止密码子）应含有多少个核苷酸？由于每个氨基酸对应一个三联体密码子，编码区长度为：</p>
+$$
+300 \times 3 = 900 \ \text{个核苷酸}
+$$
+<p>加上起始密码子（3个）和终止密码子（3个），完整的开放阅读框共需906个核苷酸。这类计算在分子生物学和基因工程中很常见，例如设计引物、预测蛋白质分子量，或判断突变（如插入/缺失）是否会导致移码，从而破坏下游的正确翻译。理解核糖体的工作机制，也是抗生素（如链霉素、红霉素，它们分别靶向细菌的30S和50S亚基）作用原理的基础——这正是选择性抑制细菌而不伤害人体细胞的关键，因为真核与原核核糖体在结构上存在显著差异。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Biology 2e Ch4: Cell Structure (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

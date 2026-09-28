@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plasma Membrane | Biology Ch04</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="plasma-membrane">Plasma Membrane</h2>
+<p>细胞膜（质膜）是包裹细胞、将其内部环境与外界分隔开的一层薄膜，主要由磷脂双分子层构成，其中镶嵌着多种蛋白质。每个磷脂分子都有一个亲水性的"头部"（含磷酸基团，可与水分子形成氢键）和两条疏水性的"尾部"（脂肪酸链，排斥水分子）。当大量磷脂分子聚集在水环境中时，它们会自发排列成双层结构：亲水头部朝向细胞内外两侧的水性环境，疏水尾部则相互靠拢，藏在膜的中央，从而形成一道天然的屏障。这种自组装现象不需要能量输入，是分子间相互作用（热力学上趋向能量最低状态）的自然结果。</p>
+<p>细胞膜并非静止不变的墙壁，而是一种流动的结构——磷脂分子和蛋白质可以在膜平面内侧向移动，这一特性被称为"流动镶嵌模型"（fluid mosaic model）。镶嵌在膜中的蛋白质承担着多种功能：通道蛋白允许特定离子或分子通过，载体蛋白负责主动或被动运输，受体蛋白识别细胞外的信号分子（如激素），还有一些蛋白质参与细胞间的识别与黏附。</p>
+<p><strong>应用实例</strong>：考虑水分子与葡萄糖分子穿过细胞膜的差异。水分子体积小、极性弱，可以通过膜上的水通道蛋白（水通道蛋白，aquaporin）快速扩散；而葡萄糖分子较大且极性强，无法直接穿过疏水核心，必须依赖专门的载体蛋白（如GLUT转运蛋白）才能进入细胞。这解释了为什么细胞膜被称为"选择透过性膜"——它并非对所有物质一视同仁，而是根据分子大小、极性和是否存在对应转运蛋白来决定通透性。理解这一点，有助于解释诸如肾小管重吸收、神经细胞动作电位产生等生理过程的分子基础。</p>
+<pre class="mermaid">flowchart LR
+    A[外侧亲水头部] --> B[疏水脂肪酸尾部 - 上层]
+    B --> C[疏水脂肪酸尾部 - 下层]
+    C --> D[内侧亲水头部]
+    E[跨膜通道蛋白] -.横跨.-> A
+    E -.横跨.-> D</pre>
+<p><em>磷脂双分子层横截面示意图：亲水头部朝向膜两侧的水环境，疏水尾部藏于中央，蛋白质通道贯穿整个膜结构，为特定分子提供通路。</em></p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Biology 2e Ch4: Cell Structure (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>
