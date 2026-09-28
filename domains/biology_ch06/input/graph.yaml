@@ -1,0 +1,200 @@
+domain: biology_2e_ch6
+primitives:
+  energy:
+    defines: The ability to do work.
+    tier: 0
+  thermodynamics:
+    defines: The study of energy and energy transfer involving physical matter.
+    tier: 0
+  system_and_surroundings:
+    defines: The matter and environment relevant to an energy transfer (system) versus everything outside
+      of it (surroundings), classified as open or closed.
+    tier: 0
+  enthalpy:
+    defines: A system's total energy, denoted as delta H in free energy calculations.
+    tier: 0
+  metabolism:
+    defines: All the chemical reactions that take place inside cells, including anabolism and catabolism.
+    tier: 0
+  substrate:
+    defines: The reactant molecule(s) to which an enzyme binds at its active site.
+    tier: 0
+concepts:
+  kinetic_energy:
+    defines: The energy associated with objects or particles in motion.
+    composed_of:
+    - energy
+    tier: 1
+  potential_energy:
+    defines: Stored energy that an object has due to its position or structure, representing the potential
+      to do work.
+    composed_of:
+    - energy
+    tier: 1
+  chemical_energy:
+    defines: Potential energy stored within chemical bonds that releases when those bonds are broken.
+    composed_of:
+    - potential_energy
+    tier: 2
+  first_law_of_thermodynamics:
+    defines: The total amount of energy in the universe is constant; energy can be transferred or transformed
+      but not created or destroyed.
+    composed_of:
+    - thermodynamics
+    - system_and_surroundings
+    - energy
+    tier: 1
+  entropy:
+    defines: A measure of randomness or disorder within a system.
+    composed_of:
+    - thermodynamics
+    - system_and_surroundings
+    tier: 1
+  second_law_of_thermodynamics:
+    defines: Every energy transfer or transformation increases the entropy of the universe because no
+      energy transfer is completely efficient.
+    composed_of:
+    - first_law_of_thermodynamics
+    - entropy
+    tier: 2
+  free_energy:
+    defines: The usable energy in a chemical reaction that is available to do work, after accounting for
+      entropy.
+    composed_of:
+    - enthalpy
+    - entropy
+    tier: 2
+  delta_g:
+    defines: The change in Gibbs free energy during a chemical reaction, calculated from enthalpy, entropy,
+      and temperature.
+    composed_of:
+    - free_energy
+    tier: 3
+  exergonic_reaction:
+    defines: A chemical reaction with a negative delta G that releases free energy and occurs spontaneously.
+    composed_of:
+    - delta_g
+    tier: 4
+  endergonic_reaction:
+    defines: A chemical reaction with a positive delta G that requires an input of energy and is nonspontaneous.
+    composed_of:
+    - delta_g
+    tier: 4
+  chemical_equilibrium:
+    defines: The state a reversible reaction reaches when it has minimal free energy and maximal entropy,
+      with no net change in reactant/product concentrations.
+    composed_of:
+    - free_energy
+    - entropy
+    tier: 2
+  activation_energy:
+    defines: The small amount of energy input required for a chemical reaction to reach its transition
+      state and proceed.
+    composed_of:
+    - energy
+    tier: 1
+  transition_state:
+    defines: The high-energy, unstable intermediate state between substrate and product during a chemical
+      reaction.
+    composed_of:
+    - activation_energy
+    - substrate
+    tier: 2
+  catalysis:
+    defines: The process of lowering a reaction's activation energy to increase its rate.
+    composed_of:
+    - activation_energy
+    tier: 2
+  anabolic_pathway:
+    defines: A metabolic pathway that requires an input of energy to synthesize complex molecules from
+      simpler ones.
+    composed_of:
+    - metabolism
+    - endergonic_reaction
+    tier: 5
+  catabolic_pathway:
+    defines: A metabolic pathway in which complex molecules break down into simpler ones, releasing energy.
+    composed_of:
+    - metabolism
+    - exergonic_reaction
+    tier: 5
+  atp:
+    defines: The primary energy currency molecule of cells, whose phosphoanhydride bonds release usable
+      energy when hydrolyzed.
+    composed_of:
+    - chemical_energy
+    - metabolism
+    tier: 3
+  atp_hydrolysis:
+    defines: The exergonic breakdown of ATP into ADP and inorganic phosphate, releasing free energy to
+      power cellular work.
+    composed_of:
+    - atp
+    - exergonic_reaction
+    tier: 5
+  phosphorylation:
+    defines: The process of a phosphate group binding to a molecule, often transferred from ATP, raising
+      the molecule's free energy.
+    composed_of:
+    - atp
+    tier: 4
+  energy_coupling:
+    defines: The strategy by which the energy released by an exergonic reaction (such as ATP hydrolysis)
+      is used to drive an endergonic reaction.
+    composed_of:
+    - atp_hydrolysis
+    - endergonic_reaction
+    tier: 6
+  enzyme:
+    defines: A protein catalyst that lowers the activation energy of biochemical reactions without changing
+      their free energy.
+    composed_of:
+    - catalysis
+    - substrate
+    tier: 3
+  active_site:
+    defines: The specific region of an enzyme where the substrate binds and the catalytic reaction occurs.
+    composed_of:
+    - enzyme
+    - substrate
+    tier: 4
+  induced_fit:
+    defines: A model describing the dynamic conformational change that occurs in both enzyme and substrate
+      as they bind, optimizing catalysis.
+    composed_of:
+    - active_site
+    tier: 5
+  cofactors_and_coenzymes:
+    defines: Inorganic ions (cofactors) or organic helper molecules (coenzymes), often derived from vitamins,
+      required for optimal enzyme function.
+    composed_of:
+    - enzyme
+    tier: 4
+  competitive_inhibition:
+    defines: Enzyme inhibition in which an inhibitor molecule competes with the substrate for binding
+      at the active site.
+    composed_of:
+    - active_site
+    tier: 5
+  allosteric_regulation:
+    defines: Enzyme regulation in which a molecule binds at a site other than the active site (the allosteric
+      site), inducing a conformational change that inhibits or activates the enzyme.
+    composed_of:
+    - enzyme
+    - active_site
+    tier: 5
+  enzyme_regulation:
+    defines: Mechanisms including environmental factors, cofactors/coenzymes, compartmentalization, and
+      inhibitors/activators that control enzyme activity.
+    composed_of:
+    - cofactors_and_coenzymes
+    - competitive_inhibition
+    - allosteric_regulation
+    tier: 6
+  feedback_inhibition:
+    defines: A regulatory mechanism in which a metabolic pathway's product inhibits an enzyme earlier
+      in the pathway to limit its own overproduction.
+    composed_of:
+    - allosteric_regulation
+    - metabolism
+    tier: 6

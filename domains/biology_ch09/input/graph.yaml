@@ -1,0 +1,171 @@
+domain: biology_2e_ch9
+primitives:
+  ligand:
+    defines: A molecule produced by a signaling cell that binds a specific receptor, delivering a signal
+      in the process.
+    tier: 0
+  receptor:
+    defines: A protein in or on a target cell that binds to ligands.
+    tier: 0
+  phosphorylation:
+    defines: The enzyme-catalyzed (kinase) addition of a phosphate group to a molecule, such as serine,
+      threonine, or tyrosine residues of a protein, to activate or inactivate it.
+    tier: 0
+  kinase:
+    defines: An enzyme that transfers a phosphate group from ATP to another molecule.
+    tier: 0
+concepts:
+  intercellular_signaling:
+    defines: Communication between cells, achieved through the release and reception of ligands by signaling
+      and target cells.
+    composed_of:
+    - ligand
+    - receptor
+    tier: 1
+  paracrine_signaling:
+    defines: Local signaling in which ligands diffuse through the extracellular matrix to act on nearby
+      cells, as seen at nerve cell synapses.
+    composed_of:
+    - intercellular_signaling
+    tier: 2
+  endocrine_signaling:
+    defines: Long-distance signaling in which hormones travel through the bloodstream from endocrine cells
+      to distant target cells.
+    composed_of:
+    - intercellular_signaling
+    tier: 2
+  autocrine_signaling:
+    defines: Signaling in which a cell releases a ligand that binds to receptors on itself or similar
+      nearby cells.
+    composed_of:
+    - intercellular_signaling
+    tier: 2
+  gap_junction_signaling:
+    defines: Signaling in which small molecules pass directly between adjacent cells through fluid-filled
+      membrane channels (gap junctions or plasmodesmata).
+    composed_of:
+    - intercellular_signaling
+    tier: 2
+  internal_receptor:
+    defines: A cytoplasmic receptor that binds hydrophobic ligands able to cross the plasma membrane,
+      often regulating gene expression directly.
+    composed_of:
+    - receptor
+    - ligand
+    tier: 1
+  cell_surface_receptor:
+    defines: A membrane-spanning receptor that binds external ligands and converts an extracellular signal
+      into an intracellular one via signal transduction.
+    composed_of:
+    - receptor
+    - ligand
+    tier: 1
+  ion_channel_linked_receptor:
+    defines: A cell-surface receptor that opens a membrane channel to allow specific ions to pass through
+      upon ligand binding.
+    composed_of:
+    - cell_surface_receptor
+    tier: 2
+  g_protein_linked_receptor:
+    defines: A cell-surface receptor that activates a membrane-bound G-protein, which then interacts with
+      an ion channel or enzyme to transmit a signal.
+    composed_of:
+    - cell_surface_receptor
+    tier: 2
+  enzyme_linked_receptor:
+    defines: A cell-surface receptor with an intracellular domain associated with or acting as an enzyme,
+      activated upon ligand binding.
+    composed_of:
+    - cell_surface_receptor
+    tier: 2
+  receptor_dimerization:
+    defines: The joining of two receptor proteins into a stable complex (dimer) that enables activation
+      of their intracellular domains.
+    composed_of:
+    - enzyme_linked_receptor
+    tier: 3
+  signal_transduction:
+    defines: The propagation of a signal from a cell-surface receptor through the membrane and into the
+      cytoplasm.
+    composed_of:
+    - cell_surface_receptor
+    tier: 2
+  intracellular_signaling:
+    defines: Communication that occurs within a single cell, propagating a signal from a receptor through
+      the cytoplasm.
+    composed_of:
+    - signal_transduction
+    tier: 3
+  signaling_pathway:
+    defines: A chain of protein and second-messenger interactions in the cytoplasm that propagates a signal
+      to produce a cellular response.
+    composed_of:
+    - intracellular_signaling
+    - phosphorylation
+    - kinase
+    tier: 4
+  dephosphorylation:
+    defines: The removal of a phosphate group from a phosphorylated molecule by an enzyme called a phosphatase,
+      reversing phosphorylation's effect.
+    composed_of:
+    - phosphorylation
+    tier: 1
+  second_messenger:
+    defines: A small, non-protein molecule (e.g., calcium ions, cAMP, DAG, IP3) that propagates a signal
+      within the cell after receptor activation.
+    composed_of:
+    - intracellular_signaling
+    tier: 3
+  signal_amplification:
+    defines: The enzymatic amplification of a single ligand-binding event into many downstream activations,
+      and the merging of signals from multiple receptors to activate a shared response.
+    composed_of:
+    - signaling_pathway
+    tier: 5
+  signal_termination:
+    defines: The process of stopping a signaling cascade through ligand degradation, dephosphorylation,
+      or second-messenger breakdown.
+    composed_of:
+    - signaling_pathway
+    - dephosphorylation
+    tier: 5
+applications:
+  gene_expression_response:
+    defines: A signaling pathway outcome in which transcription or translation is regulated, as in the
+      MAPK/ERK and NF-κB pathways.
+    needs:
+    - signaling_pathway
+    tier: 5
+  cellular_metabolism_response:
+    defines: A signaling pathway outcome, such as adrenaline-triggered cAMP signaling in muscle cells,
+      that alters glycogen degradation and synthesis.
+    needs:
+    - signaling_pathway
+    - second_messenger
+    tier: 5
+  cell_growth_response:
+    defines: A signaling pathway outcome in which growth factors bind receptor tyrosine kinases to activate
+      RAS/MAP kinase pathways and stimulate cell division.
+    needs:
+    - signaling_pathway
+    - receptor_dimerization
+    tier: 5
+  apoptosis:
+    defines: Programmed cell death triggered by internal checkpoints or external signals, allowing controlled
+      removal of damaged, unneeded, or dangerous cells.
+    needs:
+    - signaling_pathway
+    tier: 5
+  quorum_sensing:
+    defines: A method of bacterial cell-cell communication using secreted autoinducer molecules to sense
+      population density and coordinate gene expression, including biofilm formation.
+    needs:
+    - intercellular_signaling
+    tier: 2
+  yeast_mating_signaling:
+    defines: Signaling in budding yeast using secreted mating factor that binds cell-surface receptors
+      on nearby yeast to initiate mating-related signaling cascades.
+    needs:
+    - cell_surface_receptor
+    - signaling_pathway
+    tier: 5

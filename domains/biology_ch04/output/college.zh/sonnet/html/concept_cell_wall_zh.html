@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cell Wall | Biology Ch04</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="细胞壁">细胞壁</h2>
+<p>细胞壁（cell wall）是位于质膜外侧的一层坚韧结构，存在于植物细胞、真菌细胞、大多数原核生物（细菌）以及部分原生生物中，但动物细胞没有细胞壁。它的主要功能包括：为细胞提供机械支撑、维持固定形状、抵抗渗透压变化引起的破裂，并在多细胞生物中为组织提供整体结构强度。植物细胞壁的主要成分是纤维素（一种由葡萄糖单体构成的多糖），此外还含有半纤维素和果胶；真菌细胞壁则主要由几丁质构成；细菌细胞壁的核心成分是肽聚糖。这种化学组成的差异，正是许多抗生素（如青霉素）能够选择性攻击细菌而不伤害人体细胞的原因——因为人体细胞根本没有细胞壁。</p>
+<p><strong>举例说明</strong>：把一个植物细胞放入清水（低渗溶液）中，水会因渗透作用进入细胞，质膜向外膨胀，但细胞壁会像一个坚固的外壳一样限制细胞过度扩张，使细胞达到"膨压"（turgor pressure）状态而不会破裂。这正是新鲜蔬菜挺立、植物茎叶保持坚挺的原因。相反，如果将同一细胞放入高浓度盐水（高渗溶液）中，水会流出细胞，质膜从细胞壁上收缩脱离，这种现象称为质壁分离（plasmolysis），此时细胞壁的形状保持不变，但细胞本身已萎蔫。</p>
+<p><strong>问题解决应用</strong>：细胞壁的存在解释了许多实际现象。例如，为什么切开的黄瓜放入盐水中会变软？因为盐水造成高渗环境，水从细胞中渗出，细胞失去膨压，即使细胞壁结构未被破坏，整株组织也会因内部细胞萎蔫而变软。又例如，在显微镜下区分植物细胞与动物细胞的一个关键判据，就是观察细胞外围是否存在一层清晰、僵硬的边界结构——若有，则为细胞壁而非仅仅是质膜。理解细胞壁的存在与成分，还能帮助解释农业中植物萎蔫、木材硬度、以及细菌细胞壁如何成为抗生素设计的靶点等一系列跨学科问题。</p>
+<figure class="cb-figure">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/8/85/Plant_cell_structure_svg_no_lignin.svg" alt="植物细胞结构示意图，标注细胞壁位置" class="cb-figure-img">
+  <figcaption>植物细胞结构示意图，可见细胞壁位于质膜外侧，包围整个细胞。Source: <a href="https://commons.wikimedia.org/wiki/File:Plant_cell_structure_svg_no_lignin.svg">Wikimedia Commons</a>, CC BY-SA 3.0.</figcaption>
+</figure>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Biology 2e Ch4: Cell Structure (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

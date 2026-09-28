@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plant Vs Animal Cell Structures | Biology Ch04</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="plant-vs-animal-cell-structures">Plant Vs Animal Cell Structures</h2>
+<p>植物细胞与动物细胞都是真核细胞,拥有细胞核、线粒体、内质网和高尔基体等共同细胞器,但二者在结构上存在几处关键差异,这些差异直接反映了各自的生活方式——植物固定不动、自己合成食物;动物则需要移动、摄食并主动分解外来颗粒。</p>
+<p>植物细胞特有的结构包括:细胞壁(cell wall),由纤维素构成,位于细胞膜外侧,提供机械支撑并限制细胞过度吸水膨胀;叶绿体(chloroplast),含叶绿素,是光合作用的场所,将光能转化为化学能;中央液泡(central vacuole),体积可占细胞总体积的90%以上,储存水分、离子和代谢废物,并通过渗透压变化维持细胞的膨压(turgor pressure),这是植物茎叶保持挺立的主要机制。动物细胞则拥有中心体(centrosome),内含两个互相垂直排列的中心粒,负责在细胞分裂时组织纺锤体微管,确保染色体准确分配;以及溶酶体(lysosome),内含多种水解酶,用于分解细胞内衰老的细胞器、吞噬进来的病原体或大分子物质,相当于细胞的"消化系统"。</p>
+<p><strong>工作实例</strong>:假设你在显微镜下观察到一个未知细胞,发现其外层有一层坚硬的方形轮廓,且细胞内有一个占据大部分空间的透明囊状结构。你可以推断这是植物细胞——方形轮廓来自细胞壁对细胞形状的固定作用,透明大囊即为中央液泡。若同一细胞中还能看到绿色颗粒状结构,则进一步确认为植物细胞的叶绿体。</p>
+<p><strong>问题解决应用</strong>:若某种除草剂的作用机制是抑制纤维素合成酶,推测该除草剂对植物细胞和动物细胞的影响是否相同?由于动物细胞本身没有细胞壁,该药物应对动物细胞几乎无直接毒性,但会使植物细胞因缺乏结构支撑而萎陷死亡——这正是许多选择性除草剂设计的基本原理,即利用植物细胞特有结构实现"只杀草不伤人"的靶向效果。</p>
+<pre class="mermaid">flowchart LR
+    A[真核细胞共同结构] --> B[植物细胞特有]
+    A --> C[动物细胞特有]
+    B --> B1[细胞壁: 支撑与限水]
+    B --> B2[叶绿体: 光合作用]
+    B --> B3[中央液泡: 膨压调节]
+    C --> C1[中心体: 纺锤体组织]
+    C --> C2[溶酶体: 细胞内消化]</pre>
+<p><em>该图展示植物细胞与动物细胞在共同真核结构基础上各自特有的三种关键细胞器及其主要功能。</em></p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Biology 2e Ch4: Cell Structure (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

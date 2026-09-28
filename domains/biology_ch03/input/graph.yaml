@@ -1,0 +1,168 @@
+domain: biology_2e_ch3
+primitives:
+  biological_macromolecule:
+    defines: A large molecule necessary for life, built from smaller organic monomer subunits.
+    tier: 0
+  monomer:
+    defines: The smallest single subunit or building block that combines with others to form a larger
+      polymer.
+    tier: 0
+  monosaccharide:
+    defines: A simple sugar monomer, such as glucose, galactose, or fructose, that is the building block
+      of carbohydrates.
+    tier: 0
+  fatty_acid:
+    defines: A long hydrocarbon chain with a carboxyl group that combines with glycerol to form fats,
+      and which may be saturated or unsaturated.
+    tier: 0
+  amino_acid:
+    defines: The monomer of proteins, consisting of a central carbon bonded to an amino group, a carboxyl
+      group, a hydrogen atom, and a variable R group.
+    tier: 0
+  nucleotide:
+    defines: The monomer of nucleic acids, composed of a nitrogenous base, a pentose sugar, and one or
+      more phosphate groups.
+    tier: 0
+concepts:
+  dehydration_synthesis:
+    defines: A reaction that joins two monomers into a polymer by forming a covalent bond and releasing
+      a water molecule.
+    composed_of:
+    - monomer
+    tier: 1
+  hydrolysis:
+    defines: A reaction that breaks a polymer into monomers by inserting a water molecule across a covalent
+      bond.
+    composed_of:
+    - monomer
+    - polymer
+    tier: 2
+  polymer:
+    defines: A larger molecule formed when monomers join together via covalent bonds.
+    composed_of:
+    - monomer
+    - dehydration_synthesis
+    tier: 1
+  glycosidic_bond:
+    defines: The covalent bond formed between two monosaccharides during a dehydration reaction.
+    composed_of:
+    - monosaccharide
+    - dehydration_synthesis
+    tier: 1
+  disaccharide:
+    defines: Two monosaccharides joined by a glycosidic bond formed through dehydration synthesis.
+    composed_of:
+    - monosaccharide
+    - glycosidic_bond
+    tier: 2
+  polysaccharide:
+    defines: A long, branched or unbranched chain of monosaccharides linked by glycosidic bonds, such
+      as starch, glycogen, cellulose, or chitin.
+    composed_of:
+    - monosaccharide
+    - glycosidic_bond
+    - polymer
+    tier: 2
+  carbohydrate:
+    defines: A biological macromolecule with a carbon-to-hydrogen-to-oxygen ratio of 1:2:1 that serves
+      as an energy source and structural support.
+    composed_of:
+    - biological_macromolecule
+    - monosaccharide
+    - disaccharide
+    - polysaccharide
+    tier: 3
+  saturated_unsaturated_fatty_acids:
+    defines: Classification of fatty acids based on the absence (saturated) or presence (unsaturated)
+      of double bonds in the hydrocarbon chain.
+    composed_of:
+    - fatty_acid
+    tier: 1
+  triacylglycerol:
+    defines: A molecule formed from glycerol bonded to three fatty acids via ester bonds, releasing three
+      water molecules, serving as long-term energy storage.
+    composed_of:
+    - fatty_acid
+    - dehydration_synthesis
+    tier: 1
+  phospholipid:
+    defines: An amphipathic lipid composed of two fatty acids and a modified phosphate group attached
+      to a glycerol backbone, forming the plasma membrane's bilayer.
+    composed_of:
+    - fatty_acid
+    tier: 1
+  steroid:
+    defines: A lipid with a fused four-carbon-ring structure, such as cholesterol, that serves as a membrane
+      component and hormone precursor.
+    composed_of:
+    - lipid
+    tier: 2
+  lipid:
+    defines: A diverse group of largely nonpolar, hydrophobic macromolecules including fats, oils, waxes,
+      phospholipids, and steroids.
+    composed_of:
+    - biological_macromolecule
+    - fatty_acid
+    - triacylglycerol
+    - phospholipid
+    tier: 2
+  peptide_bond:
+    defines: The covalent bond formed between the carboxyl group of one amino acid and the amino group
+      of another via dehydration synthesis.
+    composed_of:
+    - amino_acid
+    - dehydration_synthesis
+    tier: 1
+  protein_structure_levels:
+    defines: The four hierarchical levels—primary, secondary, tertiary, and quaternary—that determine
+      a protein's overall three-dimensional shape.
+    composed_of:
+    - amino_acid
+    - peptide_bond
+    tier: 2
+  protein:
+    defines: A biological macromolecule composed of one or more amino acid chains that performs diverse
+      structural, regulatory, and catalytic functions.
+    composed_of:
+    - biological_macromolecule
+    - amino_acid
+    - peptide_bond
+    - protein_structure_levels
+    tier: 3
+  nucleic_acid:
+    defines: A biological macromolecule composed of nucleotides that carries the cell's genetic blueprint
+      and instructions for cellular function.
+    composed_of:
+    - biological_macromolecule
+    - nucleotide
+    - polymer
+    tier: 2
+  dna_structure:
+    defines: The antiparallel double-helical structure of DNA in which sugar-phosphate backbones flank
+      complementary, hydrogen-bonded nitrogenous base pairs.
+    composed_of:
+    - nucleotide
+    - nucleic_acid
+    tier: 3
+  rna_types_and_function:
+    defines: The single-stranded nucleic acid involved in protein synthesis, existing as mRNA, rRNA, tRNA,
+      and microRNA, each with distinct roles.
+    composed_of:
+    - nucleotide
+    - nucleic_acid
+    tier: 3
+applications:
+  trans_fat:
+    defines: A fat formed by artificial hydrogenation of oils that converts cis double bonds to the trans
+      configuration.
+    needs:
+    - saturated_unsaturated_fatty_acids
+    - triacylglycerol
+    tier: 2
+  denaturation:
+    defines: The loss of a protein's shape and function due to changes in temperature, pH, or chemical
+      exposure, without necessarily altering its primary sequence.
+    needs:
+    - protein_structure_levels
+    - protein
+    tier: 4

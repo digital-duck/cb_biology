@@ -1,0 +1,163 @@
+domain: biology_2e_ch8
+sources:
+  photoautotroph:
+    label: Photoautotroph
+    sections:
+    - id: ch08_s8_1
+      title: 8.1 Overview of Photosynthesis
+  heterotroph:
+    label: Heterotroph
+    sections:
+    - id: ch08_s8_1
+      title: 8.1 Overview of Photosynthesis
+  chemoautotroph:
+    label: Chemoautotroph
+    sections:
+    - id: ch08_s8_1
+      title: 8.1 Overview of Photosynthesis
+  chloroplast:
+    label: Chloroplast
+    sections:
+    - id: ch08_s8_1
+      title: 8.1 Overview of Photosynthesis
+  thylakoid:
+    label: Thylakoid
+    sections:
+    - id: ch08_s8_1
+      title: 8.1 Overview of Photosynthesis
+  stroma:
+    label: Stroma
+    sections:
+    - id: ch08_s8_1
+      title: 8.1 Overview of Photosynthesis
+  stoma:
+    label: Stoma
+    sections:
+    - id: ch08_s8_1
+      title: 8.1 Overview of Photosynthesis
+  photon:
+    label: Photon
+    sections:
+    - id: ch08_s8_2
+      title: 8.2 The Light-Dependent Reactions of Photosynthesis
+  wavelength:
+    label: Wavelength
+    sections:
+    - id: ch08_s8_2
+      title: 8.2 The Light-Dependent Reactions of Photosynthesis
+  electromagnetic_spectrum:
+    label: Electromagnetic Spectrum
+    sections:
+    - id: ch08_s8_2
+      title: 8.2 The Light-Dependent Reactions of Photosynthesis
+  pigment:
+    label: Pigment
+    sections:
+    - id: ch08_s8_2
+      title: 8.2 The Light-Dependent Reactions of Photosynthesis
+  chlorophyll:
+    label: Chlorophyll
+    sections:
+    - id: ch08_s8_2
+      title: 8.2 The Light-Dependent Reactions of Photosynthesis
+  carotenoid:
+    label: Carotenoid
+    sections:
+    - id: ch08_s8_2
+      title: 8.2 The Light-Dependent Reactions of Photosynthesis
+  absorption_spectrum:
+    label: Absorption Spectrum
+    sections:
+    - id: ch08_s8_2
+      title: 8.2 The Light-Dependent Reactions of Photosynthesis
+  reduction:
+    label: Reduction
+    sections:
+    - id: ch08_s8_2
+      title: 8.2 The Light-Dependent Reactions of Photosynthesis
+  light_harvesting_complex:
+    label: Light-Harvesting Complex
+    sections:
+    - id: ch08_s8_2
+      title: 8.2 The Light-Dependent Reactions of Photosynthesis
+  reaction_center:
+    label: Reaction Center
+    sections:
+    - id: ch08_s8_2
+      title: 8.2 The Light-Dependent Reactions of Photosynthesis
+  photosystem:
+    label: Photosystem
+    sections:
+    - id: ch08_s8_2
+      title: 8.2 The Light-Dependent Reactions of Photosynthesis
+  photosystem_ii:
+    label: Photosystem II (PSII)
+    sections:
+    - id: ch08_s8_2
+      title: 8.2 The Light-Dependent Reactions of Photosynthesis
+    - id: ch08_s8_3
+      title: 8.3 Using Light Energy to Make Organic Molecules
+  photosystem_i:
+    label: Photosystem I (PSI)
+    sections:
+    - id: ch08_s8_2
+      title: 8.2 The Light-Dependent Reactions of Photosynthesis
+    - id: ch08_s8_3
+      title: 8.3 Using Light Energy to Make Organic Molecules
+  electron_transport_chain:
+    label: Photosynthetic Electron Transport Chain
+    sections:
+    - id: ch08_s8_2
+      title: 8.2 The Light-Dependent Reactions of Photosynthesis
+    - id: ch08_s8_3
+      title: 8.3 Using Light Energy to Make Organic Molecules
+  chemiosmosis:
+    label: Chemiosmosis
+    sections:
+    - id: ch08_s8_3
+      title: 8.3 Using Light Energy to Make Organic Molecules
+  atp_synthase:
+    label: ATP Synthase
+    sections:
+    - id: ch08_s8_3
+      title: 8.3 Using Light Energy to Make Organic Molecules
+  light_dependent_reactions:
+    label: Light-Dependent Reactions
+    sections:
+    - id: ch08_s8_1
+      title: 8.1 Overview of Photosynthesis
+    - id: ch08_s8_2
+      title: 8.2 The Light-Dependent Reactions of Photosynthesis
+    - id: ch08_s8_3
+      title: 8.3 Using Light Energy to Make Organic Molecules
+  calvin_cycle:
+    label: Calvin Cycle
+    sections:
+    - id: ch08_s8_1
+      title: 8.1 Overview of Photosynthesis
+    - id: ch08_s8_3
+      title: 8.3 Using Light Energy to Make Organic Molecules
+  carbon_fixation:
+    label: Carbon Fixation
+    sections:
+    - id: ch08_s8_3
+      title: 8.3 Using Light Energy to Make Organic Molecules
+  photosynthesis:
+    label: Photosynthesis
+    sections:
+    - id: ch08_s8_1
+      title: 8.1 Overview of Photosynthesis
+    - id: ch08_s8_2
+      title: 8.2 The Light-Dependent Reactions of Photosynthesis
+    - id: ch08_s8_3
+      title: 8.3 Using Light Energy to Make Organic Molecules
+  photosynthesis_respiration_energy_cycle:
+    label: Photosynthesis-Respiration Energy Cycle
+    sections:
+    - id: ch08_s8_3
+      title: 8.3 Using Light Energy to Make Organic Molecules
+  cam_desert_adaptation:
+    label: CAM Photosynthesis in Desert Plants
+    sections:
+    - id: ch08_s8_3
+      title: 8.3 Using Light Energy to Make Organic Molecules

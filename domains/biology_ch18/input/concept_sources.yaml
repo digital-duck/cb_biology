@@ -1,0 +1,208 @@
+domain: biology_2e_ch18
+sources:
+  heritable_variation:
+    label: Heritable Variation
+    sections:
+    - id: ch18_s18_1
+      title: 18.1 Understanding Evolution
+  mutation:
+    label: Mutation
+    sections:
+    - id: ch18_s18_1
+      title: 18.1 Understanding Evolution
+  sexual_reproduction:
+    label: Sexual Reproduction
+    sections:
+    - id: ch18_s18_1
+      title: 18.1 Understanding Evolution
+    - id: ch18_s18_2
+      title: 18.2 Formation of New Species
+  gene_pool:
+    label: Gene Pool
+    sections:
+    - id: ch18_s18_2
+      title: 18.2 Formation of New Species
+  gene_flow:
+    label: Gene Flow
+    sections:
+    - id: ch18_s18_2
+      title: 18.2 Formation of New Species
+  natural_selection:
+    label: Natural Selection
+    sections:
+    - id: ch18_s18_1
+      title: 18.1 Understanding Evolution
+  adaptation:
+    label: Adaptation
+    sections:
+    - id: ch18_s18_1
+      title: 18.1 Understanding Evolution
+  convergent_evolution:
+    label: Convergent Evolution
+    sections:
+    - id: ch18_s18_1
+      title: 18.1 Understanding Evolution
+  divergent_evolution:
+    label: Divergent Evolution
+    sections:
+    - id: ch18_s18_1
+      title: 18.1 Understanding Evolution
+  homologous_structures:
+    label: Homologous Structures
+    sections:
+    - id: ch18_s18_1
+      title: 18.1 Understanding Evolution
+  vestigial_structures:
+    label: Vestigial Structures
+    sections:
+    - id: ch18_s18_1
+      title: 18.1 Understanding Evolution
+  analogous_structures:
+    label: Analogous Structures
+    sections:
+    - id: ch18_s18_1
+      title: 18.1 Understanding Evolution
+  fossil_evidence:
+    label: Fossil Evidence of Evolution
+    sections:
+    - id: ch18_s18_1
+      title: 18.1 Understanding Evolution
+  biogeography_evidence:
+    label: Biogeographic Evidence of Evolution
+    sections:
+    - id: ch18_s18_1
+      title: 18.1 Understanding Evolution
+  molecular_evidence:
+    label: Molecular Evidence of Evolution
+    sections:
+    - id: ch18_s18_1
+      title: 18.1 Understanding Evolution
+  species:
+    label: Species
+    sections:
+    - id: ch18_s18_2
+      title: 18.2 Formation of New Species
+  hybrid:
+    label: Hybrid
+    sections:
+    - id: ch18_s18_2
+      title: 18.2 Formation of New Species
+  speciation:
+    label: Speciation
+    sections:
+    - id: ch18_s18_2
+      title: 18.2 Formation of New Species
+  allopatric_speciation:
+    label: Allopatric Speciation
+    sections:
+    - id: ch18_s18_2
+      title: 18.2 Formation of New Species
+  sympatric_speciation:
+    label: Sympatric Speciation
+    sections:
+    - id: ch18_s18_2
+      title: 18.2 Formation of New Species
+    - id: ch18_s18_3
+      title: 18.3 Reconnection and Speciation Rates
+  dispersal:
+    label: Dispersal
+    sections:
+    - id: ch18_s18_2
+      title: 18.2 Formation of New Species
+  vicariance:
+    label: Vicariance
+    sections:
+    - id: ch18_s18_2
+      title: 18.2 Formation of New Species
+  adaptive_radiation:
+    label: Adaptive Radiation
+    sections:
+    - id: ch18_s18_2
+      title: 18.2 Formation of New Species
+  polyploidy:
+    label: Polyploidy
+    sections:
+    - id: ch18_s18_2
+      title: 18.2 Formation of New Species
+  autopolyploidy:
+    label: Autopolyploidy
+    sections:
+    - id: ch18_s18_2
+      title: 18.2 Formation of New Species
+  allopolyploidy:
+    label: Allopolyploidy
+    sections:
+    - id: ch18_s18_2
+      title: 18.2 Formation of New Species
+  reproductive_isolation:
+    label: Reproductive Isolation
+    sections:
+    - id: ch18_s18_2
+      title: 18.2 Formation of New Species
+  prezygotic_barrier:
+    label: Prezygotic Barrier
+    sections:
+    - id: ch18_s18_2
+      title: 18.2 Formation of New Species
+  postzygotic_barrier:
+    label: Postzygotic Barrier
+    sections:
+    - id: ch18_s18_2
+      title: 18.2 Formation of New Species
+    - id: ch18_s18_3
+      title: 18.3 Reconnection and Speciation Rates
+  temporal_isolation:
+    label: Temporal Isolation
+    sections:
+    - id: ch18_s18_2
+      title: 18.2 Formation of New Species
+  habitat_isolation:
+    label: Habitat Isolation
+    sections:
+    - id: ch18_s18_2
+      title: 18.2 Formation of New Species
+  behavioral_isolation:
+    label: Behavioral Isolation
+    sections:
+    - id: ch18_s18_2
+      title: 18.2 Formation of New Species
+  gametic_barrier:
+    label: Gametic Barrier
+    sections:
+    - id: ch18_s18_2
+      title: 18.2 Formation of New Species
+  hybrid_inviability:
+    label: Hybrid Inviability
+    sections:
+    - id: ch18_s18_3
+      title: 18.3 Reconnection and Speciation Rates
+  hybrid_sterility:
+    label: Hybrid Sterility
+    sections:
+    - id: ch18_s18_3
+      title: 18.3 Reconnection and Speciation Rates
+  hybrid_zone:
+    label: Hybrid Zone
+    sections:
+    - id: ch18_s18_3
+      title: 18.3 Reconnection and Speciation Rates
+  reinforcement:
+    label: Reinforcement
+    sections:
+    - id: ch18_s18_3
+      title: 18.3 Reconnection and Speciation Rates
+  fusion:
+    label: Fusion
+    sections:
+    - id: ch18_s18_3
+      title: 18.3 Reconnection and Speciation Rates
+  gradual_speciation_model:
+    label: Gradual Speciation Model
+    sections:
+    - id: ch18_s18_3
+      title: 18.3 Reconnection and Speciation Rates
+  punctuated_equilibrium:
+    label: Punctuated Equilibrium
+    sections:
+    - id: ch18_s18_3
+      title: 18.3 Reconnection and Speciation Rates

@@ -1,0 +1,134 @@
+domain: biology_2e_ch3
+sources:
+  biological_macromolecule:
+    label: Biological Macromolecule
+    sections:
+    - id: ch03_s3_1
+      title: 3.1 Synthesis of Biological Macromolecules
+  monomer:
+    label: Monomer
+    sections:
+    - id: ch03_s3_1
+      title: 3.1 Synthesis of Biological Macromolecules
+  polymer:
+    label: Polymer
+    sections:
+    - id: ch03_s3_1
+      title: 3.1 Synthesis of Biological Macromolecules
+  dehydration_synthesis:
+    label: Dehydration Synthesis
+    sections:
+    - id: ch03_s3_1
+      title: 3.1 Synthesis of Biological Macromolecules
+  hydrolysis:
+    label: Hydrolysis
+    sections:
+    - id: ch03_s3_1
+      title: 3.1 Synthesis of Biological Macromolecules
+  carbohydrate:
+    label: Carbohydrate
+    sections:
+    - id: ch03_s3_2
+      title: 3.2 Carbohydrates
+  monosaccharide:
+    label: Monosaccharide
+    sections:
+    - id: ch03_s3_2
+      title: 3.2 Carbohydrates
+  disaccharide:
+    label: Disaccharide
+    sections:
+    - id: ch03_s3_2
+      title: 3.2 Carbohydrates
+  glycosidic_bond:
+    label: Glycosidic Bond
+    sections:
+    - id: ch03_s3_2
+      title: 3.2 Carbohydrates
+  polysaccharide:
+    label: Polysaccharide
+    sections:
+    - id: ch03_s3_2
+      title: 3.2 Carbohydrates
+  lipid:
+    label: Lipid
+    sections:
+    - id: ch03_s3_3
+      title: 3.3 Lipids
+  fatty_acid:
+    label: Fatty Acid
+    sections:
+    - id: ch03_s3_3
+      title: 3.3 Lipids
+  triacylglycerol:
+    label: Triacylglycerol (Fat)
+    sections:
+    - id: ch03_s3_3
+      title: 3.3 Lipids
+  saturated_unsaturated_fatty_acids:
+    label: Saturated vs. Unsaturated Fatty Acids
+    sections:
+    - id: ch03_s3_3
+      title: 3.3 Lipids
+  trans_fat:
+    label: Trans Fat
+    sections:
+    - id: ch03_s3_3
+      title: 3.3 Lipids
+  phospholipid:
+    label: Phospholipid
+    sections:
+    - id: ch03_s3_3
+      title: 3.3 Lipids
+  steroid:
+    label: Steroid
+    sections:
+    - id: ch03_s3_3
+      title: 3.3 Lipids
+    - id: ch03_s3_4
+      title: 3.4 Proteins
+  protein:
+    label: Protein
+    sections:
+    - id: ch03_s3_4
+      title: 3.4 Proteins
+  amino_acid:
+    label: Amino Acid
+    sections:
+    - id: ch03_s3_4
+      title: 3.4 Proteins
+  peptide_bond:
+    label: Peptide Bond
+    sections:
+    - id: ch03_s3_4
+      title: 3.4 Proteins
+  protein_structure_levels:
+    label: Levels of Protein Structure
+    sections:
+    - id: ch03_s3_4
+      title: 3.4 Proteins
+  denaturation:
+    label: Denaturation
+    sections:
+    - id: ch03_s3_5
+      title: 3.5 Nucleic Acids
+  nucleic_acid:
+    label: Nucleic Acid
+    sections:
+    - id: ch03_s3_5
+      title: 3.5 Nucleic Acids
+  nucleotide:
+    label: Nucleotide
+    sections:
+    - id: ch03_s3_5
+      title: 3.5 Nucleic Acids
+  dna_structure:
+    label: DNA Double-Helix Structure
+    sections:
+    - id: ch03_s3_5
+      title: 3.5 Nucleic Acids
+  rna_types_and_function:
+    label: RNA Types and Function
+    sections:
+    - id: ch03_s3_5
+      title: 3.5 Nucleic Acids

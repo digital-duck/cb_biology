@@ -1,0 +1,211 @@
+domain: biology_2e_ch34
+primitives:
+  dietary_classification:
+    defines: Animals are classified by diet as herbivores (plant-eaters), carnivores (meat-eaters), or
+      omnivores (both).
+    tier: 0
+  ingestion:
+    defines: The act of taking in food through the mouth.
+    tier: 0
+  digestion:
+    defines: The mechanical and chemical breakdown of food into small organic fragments.
+    tier: 0
+  absorption:
+    defines: The cellular uptake of nutrients from digested food across the digestive epithelium into
+      the bloodstream.
+    tier: 0
+  elimination:
+    defines: The removal of undigested food content and waste products from the body.
+    tier: 0
+  enzyme:
+    defines: A protein that chemically catalyzes the breakdown of food macromolecules into absorbable
+      units.
+    tier: 0
+  peristalsis:
+    defines: Wave-like smooth muscle contractions that propel food through the digestive tract.
+    tier: 0
+  sphincter:
+    defines: A ring-like band of muscle that forms a valve controlling movement of material between segments
+      of the digestive tract.
+    tier: 0
+  homeostasis:
+    defines: The ability of a system to maintain a stable internal environment despite external changes,
+      requiring energy from food.
+    tier: 0
+  atp:
+    defines: The primary energy currency of the cell, storing energy in phosphate ester bonds.
+    tier: 0
+  essential_nutrient:
+    defines: A nutrient that cannot be synthesized by the body and must be obtained from food.
+    tier: 0
+  vitamin:
+    defines: An organic molecule required in small quantities as a coenzyme for many enzyme functions.
+    tier: 0
+  mineral:
+    defines: An inorganic essential nutrient that serves structural and regulatory roles.
+    tier: 0
+  hormone:
+    defines: A chemical messenger released by endocrine cells to regulate digestive processes.
+    tier: 0
+concepts:
+  gastrovascular_cavity:
+    defines: A simple digestive system with a single opening serving as both mouth and anus.
+    composed_of:
+    - ingestion
+    - digestion
+    - absorption
+    - elimination
+    tier: 1
+  alimentary_canal:
+    defines: A more advanced tubular digestive system with a separate mouth and anus.
+    composed_of:
+    - ingestion
+    - digestion
+    - absorption
+    - elimination
+    - peristalsis
+    - sphincter
+    tier: 1
+  monogastric_system:
+    defines: A vertebrate digestive system with a single-chambered stomach.
+    composed_of:
+    - alimentary_canal
+    tier: 2
+  avian_digestive_system:
+    defines: A specialized bird digestive system with a two-chambered stomach adapted to process unmasticated
+      food.
+    composed_of:
+    - alimentary_canal
+    tier: 2
+  ruminant_digestion:
+    defines: A four-chambered stomach system in herbivores using microbial fermentation to digest cellulose-rich
+      roughage.
+    composed_of:
+    - alimentary_canal
+    - dietary_classification
+    tier: 2
+  pseudo_ruminant_digestion:
+    defines: A three-chambered stomach system relying on an enlarged cecum to ferment roughage.
+    composed_of:
+    - alimentary_canal
+    - dietary_classification
+    tier: 2
+  oral_cavity:
+    defines: The mouth, where food is mechanically and chemically processed to form a bolus.
+    composed_of:
+    - ingestion
+    - enzyme
+    tier: 1
+  esophagus:
+    defines: A tubular organ connecting mouth to stomach that moves the bolus via peristalsis.
+    composed_of:
+    - peristalsis
+    tier: 1
+  stomach:
+    defines: A saclike, highly acidic organ that secretes gastric juices and pepsin to digest protein,
+      producing chyme.
+    composed_of:
+    - digestion
+    - enzyme
+    - sphincter
+    tier: 1
+  small_intestine:
+    defines: The organ where digestion of protein, fat, and carbohydrate completes and most absorption
+      occurs.
+    composed_of:
+    - digestion
+    - absorption
+    - enzyme
+    tier: 1
+  large_intestine:
+    defines: The organ that reabsorbs water from undigested food and stores waste before elimination.
+    composed_of:
+    - absorption
+    - elimination
+    tier: 1
+  accessory_organs:
+    defines: Organs such as liver, pancreas, gallbladder, and salivary glands that add enzymatic secretions
+      but food does not pass through.
+    composed_of:
+    - enzyme
+    tier: 1
+  carbohydrate_digestion:
+    defines: The stepwise breakdown of starches and disaccharides into absorbable monosaccharides.
+    composed_of:
+    - enzyme
+    - small_intestine
+    - oral_cavity
+    tier: 2
+  protein_digestion:
+    defines: The stepwise breakdown of proteins into peptides and free amino acids.
+    composed_of:
+    - enzyme
+    - stomach
+    - small_intestine
+    tier: 2
+  lipid_digestion:
+    defines: The emulsification and enzymatic breakdown of fat globules into fatty acids and monoglycerides.
+    composed_of:
+    - enzyme
+    - small_intestine
+    - accessory_organs
+    tier: 2
+  glycogen_storage:
+    defines: The conversion of excess glucose and ATP into glycogen for later release when blood sugar
+      drops.
+    composed_of:
+    - atp
+    - homeostasis
+    - carbohydrate_digestion
+    tier: 3
+  cellular_respiration:
+    defines: The metabolic reactions that convert carbohydrates, proteins, and fats into ATP.
+    composed_of:
+    - atp
+    - carbohydrate_digestion
+    - protein_digestion
+    - lipid_digestion
+    tier: 3
+  digestive_phases:
+    defines: Three overlapping neurally and hormonally controlled phases regulating gastric secretion
+      and motility.
+    composed_of:
+    - stomach
+    - hormone
+    tier: 2
+  hormonal_regulation_of_digestion:
+    defines: Control of digestive secretions via hormones such as gastrin, secretin, and cholecystokinin.
+    composed_of:
+    - hormone
+    - digestive_phases
+    tier: 3
+  neural_regulation_of_digestion:
+    defines: Control of salivation, gastric secretion, and peristalsis by the nervous system in response
+      to food cues.
+    composed_of:
+    - peristalsis
+    - digestive_phases
+    tier: 3
+applications:
+  obesity:
+    defines: A health condition from excess energy storage as fat, linked to calorie-dense diets and associated
+      diseases.
+    needs:
+    - glycogen_storage
+    - homeostasis
+    tier: 4
+  ulcers:
+    defines: Open wounds on the stomach lining caused by bacteria when the protective mucus layer is ruptured.
+    needs:
+    - stomach
+    tier: 2
+  constipation_diarrhea:
+    defines: Common elimination disorders caused by excess or insufficient water reabsorption in the colon.
+    needs:
+    - large_intestine
+    tier: 2
+  avian_evolutionary_adaptation:
+    defines: The evolutionary simplification of the bird digestive system to reduce body weight for flight.
+    needs:
+    - avian_digestive_system
+    tier: 3

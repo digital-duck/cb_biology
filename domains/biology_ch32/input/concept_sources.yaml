@@ -1,0 +1,126 @@
+domain: biology_2e_ch32
+sources:
+  alternation_of_generations:
+    label: Alternation of Generations
+    sections:
+    - id: ch32_s32_1
+      title: 32.1 Reproductive Development and Structure
+  gametophyte:
+    label: Gametophyte
+    sections:
+    - id: ch32_s32_1
+      title: 32.1 Reproductive Development and Structure
+    - id: ch32_key_terms
+      title: Key Terms
+  sporophyte:
+    label: Sporophyte
+    sections:
+    - id: ch32_s32_1
+      title: 32.1 Reproductive Development and Structure
+    - id: ch32_key_terms
+      title: Key Terms
+  flower_structure:
+    label: Flower Structure (Whorls)
+    sections:
+    - id: ch32_s32_1
+      title: 32.1 Reproductive Development and Structure
+  complete_incomplete_flowers:
+    label: Complete, Incomplete, and Perfect Flowers
+    sections:
+    - id: ch32_s32_1
+      title: 32.1 Reproductive Development and Structure
+  monoecious_dioecious:
+    label: Monoecious and Dioecious Plants
+    sections:
+    - id: ch32_s32_1
+      title: 32.1 Reproductive Development and Structure
+  male_gametophyte_development:
+    label: Male Gametophyte Development (Pollen Grain)
+    sections:
+    - id: ch32_s32_1
+      title: 32.1 Reproductive Development and Structure
+  female_gametophyte_development:
+    label: Female Gametophyte Development (Embryo Sac)
+    sections:
+    - id: ch32_s32_1
+      title: 32.1 Reproductive Development and Structure
+  gymnosperm_reproduction:
+    label: Gymnosperm Sexual Reproduction
+    sections:
+    - id: ch32_s32_1
+      title: 32.1 Reproductive Development and Structure
+  pollination:
+    label: Pollination
+    sections:
+    - id: ch32_s32_2
+      title: 32.2 Pollination and Fertilization
+  self_pollination:
+    label: Self-Pollination
+    sections:
+    - id: ch32_s32_2
+      title: 32.2 Pollination and Fertilization
+  cross_pollination:
+    label: Cross-Pollination
+    sections:
+    - id: ch32_s32_2
+      title: 32.2 Pollination and Fertilization
+  pollination_agents:
+    label: Pollination Agents (Biotic and Abiotic)
+    sections:
+    - id: ch32_s32_2
+      title: 32.2 Pollination and Fertilization
+  double_fertilization:
+    label: Double Fertilization
+    sections:
+    - id: ch32_s32_2
+      title: 32.2 Pollination and Fertilization
+  embryo_development:
+    label: Embryo Development
+    sections:
+    - id: ch32_s32_2
+      title: 32.2 Pollination and Fertilization
+  seed_structure_development:
+    label: Seed Structure and Development
+    sections:
+    - id: ch32_s32_2
+      title: 32.2 Pollination and Fertilization
+  seed_germination:
+    label: Seed Germination and Dormancy
+    sections:
+    - id: ch32_s32_2
+      title: 32.2 Pollination and Fertilization
+  fruit_development_types:
+    label: Fruit Development and Types
+    sections:
+    - id: ch32_s32_2
+      title: 32.2 Pollination and Fertilization
+  fruit_seed_dispersal:
+    label: Fruit and Seed Dispersal
+    sections:
+    - id: ch32_s32_2
+      title: 32.2 Pollination and Fertilization
+  asexual_reproduction:
+    label: Asexual Reproduction
+    sections:
+    - id: ch32_s32_3
+      title: 32.3 Asexual Reproduction
+  natural_asexual_reproduction:
+    label: Natural Methods of Asexual Reproduction
+    sections:
+    - id: ch32_s32_3
+      title: 32.3 Asexual Reproduction
+  artificial_asexual_reproduction:
+    label: Artificial Methods of Asexual Reproduction
+    sections:
+    - id: ch32_s32_3
+      title: 32.3 Asexual Reproduction
+  plant_life_span_classification:
+    label: Plant Life Span and Flowering Classification
+    sections:
+    - id: ch32_s32_3
+      title: 32.3 Asexual Reproduction
+  senescence:
+    label: Senescence
+    sections:
+    - id: ch32_s32_3
+      title: 32.3 Asexual Reproduction

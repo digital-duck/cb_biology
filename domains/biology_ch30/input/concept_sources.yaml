@@ -1,0 +1,227 @@
+domain: biology_2e_ch30
+sources:
+  plant_cell_structures:
+    label: Plant Cell Structures
+    sections:
+    - id: ch30_s30_1
+      title: 30.1 The Plant Body
+  shoot_system:
+    label: Shoot System
+    sections:
+    - id: ch30_s30_1
+      title: 30.1 The Plant Body
+  root_system:
+    label: Root System
+    sections:
+    - id: ch30_s30_1
+      title: 30.1 The Plant Body
+    - id: ch30_s30_3
+      title: 30.3 Roots
+  meristematic_tissue:
+    label: Meristematic Tissue
+    sections:
+    - id: ch30_s30_1
+      title: 30.1 The Plant Body
+  permanent_tissue:
+    label: Permanent Tissue
+    sections:
+    - id: ch30_s30_1
+      title: 30.1 The Plant Body
+  dermal_tissue:
+    label: Dermal Tissue
+    sections:
+    - id: ch30_s30_1
+      title: 30.1 The Plant Body
+    - id: ch30_s30_2
+      title: 30.2 Stems
+    - id: ch30_s30_4
+      title: 30.4 Leaves
+  ground_tissue:
+    label: Ground Tissue
+    sections:
+    - id: ch30_s30_1
+      title: 30.1 The Plant Body
+    - id: ch30_s30_2
+      title: 30.2 Stems
+    - id: ch30_s30_3
+      title: 30.3 Roots
+  xylem:
+    label: Xylem
+    sections:
+    - id: ch30_s30_1
+      title: 30.1 The Plant Body
+    - id: ch30_s30_2
+      title: 30.2 Stems
+    - id: ch30_s30_5
+      title: 30.5 Transport of Water and Solutes in Plants
+  phloem:
+    label: Phloem
+    sections:
+    - id: ch30_s30_1
+      title: 30.1 The Plant Body
+    - id: ch30_s30_2
+      title: 30.2 Stems
+    - id: ch30_s30_5
+      title: 30.5 Transport of Water and Solutes in Plants
+  vascular_tissue:
+    label: Vascular Tissue
+    sections:
+    - id: ch30_s30_1
+      title: 30.1 The Plant Body
+    - id: ch30_s30_2
+      title: 30.2 Stems
+    - id: ch30_s30_3
+      title: 30.3 Roots
+  parenchyma_cell:
+    label: Parenchyma Cell
+    sections:
+    - id: ch30_s30_2
+      title: 30.2 Stems
+  collenchyma_cell:
+    label: Collenchyma Cell
+    sections:
+    - id: ch30_s30_2
+      title: 30.2 Stems
+  sclerenchyma_cell:
+    label: Sclerenchyma Cell
+    sections:
+    - id: ch30_s30_2
+      title: 30.2 Stems
+  stem_anatomy:
+    label: Stem Anatomy
+    sections:
+    - id: ch30_s30_2
+      title: 30.2 Stems
+  primary_growth:
+    label: Primary Growth
+    sections:
+    - id: ch30_s30_2
+      title: 30.2 Stems
+  secondary_growth:
+    label: Secondary Growth
+    sections:
+    - id: ch30_s30_2
+      title: 30.2 Stems
+  annual_rings:
+    label: Annual Rings
+    sections:
+    - id: ch30_s30_2
+      title: 30.2 Stems
+  stem_modifications:
+    label: Stem Modifications
+    sections:
+    - id: ch30_s30_2
+      title: 30.2 Stems
+    - id: ch30_s30_3
+      title: 30.3 Roots
+  root_systems:
+    label: Root Systems (Tap and Fibrous)
+    sections:
+    - id: ch30_s30_3
+      title: 30.3 Roots
+  root_growth_zones:
+    label: Root Growth Zones
+    sections:
+    - id: ch30_s30_3
+      title: 30.3 Roots
+  root_anatomy:
+    label: Root Anatomy
+    sections:
+    - id: ch30_s30_3
+      title: 30.3 Roots
+  root_modifications:
+    label: Root Modifications
+    sections:
+    - id: ch30_s30_3
+      title: 30.3 Roots
+    - id: ch30_s30_4
+      title: 30.4 Leaves
+  leaf_structure:
+    label: Leaf Structure
+    sections:
+    - id: ch30_s30_4
+      title: 30.4 Leaves
+  leaf_venation:
+    label: Leaf Venation
+    sections:
+    - id: ch30_s30_4
+      title: 30.4 Leaves
+  leaf_form:
+    label: Leaf Form (Simple and Compound)
+    sections:
+    - id: ch30_s30_4
+      title: 30.4 Leaves
+  stomata_guard_cells:
+    label: Stomata and Guard Cells
+    sections:
+    - id: ch30_s30_2
+      title: 30.2 Stems
+    - id: ch30_s30_4
+      title: 30.4 Leaves
+    - id: ch30_s30_5
+      title: 30.5 Transport of Water and Solutes in Plants
+  leaf_adaptations:
+    label: Leaf Adaptations to Environment
+    sections:
+    - id: ch30_s30_4
+      title: 30.4 Leaves
+  water_potential:
+    label: Water Potential
+    sections:
+    - id: ch30_s30_5
+      title: 30.5 Transport of Water and Solutes in Plants
+  transpiration:
+    label: Transpiration
+    sections:
+    - id: ch30_s30_5
+      title: 30.5 Transport of Water and Solutes in Plants
+  cohesion_tension_theory:
+    label: Cohesion-Tension Theory
+    sections:
+    - id: ch30_s30_5
+      title: 30.5 Transport of Water and Solutes in Plants
+  translocation:
+    label: Translocation
+    sections:
+    - id: ch30_s30_5
+      title: 30.5 Transport of Water and Solutes in Plants
+  photomorphogenesis:
+    label: Photomorphogenesis
+    sections:
+    - id: ch30_s30_6
+      title: 30.6 Plant Sensory Systems and Responses
+  phytochrome_system:
+    label: Phytochrome System
+    sections:
+    - id: ch30_s30_6
+      title: 30.6 Plant Sensory Systems and Responses
+  phototropism:
+    label: Phototropism
+    sections:
+    - id: ch30_s30_6
+      title: 30.6 Plant Sensory Systems and Responses
+  gravitropism:
+    label: Gravitropism
+    sections:
+    - id: ch30_s30_6
+      title: 30.6 Plant Sensory Systems and Responses
+  plant_hormones:
+    label: Plant Hormones
+    sections:
+    - id: ch30_s30_6
+      title: 30.6 Plant Sensory Systems and Responses
+  thigmo_responses:
+    label: Thigmotropism, Thigmonasty, and Thigmomorphogenesis
+    sections:
+    - id: ch30_s30_6
+      title: 30.6 Plant Sensory Systems and Responses
+  plant_defense_responses:
+    label: Plant Defense Responses
+    sections:
+    - id: ch30_s30_6
+      title: 30.6 Plant Sensory Systems and Responses
+  horticultural_applications:
+    label: Horticultural Applications of Hormones
+    sections:
+    - id: ch30_s30_6
+      title: 30.6 Plant Sensory Systems and Responses

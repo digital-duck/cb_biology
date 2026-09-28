@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chloroplast | Biology Ch04</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="chloroplast">Chloroplast</h2>
+<p>叶绿体是植物细胞和藻类细胞中的一种细胞器，是光合作用发生的场所。它拥有双层膜结构：外膜通透性较高，内膜则严格调控物质进出。内膜以内是基质（stroma），其中悬浮着一叠叠圆盘状的类囊体（thylakoid），这些类囊体像硬币一样堆叠成基粒（granum）。类囊体膜上嵌有叶绿素等光合色素，负责吸收光能并启动光反应；基质中则进行卡尔文循环（Calvin cycle），利用光反应产物将二氧化碳固定为糖类。值得注意的是，叶绿体拥有自己的环状DNA和核糖体，能够独立合成部分蛋白质——这一特征是内共生学说（endosymbiotic theory）的关键证据：叶绿体很可能起源于被古老真核细胞吞噬后保留下来的光合细菌。</p>
+<p><strong>实例分析</strong>：观察一片菠菜叶的横切面，叶肉细胞中可见大量椭圆形、呈绿色的颗粒，这些就是叶绿体，通常每个细胞含有几十到上百个。光合作用的总反应可概括为：</p>
+$$6CO_2 + 6H_2O + \text{光能} \rightarrow C_6H_{12}O_6 + 6O_2$$
+<p>这一反应实际分为两个阶段在叶绿体的不同部位完成：光反应在类囊体膜上产生ATP、NADPH和氧气；暗反应（卡尔文循环）在基质中利用ATP和NADPH将CO₂转化为葡萄糖。</p>
+<p><strong>问题解决应用</strong>：若某植物长期处于弱光环境，其叶片细胞会如何调整叶绿体？答案是：细胞通常会增加叶绿体数量或增大类囊体膜面积，以提高光能捕获效率，这也解释了为什么阴生植物的叶片往往更薄、叶绿体密度更高、叶绿素含量更多，从而在有限光照下最大化光合效率。理解叶绿体的结构与功能关系，有助于解释农业实践中光照管理、遮阴处理对作物产量的影响。</p>
+<pre class="mermaid">graph TD
+    A[叶绿体] --> B[外膜]
+    A --> C[内膜]
+    A --> D[基质 stroma]
+    D --> E[类囊体 thylakoid]
+    E --> F[基粒 granum]
+    D --> G[叶绿体DNA与核糖体]
+    E --> H[光反应: 产生ATP和NADPH]
+    D --> I[卡尔文循环: 固定CO2生成糖类]
+    H --> I</pre>
+<p><em>该图展示叶绿体的内部结构层次及光合作用两阶段在不同区域的分工。</em></p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Biology 2e Ch4: Cell Structure (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

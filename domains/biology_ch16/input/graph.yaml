@@ -1,0 +1,208 @@
+domain: biology_2e_ch16
+primitives:
+  gene_expression:
+    defines: The process of turning on a gene to produce RNA and protein, controlled by internal chemical
+      mechanisms.
+    tier: 0
+  transcription:
+    defines: The synthesis of RNA from a DNA template.
+    tier: 0
+  translation:
+    defines: The synthesis of protein from an RNA template by ribosomes.
+    tier: 0
+  operon:
+    defines: A collection of genes involved in a pathway that are transcribed together as a single mRNA
+      in prokaryotic cells.
+    tier: 0
+  repressor:
+    defines: A protein that binds to the operator of prokaryotic genes to prevent transcription.
+    tier: 0
+  activator:
+    defines: A protein that binds to prokaryotic promoters to increase transcription.
+    tier: 0
+  inducer:
+    defines: A small molecule that either activates or represses transcription depending on cellular needs.
+    tier: 0
+  histone:
+    defines: A protein around which DNA is wound to form nucleosome complexes that package and order DNA.
+    tier: 0
+  transcription_factor:
+    defines: A protein that binds to DNA at the promoter or enhancer region and influences transcription
+      of a gene.
+    tier: 0
+  promoter:
+    defines: The DNA region immediately upstream of a coding sequence that binds transcription factors
+      to control initiation of transcription.
+    tier: 0
+concepts:
+  prokaryotic_vs_eukaryotic_regulation:
+    defines: The comparison of gene expression control, which in prokaryotes occurs mainly at the transcriptional
+      level while in eukaryotes it occurs at multiple levels.
+    composed_of:
+    - gene_expression
+    - transcription
+    - translation
+    tier: 1
+  cap_protein:
+    defines: A positive regulator that binds cAMP and then binds promoters of sugar-processing operons
+      to stabilize RNA polymerase binding and increase transcription.
+    composed_of:
+    - activator
+    - promoter
+    tier: 1
+  epigenetic_regulation:
+    defines: Heritable changes in gene expression that do not involve changes in the DNA sequence, controlling
+      access to genes via chromatin structure and DNA methylation.
+    composed_of:
+    - gene_expression
+    - histone
+    tier: 1
+  chromatin_remodeling:
+    defines: The process of changing how DNA is associated with histone proteins to open or close chromosomal
+      regions for transcription.
+    composed_of:
+    - histone
+    - transcription
+    tier: 1
+  nucleosome:
+    defines: A structural unit formed by DNA wound around histone proteins that controls protein access
+      to DNA.
+    composed_of:
+    - histone
+    tier: 1
+  histone_modification:
+    defines: The addition or removal of chemical groups to histone tails that alters gene accessibility.
+    composed_of:
+    - histone
+    - chromatin_remodeling
+    tier: 2
+  dna_methylation:
+    defines: An epigenetic modification in which methyl groups are added to cytosines in CpG islands,
+      usually silencing the associated gene.
+    composed_of:
+    - epigenetic_regulation
+    tier: 2
+  tata_box:
+    defines: A core promoter DNA sequence element that serves as the binding site for the TFIID transcription
+      factor complex.
+    composed_of:
+    - promoter
+    - transcription_factor
+    tier: 1
+  enhancer:
+    defines: A DNA segment, potentially distant from a gene, that binds specific transcription factors
+      to increase transcription of that gene.
+    composed_of:
+    - transcription_factor
+    - promoter
+    tier: 1
+  transcriptional_repressor_eukaryotic:
+    defines: A protein that binds to promoter or enhancer regions in eukaryotic cells to block transcription.
+    composed_of:
+    - promoter
+    - enhancer
+    - transcription_factor
+    tier: 2
+  post_transcriptional_regulation:
+    defines: Regulation of gene expression occurring after RNA transcription but before translation, including
+      splicing and RNA stability control.
+    composed_of:
+    - transcription
+    - translation
+    tier: 1
+  rna_splicing:
+    defines: The removal of introns from a pre-mRNA transcript by spliceosomes, joining exons together
+      to form mature mRNA.
+    composed_of:
+    - post_transcriptional_regulation
+    tier: 2
+  alternative_splicing:
+    defines: A mechanism producing different protein products from one gene by combining different sets
+      of exons into mature mRNA.
+    composed_of:
+    - rna_splicing
+    tier: 3
+  rna_stability:
+    defines: The length of time an RNA molecule remains intact in the cytoplasm before degradation, which
+      influences protein output.
+    composed_of:
+    - post_transcriptional_regulation
+    tier: 2
+  rna_binding_proteins:
+    defines: Proteins that bind to the 5' or 3' untranslated regions of mRNA to increase or decrease RNA
+      stability.
+    composed_of:
+    - rna_stability
+    tier: 3
+  microrna_regulation:
+    defines: Short RNA molecules that associate with the RISC complex and bind complementary mRNA sequences
+      to impede translation or trigger mRNA degradation.
+    composed_of:
+    - translation
+    - post_transcriptional_regulation
+    tier: 2
+  translational_regulation:
+    defines: Control of gene expression through regulation of the translation initiation complex that
+      assembles on mRNA to begin protein synthesis.
+    composed_of:
+    - translation
+    tier: 1
+  post_translational_regulation:
+    defines: Regulation of gene expression after a protein has been synthesized, via chemical modifications
+      that affect protein activity, location, or longevity.
+    composed_of:
+    - translation
+    tier: 1
+  ubiquitination_degradation:
+    defines: The addition of a ubiquitin tag to a protein marking it for degradation by the proteasome.
+    composed_of:
+    - post_translational_regulation
+    tier: 2
+  tumor_suppressor_genes:
+    defines: Genes such as p53 that are active in normal cells to prevent uncontrolled cell growth, and
+      are often mutated in cancer.
+    composed_of:
+    - gene_expression
+    tier: 1
+  oncogenes:
+    defines: Mutated proto-oncogenes, such as myc, that cause uncontrolled cell growth and cancer when
+      overexpressed or aberrantly activated.
+    composed_of:
+    - gene_expression
+    tier: 1
+applications:
+  trp_operon:
+    defines: A prokaryotic operon encoding tryptophan-synthesis genes that is switched off when tryptophan
+      binds the repressor and blocks transcription.
+    needs:
+    - operon
+    - repressor
+    - inducer
+    tier: 1
+  lac_operon:
+    defines: A prokaryotic operon that is transcribed only when glucose is absent and lactose is present,
+      regulated jointly by CAP and the lac repressor.
+    needs:
+    - operon
+    - cap_protein
+    - repressor
+    - inducer
+    tier: 2
+  cancer_gene_regulation:
+    defines: The concept that cancer arises from changes to gene expression at epigenetic, transcriptional,
+      post-transcriptional, translational, or post-translational levels.
+    needs:
+    - tumor_suppressor_genes
+    - oncogenes
+    - epigenetic_regulation
+    - post_transcriptional_regulation
+    - translational_regulation
+    - post_translational_regulation
+    tier: 2
+  targeted_cancer_therapy:
+    defines: Drugs designed based on a tumor's specific gene expression pattern to target diseased cells,
+      such as anti-EGFR medications.
+    needs:
+    - cancer_gene_regulation
+    - oncogenes
+    tier: 3

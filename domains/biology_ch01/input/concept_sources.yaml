@@ -1,0 +1,204 @@
+domain: biology
+sources:
+  biology:
+    label: Biology
+    sections:
+    - id: ch01_s1_1
+      title: 1.1 The Science of Biology
+  science:
+    label: Science
+    sections:
+    - id: ch01_s1_1
+      title: 1.1 The Science of Biology
+  natural_science:
+    label: Natural Science
+    sections:
+    - id: ch01_s1_1
+      title: 1.1 The Science of Biology
+  hypothesis:
+    label: Hypothesis
+    sections:
+    - id: ch01_s1_1
+      title: 1.1 The Science of Biology
+  theory:
+    label: Theory
+    sections:
+    - id: ch01_s1_1
+      title: 1.1 The Science of Biology
+  falsifiability:
+    label: Falsifiability
+    sections:
+    - id: ch01_s1_1
+      title: 1.1 The Science of Biology
+  inductive_reasoning:
+    label: Inductive Reasoning
+    sections:
+    - id: ch01_s1_1
+      title: 1.1 The Science of Biology
+  deductive_reasoning:
+    label: Deductive Reasoning
+    sections:
+    - id: ch01_s1_1
+      title: 1.1 The Science of Biology
+  descriptive_science:
+    label: Descriptive (Discovery) Science
+    sections:
+    - id: ch01_s1_1
+      title: 1.1 The Science of Biology
+  hypothesis_based_science:
+    label: Hypothesis-Based Science
+    sections:
+    - id: ch01_s1_1
+      title: 1.1 The Science of Biology
+  scientific_method:
+    label: Scientific Method
+    sections:
+    - id: ch01_s1_1
+      title: 1.1 The Science of Biology
+  variable:
+    label: Variable
+    sections:
+    - id: ch01_s1_1
+      title: 1.1 The Science of Biology
+  control_group:
+    label: Control (Control Group)
+    sections:
+    - id: ch01_s1_1
+      title: 1.1 The Science of Biology
+  basic_science:
+    label: Basic Science
+    sections:
+    - id: ch01_s1_1
+      title: 1.1 The Science of Biology
+  applied_science:
+    label: Applied Science
+    sections:
+    - id: ch01_s1_1
+      title: 1.1 The Science of Biology
+  peer_review:
+    label: Peer Review
+    sections:
+    - id: ch01_s1_1
+      title: 1.1 The Science of Biology
+  scientific_paper_structure:
+    label: Scientific Paper (IMRaD) Structure
+    sections:
+    - id: ch01_s1_1
+      title: 1.1 The Science of Biology
+  bioethics:
+    label: Bioethics
+    sections:
+    - id: ch01_s1_1
+      title: 1.1 The Science of Biology
+    - id: ch01_s1_2
+      title: 1.2 Themes and Concepts of Biology
+  properties_of_life:
+    label: Properties of Life
+    sections:
+    - id: ch01_s1_2
+      title: 1.2 Themes and Concepts of Biology
+  homeostasis:
+    label: Homeostasis
+    sections:
+    - id: ch01_s1_2
+      title: 1.2 Themes and Concepts of Biology
+  adaptation:
+    label: Adaptation
+    sections:
+    - id: ch01_s1_2
+      title: 1.2 Themes and Concepts of Biology
+  evolution:
+    label: Evolution
+    sections:
+    - id: ch01_s1_2
+      title: 1.2 Themes and Concepts of Biology
+  levels_of_biological_organization:
+    label: Levels of Biological Organization
+    sections:
+    - id: ch01_s1_2
+      title: 1.2 Themes and Concepts of Biology
+  atom:
+    label: Atom
+    sections:
+    - id: ch01_s1_2
+      title: 1.2 Themes and Concepts of Biology
+  molecule:
+    label: Molecule
+    sections:
+    - id: ch01_s1_2
+      title: 1.2 Themes and Concepts of Biology
+  macromolecule:
+    label: Macromolecule
+    sections:
+    - id: ch01_s1_2
+      title: 1.2 Themes and Concepts of Biology
+  organelle:
+    label: Organelle
+    sections:
+    - id: ch01_s1_2
+      title: 1.2 Themes and Concepts of Biology
+  cell:
+    label: Cell
+    sections:
+    - id: ch01_s1_2
+      title: 1.2 Themes and Concepts of Biology
+  prokaryote_eukaryote:
+    label: Prokaryotic vs. Eukaryotic Cells
+    sections:
+    - id: ch01_s1_2
+      title: 1.2 Themes and Concepts of Biology
+  tissue:
+    label: Tissue
+    sections:
+    - id: ch01_s1_2
+      title: 1.2 Themes and Concepts of Biology
+  organ:
+    label: Organ
+    sections:
+    - id: ch01_s1_2
+      title: 1.2 Themes and Concepts of Biology
+  organ_system:
+    label: Organ System
+    sections:
+    - id: ch01_s1_2
+      title: 1.2 Themes and Concepts of Biology
+  organism:
+    label: Organism
+    sections:
+    - id: ch01_s1_2
+      title: 1.2 Themes and Concepts of Biology
+  population:
+    label: Population
+    sections:
+    - id: ch01_s1_2
+      title: 1.2 Themes and Concepts of Biology
+  community:
+    label: Community
+    sections:
+    - id: ch01_s1_2
+      title: 1.2 Themes and Concepts of Biology
+  ecosystem:
+    label: Ecosystem
+    sections:
+    - id: ch01_s1_2
+      title: 1.2 Themes and Concepts of Biology
+  biosphere:
+    label: Biosphere
+    sections:
+    - id: ch01_s1_2
+      title: 1.2 Themes and Concepts of Biology
+  phylogenetic_tree:
+    label: Phylogenetic Tree
+    sections:
+    - id: ch01_s1_2
+      title: 1.2 Themes and Concepts of Biology
+  three_domain_system:
+    label: Three-Domain System
+    sections:
+    - id: ch01_s1_2
+      title: 1.2 Themes and Concepts of Biology
+  branches_of_biology:
+    label: Branches of Biological Study
+    sections:
+    - id: ch01_s1_2
+      title: 1.2 Themes and Concepts of Biology

@@ -1,0 +1,203 @@
+domain: biology_2e_ch37
+primitives:
+  hormone:
+    defines: A chemical messenger released into body fluids that travels to target cells and elicits a
+      response.
+    tier: 0
+  endocrine_gland:
+    defines: A gland that secretes hormones into interstitial fluid, which diffuse into blood and travel
+      to target organs and tissues.
+    tier: 0
+  target_cell:
+    defines: A cell that possesses a receptor for a specific hormone and therefore responds to it.
+    tier: 0
+  negative_feedback:
+    defines: A control mechanism in which rising hormone levels inhibit further release of that hormone,
+      keeping blood concentrations within a narrow range.
+    tier: 0
+concepts:
+  lipid_derived_hormone:
+    defines: A hormone structurally similar to cholesterol that can diffuse across plasma membranes.
+    composed_of:
+    - hormone
+    tier: 1
+  amino_acid_derived_hormone:
+    defines: A relatively small hormone derived from tyrosine or tryptophan, such as epinephrine or melatonin.
+    composed_of:
+    - hormone
+    tier: 1
+  peptide_hormone:
+    defines: A hormone composed of a polypeptide chain, water-soluble.
+    composed_of:
+    - hormone
+    tier: 1
+  hormone_receptor:
+    defines: A cellular protein that binds to a specific hormone.
+    composed_of:
+    - hormone
+    - target_cell
+    tier: 1
+  humoral_stimuli:
+    defines: Control of hormone release in response to changes in extracellular fluid or ion concentrations.
+    composed_of:
+    - hormone
+    - endocrine_gland
+    tier: 1
+  hormonal_stimuli:
+    defines: Release of a hormone in response to stimulation by another hormone.
+    composed_of:
+    - hormone
+    - endocrine_gland
+    tier: 1
+  neural_stimuli:
+    defines: Direct stimulation of an endocrine gland by the nervous system to release hormones.
+    composed_of:
+    - endocrine_gland
+    tier: 1
+  thyroid_gland:
+    defines: An endocrine gland in the neck composed of follicles that produce T3, T4, and calcitonin.
+    composed_of:
+    - endocrine_gland
+    tier: 1
+  parathyroid_glands:
+    defines: Small glands on the posterior thyroid surface that produce parathyroid hormone.
+    composed_of:
+    - endocrine_gland
+    tier: 1
+  adrenal_glands:
+    defines: Glands atop the kidneys with a cortex and medulla producing multiple hormones.
+    composed_of:
+    - endocrine_gland
+    tier: 1
+  pancreas_endocrine_function:
+    defines: A heterocrine organ whose pancreatic islets contain alpha and beta cells regulating blood
+      glucose.
+    composed_of:
+    - endocrine_gland
+    tier: 1
+  pineal_gland:
+    defines: A gland that produces melatonin, regulating circadian rhythms and reproductive functions.
+    composed_of:
+    - endocrine_gland
+    tier: 1
+  gonads:
+    defines: The testes and ovaries, which produce steroid sex hormones.
+    composed_of:
+    - endocrine_gland
+    tier: 1
+  intracellular_hormone_receptor:
+    defines: A receptor in the cytoplasm or nucleus that binds lipid-soluble hormones and regulates gene
+      transcription.
+    composed_of:
+    - hormone_receptor
+    - lipid_derived_hormone
+    tier: 2
+  plasma_membrane_hormone_receptor:
+    defines: A receptor on the outer cell surface that binds lipid-insoluble hormones and activates a
+      signaling pathway.
+    composed_of:
+    - hormone_receptor
+    - amino_acid_derived_hormone
+    - peptide_hormone
+    tier: 2
+  receptor_regulation:
+    defines: Changes in the number of hormone receptors on a target cell in response to prolonged hormone
+      exposure.
+    composed_of:
+    - hormone_receptor
+    tier: 2
+  hypothalamic_pituitary_axis:
+    defines: The integrated system in which the hypothalamus controls hormone release from the pituitary.
+    composed_of:
+    - endocrine_gland
+    - hormonal_stimuli
+    - neural_stimuli
+    tier: 2
+  blood_glucose_regulation:
+    defines: The homeostatic control of blood glucose by insulin and glucagon.
+    composed_of:
+    - pancreas_endocrine_function
+    - negative_feedback
+    - humoral_stimuli
+    tier: 2
+  calcium_regulation:
+    defines: Regulation of blood Ca2+ by parathyroid hormone and calcitonin.
+    composed_of:
+    - parathyroid_glands
+    - thyroid_gland
+    - negative_feedback
+    tier: 2
+  second_messenger_signaling:
+    defines: A signal transduction pathway in which a first-messenger hormone activates cAMP to mediate
+      a cellular response.
+    composed_of:
+    - plasma_membrane_hormone_receptor
+    tier: 3
+  anterior_pituitary:
+    defines: The glandular portion of the pituitary that secretes hormones under hypothalamic control.
+    composed_of:
+    - hypothalamic_pituitary_axis
+    tier: 3
+  posterior_pituitary:
+    defines: An extension of the hypothalamus that stores and releases ADH and oxytocin.
+    composed_of:
+    - hypothalamic_pituitary_axis
+    tier: 3
+  water_balance_regulation:
+    defines: The system by which ADH and RAAS regulate water and Na+ reabsorption to control blood volume.
+    composed_of:
+    - posterior_pituitary
+    - negative_feedback
+    tier: 4
+  reproductive_hormone_regulation:
+    defines: Control of gamete production and sex hormone secretion by the hypothalamic-pituitary-gonadal
+      axis.
+    composed_of:
+    - hypothalamic_pituitary_axis
+    - anterior_pituitary
+    - gonads
+    - negative_feedback
+    tier: 4
+  metabolic_rate_regulation:
+    defines: Control of basal metabolic rate by thyroid hormones released in response to TSH.
+    composed_of:
+    - thyroid_gland
+    - anterior_pituitary
+    - negative_feedback
+    tier: 4
+  growth_hormone_regulation:
+    defines: Control of tissue growth by growth hormone, regulated by hypothalamic and pituitary signals.
+    composed_of:
+    - anterior_pituitary
+    - negative_feedback
+    tier: 4
+  stress_response:
+    defines: The short-term and long-term hormonal responses that prepare the body to cope with stressors.
+    composed_of:
+    - adrenal_glands
+    - anterior_pituitary
+    - neural_stimuli
+    - negative_feedback
+    tier: 4
+applications:
+  secondary_endocrine_organs:
+    defines: Non-endocrine organs that also secrete hormones such as ANP, renin, erythropoietin, gastrin,
+      thymosin, and leptin.
+    needs:
+    - endocrine_gland
+    - hormone
+    tier: 1
+  performance_enhancing_hormones:
+    defines: The real-world use and health risks of exogenous hormones to enhance athletic performance.
+    needs:
+    - amino_acid_derived_hormone
+    - peptide_hormone
+    - gonads
+    tier: 2
+  endocrine_disorders:
+    defines: Diseases resulting from hormone underproduction or overproduction.
+    needs:
+    - hormone_receptor
+    - receptor_regulation
+    - negative_feedback
+    tier: 3

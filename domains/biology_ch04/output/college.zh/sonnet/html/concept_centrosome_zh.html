@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Centrosome | Biology Ch04</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="centrosome">Centrosome</h2>
+<p>中心体（centrosome）是动物细胞中位于细胞核附近的微管组织中心，负责启动和调控细胞内微管网络的组装。每个中心体通常由一对相互垂直排列的中心粒（centriole）构成，外周包裹着致密的蛋白质基质，称为周中心粒物质（pericentriolar material, PCM）。真正负责微管成核的并不是中心粒本身，而是PCM中富含的γ-微管蛋白环形复合物（γ-tubulin ring complex），它为微管的"负极端"提供模板，使微管能够以中心体为起点、以恒定的方向向细胞外周延伸。</p>
+<p>细胞分裂间期，中心体协助维持细胞骨架的整体构型，决定细胞器的空间定位、细胞极性以及纤毛的形成基础。进入有丝分裂前，中心体完成复制，一分为二，两个子中心体分别迁移到细胞的两极，成为纺锤体（spindle apparatus）两极的组织核心。由此发出的纺锤丝精确捕获并牵引染色体，保证遗传物质在两个子细胞间均等分配。</p>
+<p>以人体细胞为例：一个即将分裂的成纤维细胞在S期完成DNA复制的同时，其中心体也完成复制——原有的一对中心粒各自在旁边"生出"一个子中心粒，形成两对中心粒。到G2期末，两个中心体已分离并各自携带一对中心粒，为分裂做好准备。若用秋水仙素（colchicine）等药物抑制微管聚合，纺锤体将无法正常形成，染色体便无法准确分离，细胞分裂随之受阻——这正是此类药物被用作抗癌化疗手段的原理，也说明了中心体功能异常与染色体不稳定性、肿瘤发生之间的关联。</p>
+<p>在解决实际问题时，理解中心体的功能有助于解释一系列细胞生物学现象：例如，为什么某些神经细胞和肌肉细胞（终末分化、不再分裂）中心体会逐渐退化；为什么中心体数目异常（如一个细胞中出现两个以上中心体）常见于癌细胞并导致多极纺锤体和染色体错误分配；以及纤毛相关遗传病（纤毛病，ciliopathy）为何常与中心粒结构缺陷相关，因为中心粒也是纤毛基体（basal body）的来源。</p>
+<figure class="cb-figure">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Centrosome_%28borderless_version%29.svg" alt="中心体结构示意图，显示一对相互垂直的中心粒及周围的周中心粒物质" class="cb-figure-img">
+  <figcaption>中心体结构示意图，展示成对垂直排列的中心粒与周围的微管组织基质。Source: <a href="https://commons.wikimedia.org/wiki/File:Centrosome_(borderless_version).svg">Wikimedia Commons</a>, Public Domain.</figcaption>
+</figure>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Biology 2e Ch4: Cell Structure (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

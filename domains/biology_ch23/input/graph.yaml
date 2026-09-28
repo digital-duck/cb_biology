@@ -1,0 +1,163 @@
+domain: biology_2e_ch23
+primitives:
+  domain_classification:
+    defines: Organisms are classified into three domains — Archaea, Bacteria, and Eukarya — based on cellular
+      organization and ancestry.
+    tier: 0
+  prokaryotic_cell:
+    defines: A simple cell type, found in Archaea and Bacteria, lacking a nucleus and membrane-bound organelles,
+      ancestral to eukaryotic cells.
+    tier: 0
+  nucleus:
+    defines: A membrane-bound compartment enclosed by a nuclear envelope with pores, containing the cell's
+      chromosomes; the single defining feature of eukaryotic cells.
+    tier: 0
+  cytoskeleton:
+    defines: An internal network of microtubules and microfilaments providing structure and motility to
+      eukaryotic cells.
+    tier: 0
+  flagella_cilia:
+    defines: Whip-like or hair-like organelles built from cytoskeletal elements that provide cell motility.
+    tier: 0
+  histone_chromosomes:
+    defines: Linear DNA molecules coiled around basic histone proteins to form eukaryotic chromosomes.
+    tier: 0
+  mitosis:
+    defines: A process of nuclear division in which replicated chromosomes are separated using cytoskeletal
+      elements, universal among eukaryotes.
+    tier: 0
+  sexual_reproduction:
+    defines: A meiotic process unique to eukaryotes in which diploid nuclei undergo meiosis to yield haploid
+      nuclei that later fuse (karyogamy) to form a diploid zygote.
+    tier: 0
+  cell_wall:
+    defines: A rigid outer covering, inherited in some lineages from prokaryotic ancestors, that some
+      eukaryotes retain during part of their life cycle.
+    tier: 0
+  prokaryotic_metabolism:
+    defines: Metabolic processes, including oxygenic photosynthesis and aerobic respiration, that arose
+      in prokaryotes such as cyanobacteria and alpha-proteobacteria before being inherited by eukaryotes.
+    tier: 0
+  convergent_evolution:
+    defines: The independent evolution of similar morphological features in unrelated lineages due to
+      similar selective pressures rather than common ancestry.
+    tier: 0
+concepts:
+  eukaryote:
+    defines: An organism whose cells possess a nucleus along with mitochondria, a cytoskeleton, histone-bound
+      chromosomes, mitosis, and (typically) sexual reproduction, all descended from a single last common
+      ancestor.
+    composed_of:
+    - nucleus
+    - cytoskeleton
+    - histone_chromosomes
+    - mitosis
+    - sexual_reproduction
+    tier: 1
+  endosymbiosis:
+    defines: A process in which one cell engulfs another such that the engulfed cell survives and both
+      cells benefit, eventually becoming mutually interdependent.
+    composed_of:
+    - prokaryotic_cell
+    tier: 1
+  endosymbiotic_theory:
+    defines: Margulis's theory that eukaryotic organelles arose when one cell engulfed another and the
+      two coevolved until they shared genetic control of a mutualistic metabolic pathway.
+    composed_of:
+    - endosymbiosis
+    - eukaryote
+    tier: 2
+  mitochondria:
+    defines: Double-membraned organelles that generate ATP via aerobic respiration, derived by endosymbiosis
+      from an aerobic alpha-proteobacterium.
+    composed_of:
+    - endosymbiotic_theory
+    - prokaryotic_metabolism
+    tier: 3
+  primary_endosymbiosis:
+    defines: The direct engulfment of a cyanobacterium by a eukaryotic host cell, giving rise to plastids
+      surrounded by two membranes.
+    composed_of:
+    - endosymbiotic_theory
+    - prokaryotic_metabolism
+    tier: 3
+  plastid_chloroplast:
+    defines: Photosynthetic organelles, rich in chlorophyll and accessory pigments, derived from cyanobacterial
+      endosymbionts via primary endosymbiosis.
+    composed_of:
+    - primary_endosymbiosis
+    tier: 4
+  secondary_endosymbiosis:
+    defines: The engulfment of an already photosynthetic eukaryote (bearing a primary plastid) by another
+      eukaryotic host, producing plastids surrounded by three or more membranes.
+    composed_of:
+    - plastid_chloroplast
+    - eukaryote
+    tier: 5
+  protist:
+    defines: A catchall term for eukaryotic organisms that are not classified as animals, plants, or fungi,
+      encompassing enormous diversity in cell structure, metabolism, and life cycle.
+    composed_of:
+    - eukaryote
+    tier: 2
+  phagocytosis:
+    defines: A feeding process in which the cell membrane engulfs a food particle into a food vacuole
+      that fuses with a lysosome to digest it.
+    composed_of:
+    - protist
+    tier: 3
+  mixotroph:
+    defines: A nutritional strategy in which an organism obtains nutrition by both photoautotrophic and
+      heterotrophic means depending on conditions.
+    composed_of:
+    - protist
+    - plastid_chloroplast
+    tier: 5
+  taxis:
+    defines: Directed movement of a motile protist toward or away from a stimulus, such as light (phototaxis).
+    composed_of:
+    - protist
+    - flagella_cilia
+    tier: 3
+  alternation_of_generations:
+    defines: A life cycle strategy, seen in some algae and plants, in which both multicellular haploid
+      (gametophyte) and multicellular diploid (sporophyte) stages occur.
+    composed_of:
+    - protist
+    - sexual_reproduction
+    tier: 3
+  eukaryotic_supergroups:
+    defines: A classification scheme dividing domain Eukarya into six proposed monophyletic supergroups
+      (Archaeplastida, Amoebozoa, Opisthokonta, Rhizaria, Chromalveolata, Excavata) based on shared ancestry
+      and cell structure.
+    composed_of:
+    - protist
+    - secondary_endosymbiosis
+    tier: 6
+applications:
+  biological_carbon_pump:
+    defines: The process by which carbon fixed by photosynthetic protists sinks to the ocean floor upon
+      death, removing carbon dioxide from the atmosphere.
+    needs:
+    - protist
+    - plastid_chloroplast
+    tier: 5
+  coral_dinoflagellate_symbiosis:
+    defines: A mutualistic relationship in which photosynthetic zooxanthellae dinoflagellates provide
+      nutrients to coral polyps in exchange for a protected environment.
+    needs:
+    - protist
+    - mixotroph
+    tier: 6
+  protist_pathogens:
+    defines: Parasitic protists, such as Plasmodium (malaria) and Trypanosoma (sleeping sickness, Chagas
+      disease), that cause serious diseases in humans, animals, and plants.
+    needs:
+    - protist
+    tier: 3
+  protist_decomposers:
+    defines: Saprobic protists that absorb nutrients from dead organic matter, returning inorganic nutrients
+      to soil and water.
+    needs:
+    - protist
+    tier: 3

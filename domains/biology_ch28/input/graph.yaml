@@ -1,0 +1,266 @@
+domain: biology_2e_ch28
+primitives:
+  invertebrate:
+    defines: An animal that lacks a cranium and a defined vertebral column or spine, comprising about
+      97 percent of animal species.
+    tier: 0
+  choanocyte:
+    defines: A flagellated "collar cell" lining sponge feeding chambers that generates water current and
+      traps food by phagocytosis.
+    tier: 0
+  diploblastic:
+    defines: Development from two embryonic germ layers, ectoderm and endoderm, characteristic of cnidarians.
+    tier: 0
+  cnidocyte:
+    defines: A specialized stinging cell containing a nematocyst used by cnidarians to capture prey and
+      deter predators.
+    tier: 0
+  triploblastic_bilateral:
+    defines: Development from three germ layers producing an animal divisible into superficially symmetrical
+      left and right sides.
+    tier: 0
+  protostomy:
+    defines: A developmental pattern in which the blastopore becomes the mouth opening of the alimentary
+      canal.
+    tier: 0
+  lophophore_trochophore:
+    defines: A ciliated tentacle feeding structure or a free-swimming ciliated larva characteristic of
+      many lophotrochozoans.
+    tier: 0
+  metamerism:
+    defines: Repetition of internal and external body structures in a series of segments, allowing efficient
+      growth and movement.
+    tier: 0
+  cuticle_ecdysis:
+    defines: A tough, protective exoskeleton periodically shed and replaced through the molting process
+      called ecdysis.
+    tier: 0
+  deuterostome_development:
+    defines: A developmental pattern featuring radial, indeterminate cleavage and enterocoelom formation,
+      distinguishing deuterostomes from protostomes.
+    tier: 0
+concepts:
+  parazoa:
+    defines: A clade of the simplest invertebrates, including Placozoa and Porifera, that lack true embryologically
+      homologous tissues.
+    composed_of:
+    - invertebrate
+    tier: 1
+  phylum_cnidaria:
+    defines: A phylum of diploblastic, radially symmetrical animals with stinging cnidocytes, existing
+      as polyp or medusa body forms.
+    composed_of:
+    - invertebrate
+    - diploblastic
+    - cnidocyte
+    tier: 1
+  superphylum_lophotrochozoa:
+    defines: A protostome superphylum of triploblastic, bilaterally symmetrical animals often possessing
+      a lophophore or trochophore larva.
+    composed_of:
+    - triploblastic_bilateral
+    - protostomy
+    - lophophore_trochophore
+    tier: 1
+  coelom_types:
+    defines: Classification of body cavity organization based on whether and how a mesoderm-lined cavity
+      separates the ectoderm and endoderm.
+    composed_of:
+    - triploblastic_bilateral
+    tier: 1
+  superphylum_ecdysozoa:
+    defines: A monophyletic superphylum of animals sharing a molted cuticle and undergoing ecdysis during
+      growth.
+    composed_of:
+    - triploblastic_bilateral
+    - protostomy
+    - cuticle_ecdysis
+    tier: 1
+  superphylum_deuterostomia:
+    defines: A superphylum defined by embryonic development in which the anus forms from the blastopore
+      and the mouth forms secondarily.
+    composed_of:
+    - triploblastic_bilateral
+    - deuterostome_development
+    tier: 1
+  phylum_porifera:
+    defines: A phylum of simple, sessile, filter-feeding invertebrates whose bodies lack true tissues
+      but contain specialized cells organized around water-canal systems.
+    composed_of:
+    - parazoa
+    - choanocyte
+    tier: 2
+  polyp_medusa_body_forms:
+    defines: The two distinct cnidarian body plans—sessile tubular polyps and motile bell-shaped medusae—that
+      can alternate within a life cycle.
+    composed_of:
+    - phylum_cnidaria
+    tier: 2
+  incomplete_digestive_system:
+    defines: A digestive arrangement with a single opening serving as both mouth and anus, found in cnidarians
+      and most flatworms.
+    composed_of:
+    - phylum_cnidaria
+    tier: 2
+  schizocoelom:
+    defines: A protostomic coelom formed when mesoderm-producing cells migrate into the blastocoel and
+      split to form a body cavity.
+    composed_of:
+    - coelom_types
+    - protostomy
+    tier: 2
+  phylum_rotifera:
+    defines: A phylum of microscopic, mostly aquatic pseudocoelomate animals characterized by a ciliated
+      corona used for feeding.
+    composed_of:
+    - superphylum_lophotrochozoa
+    - coelom_types
+    tier: 2
+  phylum_nemertea:
+    defines: A phylum of predominantly marine, unsegmented worms possessing an eversible proboscis and
+      a closed circulatory system.
+    composed_of:
+    - superphylum_lophotrochozoa
+    - coelom_types
+    tier: 2
+  phylum_nematoda:
+    defines: A phylum of triploblastic, pseudocoelomate, cylindrical worms with a complete digestive system,
+      including free-living and parasitic species.
+    composed_of:
+    - superphylum_ecdysozoa
+    - coelom_types
+    tier: 2
+  phylum_tardigrada:
+    defines: A phylum of tiny, cuticle-covered animals with four pairs of clawed legs capable of entering
+      cryptobiosis to survive extreme conditions.
+    composed_of:
+    - superphylum_ecdysozoa
+    tier: 2
+  phylum_arthropoda:
+    defines: The largest animal phylum, characterized by a segmented body, chitinous exoskeleton, and
+      jointed appendages.
+    composed_of:
+    - superphylum_ecdysozoa
+    - metamerism
+    tier: 2
+  phylum_echinodermata:
+    defines: A phylum of marine, bottom-dwelling deuterostomes with pentaradial symmetry, a calcareous
+      endoskeleton, and a unique water vascular system.
+    composed_of:
+    - superphylum_deuterostomia
+    tier: 2
+  phylum_chordata:
+    defines: A phylum defined by the presence of a notochord, dorsal hollow nerve cord, pharyngeal slits,
+      post-anal tail, and endostyle at some developmental stage.
+    composed_of:
+    - superphylum_deuterostomia
+    tier: 2
+  sponge_spicules:
+    defines: Skeletal structures made of calcium carbonate or silica within the mesohyl that support and
+      defend the sponge body.
+    composed_of:
+    - phylum_porifera
+    tier: 3
+  sponge_reproduction:
+    defines: The sexual and asexual reproductive strategies used by sponges, most of which are monoecious.
+    composed_of:
+    - phylum_porifera
+    tier: 3
+  phylum_platyhelminthes:
+    defines: A phylum of acoelomate, triploblastic worms including free-living and parasitic forms with
+      an incomplete or absent digestive system.
+    composed_of:
+    - superphylum_lophotrochozoa
+    - coelom_types
+    - incomplete_digestive_system
+    tier: 3
+  phylum_mollusca:
+    defines: A large phylum of soft-bodied, unsegmented protostomes with a muscular foot, visceral mass,
+      mantle, and often a radula and shell.
+    composed_of:
+    - superphylum_lophotrochozoa
+    - schizocoelom
+    tier: 3
+  phylum_annelida:
+    defines: A phylum of bilaterally symmetrical protostomes exhibiting true metameric segmentation of
+      internal and external structures.
+    composed_of:
+    - superphylum_lophotrochozoa
+    - metamerism
+    - schizocoelom
+    tier: 3
+  cryptobiosis:
+    defines: A suspended metabolic state allowing tardigrades to survive desiccation, extreme temperature,
+      radiation, and other environmental stresses.
+    composed_of:
+    - phylum_tardigrada
+    tier: 3
+  arthropod_exoskeleton:
+    defines: A layered chitinous covering that provides protection, support, and flexibility while requiring
+      molting for growth.
+    composed_of:
+    - cuticle_ecdysis
+    - phylum_arthropoda
+    tier: 3
+  tagmata_appendages:
+    defines: Fused groups of body segments forming functional regions bearing specialized jointed appendages.
+    composed_of:
+    - phylum_arthropoda
+    - metamerism
+    tier: 3
+  water_vascular_system:
+    defines: A hydraulic system unique to echinoderms using seawater to power tube feet for locomotion,
+      feeding, and gas exchange.
+    composed_of:
+    - phylum_echinodermata
+    tier: 3
+  molluscan_body_plan:
+    defines: The shared anatomical organization of mollusks consisting of a locomotor foot, organ-containing
+      visceral mass, shell-secreting mantle, and feeding radula.
+    composed_of:
+    - phylum_mollusca
+    tier: 4
+  gastropod_torsion:
+    defines: An embryonic developmental process in some gastropods in which the mantle and visceral mass
+      rotate to bring the anus near the head.
+    composed_of:
+    - molluscan_body_plan
+    tier: 5
+applications:
+  cnidarian_classes:
+    defines: The major taxonomic groups within Cnidaria distinguished by dominant body form, symmetry,
+      and specialized structures.
+    needs:
+    - phylum_cnidaria
+    - polyp_medusa_body_forms
+    tier: 3
+  flatworm_parasitism:
+    defines: Parasitic flatworm groups, including blood flukes and tapeworms, that infect hosts via complex
+      life cycles involving intermediate hosts.
+    needs:
+    - phylum_platyhelminthes
+    tier: 4
+  molluscan_classes:
+    defines: The eight classes of Mollusca distinguished by modifications of the foot, shell, and mantle.
+    needs:
+    - phylum_mollusca
+    - molluscan_body_plan
+    tier: 5
+  annelid_classes:
+    defines: The two major annelid groups distinguished by presence/absence of parapodia and setae, including
+      earthworms and leeches.
+    needs:
+    - phylum_annelida
+    tier: 4
+  c_elegans_model:
+    defines: A free-living nematode used extensively in laboratories to study development, genetics, and
+      cell biology.
+    needs:
+    - phylum_nematoda
+    tier: 3
+  arthropod_subphyla:
+    defines: The major subdivisions of Arthropoda distinguished by appendage type, body tagmata, and habitat.
+    needs:
+    - phylum_arthropoda
+    - tagmata_appendages
+    tier: 4

@@ -1,0 +1,236 @@
+domain: biology_2e_ch46
+sources:
+  ecosystem:
+    label: Ecosystem
+    sections:
+    - id: ch46_s46_1
+      title: 46.1 Ecology of Ecosystems
+  trophic_level:
+    label: Trophic Level
+    sections:
+    - id: ch46_s46_1
+      title: 46.1 Ecology of Ecosystems
+  autotroph:
+    label: Autotroph
+    sections:
+    - id: ch46_s46_2
+      title: 46.2 Energy Flow through Ecosystems
+  heterotroph:
+    label: Heterotroph
+    sections:
+    - id: ch46_s46_2
+      title: 46.2 Energy Flow through Ecosystems
+  biomass:
+    label: Biomass
+    sections:
+    - id: ch46_s46_2
+      title: 46.2 Energy Flow through Ecosystems
+  biogeochemical_cycle:
+    label: Biogeochemical Cycle
+    sections:
+    - id: ch46_s46_3
+      title: 46.3 Biogeochemical Cycles
+  second_law_of_thermodynamics:
+    label: Second Law of Thermodynamics (in ecosystems)
+    sections:
+    - id: ch46_s46_1
+      title: 46.1 Ecology of Ecosystems
+    - id: ch46_s46_2
+      title: 46.2 Energy Flow through Ecosystems
+  primary_producer:
+    label: Primary Producer
+    sections:
+    - id: ch46_s46_1
+      title: 46.1 Ecology of Ecosystems
+  primary_consumer:
+    label: Primary Consumer
+    sections:
+    - id: ch46_s46_1
+      title: 46.1 Ecology of Ecosystems
+  secondary_consumer:
+    label: Secondary Consumer
+    sections:
+    - id: ch46_s46_1
+      title: 46.1 Ecology of Ecosystems
+  tertiary_consumer:
+    label: Tertiary Consumer
+    sections:
+    - id: ch46_s46_1
+      title: 46.1 Ecology of Ecosystems
+  apex_consumer:
+    label: Apex Consumer
+    sections:
+    - id: ch46_s46_1
+      title: 46.1 Ecology of Ecosystems
+  food_chain:
+    label: Food Chain
+    sections:
+    - id: ch46_s46_1
+      title: 46.1 Ecology of Ecosystems
+  food_web:
+    label: Food Web
+    sections:
+    - id: ch46_s46_1
+      title: 46.1 Ecology of Ecosystems
+  grazing_food_web:
+    label: Grazing Food Web
+    sections:
+    - id: ch46_s46_1
+      title: 46.1 Ecology of Ecosystems
+  detrital_food_web:
+    label: Detrital Food Web
+    sections:
+    - id: ch46_s46_1
+      title: 46.1 Ecology of Ecosystems
+  ecosystem_dynamics:
+    label: Ecosystem Dynamics
+    sections:
+    - id: ch46_s46_1
+      title: 46.1 Ecology of Ecosystems
+  equilibrium:
+    label: Ecological Equilibrium
+    sections:
+    - id: ch46_s46_1
+      title: 46.1 Ecology of Ecosystems
+  resistance:
+    label: Ecological Resistance
+    sections:
+    - id: ch46_s46_1
+      title: 46.1 Ecology of Ecosystems
+  resilience:
+    label: Ecological Resilience
+    sections:
+    - id: ch46_s46_1
+      title: 46.1 Ecology of Ecosystems
+  holistic_ecosystem_model:
+    label: Holistic Ecosystem Model
+    sections:
+    - id: ch46_s46_1
+      title: 46.1 Ecology of Ecosystems
+  mesocosm:
+    label: Mesocosm
+    sections:
+    - id: ch46_s46_1
+      title: 46.1 Ecology of Ecosystems
+  microcosm:
+    label: Microcosm
+    sections:
+    - id: ch46_s46_1
+      title: 46.1 Ecology of Ecosystems
+  conceptual_model:
+    label: Conceptual Model
+    sections:
+    - id: ch46_s46_1
+      title: 46.1 Ecology of Ecosystems
+  analytical_model:
+    label: Analytical Model
+    sections:
+    - id: ch46_s46_1
+      title: 46.1 Ecology of Ecosystems
+  simulation_model:
+    label: Simulation Model
+    sections:
+    - id: ch46_s46_1
+      title: 46.1 Ecology of Ecosystems
+    - id: ch46_s46_2
+      title: 46.2 Energy Flow through Ecosystems
+  gross_primary_productivity:
+    label: Gross Primary Productivity
+    sections:
+    - id: ch46_s46_2
+      title: 46.2 Energy Flow through Ecosystems
+  net_primary_productivity:
+    label: Net Primary Productivity
+    sections:
+    - id: ch46_s46_2
+      title: 46.2 Energy Flow through Ecosystems
+  trophic_level_transfer_efficiency:
+    label: Trophic Level Transfer Efficiency (TLTE)
+    sections:
+    - id: ch46_s46_2
+      title: 46.2 Energy Flow through Ecosystems
+  net_production_efficiency:
+    label: Net Production Efficiency (NPE)
+    sections:
+    - id: ch46_s46_2
+      title: 46.2 Energy Flow through Ecosystems
+  ecological_pyramid:
+    label: Ecological Pyramid
+    sections:
+    - id: ch46_s46_2
+      title: 46.2 Energy Flow through Ecosystems
+  biomagnification:
+    label: Biomagnification
+    sections:
+    - id: ch46_s46_2
+      title: 46.2 Energy Flow through Ecosystems
+  residence_time:
+    label: Residence Time
+    sections:
+    - id: ch46_s46_3
+      title: 46.3 Biogeochemical Cycles
+  water_cycle:
+    label: Water (Hydrologic) Cycle
+    sections:
+    - id: ch46_s46_3
+      title: 46.3 Biogeochemical Cycles
+  carbon_cycle:
+    label: Carbon Cycle
+    sections:
+    - id: ch46_s46_3
+      title: 46.3 Biogeochemical Cycles
+  nitrogen_cycle:
+    label: Nitrogen Cycle
+    sections:
+    - id: ch46_s46_3
+      title: 46.3 Biogeochemical Cycles
+  nitrogen_fixation:
+    label: Nitrogen Fixation
+    sections:
+    - id: ch46_s46_3
+      title: 46.3 Biogeochemical Cycles
+  ammonification:
+    label: Ammonification
+    sections:
+    - id: ch46_s46_3
+      title: 46.3 Biogeochemical Cycles
+  nitrification:
+    label: Nitrification
+    sections:
+    - id: ch46_s46_3
+      title: 46.3 Biogeochemical Cycles
+  denitrification:
+    label: Denitrification
+    sections:
+    - id: ch46_s46_3
+      title: 46.3 Biogeochemical Cycles
+  phosphorus_cycle:
+    label: Phosphorus Cycle
+    sections:
+    - id: ch46_s46_3
+      title: 46.3 Biogeochemical Cycles
+  sulfur_cycle:
+    label: Sulfur Cycle
+    sections:
+    - id: ch46_s46_3
+      title: 46.3 Biogeochemical Cycles
+  eutrophication:
+    label: Eutrophication
+    sections:
+    - id: ch46_s46_3
+      title: 46.3 Biogeochemical Cycles
+  dead_zone:
+    label: Dead Zone
+    sections:
+    - id: ch46_s46_3
+      title: 46.3 Biogeochemical Cycles
+  acid_rain:
+    label: Acid Rain
+    sections:
+    - id: ch46_s46_3
+      title: 46.3 Biogeochemical Cycles
+  nonrenewable_resource:
+    label: Nonrenewable Resource
+    sections:
+    - id: ch46_s46_3
+      title: 46.3 Biogeochemical Cycles

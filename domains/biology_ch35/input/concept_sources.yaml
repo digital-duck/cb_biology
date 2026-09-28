@@ -1,0 +1,169 @@
+domain: biology_2e_ch35
+sources:
+  neuron:
+    label: Neuron
+    sections:
+    - id: ch35_s35_1
+      title: 35.1 Neurons and Glial Cells
+  glia:
+    label: Glial Cells
+    sections:
+    - id: ch35_s35_1
+      title: 35.1 Neurons and Glial Cells
+  neuron_structure:
+    label: Neuron Structure (Dendrites, Soma, Axon)
+    sections:
+    - id: ch35_s35_1
+      title: 35.1 Neurons and Glial Cells
+  neuron_types:
+    label: Types of Neurons
+    sections:
+    - id: ch35_s35_1
+      title: 35.1 Neurons and Glial Cells
+  glial_cell_types:
+    label: Types of Glial Cells
+    sections:
+    - id: ch35_s35_1
+      title: 35.1 Neurons and Glial Cells
+  myelin:
+    label: Myelin
+    sections:
+    - id: ch35_s35_1
+      title: 35.1 Neurons and Glial Cells
+    - id: ch35_s35_2
+      title: 35.2 How Neurons Communicate
+  ion_channel:
+    label: Ion Channel
+    sections:
+    - id: ch35_s35_2
+      title: 35.2 How Neurons Communicate
+  membrane_potential:
+    label: Membrane Potential
+    sections:
+    - id: ch35_s35_2
+      title: 35.2 How Neurons Communicate
+  resting_membrane_potential:
+    label: Resting Membrane Potential
+    sections:
+    - id: ch35_s35_2
+      title: 35.2 How Neurons Communicate
+  action_potential:
+    label: Action Potential
+    sections:
+    - id: ch35_s35_2
+      title: 35.2 How Neurons Communicate
+  depolarization_repolarization:
+    label: Depolarization, Repolarization, and Hyperpolarization
+    sections:
+    - id: ch35_s35_2
+      title: 35.2 How Neurons Communicate
+  refractory_period:
+    label: Refractory Period
+    sections:
+    - id: ch35_s35_2
+      title: 35.2 How Neurons Communicate
+  saltatory_conduction:
+    label: Saltatory Conduction
+    sections:
+    - id: ch35_s35_2
+      title: 35.2 How Neurons Communicate
+  synapse:
+    label: Synapse
+    sections:
+    - id: ch35_s35_2
+      title: 35.2 How Neurons Communicate
+  chemical_synaptic_transmission:
+    label: Chemical Synaptic Transmission
+    sections:
+    - id: ch35_s35_2
+      title: 35.2 How Neurons Communicate
+  electrical_synapse:
+    label: Electrical Synapse
+    sections:
+    - id: ch35_s35_2
+      title: 35.2 How Neurons Communicate
+  postsynaptic_potentials:
+    label: EPSPs and IPSPs
+    sections:
+    - id: ch35_s35_2
+      title: 35.2 How Neurons Communicate
+  summation:
+    label: Signal Summation
+    sections:
+    - id: ch35_s35_2
+      title: 35.2 How Neurons Communicate
+  synaptic_plasticity:
+    label: Synaptic Plasticity
+    sections:
+    - id: ch35_s35_2
+      title: 35.2 How Neurons Communicate
+  ltp_ltd:
+    label: Long-Term Potentiation and Depression
+    sections:
+    - id: ch35_s35_2
+      title: 35.2 How Neurons Communicate
+  meninges_csf:
+    label: Meninges and Cerebrospinal Fluid
+    sections:
+    - id: ch35_s35_3
+      title: 35.3 The Central Nervous System
+  cerebral_cortex:
+    label: Cerebral Cortex
+    sections:
+    - id: ch35_s35_3
+      title: 35.3 The Central Nervous System
+  cortical_lobes:
+    label: Cortical Lobes (Frontal, Parietal, Temporal, Occipital)
+    sections:
+    - id: ch35_s35_3
+      title: 35.3 The Central Nervous System
+  subcortical_structures:
+    label: Subcortical Brain Structures
+    sections:
+    - id: ch35_s35_3
+      title: 35.3 The Central Nervous System
+  spinal_cord:
+    label: Spinal Cord
+    sections:
+    - id: ch35_s35_3
+      title: 35.3 The Central Nervous System
+  peripheral_nervous_system:
+    label: Peripheral Nervous System
+    sections:
+    - id: ch35_s35_4
+      title: 35.4 The Peripheral Nervous System
+  autonomic_nervous_system:
+    label: Autonomic Nervous System
+    sections:
+    - id: ch35_s35_4
+      title: 35.4 The Peripheral Nervous System
+  sympathetic_parasympathetic:
+    label: Sympathetic and Parasympathetic Systems
+    sections:
+    - id: ch35_s35_4
+      title: 35.4 The Peripheral Nervous System
+  sensory_somatic_system:
+    label: Sensory-Somatic Nervous System
+    sections:
+    - id: ch35_s35_4
+      title: 35.4 The Peripheral Nervous System
+  neurodegenerative_disorders:
+    label: Neurodegenerative Disorders
+    sections:
+    - id: ch35_s35_5
+      title: 35.5 Nervous System Disorders
+  neurodevelopmental_disorders:
+    label: Neurodevelopmental Disorders
+    sections:
+    - id: ch35_s35_5
+      title: 35.5 Nervous System Disorders
+  mental_illness:
+    label: Mental Illness
+    sections:
+    - id: ch35_s35_5
+      title: 35.5 Nervous System Disorders
+  epilepsy_stroke:
+    label: Epilepsy and Stroke
+    sections:
+    - id: ch35_s35_5
+      title: 35.5 Nervous System Disorders

@@ -1,0 +1,151 @@
+domain: biology_2e_ch14
+sources:
+  nucleotide:
+    label: Nucleotide
+    sections:
+    - id: ch14_s14_2
+      title: 14.2 DNA Structure and Sequencing
+  nitrogenous_base:
+    label: Nitrogenous Base
+    sections:
+    - id: ch14_s14_2
+      title: 14.2 DNA Structure and Sequencing
+  phosphodiester_bond:
+    label: Phosphodiester Bond
+    sections:
+    - id: ch14_s14_2
+      title: 14.2 DNA Structure and Sequencing
+  transformation:
+    label: Bacterial Transformation
+    sections:
+    - id: ch14_s14_1
+      title: 14.1 Historical Basis of Modern Understanding
+  bacteriophage:
+    label: Bacteriophage
+    sections:
+    - id: ch14_s14_1
+      title: 14.1 Historical Basis of Modern Understanding
+  dna_as_genetic_material:
+    label: DNA as the Genetic Material
+    sections:
+    - id: ch14_s14_1
+      title: 14.1 Historical Basis of Modern Understanding
+  chargaffs_rules:
+    label: Chargaff's Rules
+    sections:
+    - id: ch14_s14_1
+      title: 14.1 Historical Basis of Modern Understanding
+    - id: ch14_s14_2
+      title: 14.2 DNA Structure and Sequencing
+  dna_double_helix_structure:
+    label: DNA Double-Helix Structure
+    sections:
+    - id: ch14_s14_2
+      title: 14.2 DNA Structure and Sequencing
+  dna_sequencing_sanger_method:
+    label: Sanger Dideoxy Chain Termination Sequencing
+    sections:
+    - id: ch14_s14_2
+      title: 14.2 DNA Structure and Sequencing
+  gel_electrophoresis:
+    label: Gel Electrophoresis
+    sections:
+    - id: ch14_s14_2
+      title: 14.2 DNA Structure and Sequencing
+  dna_packaging:
+    label: DNA Packaging (Nucleosomes and Supercoiling)
+    sections:
+    - id: ch14_s14_2
+      title: 14.2 DNA Structure and Sequencing
+  semiconservative_replication:
+    label: Semi-Conservative Replication
+    sections:
+    - id: ch14_s14_3
+      title: 14.3 Basics of DNA Replication
+  meselson_stahl_experiment:
+    label: Meselson-Stahl Experiment
+    sections:
+    - id: ch14_s14_3
+      title: 14.3 Basics of DNA Replication
+  origin_of_replication:
+    label: Origin of Replication
+    sections:
+    - id: ch14_s14_4
+      title: 14.4 DNA Replication in Prokaryotes
+  helicase:
+    label: Helicase
+    sections:
+    - id: ch14_s14_4
+      title: 14.4 DNA Replication in Prokaryotes
+  dna_polymerase:
+    label: DNA Polymerase
+    sections:
+    - id: ch14_s14_4
+      title: 14.4 DNA Replication in Prokaryotes
+  replication_fork:
+    label: Replication Fork
+    sections:
+    - id: ch14_s14_4
+      title: 14.4 DNA Replication in Prokaryotes
+  primer_synthesis:
+    label: RNA Primer Synthesis
+    sections:
+    - id: ch14_s14_4
+      title: 14.4 DNA Replication in Prokaryotes
+  leading_and_lagging_strand:
+    label: Leading and Lagging Strand Synthesis
+    sections:
+    - id: ch14_s14_4
+      title: 14.4 DNA Replication in Prokaryotes
+  okazaki_fragments:
+    label: Okazaki Fragments
+    sections:
+    - id: ch14_s14_4
+      title: 14.4 DNA Replication in Prokaryotes
+  prokaryotic_dna_replication:
+    label: Prokaryotic DNA Replication
+    sections:
+    - id: ch14_s14_4
+      title: 14.4 DNA Replication in Prokaryotes
+  eukaryotic_dna_replication:
+    label: Eukaryotic DNA Replication
+    sections:
+    - id: ch14_s14_5
+      title: 14.5 DNA Replication in Eukaryotes
+  telomere_replication:
+    label: Telomere Replication
+    sections:
+    - id: ch14_s14_5
+      title: 14.5 DNA Replication in Eukaryotes
+  telomerase:
+    label: Telomerase
+    sections:
+    - id: ch14_s14_5
+      title: 14.5 DNA Replication in Eukaryotes
+    - id: ch14_s14_6
+      title: 14.6 DNA Repair
+  dna_proofreading:
+    label: DNA Polymerase Proofreading
+    sections:
+    - id: ch14_s14_6
+      title: 14.6 DNA Repair
+  mismatch_repair:
+    label: Mismatch Repair
+    sections:
+    - id: ch14_s14_6
+      title: 14.6 DNA Repair
+  nucleotide_excision_repair:
+    label: Nucleotide Excision Repair
+    sections:
+    - id: ch14_s14_6
+      title: 14.6 DNA Repair
+  mutation:
+    label: Mutation
+    sections:
+    - id: ch14_s14_6
+      title: 14.6 DNA Repair
+  point_mutation_types:
+    label: Point Mutations and Their Effects
+    sections:
+    - id: ch14_s14_6
+      title: 14.6 DNA Repair

@@ -1,0 +1,173 @@
+domain: biology_2e_ch8
+primitives:
+  photoautotroph:
+    defines: An organism, such as a plant, alga, or cyanobacterium, that uses light energy to manufacture
+      its own organic food.
+    tier: 0
+  heterotroph:
+    defines: An organism that must consume organic substances or other organisms for energy because it
+      cannot photosynthesize.
+    tier: 0
+  chemoautotroph:
+    defines: An organism that builds organic molecules using energy derived from inorganic chemicals rather
+      than sunlight.
+    tier: 0
+  chloroplast:
+    defines: The double-membrane organelle in eukaryotic autotrophs where photosynthesis takes place.
+    tier: 0
+  thylakoid:
+    defines: A disc-shaped, membrane-bound structure inside a chloroplast, stacked into grana, where the
+      light-dependent reactions occur.
+    tier: 0
+  stroma:
+    defines: The fluid-filled space surrounding the grana inside a chloroplast where the light-independent
+      reactions take place.
+    tier: 0
+  stoma:
+    defines: A regulated opening, typically on the underside of a leaf, that controls gas exchange and
+      water evaporation.
+    tier: 0
+  photon:
+    defines: A distinct "packet" of light energy that can be absorbed by a pigment molecule.
+    tier: 0
+  wavelength:
+    defines: The distance between two consecutive equivalent points of a light wave, inversely related
+      to the energy it carries.
+    tier: 0
+  pigment:
+    defines: A molecule that absorbs specific wavelengths of light and reflects or transmits others, giving
+      it its color.
+    tier: 0
+  chlorophyll:
+    defines: A pigment embedded in the thylakoid membrane, including chlorophyll a and b, responsible
+      for absorbing light and giving leaves their green color.
+    tier: 0
+  carotenoid:
+    defines: A class of accessory photosynthetic pigments that absorb excess light energy and safely dissipate
+      it as heat.
+    tier: 0
+  reduction:
+    defines: The gain of an electron by an atom or molecule.
+    tier: 0
+concepts:
+  electromagnetic_spectrum:
+    defines: The full range of frequencies of radiation emitted by the sun, of which visible light is
+      only a small portion.
+    composed_of:
+    - photon
+    - wavelength
+    tier: 1
+  absorption_spectrum:
+    defines: The specific pattern of wavelengths a given pigment absorbs from visible light.
+    composed_of:
+    - pigment
+    - wavelength
+    tier: 1
+  light_harvesting_complex:
+    defines: A complex of hundreds of antenna pigments that passes absorbed light energy to the reaction
+      center of a photosystem.
+    composed_of:
+    - pigment
+    - chlorophyll
+    - carotenoid
+    - thylakoid
+    tier: 1
+  reaction_center:
+    defines: A special pair of chlorophyll a molecules within a photosystem that can be oxidized, ejecting
+      an excited electron in a photoact.
+    composed_of:
+    - chlorophyll
+    - photon
+    - reduction
+    tier: 1
+  atp_synthase:
+    defines: A protein channel in the thylakoid membrane that uses the energy of the hydrogen ion gradient
+      to attach a phosphate group to ADP, forming ATP.
+    composed_of:
+    - thylakoid
+    tier: 1
+  carbon_fixation:
+    defines: The process, catalyzed by RuBisCO, of converting inorganic CO2 gas into an organic compound
+      (3-PGA) during stage 1 of the Calvin cycle.
+    composed_of:
+    - stroma
+    - reduction
+    tier: 1
+  photosystem:
+    defines: A multiprotein complex embedded in the thylakoid membrane, consisting of a light-harvesting
+      complex and a reaction center, that converts light energy into an excited electron.
+    composed_of:
+    - light_harvesting_complex
+    - reaction_center
+    - thylakoid
+    tier: 2
+  photosystem_ii:
+    defines: The photosystem, with reaction center P680, that extracts electrons from water and passes
+      them into the electron transport chain.
+    composed_of:
+    - photosystem
+    tier: 3
+  photosystem_i:
+    defines: The photosystem, with reaction center P700, that receives electrons from the electron transport
+      chain and uses them to reduce NADP+ to NADPH.
+    composed_of:
+    - photosystem
+    tier: 3
+  electron_transport_chain:
+    defines: A series of proteins, including the cytochrome complex, between PSII and PSI that pass energized
+      electrons and use the released energy to pump hydrogen ions into the thylakoid lumen.
+    composed_of:
+    - photosystem_ii
+    - photosystem_i
+    - thylakoid
+    tier: 4
+  chemiosmosis:
+    defines: The diffusion of hydrogen ions through ATP synthase from an area of high to low concentration
+      across the thylakoid membrane, releasing energy used to form ATP.
+    composed_of:
+    - electron_transport_chain
+    - atp_synthase
+    tier: 5
+  light_dependent_reactions:
+    defines: The first stage of photosynthesis, occurring in the thylakoid membrane, in which light energy
+      absorbed via photosystems is converted into the chemical energy of ATP and NADPH.
+    composed_of:
+    - photosystem_ii
+    - photosystem_i
+    - electron_transport_chain
+    - chemiosmosis
+    - thylakoid
+    tier: 6
+  calvin_cycle:
+    defines: The light-independent reactions of photosynthesis, occurring in the stroma, that use ATP
+      and NADPH to convert atmospheric CO2 into carbohydrate molecules.
+    composed_of:
+    - carbon_fixation
+    - light_dependent_reactions
+    - stroma
+    tier: 7
+  photosynthesis:
+    defines: The biological process by which photoautotrophs capture light energy and convert it into
+      chemical energy stored in the covalent bonds of carbohydrate molecules, releasing oxygen as a byproduct.
+    composed_of:
+    - light_dependent_reactions
+    - calvin_cycle
+    - chloroplast
+    - photoautotroph
+    tier: 8
+applications:
+  cam_desert_adaptation:
+    defines: A water-conserving adaptation, seen in plants like cacti, that temporarily fixes and stores
+      CO2 at night so stomata can remain closed during the hot day.
+    needs:
+    - stoma
+    - carbon_fixation
+    - calvin_cycle
+    tier: 8
+  photosynthesis_respiration_energy_cycle:
+    defines: The complementary relationship in which photosynthesis stores solar energy in carbohydrates
+      while cellular respiration releases that energy, cycling CO2 and O2 between the two processes.
+    needs:
+    - photosynthesis
+    - heterotroph
+    tier: 9

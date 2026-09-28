@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plant Vs Animal Cell Structures | Biology Ch04</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="plant-vs-animal-cell-structures">Plant Vs Animal Cell Structures</h2>
+<p>Both plant and animal cells are eukaryotic: each has a nucleus, mitochondria, ribosomes, and an endomembrane system (endoplasmic reticulum and Golgi apparatus) that manufacture and route proteins. What distinguishes them is a small set of specialized organelles tied to each organism's lifestyle. Plants are stationary and make their own food, so their cells carry structures for support and photosynthesis. Animals move, hunt, and digest other organisms, so their cells carry structures for flexibility and intracellular digestion.</p>
+<p>Plant cells are built around one defining feature: a rigid cell wall made of cellulose fibers, positioned just outside the plasma membrane. This wall gives the cell a fixed shape and lets it push back against incoming water pressure, so the cell fills with water and stays firm rather than swelling until it bursts — this is why a well-watered plant stands upright while a wilted one goes limp. Two other structures support the plant's lifestyle: chloroplasts, which contain chlorophyll and convert light energy into the chemical energy (glucose) the plant runs on, and a large central vacuole that stores water, nutrients, and waste and, together with the wall, keeps non-woody tissue rigid.</p>
+<p>Animal cells lack a wall, so the plasma membrane alone bounds the cell — this is what allows animal cells to change shape for movement, muscle contraction, and tissue folding during development. Two organelles reflect this animal-specific lifestyle: the centrosome, which coordinates the even splitting of genetic material when a cell divides, and lysosomes, membrane-bound sacs of digestive enzymes that break down worn-out cell parts, engulfed food, and invading pathogens.</p>
+<p>A useful problem-solving approach: given a micrograph or cell description, identify which organelles are present and absent, then infer the organism's biology. A cell with a thick outer wall, a large fluid-filled sac, and green organelles must be autotrophic (self-feeding) and structurally rigid — a plant cell. A cell lacking a wall but containing enzyme-filled sacs near a nucleus preparing to divide is likely an animal cell actively engaged in digestion or division. This same organelle-to-function reasoning is used to interpret real electron micrographs in a lab setting.</p>
+<pre class="mermaid">flowchart LR
+    subgraph Shared["Shared Organelles"]
+        N[Nucleus]
+        M[Mitochondria]
+        R[Ribosomes]
+        ER[Endoplasmic Reticulum]
+        G[Golgi Apparatus]
+    end
+    subgraph Plant["Plant-Specific"]
+        CW[Cell Wall]
+        CH[Chloroplasts]
+        CV[Central Vacuole]
+    end
+    subgraph Animal["Animal-Specific"]
+        CS[Centrosome]
+        LY[Lysosomes]
+    end</pre>
+<p><em>Comparison of eukaryotic organelles shared by plant and animal cells versus those unique to each cell type.</em></p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Biology 2e Ch4: Cell Structure (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

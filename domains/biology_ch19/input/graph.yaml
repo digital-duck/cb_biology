@@ -1,0 +1,203 @@
+domain: biology_2e_ch19
+primitives:
+  evolution:
+    defines: A change in a population's allele frequency over time, connecting small-scale (microevolution)
+      and large-scale (macroevolution) genetic change.
+    tier: 0
+  allele:
+    defines: A variant form of a gene that codes for a particular trait associated with a character.
+    tier: 0
+  natural_selection:
+    defines: The process by which individuals with heritable traits that improve survival and reproduction
+      pass those traits on more frequently, changing a population's genetic makeup over time.
+    tier: 0
+  mutation:
+    defines: A change to an organism's DNA that introduces novel genotypic and phenotypic variation into
+      a population.
+    tier: 0
+concepts:
+  gene_pool:
+    defines: The sum of all the alleles present in a population.
+    composed_of:
+    - allele
+    tier: 1
+  allele_frequency:
+    defines: The rate at which a specific allele appears within a population, calculated as the number
+      of copies of that allele divided by all copies of the gene in the population.
+    composed_of:
+    - gene_pool
+    tier: 2
+  population_genetics:
+    defines: The study of how selective forces change allele and genotypic frequencies in a population
+      over time.
+    composed_of:
+    - allele_frequency
+    - natural_selection
+    tier: 3
+  hardy_weinberg_principle:
+    defines: A model stating that a population's allele and genotype frequencies remain inherently stable
+      across generations unless an evolutionary force acts upon it, providing a mathematical baseline
+      against which real populations can be compared.
+    composed_of:
+    - allele_frequency
+    tier: 3
+  genetic_structure:
+    defines: The distribution of the different possible genotypes within a population, derived mathematically
+      from allele frequencies (p^2 + 2pq + q^2 = 1).
+    composed_of:
+    - hardy_weinberg_principle
+    tier: 4
+  genetic_variability:
+    defines: The diversity of alleles and genotypes present within a population.
+    composed_of:
+    - genetic_structure
+    - mutation
+    tier: 5
+  population_variation:
+    defines: The distribution of different phenotypes among individuals in a population, arising from
+      genetic structure and environmental factors.
+    composed_of:
+    - genetic_structure
+    tier: 5
+  heritability:
+    defines: The fraction of phenotypic variation in a population that can be attributed to genetic differences
+      among individuals.
+    composed_of:
+    - population_variation
+    tier: 6
+  inbreeding:
+    defines: The mating of closely related individuals, which increases the likelihood of pairing rare
+      deleterious recessive alleles and can cause inbreeding depression.
+    composed_of:
+    - genetic_variability
+    tier: 6
+  genetic_drift:
+    defines: A change in allele frequencies within a population due purely to chance rather than selective
+      advantage.
+    composed_of:
+    - allele_frequency
+    tier: 3
+  bottleneck_effect:
+    defines: A magnification of genetic drift caused by a natural event or catastrophe that suddenly eliminates
+      a large portion of a population's gene pool.
+    composed_of:
+    - genetic_drift
+    tier: 4
+  founder_effect:
+    defines: An allele frequency change that occurs when a small, non-representative subset of a population
+      establishes a new, isolated population.
+    composed_of:
+    - genetic_drift
+    tier: 4
+  gene_flow:
+    defines: The movement of alleles into or out of a population due to migration of individuals or gametes.
+    composed_of:
+    - allele_frequency
+    tier: 3
+  nonrandom_mating:
+    defines: A change in a population's gene pool that occurs when individuals preferentially mate with
+      certain phenotypes rather than mating randomly.
+    composed_of:
+    - genetic_structure
+    tier: 4
+  environmental_variation:
+    defines: Phenotypic differences among individuals caused by environmental factors rather than genetic
+      differences, which are not directly heritable but can still influence natural selection.
+    composed_of:
+    - population_variation
+    - natural_selection
+    tier: 6
+  cline:
+    defines: A gradual variation in a species' phenotype across a geographic or ecological gradient, often
+      maintained by gene flow between neighboring populations.
+    composed_of:
+    - gene_flow
+    - population_variation
+    tier: 6
+  adaptive_evolution:
+    defines: The process by which natural selection increases the frequency of beneficial alleles and
+      decreases the frequency of deleterious alleles in a population.
+    composed_of:
+    - natural_selection
+    - allele_frequency
+    tier: 3
+  evolutionary_fitness:
+    defines: An individual's ability to survive and reproduce, measured by its genetic contribution to
+      the next generation.
+    composed_of:
+    - natural_selection
+    tier: 1
+  relative_fitness:
+    defines: An individual's fitness measured in comparison to other individuals in the population, rather
+      than in absolute terms.
+    composed_of:
+    - evolutionary_fitness
+    tier: 2
+  stabilizing_selection:
+    defines: Natural selection that favors an average phenotype and selects against extreme variation,
+      decreasing a population's genetic variability.
+    composed_of:
+    - natural_selection
+    - population_variation
+    tier: 6
+  directional_selection:
+    defines: Natural selection that favors phenotypes at one end of the existing variation spectrum, typically
+      in response to environmental change.
+    composed_of:
+    - natural_selection
+    - population_variation
+    tier: 6
+  diversifying_selection:
+    defines: Natural selection that favors two or more distinct phenotypes while selecting against intermediate
+      phenotypes, increasing genetic variability.
+    composed_of:
+    - natural_selection
+    - population_variation
+    tier: 6
+  frequency_dependent_selection:
+    defines: Natural selection that favors phenotypes because they are either common (positive) or rare
+      (negative) in the population.
+    composed_of:
+    - natural_selection
+    - allele_frequency
+    tier: 3
+  sexual_selection:
+    defines: Selection pressure arising from differences in reproductive success between males and females,
+      often producing sexual dimorphism through mate competition or choice.
+    composed_of:
+    - natural_selection
+    - relative_fitness
+    tier: 3
+applications:
+  sexual_dimorphism:
+    defines: Phenotypic differences between males and females of a population, often resulting from sexual
+      selection.
+    needs:
+    - sexual_selection
+    tier: 4
+  handicap_principle:
+    defines: A theory of sexual selection proposing that only the fittest individuals can afford costly
+      ornamental traits, making such traits an honest signal of quality.
+    needs:
+    - sexual_selection
+    tier: 4
+  good_genes_hypothesis:
+    defines: A theory of sexual selection proposing that males develop impressive ornaments to signal
+      efficient metabolism or disease resistance, which females select for to benefit their offspring.
+    needs:
+    - sexual_selection
+    tier: 4
+  hardy_weinberg_application:
+    defines: The practical use of the Hardy-Weinberg equation to detect whether a real population is evolving
+      by comparing observed genotype frequencies to predicted equilibrium values.
+    needs:
+    - hardy_weinberg_principle
+    - genetic_structure
+    tier: 5
+  flu_vaccine_evolution:
+    defines: The real-world application of evolutionary theory to predict rapidly mutating flu strains
+      and design effective annual vaccines.
+    needs:
+    - mutation
+    - natural_selection
+    tier: 1

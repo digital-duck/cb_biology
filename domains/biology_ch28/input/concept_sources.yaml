@@ -1,0 +1,232 @@
+domain: biology_2e_ch28
+sources:
+  invertebrate:
+    label: Invertebrate
+    sections:
+    - id: ch28_s28_1
+      title: 28.1 Phylum Porifera
+  parazoa:
+    label: Parazoa
+    sections:
+    - id: ch28_s28_1
+      title: 28.1 Phylum Porifera
+  phylum_porifera:
+    label: Phylum Porifera (Sponges)
+    sections:
+    - id: ch28_s28_1
+      title: 28.1 Phylum Porifera
+  choanocyte:
+    label: Choanocyte
+    sections:
+    - id: ch28_s28_1
+      title: 28.1 Phylum Porifera
+  sponge_spicules:
+    label: Spicules and Sponge Skeletal Support
+    sections:
+    - id: ch28_s28_1
+      title: 28.1 Phylum Porifera
+  sponge_reproduction:
+    label: Sponge Reproduction
+    sections:
+    - id: ch28_s28_1
+      title: 28.1 Phylum Porifera
+  phylum_cnidaria:
+    label: Phylum Cnidaria
+    sections:
+    - id: ch28_s28_2
+      title: 28.2 Phylum Cnidaria
+  diploblastic:
+    label: Diploblastic Development
+    sections:
+    - id: ch28_s28_2
+      title: 28.2 Phylum Cnidaria
+  cnidocyte:
+    label: Cnidocyte
+    sections:
+    - id: ch28_s28_2
+      title: 28.2 Phylum Cnidaria
+  polyp_medusa_body_forms:
+    label: Polyp and Medusa Body Forms
+    sections:
+    - id: ch28_s28_2
+      title: 28.2 Phylum Cnidaria
+  incomplete_digestive_system:
+    label: Incomplete Digestive System
+    sections:
+    - id: ch28_s28_2
+      title: 28.2 Phylum Cnidaria
+    - id: ch28_s28_3
+      title: '28.3 Superphylum Lophotrochozoa: Flatworms, Rotifers, and Nemerteans'
+  cnidarian_classes:
+    label: Cnidarian Classes (Anthozoa, Scyphozoa, Cubozoa, Hydrozoa)
+    sections:
+    - id: ch28_s28_2
+      title: 28.2 Phylum Cnidaria
+  superphylum_lophotrochozoa:
+    label: Superphylum Lophotrochozoa
+    sections:
+    - id: ch28_s28_3
+      title: '28.3 Superphylum Lophotrochozoa: Flatworms, Rotifers, and Nemerteans'
+    - id: ch28_s28_4
+      title: '28.4 Superphylum Lophotrochozoa: Mollusks and Annelids'
+  triploblastic_bilateral:
+    label: Triploblastic, Bilateral Symmetry
+    sections:
+    - id: ch28_s28_3
+      title: '28.3 Superphylum Lophotrochozoa: Flatworms, Rotifers, and Nemerteans'
+  protostomy:
+    label: Protostomy
+    sections:
+    - id: ch28_s28_3
+      title: '28.3 Superphylum Lophotrochozoa: Flatworms, Rotifers, and Nemerteans'
+  coelom_types:
+    label: Coelom Types (Acoelomate, Pseudocoelomate, Eucoelomate)
+    sections:
+    - id: ch28_s28_3
+      title: '28.3 Superphylum Lophotrochozoa: Flatworms, Rotifers, and Nemerteans'
+  schizocoelom:
+    label: Schizocoelom
+    sections:
+    - id: ch28_s28_3
+      title: '28.3 Superphylum Lophotrochozoa: Flatworms, Rotifers, and Nemerteans'
+  lophophore_trochophore:
+    label: Lophophore and Trochophore Larva
+    sections:
+    - id: ch28_s28_3
+      title: '28.3 Superphylum Lophotrochozoa: Flatworms, Rotifers, and Nemerteans'
+    - id: ch28_s28_4
+      title: '28.4 Superphylum Lophotrochozoa: Mollusks and Annelids'
+  phylum_platyhelminthes:
+    label: Phylum Platyhelminthes (Flatworms)
+    sections:
+    - id: ch28_s28_3
+      title: '28.3 Superphylum Lophotrochozoa: Flatworms, Rotifers, and Nemerteans'
+  flatworm_parasitism:
+    label: Flatworm Parasitism (Trematodes and Cestodes)
+    sections:
+    - id: ch28_s28_3
+      title: '28.3 Superphylum Lophotrochozoa: Flatworms, Rotifers, and Nemerteans'
+  phylum_rotifera:
+    label: Phylum Rotifera
+    sections:
+    - id: ch28_s28_3
+      title: '28.3 Superphylum Lophotrochozoa: Flatworms, Rotifers, and Nemerteans'
+  phylum_nemertea:
+    label: Phylum Nemertea (Ribbon Worms)
+    sections:
+    - id: ch28_s28_3
+      title: '28.3 Superphylum Lophotrochozoa: Flatworms, Rotifers, and Nemerteans'
+  phylum_mollusca:
+    label: Phylum Mollusca
+    sections:
+    - id: ch28_s28_4
+      title: '28.4 Superphylum Lophotrochozoa: Mollusks and Annelids'
+  molluscan_body_plan:
+    label: Molluscan Body Plan (Foot, Mantle, Visceral Mass, Radula)
+    sections:
+    - id: ch28_s28_4
+      title: '28.4 Superphylum Lophotrochozoa: Mollusks and Annelids'
+  gastropod_torsion:
+    label: Gastropod Torsion
+    sections:
+    - id: ch28_s28_4
+      title: '28.4 Superphylum Lophotrochozoa: Mollusks and Annelids'
+  molluscan_classes:
+    label: Molluscan Classes
+    sections:
+    - id: ch28_s28_4
+      title: '28.4 Superphylum Lophotrochozoa: Mollusks and Annelids'
+  phylum_annelida:
+    label: Phylum Annelida (Segmented Worms)
+    sections:
+    - id: ch28_s28_4
+      title: '28.4 Superphylum Lophotrochozoa: Mollusks and Annelids'
+  metamerism:
+    label: Metamerism (True Segmentation)
+    sections:
+    - id: ch28_s28_4
+      title: '28.4 Superphylum Lophotrochozoa: Mollusks and Annelids'
+  annelid_classes:
+    label: Annelid Classes (Polychaeta and Oligochaeta)
+    sections:
+    - id: ch28_s28_4
+      title: '28.4 Superphylum Lophotrochozoa: Mollusks and Annelids'
+  superphylum_ecdysozoa:
+    label: Superphylum Ecdysozoa
+    sections:
+    - id: ch28_s28_5
+      title: '28.5 Superphylum Ecdysozoa: Nematodes and Tardigrades'
+    - id: ch28_s28_6
+      title: '28.6 Superphylum Ecdysozoa: Arthropods'
+  cuticle_ecdysis:
+    label: Cuticle and Ecdysis
+    sections:
+    - id: ch28_s28_5
+      title: '28.5 Superphylum Ecdysozoa: Nematodes and Tardigrades'
+    - id: ch28_s28_6
+      title: '28.6 Superphylum Ecdysozoa: Arthropods'
+  phylum_nematoda:
+    label: Phylum Nematoda (Roundworms)
+    sections:
+    - id: ch28_s28_5
+      title: '28.5 Superphylum Ecdysozoa: Nematodes and Tardigrades'
+  c_elegans_model:
+    label: Caenorhabditis elegans as a Model Organism
+    sections:
+    - id: ch28_s28_5
+      title: '28.5 Superphylum Ecdysozoa: Nematodes and Tardigrades'
+  phylum_tardigrada:
+    label: Phylum Tardigrada (Water Bears)
+    sections:
+    - id: ch28_s28_5
+      title: '28.5 Superphylum Ecdysozoa: Nematodes and Tardigrades'
+  cryptobiosis:
+    label: Cryptobiosis
+    sections:
+    - id: ch28_s28_5
+      title: '28.5 Superphylum Ecdysozoa: Nematodes and Tardigrades'
+  phylum_arthropoda:
+    label: Phylum Arthropoda
+    sections:
+    - id: ch28_s28_6
+      title: '28.6 Superphylum Ecdysozoa: Arthropods'
+  arthropod_exoskeleton:
+    label: Arthropod Exoskeleton (Cuticle)
+    sections:
+    - id: ch28_s28_6
+      title: '28.6 Superphylum Ecdysozoa: Arthropods'
+  tagmata_appendages:
+    label: Tagmata and Jointed Appendages
+    sections:
+    - id: ch28_s28_6
+      title: '28.6 Superphylum Ecdysozoa: Arthropods'
+  arthropod_subphyla:
+    label: Arthropod Subphyla (Chelicerata, Myriapoda, Crustacea, Hexapoda)
+    sections:
+    - id: ch28_s28_6
+      title: '28.6 Superphylum Ecdysozoa: Arthropods'
+  superphylum_deuterostomia:
+    label: Superphylum Deuterostomia
+    sections:
+    - id: ch28_s28_7
+      title: 28.7 Superphylum Deuterostomia
+  deuterostome_development:
+    label: Deuterostome Embryonic Development
+    sections:
+    - id: ch28_s28_7
+      title: 28.7 Superphylum Deuterostomia
+  phylum_echinodermata:
+    label: Phylum Echinodermata
+    sections:
+    - id: ch28_s28_7
+      title: 28.7 Superphylum Deuterostomia
+  water_vascular_system:
+    label: Water Vascular System
+    sections:
+    - id: ch28_s28_7
+      title: 28.7 Superphylum Deuterostomia
+  phylum_chordata:
+    label: Phylum Chordata
+    sections:
+    - id: ch28_s28_7
+      title: 28.7 Superphylum Deuterostomia

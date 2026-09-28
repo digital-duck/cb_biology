@@ -1,0 +1,207 @@
+domain: biology_2e_ch41
+primitives:
+  electrolyte:
+    defines: A solute that dissociates into ions when dissolved in water.
+    tier: 0
+  non_electrolyte:
+    defines: A solute that does not dissociate into ions when dissolved in water.
+    tier: 0
+  semi_permeable_membrane:
+    defines: A membrane that is permeable to certain solutes and water but not others.
+    tier: 0
+  passive_diffusion:
+    defines: Movement of water or solutes across a membrane without requiring energy input.
+    tier: 0
+  mole_molarity_molality:
+    defines: Units for expressing solute quantity (mole) and concentration (molarity per liter of solution,
+      molality per kilogram of solvent).
+    tier: 0
+  kidney:
+    defines: The main osmoregulatory organ that filters blood and purifies it, producing urine.
+    tier: 0
+  nitrogenous_waste:
+    defines: Toxic waste products, primarily ammonia, generated from the breakdown of nitrogen-containing
+      macromolecules like proteins and nucleic acids.
+    tier: 0
+  osmoregulatory_hormones:
+    defines: Chemical messengers secreted into the bloodstream that act on the kidneys and vasculature
+      to regulate osmotic balance and blood pressure.
+    tier: 0
+concepts:
+  osmosis:
+    defines: The diffusion of water across a membrane in response to osmotic pressure caused by an imbalance
+      of solute concentration.
+    composed_of:
+    - semi_permeable_membrane
+    - passive_diffusion
+    tier: 1
+  facilitated_diffusion:
+    defines: Movement of solutes across a membrane through protein-based channels, following the concentration
+      gradient.
+    composed_of:
+    - passive_diffusion
+    tier: 1
+  active_transport:
+    defines: Movement of ions across a membrane against their concentration gradient, requiring energy
+      such as ATP and carrier proteins/pumps.
+    composed_of:
+    - electrolyte
+    tier: 1
+  milliequivalent_milliosmole:
+    defines: Units of electrolyte concentration that account for both the number and charge of ions in
+      solution (mEq/L and mOsm).
+    composed_of:
+    - electrolyte
+    - mole_molarity_molality
+    tier: 1
+  kidney_structure:
+    defines: The layered and regional organization of the kidney.
+    composed_of:
+    - kidney
+    tier: 1
+  renal_blood_supply:
+    defines: The branching network of arteries and veins that carry blood into and out of the kidney.
+    composed_of:
+    - kidney
+    tier: 1
+  ammonotelism:
+    defines: The excretion of nitrogenous waste directly as ammonia, typical of aquatic animals.
+    composed_of:
+    - nitrogenous_waste
+    tier: 1
+  urea_cycle:
+    defines: The biochemical pathway by which mammals convert toxic ammonia into urea for excretion.
+    composed_of:
+    - nitrogenous_waste
+    tier: 1
+  uric_acid_pathway:
+    defines: The biochemical pathway by which birds, reptiles, and most terrestrial arthropods convert
+      ammonia into uric acid.
+    composed_of:
+    - nitrogenous_waste
+    tier: 1
+  renin_angiotensin_aldosterone_system:
+    defines: A hormonal pathway in which renin triggers production of angiotensin II, which raises blood
+      pressure and stimulates aldosterone release.
+    composed_of:
+    - osmoregulatory_hormones
+    - kidney
+    tier: 1
+  osmotic_pressure:
+    defines: Pressure exerted on a membrane that drives water movement to equalize solute concentration
+      on either side.
+    composed_of:
+    - osmosis
+    tier: 2
+  nephron:
+    defines: The functional unit of the kidney, consisting of a renal corpuscle, renal tubule, and associated
+      capillary network.
+    composed_of:
+    - kidney_structure
+    - renal_blood_supply
+    tier: 2
+  tonicity:
+    defines: The relative solute concentration of a solution compared to another, determining whether
+      cells swell, shrink, or stay the same size.
+    composed_of:
+    - osmotic_pressure
+    tier: 3
+  renal_corpuscle:
+    defines: The glomerulus and its surrounding Bowman's capsule, together forming the blood-filtering
+      structure of the nephron.
+    composed_of:
+    - nephron
+    tier: 3
+  renal_tubule:
+    defines: The convoluted structure emerging from the glomerulus, divided into the proximal convoluted
+      tubule, loop of Henle, and distal convoluted tubule.
+    composed_of:
+    - nephron
+    tier: 3
+  nephron_capillary_network:
+    defines: The afferent and efferent arterioles and peritubular capillaries that supply and exchange
+      with the nephron.
+    composed_of:
+    - nephron
+    - renal_blood_supply
+    tier: 3
+  osmoregulation:
+    defines: The process of maintaining salt and water balance across membranes within the body's fluids.
+    composed_of:
+    - tonicity
+    - osmosis
+    tier: 4
+  urine_formation:
+    defines: The three-step process by which the kidney generates urine.
+    composed_of:
+    - renal_corpuscle
+    - renal_tubule
+    - nephron_capillary_network
+    tier: 4
+  glomerular_filtration:
+    defines: The passive filtering of blood solutes out of the glomerular capillaries into the glomerulus
+      due to blood pressure.
+    composed_of:
+    - renal_corpuscle
+    - passive_diffusion
+    tier: 4
+  tubular_reabsorption:
+    defines: The reclamation of water and solutes from the filtrate back into the peritubular capillaries.
+    composed_of:
+    - renal_tubule
+    - nephron_capillary_network
+    tier: 4
+  tubular_secretion:
+    defines: The process of secreting additional solutes and wastes into the kidney tubules.
+    composed_of:
+    - renal_tubule
+    - nephron_capillary_network
+    tier: 4
+  countercurrent_multiplier_exchanger:
+    defines: The mechanism by which the loop of Henle and vasa recta create and maintain the osmotic gradient
+      needed to concentrate urine.
+    composed_of:
+    - renal_tubule
+    - nephron_capillary_network
+    - osmotic_pressure
+    tier: 4
+  juxtaglomerular_complex:
+    defines: An endocrine structure formed by the macula densa and juxtaglomerular cells that secretes
+      renin and erythropoietin.
+    composed_of:
+    - nephron
+    - renal_corpuscle
+    tier: 4
+  aldosterone_function:
+    defines: A mineralocorticoid hormone from the adrenal cortex that promotes sodium (and water) reabsorption
+      in the renal tubules.
+    composed_of:
+    - renin_angiotensin_aldosterone_system
+    - tubular_reabsorption
+    tier: 5
+  antidiuretic_hormone_function:
+    defines: A hormone that promotes water reabsorption via aquaporins in the collecting ducts.
+    composed_of:
+    - osmoregulatory_hormones
+    - tubular_reabsorption
+    tier: 5
+  atrial_natriuretic_peptide_function:
+    defines: A hormone released by the heart atrium that lowers blood pressure and sodium reabsorption,
+      acting opposite to aldosterone, ADH, and renin.
+    composed_of:
+    - osmoregulatory_hormones
+    - aldosterone_function
+    tier: 6
+applications:
+  invertebrate_excretory_systems:
+    defines: Simpler excretory structures found in microorganisms and invertebrates.
+    needs:
+    - passive_diffusion
+    - semi_permeable_membrane
+    tier: 1
+  osmoregulator_osmoconformer:
+    defines: Organisms that maintain constant internal tonicity versus organisms whose internal tonicity
+      conforms to the external environment.
+    needs:
+    - osmoregulation
+    tier: 5

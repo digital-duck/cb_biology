@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prokaryotic Cell | Biology Ch04</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="prokaryotic-cell-原核细胞">Prokaryotic Cell（原核细胞）</h2>
+<p><strong>定义</strong></p>
+<p>原核细胞是细菌（Bacteria）和古菌（Archaea）这两大生命域的基本组成单位，结构简单、通常为单细胞生物。它最核心的特征是<strong>没有核膜包被的细胞核</strong>：遗传物质——通常是一条环状 DNA——直接盘绕在细胞质中一个称为<strong>拟核（nucleoid）</strong>的区域，没有膜将其与周围细胞质隔开。原核细胞同样缺乏线粒体、内质网、高尔基体等膜结合细胞器。尽管结构看似简单，原核生物在代谢方式上却极为多样，能够在强酸、高温、高盐甚至无氧的极端环境中生存。</p>
+<p><strong>结构要点与实例分析</strong></p>
+<p>以大肠杆菌（<em>E. coli</em>）为例：细胞外层由细胞壁和细胞膜包裹，起维持形态和保护作用；细胞质中散布的核糖体明显小于真核细胞的核糖体，负责合成蛋白质。由于遗传物质裸露在细胞质中、没有核膜阻隔，原核细胞的转录与翻译几乎可以同步进行，这使其基因表达速度远快于真核细胞，也是细菌种群能在数十分钟内完成一次分裂增殖的重要原因。</p>
+<p><strong>问题解决应用</strong></p>
+<p>拟核结构直接决定了原核细胞对某些药物的敏感性，这一点在解释抗生素的选择性作用时尤为关键。许多抗生素（如青霉素）通过破坏细菌特有的细胞壁合成，或结合细菌较小的核糖体来阻断蛋白质合成；而人体细胞（真核细胞）没有细胞壁，核糖体结构也不同，因此不会受到这些药物的影响。这正是抗生素能"精准打击"细菌而不伤害宿主细胞的结构基础——理解原核细胞与真核细胞在细胞壁、核糖体等结构上的差异，是设计新型抗菌药物、选择合适分子靶点时首先要考虑的问题。</p>
+<pre class="mermaid">graph TD
+    A[细胞类型] --> B[原核细胞]
+    A --> C[真核细胞]
+    B --> B1["无核膜；DNA为环状，位于拟核"]
+    B --> B2["核糖体较小"]
+    B --> B3["无膜结合细胞器"]
+    C --> C1["有核膜包裹的细胞核；DNA为线状"]
+    C --> C2["核糖体较大"]
+    C --> C3["含线粒体等膜结合细胞器"]</pre>
+<p><em>图示：原核细胞与真核细胞在核结构、DNA形态、核糖体大小及细胞器方面的主要差异对比。</em></p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Biology 2e Ch4: Cell Structure (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

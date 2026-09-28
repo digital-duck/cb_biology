@@ -1,0 +1,177 @@
+domain: biology_2e_ch39
+sources:
+  gas_exchange:
+    label: Gas Exchange
+    sections:
+    - id: ch39_s39_1
+      title: 39.1 Systems of Gas Exchange
+  diffusion:
+    label: Diffusion
+    sections:
+    - id: ch39_s39_1
+      title: 39.1 Systems of Gas Exchange
+    - id: ch39_s39_2
+      title: 39.2 Gas Exchange across Respiratory Surfaces
+  respiratory_surface:
+    label: Respiratory Surface
+    sections:
+    - id: ch39_s39_1
+      title: 39.1 Systems of Gas Exchange
+  direct_diffusion_respiration:
+    label: Direct Diffusion Respiration
+    sections:
+    - id: ch39_s39_1
+      title: 39.1 Systems of Gas Exchange
+  cutaneous_respiration:
+    label: Cutaneous (Skin) Respiration
+    sections:
+    - id: ch39_s39_1
+      title: 39.1 Systems of Gas Exchange
+    - id: ch39_s39_3
+      title: 39.3 Breathing
+  gills:
+    label: Gills
+    sections:
+    - id: ch39_s39_1
+      title: 39.1 Systems of Gas Exchange
+    - id: ch39_s39_3
+      title: 39.3 Breathing
+  tracheal_system:
+    label: Tracheal System
+    sections:
+    - id: ch39_s39_1
+      title: 39.1 Systems of Gas Exchange
+  mammalian_respiratory_tract:
+    label: Mammalian Respiratory Tract
+    sections:
+    - id: ch39_s39_1
+      title: 39.1 Systems of Gas Exchange
+  alveolus:
+    label: Alveolus
+    sections:
+    - id: ch39_s39_1
+      title: 39.1 Systems of Gas Exchange
+    - id: ch39_s39_2
+      title: 39.2 Gas Exchange across Respiratory Surfaces
+  respiratory_protective_mechanisms:
+    label: Respiratory Protective Mechanisms
+    sections:
+    - id: ch39_s39_1
+      title: 39.1 Systems of Gas Exchange
+  lung_volume:
+    label: Lung Volume
+    sections:
+    - id: ch39_s39_2
+      title: 39.2 Gas Exchange across Respiratory Surfaces
+  lung_capacity:
+    label: Lung Capacity
+    sections:
+    - id: ch39_s39_2
+      title: 39.2 Gas Exchange across Respiratory Surfaces
+  spirometry:
+    label: Spirometry
+    sections:
+    - id: ch39_s39_2
+      title: 39.2 Gas Exchange across Respiratory Surfaces
+  fev1_fvc_ratio:
+    label: FEV1/FVC Ratio
+    sections:
+    - id: ch39_s39_2
+      title: 39.2 Gas Exchange across Respiratory Surfaces
+    - id: ch39_s39_3
+      title: 39.3 Breathing
+  partial_pressure:
+    label: Partial Pressure
+    sections:
+    - id: ch39_s39_2
+      title: 39.2 Gas Exchange across Respiratory Surfaces
+  gas_pressure_gradient_exchange:
+    label: Gas Exchange Driven by Pressure Gradients
+    sections:
+    - id: ch39_s39_2
+      title: 39.2 Gas Exchange across Respiratory Surfaces
+  respiratory_quotient:
+    label: Respiratory Quotient (RQ)
+    sections:
+    - id: ch39_s39_2
+      title: 39.2 Gas Exchange across Respiratory Surfaces
+  boyles_law:
+    label: Boyle's Law
+    sections:
+    - id: ch39_s39_3
+      title: 39.3 Breathing
+  mechanics_of_breathing:
+    label: Mechanics of Breathing
+    sections:
+    - id: ch39_s39_3
+      title: 39.3 Breathing
+  pleura:
+    label: Pleura
+    sections:
+    - id: ch39_s39_3
+      title: 39.3 Breathing
+  respiratory_rate:
+    label: Respiratory Rate
+    sections:
+    - id: ch39_s39_3
+      title: 39.3 Breathing
+  alveolar_ventilation:
+    label: Alveolar Ventilation
+    sections:
+    - id: ch39_s39_3
+      title: 39.3 Breathing
+  surfactant:
+    label: Surfactant
+    sections:
+    - id: ch39_s39_3
+      title: 39.3 Breathing
+  lung_compliance_resistance:
+    label: Lung Compliance and Resistance
+    sections:
+    - id: ch39_s39_3
+      title: 39.3 Breathing
+  vq_mismatch:
+    label: Ventilation/Perfusion (V/Q) Mismatch
+    sections:
+    - id: ch39_s39_3
+      title: 39.3 Breathing
+  hemoglobin:
+    label: Hemoglobin
+    sections:
+    - id: ch39_s39_4
+      title: 39.4 Transport of Gases in Human Bodily Fluids
+  oxygen_dissociation_curve:
+    label: Oxygen Dissociation Curve
+    sections:
+    - id: ch39_s39_4
+      title: 39.4 Transport of Gases in Human Bodily Fluids
+  oxygen_transport:
+    label: Oxygen Transport in Blood
+    sections:
+    - id: ch39_s39_4
+      title: 39.4 Transport of Gases in Human Bodily Fluids
+  bicarbonate_buffer_system:
+    label: Bicarbonate Buffer System
+    sections:
+    - id: ch39_s39_4
+      title: 39.4 Transport of Gases in Human Bodily Fluids
+  carbon_dioxide_transport:
+    label: Carbon Dioxide Transport in Blood
+    sections:
+    - id: ch39_s39_4
+      title: 39.4 Transport of Gases in Human Bodily Fluids
+  chloride_shift:
+    label: Chloride Shift
+    sections:
+    - id: ch39_s39_4
+      title: 39.4 Transport of Gases in Human Bodily Fluids
+  hemoglobinopathies:
+    label: Hemoglobin-Related Disorders
+    sections:
+    - id: ch39_s39_4
+      title: 39.4 Transport of Gases in Human Bodily Fluids
+  carbon_monoxide_poisoning:
+    label: Carbon Monoxide Poisoning
+    sections:
+    - id: ch39_s39_4
+      title: 39.4 Transport of Gases in Human Bodily Fluids

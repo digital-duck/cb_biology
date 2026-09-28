@@ -1,0 +1,153 @@
+domain: biology_2e_ch25
+primitives:
+  archaeplastida:
+    defines: A protist supergroup including red algae, green algae, and land plants, united by shared
+      photosynthetic ancestry.
+    tier: 0
+  green_algae:
+    defines: Photosynthetic Archaeplastida (chlorophytes and charophytes) sharing chlorophyll a/b, carotenoids,
+      starch storage, and cellulose walls with land plants.
+    tier: 0
+  desiccation:
+    defines: The drying out of tissues exposed to air, the central survival challenge plants faced in
+      colonizing land.
+    tier: 0
+  gametophyte:
+    defines: The multicellular haploid phase of a plant life cycle that produces gametes by mitosis.
+    tier: 0
+  sporophyte:
+    defines: The multicellular diploid phase of a plant life cycle, arising from the zygote, that produces
+      spores by meiosis.
+    tier: 0
+  gametangium:
+    defines: A structure on the gametophyte (antheridium or archegonium) in which gametes are produced
+      by mitosis.
+    tier: 0
+  sporangium:
+    defines: A reproductive sac on the sporophyte in which diploid sporocytes undergo meiosis to form
+      haploid spores.
+    tier: 0
+  sporopollenin:
+    defines: A tough, degradation-resistant polymer that forms the thick walls of spores and pollen grains.
+    tier: 0
+  apical_meristem:
+    defines: A zone of mitotically active, undifferentiated cells at shoot and root tips that drives plant
+      elongation.
+    tier: 0
+  lignin:
+    defines: A rigid, hydrophobic polymer incorporated into cell walls that provides mechanical support
+      and waterproofing.
+    tier: 0
+  cuticle:
+    defines: A waterproof covering on leaves and stems that resists desiccation.
+    tier: 0
+concepts:
+  charophytes:
+    defines: The green algal group (Charales, Coleochaetales, Zygnematales) considered the closest algal
+      relatives of land plants based on shared traits and DNA analysis.
+    composed_of:
+    - green_algae
+    tier: 1
+  alternation_of_generations:
+    defines: A haplodiplontic life cycle found in all plants in which multicellular haploid gametophyte
+      and diploid sporophyte stages alternate.
+    composed_of:
+    - gametophyte
+    - sporophyte
+    tier: 1
+  homospory_heterospory:
+    defines: The distinction between producing one spore type (homosporous) versus two differently sized
+      spore types, microspores and megaspores (heterosporous).
+    composed_of:
+    - sporangium
+    tier: 1
+  stomata:
+    defines: Pores that open and close via guard cells to regulate gas and water vapor exchange while
+      limiting water loss.
+    composed_of:
+    - cuticle
+    - desiccation
+    tier: 1
+  vascular_tissue:
+    defines: Conductive tissue system consisting of lignified xylem, which transports water and minerals,
+      and phloem, which transports photosynthetic sugars.
+    composed_of:
+    - lignin
+    tier: 1
+  streptophytes:
+    defines: A monophyletic group comprising land plants and charophyte green algae, distinguished from
+      chlorophytes by phragmoplasts, plasmodesmata, and apical growth.
+    composed_of:
+    - charophytes
+    - apical_meristem
+    tier: 2
+  land_plant_adaptations:
+    defines: The suite of four traits—alternation of generations, apical meristems, cuticle, and lignified
+      cell walls—that enabled plants to survive on land.
+    composed_of:
+    - alternation_of_generations
+    - apical_meristem
+    - cuticle
+    - lignin
+    tier: 2
+  roots:
+    defines: Vascularized organs that anchor plants and absorb water and minerals from soil, replacing
+      the simple rhizoids of non-vascular plants.
+    composed_of:
+    - vascular_tissue
+    tier: 2
+  leaves:
+    defines: Photosynthetic organs with vascular veins, occurring as small single-veined microphylls or
+      larger multi-veined megaphylls.
+    composed_of:
+    - vascular_tissue
+    tier: 2
+  non_vascular_plants:
+    defines: Seedless land plants (liverworts, hornworts, mosses) lacking vascular tissue, with a dominant
+      gametophyte stage dependent on water for fertilization.
+    composed_of:
+    - gametophyte
+    - land_plant_adaptations
+    tier: 3
+  seedless_vascular_plants:
+    defines: Plants possessing vascular tissue, roots, and leaves but no seeds, with a dominant sporophyte
+      stage still requiring water for flagellated sperm to reach eggs.
+    composed_of:
+    - vascular_tissue
+    - roots
+    - leaves
+    - sporophyte
+    tier: 3
+  sporophylls_and_strobili:
+    defines: Leaves structurally modified to bear sporangia, sometimes clustered into cone-like strobili.
+    composed_of:
+    - leaves
+    - sporangium
+    tier: 3
+applications:
+  mycorrhizae:
+    defines: A symbiotic association between plant roots (or moss/fungal networks) and fungi that increases
+      nutrient and water absorption in exchange for photosynthetic byproducts.
+    needs:
+    - roots
+    - non_vascular_plants
+    tier: 4
+  coal_formation:
+    defines: The application of ancient Carboniferous seedless vascular plant deposits as the source of
+      coal used as an energy resource today.
+    needs:
+    - seedless_vascular_plants
+    tier: 4
+  moss_pollution_indicator:
+    defines: The use of bryophytes' sensitivity to airborne pollutants, absorbed directly through exposed
+      tissue, as a biological indicator of environmental pollution.
+    needs:
+    - non_vascular_plants
+    tier: 4
+  ecological_and_human_uses_of_seedless_plants:
+    defines: The roles seedless plants play in ecosystems (soil formation, erosion control, primary succession)
+      and in human life (fuel, food, medicine, ornamentals).
+    needs:
+    - seedless_vascular_plants
+    - non_vascular_plants
+    tier: 4

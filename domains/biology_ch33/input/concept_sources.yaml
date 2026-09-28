@@ -1,0 +1,142 @@
+domain: biology_2e_ch33
+sources:
+  body_symmetry:
+    label: Body Symmetry
+    sections:
+    - id: ch33_s33_1
+      title: 33.1 Animal Form and Function
+  diffusion:
+    label: Diffusion
+    sections:
+    - id: ch33_s33_1
+      title: 33.1 Animal Form and Function
+  surface_to_volume_ratio:
+    label: Surface-to-Volume Ratio
+    sections:
+    - id: ch33_s33_1
+      title: 33.1 Animal Form and Function
+  exoskeleton_endoskeleton:
+    label: Exoskeleton and Endoskeleton
+    sections:
+    - id: ch33_s33_1
+      title: 33.1 Animal Form and Function
+  atp_energy_storage:
+    label: ATP and Energy Storage
+    sections:
+    - id: ch33_s33_1
+      title: 33.1 Animal Form and Function
+  metabolic_rate:
+    label: Metabolic Rate (BMR/SMR)
+    sections:
+    - id: ch33_s33_1
+      title: 33.1 Animal Form and Function
+  bioenergetics:
+    label: Bioenergetics
+    sections:
+    - id: ch33_s33_1
+      title: 33.1 Animal Form and Function
+  torpor:
+    label: Torpor
+    sections:
+    - id: ch33_s33_1
+      title: 33.1 Animal Form and Function
+  body_planes_and_cavities:
+    label: Body Planes and Cavities
+    sections:
+    - id: ch33_s33_1
+      title: 33.1 Animal Form and Function
+  epithelial_tissue:
+    label: Epithelial Tissue
+    sections:
+    - id: ch33_s33_2
+      title: 33.2 Animal Primary Tissues
+  epithelial_cell_types:
+    label: Types of Epithelial Cells
+    sections:
+    - id: ch33_s33_2
+      title: 33.2 Animal Primary Tissues
+  connective_tissue:
+    label: Connective Tissue
+    sections:
+    - id: ch33_s33_2
+      title: 33.2 Animal Primary Tissues
+  connective_tissue_types:
+    label: Types of Connective Tissue
+    sections:
+    - id: ch33_s33_2
+      title: 33.2 Animal Primary Tissues
+  muscle_tissue:
+    label: Muscle Tissue
+    sections:
+    - id: ch33_s33_2
+      title: 33.2 Animal Primary Tissues
+  nervous_tissue:
+    label: Nervous Tissue
+    sections:
+    - id: ch33_s33_3
+      title: 33.3 Homeostasis
+  homeostasis:
+    label: Homeostasis
+    sections:
+    - id: ch33_s33_3
+      title: 33.3 Homeostasis
+  stimulus_receptor_effector:
+    label: Stimulus-Receptor-Effector Pathway
+    sections:
+    - id: ch33_s33_3
+      title: 33.3 Homeostasis
+  set_point:
+    label: Set Point
+    sections:
+    - id: ch33_s33_3
+      title: 33.3 Homeostasis
+  negative_feedback_loop:
+    label: Negative Feedback Loop
+    sections:
+    - id: ch33_s33_3
+      title: 33.3 Homeostasis
+  positive_feedback_loop:
+    label: Positive Feedback Loop
+    sections:
+    - id: ch33_s33_3
+      title: 33.3 Homeostasis
+  acclimatization:
+    label: Acclimatization
+    sections:
+    - id: ch33_s33_3
+      title: 33.3 Homeostasis
+  endotherm_ectotherm:
+    label: Endotherms and Ectotherms
+    sections:
+    - id: ch33_s33_3
+      title: 33.3 Homeostasis
+  heat_exchange_mechanisms:
+    label: Heat Exchange Mechanisms
+    sections:
+    - id: ch33_s33_3
+      title: 33.3 Homeostasis
+  thermoregulation:
+    label: Thermoregulation
+    sections:
+    - id: ch33_s33_3
+      title: 33.3 Homeostasis
+  fever_response:
+    label: Fever Response
+    sections:
+    - id: ch33_s33_3
+      title: 33.3 Homeostasis
+  blood_glucose_regulation:
+    label: Blood Glucose Regulation
+    sections:
+    - id: ch33_s33_3
+      title: 33.3 Homeostasis
+  blood_clotting_cascade:
+    label: Blood Clotting Cascade
+    sections:
+    - id: ch33_s33_3
+      title: 33.3 Homeostasis
+  childbirth_oxytocin:
+    label: Childbirth and Oxytocin
+    sections:
+    - id: ch33_s33_3
+      title: 33.3 Homeostasis

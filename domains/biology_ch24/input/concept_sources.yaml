@@ -1,0 +1,151 @@
+domain: biology_2e_ch24
+sources:
+  fungus:
+    label: Fungus (Kingdom Fungi)
+    sections:
+    - id: ch24_s24_1
+      title: 24.1 Characteristics of Fungi
+  eukaryotic_cell_structure:
+    label: Eukaryotic Cell Structure
+    sections:
+    - id: ch24_s24_1
+      title: 24.1 Characteristics of Fungi
+  chitin_cell_wall:
+    label: Chitin Cell Wall
+    sections:
+    - id: ch24_s24_1
+      title: 24.1 Characteristics of Fungi
+  heterotrophic_nutrition:
+    label: Heterotrophic Nutrition
+    sections:
+    - id: ch24_s24_1
+      title: 24.1 Characteristics of Fungi
+  hypha:
+    label: Hypha
+    sections:
+    - id: ch24_s24_1
+      title: 24.1 Characteristics of Fungi
+  septum:
+    label: Septum
+    sections:
+    - id: ch24_s24_1
+      title: 24.1 Characteristics of Fungi
+  coenocytic_hypha:
+    label: Coenocytic Hypha
+    sections:
+    - id: ch24_s24_1
+      title: 24.1 Characteristics of Fungi
+  mycelium:
+    label: Mycelium
+    sections:
+    - id: ch24_s24_1
+      title: 24.1 Characteristics of Fungi
+  yeast:
+    label: Yeast
+    sections:
+    - id: ch24_s24_1
+      title: 24.1 Characteristics of Fungi
+  spore:
+    label: Spore
+    sections:
+    - id: ch24_s24_1
+      title: 24.1 Characteristics of Fungi
+  asexual_reproduction:
+    label: Asexual Reproduction in Fungi
+    sections:
+    - id: ch24_s24_1
+      title: 24.1 Characteristics of Fungi
+  sexual_reproduction:
+    label: Sexual Reproduction in Fungi
+    sections:
+    - id: ch24_s24_1
+      title: 24.1 Characteristics of Fungi
+    - id: ch24_s24_2
+      title: 24.2 Classifications of Fungi
+  plasmogamy:
+    label: Plasmogamy
+    sections:
+    - id: ch24_s24_1
+      title: 24.1 Characteristics of Fungi
+  karyogamy:
+    label: Karyogamy
+    sections:
+    - id: ch24_s24_1
+      title: 24.1 Characteristics of Fungi
+  fungal_phyla_classification:
+    label: Classification of Fungal Phyla
+    sections:
+    - id: ch24_s24_2
+      title: 24.2 Classifications of Fungi
+  chytridiomycota:
+    label: Chytridiomycota (Chytrids)
+    sections:
+    - id: ch24_s24_2
+      title: 24.2 Classifications of Fungi
+  zygomycota:
+    label: Zygomycota (Conjugated Fungi)
+    sections:
+    - id: ch24_s24_2
+      title: 24.2 Classifications of Fungi
+  ascomycota:
+    label: Ascomycota (Sac Fungi)
+    sections:
+    - id: ch24_s24_2
+      title: 24.2 Classifications of Fungi
+  basidiomycota:
+    label: Basidiomycota (Club Fungi)
+    sections:
+    - id: ch24_s24_2
+      title: 24.2 Classifications of Fungi
+  glomeromycota:
+    label: Glomeromycota
+    sections:
+    - id: ch24_s24_2
+      title: 24.2 Classifications of Fungi
+  symbiosis:
+    label: Symbiosis
+    sections:
+    - id: ch24_s24_3
+      title: 24.3 Ecology of Fungi
+    - id: ch24_s24_4
+      title: 24.4 Fungal Parasites and Pathogens
+  mutualism:
+    label: Mutualism
+    sections:
+    - id: ch24_s24_3
+      title: 24.3 Ecology of Fungi
+  mycorrhiza:
+    label: Mycorrhiza
+    sections:
+    - id: ch24_s24_3
+      title: 24.3 Ecology of Fungi
+  lichen:
+    label: Lichen
+    sections:
+    - id: ch24_s24_3
+      title: 24.3 Ecology of Fungi
+  fungal_decomposition_ecology:
+    label: Fungal Decomposition and Nutrient Cycling
+    sections:
+    - id: ch24_s24_3
+      title: 24.3 Ecology of Fungi
+  parasitism:
+    label: Parasitism
+    sections:
+    - id: ch24_s24_4
+      title: 24.4 Fungal Parasites and Pathogens
+  mycosis:
+    label: Mycosis
+    sections:
+    - id: ch24_s24_4
+      title: 24.4 Fungal Parasites and Pathogens
+  fungal_toxins:
+    label: Fungal Toxins (Mycotoxicosis and Mycetismus)
+    sections:
+    - id: ch24_s24_4
+      title: 24.4 Fungal Parasites and Pathogens
+  fungi_in_human_life:
+    label: Importance of Fungi in Human Life
+    sections:
+    - id: ch24_s24_5
+      title: 24.5 Importance of Fungi in Human Life

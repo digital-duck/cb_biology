@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dna | Biology Ch04</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="dna">Dna</h2>
+<p>脱氧核糖核酸（DNA，deoxyribonucleic acid）是几乎所有细胞用来储存遗传信息的分子。DNA 由两条互补的核苷酸链组成，通过碱基互补配对原则反向平行盘绕成双螺旋结构：腺嘌呤（A）与胸腺嘧啶（T）以两个氢键配对，鸟嘌呤（G）与胞嘧啶（C）以三个氢键配对。这种配对规则不仅赋予 DNA 稳定性，也是其能够精确复制、忠实传递遗传信息的化学基础——子链的碱基序列完全由模板链决定。</p>
+<p>不过，DNA 在原核生物和真核生物中的组织方式截然不同。原核生物（如细菌）的 DNA 通常是一个环状分子，游离于细胞质中的"拟核"区域，没有膜包被，长度较短，且很少与蛋白质结合。真核生物（如动植物细胞）的 DNA 是线性的，储存在细胞核内，并与组蛋白紧密缠绕形成染色质，进一步压缩折叠成染色体，这样才能把长达数米的 DNA 塞进直径仅几微米的细胞核。</p>
+<p><strong>应用实例</strong>：假设某双链 DNA 片段一条链的序列为 5'-ATGCCGTA-3'，其互补链应为 3'-TACGGCAT-5'（书写为 5'→3' 方向则为 5'-TACGGCAT-3'）。这种互补性正是 PCR（聚合酶链式反应）技术和基因测序引物设计的基础：只要知道一条链的序列，就能推断出互补链，从而设计出能特异性结合目标片段的探针或引物。</p>
+<p><strong>解决问题</strong>：科学家如何判断一段未知 DNA 来自原核生物还是真核生物？可通过观察其组织形式——环状且无组蛋白结合提示原核起源；线性且与组蛋白共同构成染色质结构则提示真核起源。这一判断原则被广泛应用于宏基因组学分析和进化关系推断中。</p>
+<pre class="mermaid">graph TD
+    A[DNA 双螺旋结构] --> B[原核生物 DNA]
+    A --> C[真核生物 DNA]
+    B --> B1[环状分子]
+    B --> B2[位于拟核区域]
+    B --> B3[裸露，少结合蛋白质]
+    C --> C1[线性分子]
+    C --> C2[位于细胞核内]
+    C --> C3[与组蛋白结合形成染色质]
+    C3 --> C4[折叠压缩为染色体]</pre>
+<p><em>该图展示了 DNA 在原核生物与真核生物中不同的组织方式及其结构层级。</em></p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Biology 2e Ch4: Cell Structure (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

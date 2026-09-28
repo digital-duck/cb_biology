@@ -1,0 +1,108 @@
+domain: biology_2e_ch27
+primitives:
+  eukaryotic_multicellular_heterotroph:
+    defines: Eukaryotic, multicellular, heterotrophic organization distinguishing animals from autotrophs
+    tier: 0
+  differentiated_tissue:
+    defines: Specialized tissue types carrying out specific functions, distinguishing Eumetazoa
+    tier: 0
+  fertilization_and_zygote:
+    defines: Combination of haploid gametes to produce a diploid zygote, starting embryonic development
+    tier: 0
+  body_symmetry:
+    defines: Arrangement of body parts as asymmetrical, radial, or bilateral
+    tier: 0
+  phylogeny_and_evidence:
+    defines: Study of evolutionary branching relationships informed by morphological, fossil, and molecular
+      data
+    tier: 0
+  geologic_time_periods:
+    defines: Sequential geological periods used to date animal origins (Cryogenian, Ediacaran, Cambrian)
+    tier: 0
+concepts:
+  asexual_and_uniparental_reproduction:
+    defines: Reproductive modes producing offspring without fusion of two gametes
+    composed_of:
+    - fertilization_and_zygote
+    tier: 1
+  cleavage:
+    defines: Mitotic divisions of the zygote subdividing the egg into blastomeres through morula and blastula
+      stages
+    composed_of:
+    - fertilization_and_zygote
+    tier: 1
+  gastrulation:
+    defines: Rearrangement of the blastula into a gastrula, forming the archenteron and germ layers
+    composed_of:
+    - cleavage
+    tier: 2
+  germ_layers:
+    defines: Embryonic cell layers (ectoderm, mesoderm, endoderm) established during gastrulation
+    composed_of:
+    - gastrulation
+    tier: 3
+  organogenesis:
+    defines: Development of germ layers into specific tissue types, organs, and organ systems
+    composed_of:
+    - germ_layers
+    tier: 4
+  diploblasty_triploblasty:
+    defines: Classification by number of germ layers formed (two vs. three including mesoderm)
+    composed_of:
+    - germ_layers
+    tier: 4
+  metamorphosis:
+    defines: Post-embryonic transformation from larval to adult form
+    composed_of:
+    - organogenesis
+    tier: 5
+  hox_genes:
+    defines: Homeobox gene cluster determining body segmentation, appendage placement, and axis directionality
+    composed_of:
+    - organogenesis
+    tier: 5
+  coelom:
+    defines: Mesoderm-derived body cavity between gut and body wall
+    composed_of:
+    - diploblasty_triploblasty
+    tier: 5
+  coelom_type_classification:
+    defines: Subdivision of triploblasts into acoelomate, pseudocoelomate, and eucoelomate
+    composed_of:
+    - coelom
+    tier: 6
+  protostome_deuterostome:
+    defines: Developmental lineages distinguished by blastopore fate, cleavage pattern, and coelom formation
+    composed_of:
+    - coelom_type_classification
+    - cleavage
+    tier: 7
+  animal_clade_hierarchy:
+    defines: Nested classification of animal groups from tissue differentiation, symmetry, and developmental
+      features
+    composed_of:
+    - differentiated_tissue
+    - body_symmetry
+    - protostome_deuterostome
+    - phylogeny_and_evidence
+    tier: 8
+applications:
+  molecular_phylogenetic_revision:
+    defines: Use of molecular data to reclassify animal relationships
+    needs:
+    - phylogeny_and_evidence
+    - animal_clade_hierarchy
+    tier: 9
+  cambrian_explosion:
+    defines: Rapid diversification of most modern animal phyla approximately 542-488 million years ago
+    needs:
+    - geologic_time_periods
+    - animal_clade_hierarchy
+    tier: 9
+  mass_extinction:
+    defines: Events eliminating most extant species within a short geological time, reshaping evolutionary
+      diversification
+    needs:
+    - geologic_time_periods
+    - cambrian_explosion
+    tier: 10

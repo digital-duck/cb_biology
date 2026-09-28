@@ -1,0 +1,127 @@
+domain: biology_2e_ch15
+sources:
+  dna:
+    label: DNA
+    sections:
+    - id: ch15_s15_1
+      title: 15.1 The Genetic Code
+  amino_acid:
+    label: Amino Acid
+    sections:
+    - id: ch15_s15_1
+      title: 15.1 The Genetic Code
+  gene:
+    label: Gene
+    sections:
+    - id: ch15_s15_1
+      title: 15.1 The Genetic Code
+  nucleotide_triplet:
+    label: Nucleotide Triplet (Codon Unit)
+    sections:
+    - id: ch15_s15_1
+      title: 15.1 The Genetic Code
+  central_dogma:
+    label: Central Dogma
+    sections:
+    - id: ch15_s15_1
+      title: 15.1 The Genetic Code
+  genetic_code:
+    label: Genetic Code
+    sections:
+    - id: ch15_s15_1
+      title: 15.1 The Genetic Code
+  codon:
+    label: Codon
+    sections:
+    - id: ch15_s15_1
+      title: 15.1 The Genetic Code
+    - id: ch15_s15_5
+      title: 15.5 Ribosomes and Protein Synthesis
+  reading_frame:
+    label: Reading Frame
+    sections:
+    - id: ch15_s15_1
+      title: 15.1 The Genetic Code
+  template_strand:
+    label: Template Strand / Transcription Bubble
+    sections:
+    - id: ch15_s15_2
+      title: 15.2 Prokaryotic Transcription
+  rna_polymerase:
+    label: RNA Polymerase
+    sections:
+    - id: ch15_s15_2
+      title: 15.2 Prokaryotic Transcription
+    - id: ch15_s15_3
+      title: 15.3 Eukaryotic Transcription
+  promoter:
+    label: Promoter
+    sections:
+    - id: ch15_s15_2
+      title: 15.2 Prokaryotic Transcription
+    - id: ch15_s15_3
+      title: 15.3 Eukaryotic Transcription
+  transcription_initiation:
+    label: Transcription Initiation
+    sections:
+    - id: ch15_s15_2
+      title: 15.2 Prokaryotic Transcription
+    - id: ch15_s15_3
+      title: 15.3 Eukaryotic Transcription
+  transcription_elongation_termination:
+    label: Transcription Elongation and Termination
+    sections:
+    - id: ch15_s15_2
+      title: 15.2 Prokaryotic Transcription
+    - id: ch15_s15_3
+      title: 15.3 Eukaryotic Transcription
+  prokaryotic_transcription:
+    label: Prokaryotic Transcription
+    sections:
+    - id: ch15_s15_2
+      title: 15.2 Prokaryotic Transcription
+  eukaryotic_transcription_factors:
+    label: Eukaryotic Transcription Factors
+    sections:
+    - id: ch15_s15_3
+      title: 15.3 Eukaryotic Transcription
+  eukaryotic_transcription:
+    label: Eukaryotic Transcription
+    sections:
+    - id: ch15_s15_3
+      title: 15.3 Eukaryotic Transcription
+  mrna_processing:
+    label: mRNA Processing (Capping, Poly-A Tail, Splicing)
+    sections:
+    - id: ch15_s15_4
+      title: 15.4 RNA Processing in Eukaryotes
+  splicing:
+    label: Splicing
+    sections:
+    - id: ch15_s15_4
+      title: 15.4 RNA Processing in Eukaryotes
+  trna_rrna_processing:
+    label: tRNA and rRNA Processing
+    sections:
+    - id: ch15_s15_4
+      title: 15.4 RNA Processing in Eukaryotes
+  ribosome:
+    label: Ribosome
+    sections:
+    - id: ch15_s15_5
+      title: 15.5 Ribosomes and Protein Synthesis
+  trna_and_charging:
+    label: tRNA and Aminoacyl-tRNA Charging
+    sections:
+    - id: ch15_s15_5
+      title: 15.5 Ribosomes and Protein Synthesis
+  translation:
+    label: Translation (Protein Synthesis)
+    sections:
+    - id: ch15_s15_5
+      title: 15.5 Ribosomes and Protein Synthesis
+  protein_folding_targeting:
+    label: Protein Folding, Modification, and Targeting
+    sections:
+    - id: ch15_s15_5
+      title: 15.5 Ribosomes and Protein Synthesis

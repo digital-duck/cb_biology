@@ -1,0 +1,156 @@
+domain: biology_2e_ch20
+primitives:
+  phylogeny:
+    defines: The evolutionary history and relationship of an organism or group of organisms.
+    tier: 0
+  branch_point:
+    defines: The point on a phylogenetic tree where a single lineage splits into two or more distinct
+      new lineages.
+    tier: 0
+  taxonomy:
+    defines: The science of classifying organisms using a hierarchical model with internationally shared
+      classification systems.
+    tier: 0
+  taxon:
+    defines: A single named level or group within the taxonomic classification system.
+    tier: 0
+  homology:
+    defines: Similarity in form and genetics between organisms resulting from shared evolutionary ancestry.
+    tier: 0
+  analogy:
+    defines: Similar characteristics that arise from similar environmental constraints rather than close
+      evolutionary relationship.
+    tier: 0
+  horizontal_gene_transfer:
+    defines: The transfer of genetic material between unrelated species by mechanisms other than parent-to-offspring
+      transmission.
+    tier: 0
+concepts:
+  phylogenetic_tree:
+    defines: A diagram used to reflect evolutionary relationships among organisms or groups of organisms,
+      considered a hypothesis of evolutionary history.
+    composed_of:
+    - phylogeny
+    - branch_point
+    tier: 1
+  systematics:
+    defines: The field scientists use to organize and classify organisms based on evolutionary relationships.
+    composed_of:
+    - phylogeny
+    - taxonomy
+    tier: 1
+  taxonomic_classification_levels:
+    defines: The hierarchical categories used to classify organisms with increasing specificity.
+    composed_of:
+    - taxonomy
+    - taxon
+    tier: 1
+  hgt_mechanisms_prokaryotes:
+    defines: The processes by which prokaryotes exchange genetic material horizontally.
+    composed_of:
+    - horizontal_gene_transfer
+    tier: 1
+  endosymbiont_theory:
+    defines: The theory that mitochondria and chloroplasts originated as free-living prokaryotes that
+      became permanent symbionts within primitive eukaryotic cells.
+    composed_of:
+    - horizontal_gene_transfer
+    tier: 1
+  rooted_tree:
+    defines: A phylogenetic tree with a single ancestral lineage from which all represented organisms
+      relate.
+    composed_of:
+    - phylogenetic_tree
+    tier: 2
+  basal_taxon:
+    defines: A lineage that evolved early from the root and remains unbranched.
+    composed_of:
+    - phylogenetic_tree
+    - taxon
+    tier: 2
+  sister_taxa:
+    defines: Two lineages that stem from the same branch point on a phylogenetic tree.
+    composed_of:
+    - phylogenetic_tree
+    - branch_point
+    tier: 2
+  polytomy:
+    defines: A branch point on a phylogenetic tree with more than two lineages, indicating undetermined
+      relationships.
+    composed_of:
+    - phylogenetic_tree
+    - branch_point
+    tier: 2
+  binomial_nomenclature:
+    defines: A two-part scientific naming system for an organism consisting of its genus and species names.
+    composed_of:
+    - taxonomic_classification_levels
+    tier: 2
+  molecular_systematics:
+    defines: The use of molecular (DNA) data in taxonomy and biogeography to determine phylogenetic relationships.
+    composed_of:
+    - systematics
+    tier: 2
+  cladistics:
+    defines: A system that sorts organisms into clades by organizing their homologous traits to describe
+      phylogenies.
+    composed_of:
+    - homology
+    - phylogenetic_tree
+    tier: 2
+  gene_transfer_agent:
+    defines: A bacteriophage-like particle that transfers random genomic segments from one prokaryote
+      species to another.
+    composed_of:
+    - hgt_mechanisms_prokaryotes
+    tier: 2
+  genome_fusion:
+    defines: The fusion of two prokaryotic genomes, presumably through endosymbiosis, proposed as a mechanism
+      for eukaryotic evolution.
+    composed_of:
+    - endosymbiont_theory
+    tier: 2
+  clade:
+    defines: A group of organisms, including all descendants, that share a single common ancestor.
+    composed_of:
+    - cladistics
+    - branch_point
+    tier: 3
+  shared_ancestral_character:
+    defines: A characteristic found in the ancestor of a group and present in all organisms of that taxon
+      or clade.
+    composed_of:
+    - clade
+    tier: 4
+  shared_derived_character:
+    defines: A trait that arose at some point in evolution and is present only in a subset of a clade's
+      descendants, not all ancestors.
+    composed_of:
+    - clade
+    tier: 4
+  maximum_parsimony:
+    defines: The principle that evolutionary events probably occurred in the simplest, most obvious way
+      with the fewest major steps.
+    composed_of:
+    - shared_derived_character
+    tier: 5
+applications:
+  ring_of_life:
+    defines: A phylogenetic model proposing that all three domains of life evolved from a single pool
+      of gene-swapping primitive prokaryotes.
+    needs:
+    - horizontal_gene_transfer
+    tier: 1
+  web_of_life:
+    defines: A phylogenetic model proposing eukaryotes evolved from a pool of many species sharing genes
+      via horizontal gene transfer, resembling a web rather than a single tree.
+    needs:
+    - horizontal_gene_transfer
+    - phylogenetic_tree
+    tier: 2
+  eukaryote_evolution_hypotheses:
+    defines: Competing proposals for the order in which eukaryotic cell features arose.
+    needs:
+    - endosymbiont_theory
+    - genome_fusion
+    tier: 3

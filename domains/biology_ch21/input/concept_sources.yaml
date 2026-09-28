@@ -1,0 +1,166 @@
+domain: biology_2e_ch21
+sources:
+  virus:
+    label: Virus
+    sections:
+    - id: ch21_s21_1
+      title: 21.1 Viral Evolution, Morphology, and Classification
+  virion:
+    label: Virion
+    sections:
+    - id: ch21_s21_1
+      title: 21.1 Viral Evolution, Morphology, and Classification
+  viral_genome:
+    label: Viral Genome
+    sections:
+    - id: ch21_s21_1
+      title: 21.1 Viral Evolution, Morphology, and Classification
+  capsid:
+    label: Capsid
+    sections:
+    - id: ch21_s21_1
+      title: 21.1 Viral Evolution, Morphology, and Classification
+  viral_envelope:
+    label: Viral Envelope
+    sections:
+    - id: ch21_s21_1
+      title: 21.1 Viral Evolution, Morphology, and Classification
+  viral_receptor:
+    label: Viral Receptor
+    sections:
+    - id: ch21_s21_1
+      title: 21.1 Viral Evolution, Morphology, and Classification
+    - id: ch21_s21_2
+      title: 21.2 Virus Infections and Hosts
+  viral_origin_hypotheses:
+    label: Hypotheses of Viral Evolution
+    sections:
+    - id: ch21_s21_1
+      title: 21.1 Viral Evolution, Morphology, and Classification
+  viral_classification_by_structure:
+    label: Classification by Genome and Capsid Structure
+    sections:
+    - id: ch21_s21_1
+      title: 21.1 Viral Evolution, Morphology, and Classification
+  baltimore_classification:
+    label: Baltimore Classification
+    sections:
+    - id: ch21_s21_1
+      title: 21.1 Viral Evolution, Morphology, and Classification
+    - id: ch21_s21_2
+      title: 21.2 Virus Infections and Hosts
+  dna_virus:
+    label: DNA Virus
+    sections:
+    - id: ch21_s21_1
+      title: 21.1 Viral Evolution, Morphology, and Classification
+  rna_virus:
+    label: RNA Virus
+    sections:
+    - id: ch21_s21_1
+      title: 21.1 Viral Evolution, Morphology, and Classification
+  retrovirus:
+    label: Retrovirus
+    sections:
+    - id: ch21_s21_1
+      title: 21.1 Viral Evolution, Morphology, and Classification
+    - id: ch21_s21_2
+      title: 21.2 Virus Infections and Hosts
+  reverse_transcriptase:
+    label: Reverse Transcriptase
+    sections:
+    - id: ch21_s21_1
+      title: 21.1 Viral Evolution, Morphology, and Classification
+    - id: ch21_s21_2
+      title: 21.2 Virus Infections and Hosts
+    - id: ch21_s21_3
+      title: 21.3 Prevention and Treatment of Viral Infections
+  viral_replication_cycle:
+    label: Viral Replication Cycle
+    sections:
+    - id: ch21_s21_2
+      title: 21.2 Virus Infections and Hosts
+  cytopathic_effect:
+    label: Cytopathic Effect
+    sections:
+    - id: ch21_s21_2
+      title: 21.2 Virus Infections and Hosts
+  lytic_cycle:
+    label: Lytic Cycle
+    sections:
+    - id: ch21_s21_2
+      title: 21.2 Virus Infections and Hosts
+  lysogenic_cycle:
+    label: Lysogenic Cycle
+    sections:
+    - id: ch21_s21_2
+      title: 21.2 Virus Infections and Hosts
+  latency:
+    label: Viral Latency
+    sections:
+    - id: ch21_s21_2
+      title: 21.2 Virus Infections and Hosts
+  bacteriophage:
+    label: Bacteriophage
+    sections:
+    - id: ch21_s21_1
+      title: 21.1 Viral Evolution, Morphology, and Classification
+    - id: ch21_s21_2
+      title: 21.2 Virus Infections and Hosts
+  plant_virus_transmission:
+    label: Plant Virus Transmission
+    sections:
+    - id: ch21_s21_2
+      title: 21.2 Virus Infections and Hosts
+  animal_virus_entry:
+    label: Animal Virus Entry Mechanisms
+    sections:
+    - id: ch21_s21_2
+      title: 21.2 Virus Infections and Hosts
+  acute_vs_chronic_infection:
+    label: Acute, Chronic, and Asymptomatic Infection
+    sections:
+    - id: ch21_s21_2
+      title: 21.2 Virus Infections and Hosts
+  oncogenic_virus:
+    label: Oncogenic Virus
+    sections:
+    - id: ch21_s21_2
+      title: 21.2 Virus Infections and Hosts
+  vaccination:
+    label: Vaccination
+    sections:
+    - id: ch21_s21_3
+      title: 21.3 Prevention and Treatment of Viral Infections
+  viral_attenuation:
+    label: Viral Attenuation
+    sections:
+    - id: ch21_s21_3
+      title: 21.3 Prevention and Treatment of Viral Infections
+  antiviral_drug:
+    label: Antiviral Drug
+    sections:
+    - id: ch21_s21_3
+      title: 21.3 Prevention and Treatment of Viral Infections
+  haart:
+    label: Highly Active Anti-Retroviral Therapy (HAART)
+    sections:
+    - id: ch21_s21_3
+      title: 21.3 Prevention and Treatment of Viral Infections
+  viral_medical_applications:
+    label: Medical Applications of Viruses
+    sections:
+    - id: ch21_s21_3
+      title: 21.3 Prevention and Treatment of Viral Infections
+    - id: ch21_s21_4
+      title: '21.4 Other Acellular Entities: Prions and Viroids'
+  prion:
+    label: Prion
+    sections:
+    - id: ch21_s21_4
+      title: '21.4 Other Acellular Entities: Prions and Viroids'
+  viroid:
+    label: Viroid
+    sections:
+    - id: ch21_s21_4
+      title: '21.4 Other Acellular Entities: Prions and Viroids'

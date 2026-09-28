@@ -1,0 +1,335 @@
+domain: biology_2e_ch2
+primitives:
+  matter:
+    defines: Any substance that occupies space and has mass.
+    tier: 0
+  element:
+    defines: A unique form of matter with specific chemical and physical properties that cannot be broken
+      down into smaller substances by ordinary chemical reactions.
+    tier: 0
+  atom:
+    defines: The smallest unit of matter that retains all of an element's chemical properties, composed
+      of a nucleus and orbiting electrons.
+    tier: 0
+  proton:
+    defines: A positively charged subatomic particle located in the nucleus with a mass of about one atomic
+      mass unit.
+    tier: 0
+  neutron:
+    defines: An uncharged subatomic particle located in the nucleus with a mass of about one atomic mass
+      unit.
+    tier: 0
+  electron:
+    defines: A negatively charged subatomic particle found in orbitals surrounding the nucleus, with negligible
+      mass.
+    tier: 0
+concepts:
+  atomic_number:
+    defines: The number of protons in an atom, used to distinguish one element from another.
+    composed_of:
+    - atom
+    - proton
+    tier: 1
+  mass_number:
+    defines: The total number of protons and neutrons in an atom.
+    composed_of:
+    - proton
+    - neutron
+    tier: 1
+  isotope:
+    defines: A form of an element that has the same number of protons but a different number of neutrons
+      than other forms of that element.
+    composed_of:
+    - atomic_number
+    - mass_number
+    tier: 2
+  atomic_weight:
+    defines: The calculated mean of the atomic masses of an element's naturally occurring isotopes.
+    composed_of:
+    - isotope
+    tier: 3
+  radioisotope:
+    defines: An unstable isotope that emits subatomic particles or energy to attain a more stable atomic
+      configuration.
+    composed_of:
+    - isotope
+    tier: 3
+  half_life:
+    defines: The time it takes for half of the original concentration of a radioactive isotope to decay
+      back to its more stable form.
+    composed_of:
+    - radioisotope
+    tier: 4
+  periodic_table:
+    defines: An organizational chart that groups elements by atomic number and shared chemical and physical
+      properties.
+    composed_of:
+    - element
+    - atomic_number
+    tier: 2
+  electron_shell:
+    defines: A model describing electrons as occupying discrete energy levels at specific distances from
+      the nucleus.
+    composed_of:
+    - atom
+    - electron
+    tier: 1
+  electron_orbital:
+    defines: The region surrounding the nucleus where an electron is most likely to be found, described
+      by quantum mechanical wave functions.
+    composed_of:
+    - atom
+    - electron
+    tier: 1
+  electron_configuration:
+    defines: The arrangement of electrons among an atom's shells and subshells, such as 1s2 2s2 2p6.
+    composed_of:
+    - electron_shell
+    - electron_orbital
+    tier: 2
+  valence_shell:
+    defines: The outermost electron shell of an atom, whose electrons determine its chemical reactivity.
+    composed_of:
+    - electron_shell
+    - electron_configuration
+    tier: 3
+  octet_rule:
+    defines: The principle that atoms (other than the innermost shell) are most stable when they have
+      eight electrons in their valence shell.
+    composed_of:
+    - valence_shell
+    tier: 4
+  chemical_bond:
+    defines: An interaction between atoms, formed by donating, accepting, or sharing electrons, that results
+      in the formation of molecules.
+    composed_of:
+    - atom
+    - valence_shell
+    tier: 4
+  molecule:
+    defines: Two or more atoms chemically bonded together.
+    composed_of:
+    - atom
+    - chemical_bond
+    tier: 5
+  chemical_reaction:
+    defines: A process, described by reactants forming products, in which atoms bond together or bonded
+      atoms break apart.
+    composed_of:
+    - chemical_bond
+    - molecule
+    tier: 6
+  ion:
+    defines: An atom or chemical group with an unequal number of protons and electrons, giving it a net
+      charge.
+    composed_of:
+    - atom
+    - proton
+    - electron
+    tier: 1
+  ionic_bond:
+    defines: A chemical bond that forms between ions of opposite charge, such as a cation and an anion.
+    composed_of:
+    - ion
+    - chemical_bond
+    tier: 5
+  covalent_bond:
+    defines: A strong bond formed when two atoms share one or more pairs of electrons to satisfy the octet
+      rule.
+    composed_of:
+    - octet_rule
+    - chemical_bond
+    tier: 5
+  electronegativity:
+    defines: The ability of an atom to attract shared electrons toward its own nucleus, creating partial
+      charges in a bond.
+    composed_of:
+    - covalent_bond
+    tier: 6
+  polar_covalent_bond:
+    defines: A covalent bond in which electrons are shared unequally between atoms, producing partial
+      positive and negative charges.
+    composed_of:
+    - covalent_bond
+    - electronegativity
+    tier: 7
+  nonpolar_covalent_bond:
+    defines: A covalent bond in which electrons are shared equally between atoms of the same or similar
+      electronegativity.
+    composed_of:
+    - covalent_bond
+    - electronegativity
+    tier: 7
+  hydrogen_bond:
+    defines: A weak attraction between a slightly positively charged hydrogen atom and a slightly negatively
+      charged atom in another (or the same) molecule.
+    composed_of:
+    - polar_covalent_bond
+    tier: 8
+  van_der_waals_interaction:
+    defines: A very weak attraction between molecules arising from temporary fluctuations in electron
+      density.
+    composed_of:
+    - molecule
+    tier: 6
+  water_polarity:
+    defines: The property of the water molecule whereby unequal electron sharing gives oxygen a partial
+      negative charge and hydrogen a partial positive charge.
+    composed_of:
+    - polar_covalent_bond
+    - molecule
+    tier: 8
+  specific_heat_capacity:
+    defines: The amount of heat one gram of a substance must absorb or lose to change its temperature
+      by one degree Celsius; unusually high for water due to hydrogen bonding.
+    composed_of:
+    - hydrogen_bond
+    - water_polarity
+    tier: 9
+  heat_of_vaporization:
+    defines: The amount of energy required to change one gram of a liquid substance into a gas, which
+      is high for water because of hydrogen bonding.
+    composed_of:
+    - hydrogen_bond
+    - water_polarity
+    tier: 9
+  solvent:
+    defines: A substance, such as water, capable of dissolving polar molecules and ionic compounds.
+    composed_of:
+    - water_polarity
+    - ionic_bond
+    tier: 9
+  sphere_of_hydration:
+    defines: The shell of water molecules that surrounds and separates a dissolved ion or polar particle.
+    composed_of:
+    - solvent
+    - ion
+    tier: 10
+  dissociation:
+    defines: The breaking off of atoms or ions from a molecule, such as an ionic compound splitting into
+      ions in water.
+    composed_of:
+    - sphere_of_hydration
+    - ionic_bond
+    tier: 11
+  cohesion:
+    defines: The attraction between water molecules to one another due to hydrogen bonding, producing
+      surface tension.
+    composed_of:
+    - hydrogen_bond
+    - water_polarity
+    tier: 9
+  surface_tension:
+    defines: The capacity of a liquid surface to withstand rupture, resulting from cohesive forces between
+      molecules.
+    composed_of:
+    - cohesion
+    tier: 10
+  adhesion:
+    defines: The attraction between water molecules and other (often charged) molecules or surfaces.
+    composed_of:
+    - hydrogen_bond
+    - water_polarity
+    tier: 9
+  ph_scale:
+    defines: A scale from 0 to 14 that measures the concentration of hydrogen ions in a solution as the
+      negative log of that concentration.
+    composed_of:
+    - ion
+    - dissociation
+    tier: 12
+  acid:
+    defines: A substance that increases the concentration of hydrogen ions (H+) in a solution.
+    composed_of:
+    - ph_scale
+    - dissociation
+    tier: 13
+  base:
+    defines: A substance that provides hydroxide ions or otherwise reduces the hydrogen ion concentration
+      of a solution, raising its pH.
+    composed_of:
+    - ph_scale
+    - dissociation
+    tier: 13
+  buffer:
+    defines: A substance that resists changes in pH by absorbing or releasing hydrogen or hydroxide ions.
+    composed_of:
+    - acid
+    - base
+    tier: 14
+  carbon_bonding:
+    defines: Carbon's ability, due to four electrons in its outer shell, to form up to four covalent bonds
+      with other atoms, making it the structural backbone of macromolecules.
+    composed_of:
+    - covalent_bond
+    - valence_shell
+    tier: 5
+  hydrocarbon:
+    defines: An organic molecule composed entirely of carbon and hydrogen atoms.
+    composed_of:
+    - carbon_bonding
+    - molecule
+    tier: 6
+  isomer:
+    defines: One of two or more molecules that share the same chemical formula but differ in the arrangement
+      of their atoms or bonds.
+    composed_of:
+    - hydrocarbon
+    - chemical_bond
+    tier: 7
+  structural_isomer:
+    defines: An isomer that differs from another in the placement of its covalent bonds among the same
+      atoms.
+    composed_of:
+    - isomer
+    - covalent_bond
+    tier: 8
+  geometric_isomer:
+    defines: An isomer with similar bonding patterns that differs in the spatial arrangement of atoms
+      around a double bond, described as cis or trans.
+    composed_of:
+    - isomer
+    - covalent_bond
+    tier: 8
+  enantiomer:
+    defines: A molecule that shares the same structure and bonds as another but is its non-superimposable
+      mirror image.
+    composed_of:
+    - isomer
+    tier: 8
+  functional_group:
+    defines: A group of atoms attached to a carbon backbone that confers specific chemical properties
+      to a molecule.
+    composed_of:
+    - carbon_bonding
+    - molecule
+    tier: 6
+applications:
+  carbon_dating:
+    defines: A technique that uses the known half-life and decay of carbon-14 to determine the age of
+      formerly living materials.
+    needs:
+    - half_life
+    - radioisotope
+    tier: 5
+  electrolytes:
+    defines: Salts, such as sodium, potassium, and calcium ions, necessary for nerve impulse conduction,
+      muscle contraction, and water balance.
+    needs:
+    - ion
+    - dissociation
+    tier: 12
+  capillary_action:
+    defines: The rise of water within a narrow tube caused by adhesive forces between water and the tube's
+      charged surface exceeding water's cohesive forces.
+    needs:
+    - adhesion
+    - cohesion
+    tier: 10
+  blood_ph_buffering:
+    defines: The carbonic acid/bicarbonate/carbon dioxide system that maintains near-neutral blood pH
+      in the body.
+    needs:
+    - buffer
+    - ph_scale
+    tier: 15

@@ -1,0 +1,231 @@
+domain: biology_2e_ch29
+primitives:
+  notochord:
+    defines: A flexible, rod-shaped mesodermal support structure found in the embryonic stage of all chordates
+      and in the adult stage of some.
+    tier: 0
+  dorsal_hollow_nerve_cord:
+    defines: A hollow, tubular nerve structure derived from ectoderm, located dorsal to the notochord
+      in chordates.
+    tier: 0
+  pharyngeal_slits:
+    defines: Openings in the pharynx that extend to the outside environment, used for feeding or gas exchange
+      in chordates.
+    tier: 0
+  post_anal_tail:
+    defines: A muscular, posterior elongation of the body extending beyond the anus, found in chordates.
+    tier: 0
+  endostyle:
+    defines: A ciliated, mucus-producing strip of tissue in the pharynx floor that traps food and is homologous
+      to the vertebrate thyroid gland.
+    tier: 0
+  cranium:
+    defines: A bony, cartilaginous, or fibrous structure surrounding the brain, jaw, and facial bones,
+      defining the clade Craniata.
+    tier: 0
+  lateral_line_system:
+    defines: A sensory organ system running along a fish's body that detects movement and vibration in
+      surrounding water.
+    tier: 0
+  temporal_fenestrae:
+    defines: Post-orbital skull openings whose number distinguishes anapsids, synapsids, and diapsids.
+    tier: 0
+  ectothermy_endothermy:
+    defines: Two strategies of body temperature regulation—relying on environmental heat versus internally
+      generated metabolic heat.
+    tier: 0
+  feathers:
+    defines: Keratinous integumentary structures unique to birds (and their dinosaur ancestors) providing
+      insulation and enabling flight.
+    tier: 0
+  hair:
+    defines: A keratin-based integumentary structure characteristic of mammals, providing insulation,
+      sensation, and signaling.
+    tier: 0
+  mammary_glands:
+    defines: Modified skin glands in mammals that produce milk to nourish newborn offspring.
+    tier: 0
+concepts:
+  chordata:
+    defines: The phylum of deuterostome animals defined by possessing a notochord, dorsal hollow nerve
+      cord, pharyngeal slits, post-anal tail, and endostyle at some developmental stage.
+    composed_of:
+    - notochord
+    - dorsal_hollow_nerve_cord
+    - pharyngeal_slits
+    - post_anal_tail
+    - endostyle
+    tier: 1
+  vertebral_column:
+    defines: A series of separate, irregularly shaped bones joined together to form a backbone, replacing
+      the notochord in vertebrates.
+    composed_of:
+    - notochord
+    tier: 1
+  vertebrata_craniata:
+    defines: The clade of chordates possessing a cranium and (in most members) a vertebral column, distinguishing
+      them from invertebrate chordates.
+    composed_of:
+    - chordata
+    - cranium
+    - vertebral_column
+    tier: 2
+  cephalochordata_urochordata:
+    defines: The two invertebrate chordate clades—lancelets and tunicates—that possess the five chordate
+      characteristics at some life stage but lack a cranium.
+    composed_of:
+    - chordata
+    tier: 2
+  gnathostomes:
+    defines: Vertebrates possessing true hinged jaws, derived from the first gill arch, allowing active
+      predation.
+    composed_of:
+    - vertebrata_craniata
+    tier: 3
+  agnatha:
+    defines: The clade of jawless craniates, including hagfishes and lampreys, lacking jaws and paired
+      fins.
+    composed_of:
+    - vertebrata_craniata
+    tier: 3
+  tetrapods:
+    defines: Vertebrates with a four-limbed evolutionary history, including amphibians, reptiles, birds,
+      and mammals.
+    composed_of:
+    - gnathostomes
+    tier: 4
+  cartilaginous_bony_fishes:
+    defines: The two major gnathostome clades of fishes, distinguished by cartilaginous versus bony skeletons.
+    composed_of:
+    - gnathostomes
+    tier: 4
+  swim_bladder:
+    defines: A gas-filled organ in bony fishes, derived from the gut, that controls buoyancy and is homologous
+      to lungs.
+    composed_of:
+    - cartilaginous_bony_fishes
+    tier: 5
+  amphibian_life_cycle:
+    defines: The dual aquatic-terrestrial life cycle of amphibians, involving a larval stage, metamorphosis,
+      and moist permeable skin used for cutaneous respiration.
+    composed_of:
+    - tetrapods
+    - ectothermy_endothermy
+    tier: 5
+  tetrapod_evolution:
+    defines: The evolutionary transition from lobe-finned fishes to limbed terrestrial vertebrates, documented
+      by transitional fossils.
+    composed_of:
+    - cartilaginous_bony_fishes
+    - tetrapods
+    tier: 5
+  amniotic_egg:
+    defines: A terrestrially adapted egg with four extraembryonic membranes that reduces dependence on
+      water for embryonic development.
+    composed_of:
+    - tetrapods
+    tier: 5
+  amniotes:
+    defines: Tetrapods whose eggs contain four extraembryonic membranes enabling terrestrial reproduction.
+    composed_of:
+    - tetrapods
+    - amniotic_egg
+    tier: 6
+  synapsid_anapsid_diapsid:
+    defines: The three amniote lineages distinguished by their skull temporal fenestrae, giving rise respectively
+      to mammals, extinct forms, and reptiles/birds.
+    composed_of:
+    - amniotes
+    - temporal_fenestrae
+    tier: 7
+  reptile_characteristics:
+    defines: Traits of reptiles including scaly keratinized skin, lung-based respiration, ectothermy,
+      and shelled eggs laid on land.
+    composed_of:
+    - amniotes
+    - ectothermy_endothermy
+    tier: 7
+  archosaur_diversification:
+    defines: The diapsid lineage that diverged into dinosaurs, pterosaurs, crocodilians, and birds during
+      the Mesozoic.
+    composed_of:
+    - synapsid_anapsid_diapsid
+    tier: 8
+  modern_reptile_clades:
+    defines: The four living nonavian reptile clades—Crocodilia, Sphenodontia, Squamata, and Testudines.
+    composed_of:
+    - reptile_characteristics
+    - synapsid_anapsid_diapsid
+    tier: 8
+  mammal_characteristics:
+    defines: Distinguishing mammalian traits including hair, mammary glands, a single-boned lower jaw,
+      heterodont diphyodont teeth, and a four-chambered heart.
+    composed_of:
+    - hair
+    - mammary_glands
+    - synapsid_anapsid_diapsid
+    tier: 8
+  bird_flight_adaptations:
+    defines: Skeletal, muscular, and respiratory modifications in birds that enable powered flight.
+    composed_of:
+    - feathers
+    - archosaur_diversification
+    tier: 9
+  bird_evolution:
+    defines: The evolutionary origin of birds within maniraptoran theropod dinosaurs, evidenced by transitional
+      fossils such as Archaeopteryx.
+    composed_of:
+    - archosaur_diversification
+    - feathers
+    tier: 9
+  mammal_evolution:
+    defines: The evolutionary lineage from pelycosaurs through therapsid cynodonts to early mammals in
+      the late Triassic/early Jurassic.
+    composed_of:
+    - synapsid_anapsid_diapsid
+    - mammal_characteristics
+    tier: 9
+  living_mammal_groups:
+    defines: The three major living mammal clades, distinguished by reproductive strategy—egg-laying,
+      pouched live birth, and placental live birth.
+    composed_of:
+    - mammal_characteristics
+    tier: 9
+  primate_characteristics:
+    defines: Arboreal adaptations shared by primates, including rotating shoulder joints, opposable digits,
+      stereoscopic vision, and enlarged brains.
+    composed_of:
+    - mammal_characteristics
+    tier: 9
+  strepsirrhine_haplorhine:
+    defines: The two primate suborders distinguished by nocturnal/olfactory versus diurnal/visual adaptations.
+    composed_of:
+    - primate_characteristics
+    tier: 10
+  primate_evolution:
+    defines: The evolutionary radiation of proto-primates into prosimians, New and Old World monkeys,
+      and apes over the Cenozoic era.
+    composed_of:
+    - primate_characteristics
+    - mammal_evolution
+    tier: 10
+applications:
+  vertebrate_conservation:
+    defines: The real-world application of classifying vertebrate species by extinction risk due to habitat
+      loss and pollution, and international efforts to protect them.
+    needs:
+    - vertebrata_craniata
+    tier: 3
+  veterinary_medicine:
+    defines: The applied field concerned with diagnosing and treating diseases and injuries across diverse
+      vertebrate species, requiring comparative anatomy knowledge.
+    needs:
+    - vertebrata_craniata
+    - mammal_characteristics
+    tier: 9
+  hominin_evolution:
+    defines: The evolutionary lineage of bipedal hominins—including Australopithecus, Homo habilis, Homo
+      erectus, and archaic and modern Homo sapiens—following the human-chimpanzee split.
+    needs:
+    - primate_evolution
+    tier: 11

@@ -1,0 +1,242 @@
+domain: biology_2e_ch42
+sources:
+  pathogen:
+    label: Pathogen
+    sections:
+    - id: ch42_s42_1
+      title: 42.1 Innate Immune Response
+  antigen:
+    label: Antigen
+    sections:
+    - id: ch42_s42_2
+      title: 42.2 Adaptive Immune Response
+  epitope:
+    label: Epitope
+    sections:
+    - id: ch42_s42_2
+      title: 42.2 Adaptive Immune Response
+  innate_immunity:
+    label: Innate Immunity
+    sections:
+    - id: ch42_s42_1
+      title: 42.1 Innate Immune Response
+  physical_chemical_barriers:
+    label: Physical and Chemical Barriers
+    sections:
+    - id: ch42_s42_1
+      title: 42.1 Innate Immune Response
+  pamp:
+    label: Pathogen-Associated Molecular Pattern (PAMP)
+    sections:
+    - id: ch42_s42_1
+      title: 42.1 Innate Immune Response
+  prr:
+    label: Pattern Recognition Receptor (PRR)
+    sections:
+    - id: ch42_s42_1
+      title: 42.1 Innate Immune Response
+  toll_like_receptor:
+    label: Toll-like Receptor (TLR)
+    sections:
+    - id: ch42_s42_1
+      title: 42.1 Innate Immune Response
+  phagocyte:
+    label: Phagocyte
+    sections:
+    - id: ch42_s42_1
+      title: 42.1 Innate Immune Response
+  macrophage:
+    label: Macrophage
+    sections:
+    - id: ch42_s42_1
+      title: 42.1 Innate Immune Response
+  cytokine:
+    label: Cytokine
+    sections:
+    - id: ch42_s42_1
+      title: 42.1 Innate Immune Response
+  interferon:
+    label: Interferon
+    sections:
+    - id: ch42_s42_1
+      title: 42.1 Innate Immune Response
+  inflammation:
+    label: Inflammation
+    sections:
+    - id: ch42_s42_1
+      title: 42.1 Innate Immune Response
+  natural_killer_cell:
+    label: Natural Killer (NK) Cell
+    sections:
+    - id: ch42_s42_1
+      title: 42.1 Innate Immune Response
+  mhc_molecules:
+    label: Major Histocompatibility Complex (MHC) I/II Molecules
+    sections:
+    - id: ch42_s42_1
+      title: 42.1 Innate Immune Response
+    - id: ch42_s42_2
+      title: 42.2 Adaptive Immune Response
+  perforin_granzyme:
+    label: Perforin and Granzymes
+    sections:
+    - id: ch42_s42_1
+      title: 42.1 Innate Immune Response
+    - id: ch42_s42_2
+      title: 42.2 Adaptive Immune Response
+  complement_system:
+    label: Complement System
+    sections:
+    - id: ch42_s42_1
+      title: 42.1 Innate Immune Response
+  opsonization:
+    label: Opsonization
+    sections:
+    - id: ch42_s42_1
+      title: 42.1 Innate Immune Response
+    - id: ch42_s42_3
+      title: 42.3 Antibodies
+  adaptive_immunity:
+    label: Adaptive Immunity
+    sections:
+    - id: ch42_s42_2
+      title: 42.2 Adaptive Immune Response
+  antigen_presenting_cell:
+    label: Antigen-Presenting Cell (APC)
+    sections:
+    - id: ch42_s42_2
+      title: 42.2 Adaptive Immune Response
+  t_cell:
+    label: T Cell
+    sections:
+    - id: ch42_s42_2
+      title: 42.2 Adaptive Immune Response
+  b_cell:
+    label: B Cell
+    sections:
+    - id: ch42_s42_2
+      title: 42.2 Adaptive Immune Response
+  helper_t_cell:
+    label: Helper T Lymphocyte (TH)
+    sections:
+    - id: ch42_s42_2
+      title: 42.2 Adaptive Immune Response
+  cytotoxic_t_lymphocyte:
+    label: Cytotoxic T Lymphocyte (CTL)
+    sections:
+    - id: ch42_s42_2
+      title: 42.2 Adaptive Immune Response
+  cell_mediated_immune_response:
+    label: Cell-Mediated Immune Response
+    sections:
+    - id: ch42_s42_2
+      title: 42.2 Adaptive Immune Response
+  humoral_immune_response:
+    label: Humoral Immune Response
+    sections:
+    - id: ch42_s42_2
+      title: 42.2 Adaptive Immune Response
+  clonal_selection:
+    label: Clonal Selection
+    sections:
+    - id: ch42_s42_2
+      title: 42.2 Adaptive Immune Response
+  plasma_cell:
+    label: Plasma Cell
+    sections:
+    - id: ch42_s42_2
+      title: 42.2 Adaptive Immune Response
+  immunological_memory:
+    label: Immunological Memory
+    sections:
+    - id: ch42_s42_2
+      title: 42.2 Adaptive Immune Response
+  memory_cell:
+    label: Memory Cell
+    sections:
+    - id: ch42_s42_2
+      title: 42.2 Adaptive Immune Response
+  immune_tolerance:
+    label: Immune Tolerance
+    sections:
+    - id: ch42_s42_2
+      title: 42.2 Adaptive Immune Response
+  regulatory_t_cell:
+    label: Regulatory T (Treg) Cell
+    sections:
+    - id: ch42_s42_2
+      title: 42.2 Adaptive Immune Response
+  mucosal_immune_system:
+    label: Mucosa-Associated Lymphoid Tissue (MALT)
+    sections:
+    - id: ch42_s42_2
+      title: 42.2 Adaptive Immune Response
+  vaccination:
+    label: Vaccination
+    sections:
+    - id: ch42_s42_2
+      title: 42.2 Adaptive Immune Response
+  primary_lymphoid_organs:
+    label: Primary Centers of the Immune System
+    sections:
+    - id: ch42_s42_2
+      title: 42.2 Adaptive Immune Response
+  antibody:
+    label: Antibody
+    sections:
+    - id: ch42_s42_3
+      title: 42.3 Antibodies
+  antibody_classes:
+    label: Antibody Classes
+    sections:
+    - id: ch42_s42_3
+      title: 42.3 Antibodies
+  antibody_function:
+    label: Antibody Function
+    sections:
+    - id: ch42_s42_3
+      title: 42.3 Antibodies
+  affinity_avidity_cross_reactivity:
+    label: Affinity, Avidity, and Cross Reactivity
+    sections:
+    - id: ch42_s42_3
+      title: 42.3 Antibodies
+  passive_immunity:
+    label: Passive Immunity
+    sections:
+    - id: ch42_s42_3
+      title: 42.3 Antibodies
+  radioimmunoassay:
+    label: Radioimmunoassay (RIA)
+    sections:
+    - id: ch42_s42_3
+      title: 42.3 Antibodies
+    - id: ch42_s42_4
+      title: 42.4 Disruptions in the Immune System
+  immunodeficiency:
+    label: Immunodeficiency
+    sections:
+    - id: ch42_s42_4
+      title: 42.4 Disruptions in the Immune System
+  hypersensitivity:
+    label: Hypersensitivity
+    sections:
+    - id: ch42_s42_4
+      title: 42.4 Disruptions in the Immune System
+  allergy:
+    label: Allergy
+    sections:
+    - id: ch42_s42_4
+      title: 42.4 Disruptions in the Immune System
+  autoimmunity:
+    label: Autoimmunity
+    sections:
+    - id: ch42_s42_4
+      title: 42.4 Disruptions in the Immune System
+  molecular_mimicry:
+    label: Molecular Mimicry
+    sections:
+    - id: ch42_s42_3
+      title: 42.3 Antibodies
+    - id: ch42_s42_4
+      title: 42.4 Disruptions in the Immune System

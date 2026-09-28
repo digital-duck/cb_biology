@@ -1,0 +1,162 @@
+domain: biology_2e_ch47
+primitives:
+  biodiversity:
+    defines: The number of species and their relative abundance in the biosphere, estimated at multiple
+      levels of organization.
+    tier: 0
+  extinction:
+    defines: The disappearance of a species from Earth, a natural macroevolutionary process that also
+      occurs at accelerated rates due to human activity.
+    tier: 0
+  speciation:
+    defines: The natural "birth" process of macroevolution that, together with extinction, determines
+      the equilibrium number of species over time.
+    tier: 0
+  habitat_loss:
+    defines: The elimination or degradation of an ecosystem, which kills or extirpates the species that
+      depend on it and is a leading cause of extinction.
+    tier: 0
+  overharvesting:
+    defines: Unsustainable extraction of organisms, especially aquatic species and bush meat, driven partly
+      by the tragedy of the commons.
+    tier: 0
+  tragedy_of_the_commons:
+    defines: The economic principle that resources held in common, like fisheries, will inevitably be
+      overexploited because no individual has incentive to exercise restraint.
+    tier: 0
+  exotic_species:
+    defines: Species intentionally or unintentionally introduced into an ecosystem in which they did not
+      evolve, often threatening native species through competition, predation, or disease.
+    tier: 0
+  climate_change_threat:
+    defines: Anthropogenic warming that alters regional climates, shifts species ranges, disrupts timing
+      adaptations, and is predicted to become a major cause of extinction.
+    tier: 0
+concepts:
+  genetic_diversity:
+    defines: The variety of genes within a species or higher taxonomic group, providing raw material for
+      evolution and adaptation.
+    composed_of:
+    - biodiversity
+    tier: 1
+  ecosystem_diversity:
+    defines: The number of different ecosystems present on the planet or within a given geographic area.
+    composed_of:
+    - biodiversity
+    tier: 1
+  chemical_diversity:
+    defines: The variety of metabolic compounds produced by different species, a measurable proxy for
+      genetic diversity with value to human medicine.
+    composed_of:
+    - genetic_diversity
+    tier: 2
+  endemic_species:
+    defines: Species found in only one location, making them particularly vulnerable to extinction.
+    composed_of:
+    - biodiversity
+    - extinction
+    tier: 1
+  adaptive_radiation:
+    defines: A rapid branching through speciation of a phylogenetic clade into many closely related species
+      that radiate into different habitats and niches.
+    composed_of:
+    - speciation
+    tier: 1
+  mass_extinction:
+    defines: A sudden and dramatic loss of biodiversity, with 25-55% of genera and more than half of species
+      disappearing, observed five times in Earth's history.
+    composed_of:
+    - extinction
+    - biodiversity
+    tier: 1
+  extinction_rate:
+    defines: The number of species becoming extinct over time, often measured in extinctions per million
+      species-years (E/MSY).
+    composed_of:
+    - extinction
+    tier: 1
+  species_area_relationship:
+    defines: The rate at which new species are encountered as the area surveyed increases, used to estimate
+      extinction rates from habitat loss.
+    composed_of:
+    - extinction_rate
+    - habitat_loss
+    tier: 2
+  latitudinal_diversity_gradient:
+    defines: The pattern in which species biodiversity increases as latitude declines, with the greatest
+      diversity found near the equator.
+    composed_of:
+    - biodiversity
+    tier: 1
+  ecosystem_services:
+    defines: Beneficial processes, such as nutrient cycling, pollination, and pest control, that arise
+      from the diverse metabolic activities of organisms within ecosystems and support human welfare.
+    composed_of:
+    - ecosystem_diversity
+    tier: 2
+  secondary_plant_compounds:
+    defines: Toxins produced by plants to defend against herbivores that also serve as sources of medicinal
+      drugs.
+    composed_of:
+    - chemical_diversity
+    tier: 3
+  agricultural_diversity:
+    defines: The variety of bred crop varieties and their wild relatives, which underpins disease resistance
+      and food security.
+    composed_of:
+    - genetic_diversity
+    tier: 2
+  keystone_species:
+    defines: A species instrumental in maintaining diversity in an ecosystem, whose removal can cause
+      a collapse in biodiversity and whose reintroduction can restore it.
+    composed_of:
+    - biodiversity
+    tier: 1
+  island_biogeography:
+    defines: The theory that biodiversity on an island is a function of migration, speciation, and extinction
+      rates, which depend on the island's size and distance from a mainland source.
+    composed_of:
+    - speciation
+    - extinction
+    - biodiversity
+    tier: 1
+applications:
+  biodiversity_hotspot:
+    defines: A geographical area containing high numbers of endemic species and significant habitat degradation,
+      identified as a priority for conservation.
+    needs:
+    - endemic_species
+    - habitat_loss
+    tier: 2
+  dna_barcoding:
+    defines: A molecular genetic method using rapidly evolving gene sequences to identify and catalog
+      species.
+    needs:
+    - genetic_diversity
+    tier: 2
+  conservation_legislation:
+    defines: International treaties and national laws, such as CITES, the Endangered Species Act, and
+      the Migratory Bird Treaty Act, that provide legal frameworks for protecting species.
+    needs:
+    - extinction
+    - overharvesting
+    tier: 1
+  preserve_design:
+    defines: The application of island biogeography principles—size, shape, buffer zones, and corridors—to
+      design preserves that maximize biodiversity protection.
+    needs:
+    - island_biogeography
+    tier: 2
+  habitat_restoration:
+    defines: Efforts to restore degraded ecosystems and biodiversity, such as reintroducing keystone species
+      or removing dams.
+    needs:
+    - habitat_loss
+    - keystone_species
+    tier: 2
+  captive_breeding:
+    defines: Zoo-based programs aimed at breeding endangered species for potential reintroduction to the
+      wild, generally limited in effectiveness.
+    needs:
+    - extinction
+    tier: 1

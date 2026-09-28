@@ -1,0 +1,179 @@
+domain: biology_2e_ch12
+primitives:
+  heredity:
+    defines: The passing of traits from parents to offspring, studied through Mendel's experiments with
+      pea plants.
+    tier: 0
+  trait:
+    defines: A variation in the physical appearance of a heritable characteristic.
+    tier: 0
+  true_breeding:
+    defines: A highly inbred organism that always produces offspring identical to the parent for a given
+      trait.
+    tier: 0
+  filial_generations:
+    defines: The successive parental and offspring generations (P0, F1, F2) produced by crossing and self-crossing
+      true-breeding plants.
+    tier: 0
+  probability_basics:
+    defines: Mathematical measures of likelihood, calculated empirically or theoretically, underlying
+      Mendel's analysis of cross ratios.
+    tier: 0
+  diploidy_and_alleles:
+    defines: Diploid organisms carry two homologous copies of each chromosome, and alleles are gene variants
+      at the same locus.
+    tier: 0
+concepts:
+  hybridization:
+    defines: The process of mating two individuals with different traits to study inheritance of a characteristic
+      in their offspring.
+    composed_of:
+    - true_breeding
+    - trait
+    tier: 1
+  product_rule:
+    defines: The probability of two independent events occurring together is the product of their individual
+      probabilities.
+    composed_of:
+    - probability_basics
+    tier: 1
+  sum_rule:
+    defines: The probability of one of two mutually exclusive events occurring is the sum of their individual
+      probabilities.
+    composed_of:
+    - probability_basics
+    tier: 1
+  genotype_phenotype:
+    defines: Genotype is an organism's underlying genetic makeup, while phenotype is its observable expressed
+      traits.
+    composed_of:
+    - diploidy_and_alleles
+    - trait
+    tier: 1
+  homozygous_heterozygous:
+    defines: A homozygous organism has two identical alleles at a locus, while a heterozygous organism
+      has two different alleles.
+    composed_of:
+    - diploidy_and_alleles
+    tier: 1
+  dominant_recessive_traits:
+    defines: Dominant traits are expressed unchanged in a hybridization, while recessive traits become
+      latent in F1 but reappear in F2.
+    composed_of:
+    - hybridization
+    - filial_generations
+    tier: 2
+  reciprocal_cross:
+    defines: A paired cross swapping the traits of male and female parents to confirm inheritance patterns
+      are independent of sex.
+    composed_of:
+    - hybridization
+    - trait
+    tier: 2
+  punnett_square:
+    defines: A grid-based tool that applies probability rules to predict genotypic and phenotypic outcomes
+      of a genetic cross.
+    composed_of:
+    - genotype_phenotype
+    - probability_basics
+    tier: 2
+  incomplete_dominance:
+    defines: A pattern in which a heterozygote displays a phenotype intermediate between the two homozygous
+      parental phenotypes.
+    composed_of:
+    - genotype_phenotype
+    - homozygous_heterozygous
+    tier: 2
+  codominance:
+    defines: A pattern in which both alleles for a characteristic are simultaneously and fully expressed
+      in the heterozygote.
+    composed_of:
+    - genotype_phenotype
+    - homozygous_heterozygous
+    tier: 2
+  multiple_alleles:
+    defines: The existence of more than two allele variants for a gene at the population level, producing
+      dominance hierarchies.
+    composed_of:
+    - diploidy_and_alleles
+    - dominant_recessive_traits
+    tier: 3
+  x_linked_inheritance:
+    defines: Inheritance patterns for genes on the X chromosome, causing reciprocal crosses to differ
+      and males to be hemizygous.
+    composed_of:
+    - diploidy_and_alleles
+    - reciprocal_cross
+    tier: 3
+  lethality_alleles:
+    defines: Inheritance patterns in which an allele causes death in homozygotes or in both homozygotes
+      and heterozygotes.
+    composed_of:
+    - homozygous_heterozygous
+    - dominant_recessive_traits
+    tier: 3
+  law_of_dominance:
+    defines: In a heterozygote, one allele's trait conceals the presence of the other allele's trait for
+      the same characteristic.
+    composed_of:
+    - dominant_recessive_traits
+    - homozygous_heterozygous
+    tier: 3
+  monohybrid_cross:
+    defines: A cross between two true-breeding parents differing in one characteristic, revealing dominant/recessive
+      inheritance ratios.
+    composed_of:
+    - punnett_square
+    - dominant_recessive_traits
+    - homozygous_heterozygous
+    tier: 3
+  law_of_segregation:
+    defines: Paired alleles segregate equally into gametes during meiosis, so offspring have equal chance
+      of inheriting either allele.
+    composed_of:
+    - diploidy_and_alleles
+    - monohybrid_cross
+    tier: 4
+  law_of_independent_assortment:
+    defines: Genes for different characteristics sort into gametes independently of one another.
+    composed_of:
+    - law_of_segregation
+    - diploidy_and_alleles
+    tier: 5
+  dihybrid_cross:
+    defines: A cross between two true-breeding parents differing in two characteristics, demonstrating
+      independent assortment via a 9:3:3:1 ratio.
+    composed_of:
+    - law_of_independent_assortment
+    - punnett_square
+    tier: 6
+  gene_linkage_recombination:
+    defines: Genes located close together on the same chromosome tend to be inherited together unless
+      separated by crossover events.
+    composed_of:
+    - law_of_independent_assortment
+    - diploidy_and_alleles
+    tier: 6
+  epistasis:
+    defines: An interaction between genes in which one gene's alleles mask or interfere with the phenotypic
+      expression of another gene's alleles.
+    composed_of:
+    - dihybrid_cross
+    - dominant_recessive_traits
+    tier: 7
+applications:
+  test_cross:
+    defines: A cross between a dominant-expressing individual of unknown genotype and a homozygous recessive
+      individual, to determine the unknown parent's genotype.
+    needs:
+    - monohybrid_cross
+    - homozygous_heterozygous
+    tier: 4
+  forked_line_and_probability_methods:
+    defines: Diagrammatic and calculation-based alternatives to the Punnett square for predicting offspring
+      ratios in multi-gene crosses.
+    needs:
+    - dihybrid_cross
+    - product_rule
+    - sum_rule
+    tier: 7

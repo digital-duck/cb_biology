@@ -1,0 +1,119 @@
+domain: biology_2e_ch27
+sources:
+  eukaryotic_multicellular_heterotroph:
+    label: Eukaryotic, Multicellular, Heterotrophic Organization
+    sections:
+    - id: ch27_s27_1
+      title: 27.1 Features of the Animal Kingdom
+  differentiated_tissue:
+    label: Differentiated Tissue
+    sections:
+    - id: ch27_s27_1
+      title: 27.1 Features of the Animal Kingdom
+  fertilization_and_zygote:
+    label: Fertilization and the Zygote
+    sections:
+    - id: ch27_s27_1
+      title: 27.1 Features of the Animal Kingdom
+  asexual_and_uniparental_reproduction:
+    label: Asexual and Uniparental Reproduction
+    sections:
+    - id: ch27_s27_1
+      title: 27.1 Features of the Animal Kingdom
+  cleavage:
+    label: Cleavage
+    sections:
+    - id: ch27_s27_1
+      title: 27.1 Features of the Animal Kingdom
+    - id: ch27_s27_2
+      title: 27.2 Features Used to Classify Animals
+  gastrulation:
+    label: Gastrulation
+    sections:
+    - id: ch27_s27_1
+      title: 27.1 Features of the Animal Kingdom
+  germ_layers:
+    label: Germ Layers
+    sections:
+    - id: ch27_s27_1
+      title: 27.1 Features of the Animal Kingdom
+    - id: ch27_s27_2
+      title: 27.2 Features Used to Classify Animals
+  organogenesis:
+    label: Organogenesis
+    sections:
+    - id: ch27_s27_1
+      title: 27.1 Features of the Animal Kingdom
+  metamorphosis:
+    label: Metamorphosis
+    sections:
+    - id: ch27_s27_1
+      title: 27.1 Features of the Animal Kingdom
+  hox_genes:
+    label: Hox Genes
+    sections:
+    - id: ch27_s27_1
+      title: 27.1 Features of the Animal Kingdom
+    - id: ch27_s27_2
+      title: 27.2 Features Used to Classify Animals
+  body_symmetry:
+    label: Body Symmetry
+    sections:
+    - id: ch27_s27_2
+      title: 27.2 Features Used to Classify Animals
+  diploblasty_triploblasty:
+    label: Diploblasty and Triploblasty
+    sections:
+    - id: ch27_s27_2
+      title: 27.2 Features Used to Classify Animals
+  coelom:
+    label: Coelom (Body Cavity)
+    sections:
+    - id: ch27_s27_2
+      title: 27.2 Features Used to Classify Animals
+    - id: ch27_s27_3
+      title: 27.3 Animal Phylogeny
+  coelom_type_classification:
+    label: Acoelomate, Pseudocoelomate, and Eucoelomate Classification
+    sections:
+    - id: ch27_s27_2
+      title: 27.2 Features Used to Classify Animals
+    - id: ch27_s27_3
+      title: 27.3 Animal Phylogeny
+  protostome_deuterostome:
+    label: Protostomes and Deuterostomes
+    sections:
+    - id: ch27_s27_2
+      title: 27.2 Features Used to Classify Animals
+    - id: ch27_s27_3
+      title: 27.3 Animal Phylogeny
+  phylogeny_and_evidence:
+    label: Phylogenetic Analysis and Evidence Types
+    sections:
+    - id: ch27_s27_3
+      title: 27.3 Animal Phylogeny
+  animal_clade_hierarchy:
+    label: Animal Clade Hierarchy (Metazoa, Eumetazoa, Bilateria, Ecdysozoa, Lophotrochozoa)
+    sections:
+    - id: ch27_s27_3
+      title: 27.3 Animal Phylogeny
+  molecular_phylogenetic_revision:
+    label: Molecular Revision of Phylogeny
+    sections:
+    - id: ch27_s27_3
+      title: 27.3 Animal Phylogeny
+  geologic_time_periods:
+    label: Geologic Time Periods (Cryogenian, Ediacaran, Cambrian)
+    sections:
+    - id: ch27_s27_4
+      title: 27.4 The Evolutionary History of the Animal Kingdom
+  cambrian_explosion:
+    label: Cambrian Explosion
+    sections:
+    - id: ch27_s27_4
+      title: 27.4 The Evolutionary History of the Animal Kingdom
+  mass_extinction:
+    label: Mass Extinction
+    sections:
+    - id: ch27_s27_4
+      title: 27.4 The Evolutionary History of the Animal Kingdom

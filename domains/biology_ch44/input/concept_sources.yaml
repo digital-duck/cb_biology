@@ -1,0 +1,141 @@
+domain: biology_2e_ch44
+sources:
+  ecology:
+    label: Ecology
+    sections:
+    - id: ch44_s44_1
+      title: 44.1 The Scope of Ecology
+  abiotic_factors:
+    label: Abiotic Factors
+    sections:
+    - id: ch44_s44_1
+      title: 44.1 The Scope of Ecology
+  biotic_factors:
+    label: Biotic Factors
+    sections:
+    - id: ch44_s44_1
+      title: 44.1 The Scope of Ecology
+  levels_of_ecological_study:
+    label: Levels of Ecological Study
+    sections:
+    - id: ch44_s44_1
+      title: 44.1 The Scope of Ecology
+  organismal_ecology:
+    label: Organismal Ecology
+    sections:
+    - id: ch44_s44_1
+      title: 44.1 The Scope of Ecology
+  population_ecology:
+    label: Population Ecology
+    sections:
+    - id: ch44_s44_1
+      title: 44.1 The Scope of Ecology
+  community_ecology:
+    label: Community Ecology
+    sections:
+    - id: ch44_s44_1
+      title: 44.1 The Scope of Ecology
+  ecosystem_ecology:
+    label: Ecosystem Ecology
+    sections:
+    - id: ch44_s44_1
+      title: 44.1 The Scope of Ecology
+  biosphere:
+    label: Biosphere
+    sections:
+    - id: ch44_s44_2
+      title: 44.2 Biogeography
+  biogeography:
+    label: Biogeography
+    sections:
+    - id: ch44_s44_2
+      title: 44.2 Biogeography
+  endemic_and_generalist_species:
+    label: Endemic and Generalist Species
+    sections:
+    - id: ch44_s44_2
+      title: 44.2 Biogeography
+  ocean_upwelling:
+    label: Ocean Upwelling
+    sections:
+    - id: ch44_s44_2
+      title: 44.2 Biogeography
+  lake_turnover:
+    label: Spring and Fall Turnover
+    sections:
+    - id: ch44_s44_2
+      title: 44.2 Biogeography
+  net_primary_productivity:
+    label: Net Primary Productivity
+    sections:
+    - id: ch44_s44_2
+      title: 44.2 Biogeography
+    - id: ch44_s44_3
+      title: 44.3 Terrestrial Biomes
+  biome:
+    label: Biome
+    sections:
+    - id: ch44_s44_2
+      title: 44.2 Biogeography
+    - id: ch44_s44_3
+      title: 44.3 Terrestrial Biomes
+  terrestrial_biomes:
+    label: Terrestrial Biomes
+    sections:
+    - id: ch44_s44_3
+      title: 44.3 Terrestrial Biomes
+  aquatic_biomes:
+    label: Aquatic Biomes
+    sections:
+    - id: ch44_s44_4
+      title: 44.4 Aquatic Biomes
+  ocean_zones:
+    label: Ocean Zones
+    sections:
+    - id: ch44_s44_4
+      title: 44.4 Aquatic Biomes
+  coral_reefs:
+    label: Coral Reefs
+    sections:
+    - id: ch44_s44_4
+      title: 44.4 Aquatic Biomes
+  estuaries:
+    label: Estuaries
+    sections:
+    - id: ch44_s44_4
+      title: 44.4 Aquatic Biomes
+  freshwater_biomes:
+    label: Freshwater Biomes
+    sections:
+    - id: ch44_s44_4
+      title: 44.4 Aquatic Biomes
+  climate_vs_weather:
+    label: Climate versus Weather
+    sections:
+    - id: ch44_s44_5
+      title: 44.5 Climate and the Effects of Global Climate Change
+  global_climate_change:
+    label: Global Climate Change
+    sections:
+    - id: ch44_s44_5
+      title: 44.5 Climate and the Effects of Global Climate Change
+  natural_drivers_of_climate_change:
+    label: Natural Drivers of Climate Change
+    sections:
+    - id: ch44_s44_5
+      title: 44.5 Climate and the Effects of Global Climate Change
+  greenhouse_effect:
+    label: Greenhouse Effect
+    sections:
+    - id: ch44_s44_5
+      title: 44.5 Climate and the Effects of Global Climate Change
+  human_drivers_of_climate_change:
+    label: Human Drivers of Climate Change
+    sections:
+    - id: ch44_s44_5
+      title: 44.5 Climate and the Effects of Global Climate Change
+  consequences_of_climate_change:
+    label: Consequences of Climate Change
+    sections:
+    - id: ch44_s44_5
+      title: 44.5 Climate and the Effects of Global Climate Change

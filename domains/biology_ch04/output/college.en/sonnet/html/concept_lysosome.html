@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lysosome | Biology Ch04</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="lysosome">Lysosome</h2>
+<p>A lysosome is a membrane-bound organelle in animal cells that functions as the cell's recycling and waste-disposal center. Its interior is maintained at a pH of about 4.5–5.0, far more acidic than the surrounding cytosol (pH ~7.2), and it is packed with roughly 50 different hydrolytic enzymes — proteases, lipases, nucleases, and glycosidases — that break covalent bonds in proteins, lipids, nucleic acids, and complex carbohydrates. These enzymes are acid hydrolases: they work best in an acidic environment, which is a built-in safety feature. If a lysosome ruptures and spills its contents into the neutral-pH cytosol, the enzymes largely shut down, protecting the rest of the cell from self-digestion. The acidic interior is maintained by proton pumps embedded in the lysosomal membrane that actively transport H⁺ ions in, using ATP.</p>
+<p>Lysosomes perform three main jobs. First, in intracellular digestion, they break down macromolecules brought in by endocytosis (e.g., a cell absorbing nutrients) so the resulting monomers can be reused. Second, in autophagy, a lysosome fuses with a vesicle containing a damaged or worn-out organelle — for instance, a mitochondrion that has stopped functioning efficiently — and degrades it, recycling its components into new molecules. Third, in phagocytosis, immune cells such as macrophages engulf invading bacteria into a phagosome, which then fuses with a lysosome; the resulting acidic, enzyme-rich compartment (a phagolysosome) destroys the pathogen.</p>
+<p>Consider a white blood cell that has just engulfed a bacterium. The phagosome membrane fuses with one or more lysosomes, delivering hydrolases and lowering the internal pH. Proteases dismantle the bacterial cell wall proteins, nucleases degrade its DNA, and lipases break down its membrane lipids into fatty acids and glycerol, which the immune cell can later reuse for energy or membrane synthesis.</p>
+<p>This system also explains certain diseases: in Tay-Sachs disease, a single lysosomal enzyme (hexosaminidase A) is missing due to a genetic mutation, so a specific lipid accumulates undegraded in neurons, causing progressive nerve damage. This illustrates a general problem-solving principle in cell biology: a defect in even one lysosomal enzyme can block an entire degradation pathway, since these enzymes typically act in a stepwise sequence rather than interchangeably.</p>
+<pre class="mermaid">flowchart LR
+    A[Engulfed bacterium in phagosome] --> B[Phagosome fuses with lysosome]
+    B --> C[Acid hydrolases activated at low pH]
+    C --> D[Bacterial proteins, lipids, DNA degraded]
+    D --> E[Monomers recycled into cytosol]</pre>
+<p><em>Sequence of events in lysosomal digestion of an engulfed pathogen.</em></p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Biology 2e Ch4: Cell Structure (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

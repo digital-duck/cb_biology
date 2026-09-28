@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Concept Graph — graph</title>
+<script src="https://unpkg.com/vis-network@9.1.9/standalone/umd/vis-network.min.js"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,sans-serif;background:#f0f2f5;overflow:hidden;height:100vh}
+.app{
+  display:grid;
+  grid-template-columns:230px 1fr 210px;
+  grid-template-rows:60vh 40vh;
+  height:100vh;
+  gap:0;
+}
+/* ── Left sidebar: learning path ── */
+#path-sidebar{
+  grid-column:1;grid-row:1/3;
+  background:#f5f6f8;color:#2a2a2a;
+  display:flex;flex-direction:column;
+  overflow:hidden;
+  border-right:1px solid #dde0e6;
+}
+#path-header{
+  padding:14px 14px 10px;
+  border-bottom:1px solid #dde0e6;
+  flex-shrink:0;
+}
+#path-header h1{font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:#888;margin-bottom:2px;font-weight:700}
+#path-header .domain-name{font-size:11px;color:#555;margin-top:4px}
+#path-steps{flex:1;overflow-y:auto;padding:8px 0}
+#path-steps .hint{color:#aaa;font-size:12px;text-align:center;padding:24px 12px;line-height:1.5}
+.step-item{
+  display:flex;align-items:flex-start;gap:8px;
+  padding:7px 12px;cursor:pointer;
+  border-left:3px solid transparent;
+  transition:background .15s;
+}
+.step-item:hover{background:#ebebf0}
+.step-item.active{background:#e8eef8;border-left-color:#4a90d9}
+.step-item.target{background:#eaf5ea;border-left-color:#4caf50}
+.step-num{min-width:20px;font-size:10px;font-weight:700;color:#bbb;padding-top:2px;flex-shrink:0}
+.step-item.target .step-num{color:#4caf50}
+.step-label{font-size:12px;font-weight:600;color:#333;line-height:1.4}
+.step-def{font-size:10px;color:#888;margin-top:2px;line-height:1.4}
+.step-kind{display:inline-block;padding:0 5px;border-radius:8px;font-size:9px;font-weight:700;margin-left:4px}
+#path-count{font-size:10px;color:#aaa;margin-top:3px}
+/* ── Graph panel ── */
+#graph-panel{
+  grid-column:2;grid-row:1;
+  position:relative;background:#fff;
+  border-bottom:2px solid #dde;
+}
+#graph-container{width:100%;height:100%}
+.graph-recenter-btn{
+  position:absolute;right:16px;bottom:16px;z-index:50;
+  padding:6px 14px;border-radius:6px;
+  border:1px solid #1e3a5f;background:#1e3a5f;color:#fff;
+  font-size:12px;font-weight:600;font-family:system-ui,sans-serif;
+  box-shadow:0 1px 4px rgba(0,0,0,.25);cursor:pointer;
+}
+.graph-recenter-btn:hover{background:#28496f;border-color:#28496f}
+/* ── Explanation panel ── */
+#explain-panel{
+  grid-column:2;grid-row:2;
+  background:#fff;overflow-y:auto;
+  padding:16px 20px;
+}
+#explain-panel .empty{color:#aaa;font-size:13px;padding:20px 0;text-align:center}
+#explain-panel .node-title{
+  display:flex;align-items:center;gap:8px;margin-bottom:10px;
+}
+#explain-panel .node-title h2{font-size:16px;color:#1e3a5f}
+.badge{
+  display:inline-block;padding:2px 8px;border-radius:10px;
+  font-size:11px;font-weight:700;
+}
+.badge.primitive{background:#e8f5e9;color:#2e7d32}
+.badge.concept{background:#e3f2fd;color:#1565c0}
+.badge.application{background:#fff3e0;color:#ef6c00}
+.tier-tag{font-size:11px;color:#999;margin-left:auto}
+#explain-panel .defines{
+  font-size:14px;color:#333;line-height:1.6;margin-bottom:12px;
+  padding:10px 12px;background:#f8f9fb;border-radius:6px;
+  border-left:3px solid #90b4e8;
+}
+#explain-panel .section-label{
+  font-size:10px;font-weight:700;text-transform:uppercase;
+  letter-spacing:.08em;color:#999;margin-bottom:6px;
+}
+#explain-panel .prereq-list{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+.prereq-chip{
+  padding:3px 9px;border-radius:12px;font-size:11px;
+  background:#e3f2fd;color:#1565c0;cursor:pointer;
+  border:1px solid #90caf9;transition:background .12s;
+}
+.prereq-chip:hover{background:#bbdefb}
+#explain-panel .meta-row{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:10px}
+.meta-item{font-size:12px;color:#555}
+.meta-item b{color:#1e3a5f}
+#explain-panel .play-hint{
+  font-size:12px;color:#5a5a5a;line-height:1.6;
+  padding:8px 12px;background:#fffde7;border-radius:6px;
+  border-left:3px solid #ffd54f;margin-bottom:8px;
+}
+/* ── Notes sidebar ── */
+#notes-sidebar{
+  grid-column:3;grid-row:1/3;
+  background:#fafaf8;
+  border-left:2px solid #e8e8e0;
+  display:flex;flex-direction:column;
+  overflow:hidden;
+}
+#notes-header{
+  padding:10px 12px 8px;
+  border-bottom:1px solid #e0e0d8;
+  flex-shrink:0;
+}
+#notes-header-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:2px}
+#notes-header h2{font-size:12px;font-weight:700;color:#555;text-transform:uppercase;letter-spacing:.06em;margin:0}
+#notes-node-label{font-size:11px;color:#999;margin-top:2px}
+.nb-btn{font-size:10px;padding:2px 7px;border-radius:3px;
+  border:1px solid #ddd;background:#f0f0ea;cursor:pointer;color:#777;
+  font-family:system-ui,sans-serif}
+.nb-btn:hover{background:#e0e0d8;color:#444}
+#notes-textarea{
+  flex:0 0 auto;height:100px;border:none;resize:none;
+  padding:12px;font-size:12px;line-height:1.6;
+  font-family:inherit;background:#fafaf8;color:#333;
+  outline:none;
+}
+#notes-with-entries{
+  border-top:1px solid #e8e8e0;flex:1;min-height:0;overflow-y:auto;
+}
+.note-entry{
+  padding:6px 12px;cursor:pointer;
+  border-bottom:1px solid #f0f0e8;
+  font-size:11px;
+}
+.note-entry:hover{background:#f0efe8}
+.note-entry .note-node{font-weight:600;color:#555;display:flex;justify-content:space-between;align-items:center}
+.note-entry .note-ts{font-weight:400;color:#bbb;font-size:10px}
+.note-entry .note-preview{color:#999;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+/* ── kind badge colours in sidebar ── */
+.primitive-k{background:#e8f5e9;color:#2e7d32}
+.concept-k{background:#e3f2fd;color:#1565c0}
+.application-k{background:#fff3e0;color:#ef6c00}
+/* ── concept detail panel ── */
+#concept-detail{margin-top:14px;border-top:1px solid #e8e8e0;padding-top:10px;}
+#concept-iframe{width:100%;height:500px;border:1px solid #e0e0d8;border-radius:4px;margin-top:6px;display:block;}
+.concept-not-found{color:#e57373;font-size:12px;padding:6px 0;font-style:italic;}
+</style>
+</head>
+<body>
+<div class="app">
+
+<!-- LEFT: learning path sidebar -->
+<aside id="path-sidebar">
+  <div id="path-header">
+    <h1>Learning Path</h1>
+    <div class="domain-name">graph</div>
+    <div id="path-count"></div>
+  </div>
+  <div id="path-steps">
+    <div class="hint">Click any node in the graph<br>to see its learning path</div>
+  </div>
+</aside>
+
+<!-- CENTRE TOP: concept graph -->
+<div id="graph-panel">
+  <div id="graph-container"></div>
+  <button class="graph-recenter-btn" onclick="reCenterGraph()" title="Re-fit the graph to the viewport">Re-Center</button>
+</div>
+
+<!-- CENTRE BOTTOM: explanation panel -->
+<div id="explain-panel">
+  <div class="empty">Select a node to see its definition, prerequisites, and learning context.</div>
+</div>
+
+<!-- RIGHT: notes sidebar -->
+<aside id="notes-sidebar">
+  <div id="notes-header">
+    <div id="notes-header-top">
+      <h2>Notes</h2>
+      <div>
+        <button class="nb-btn" id="nb-clear-btn" onclick="clearNote()">Clear</button>
+        <button class="nb-btn" onclick="exportNotes()">Export</button>
+      </div>
+    </div>
+    <div id="notes-node-label">no node selected</div>
+  </div>
+  <textarea id="notes-textarea" placeholder="Type notes here&#10;(auto-saved per node)"></textarea>
+  <div id="notes-with-entries"></div>
+</aside>
+
+</div><!-- .app -->
+
+<script>
+const RAW = {"nodes": [{"id": "cell", "label": "cell", "kind": "primitive", "tier": 0, "defines": "The smallest unit of a living thing; the basic building block of all organisms.", "prereqs": [], "verifier": "", "lab": "", "play": "", "color": {"background": "#fffde7", "border": "#795548"}, "font": {"size": 13}}, {"id": "microscope", "label": "microscope", "kind": "primitive", "tier": 0, "defines": "An instrument that magnifies an object so scientists can study cells too small to see with the naked eye.", "prereqs": [], "verifier": "", "lab": "", "play": "", "color": {"background": "#fffde7", "border": "#795548"}, "font": {"size": 13}}, {"id": "prokaryotic_cell", "label": "prokaryotic cell", "kind": "primitive", "tier": 0, "defines": "A simple, mostly single-celled organism that lacks a nucleus or any other membrane-bound organelle.", "prereqs": [], "verifier": "", "lab": "", "play": "", "color": {"background": "#fffde7", "border": "#795548"}, "font": {"size": 13}}, {"id": "eukaryotic_cell", "label": "eukaryotic cell", "kind": "primitive", "tier": 0, "defines": "A cell that has a membrane-bound nucleus and several other membrane-bound organelles.", "prereqs": [], "verifier": "", "lab": "", "play": "", "color": {"background": "#fffde7", "border": "#795548"}, "font": {"size": 13}}, {"id": "plasma_membrane", "label": "plasma membrane", "kind": "primitive", "tier": 0, "defines": "A phospholipid bilayer with embedded proteins that separates a cell's interior from its surrounding environment.", "prereqs": [], "verifier": "", "lab": "", "play": "", "color": {"background": "#fffde7", "border": "#795548"}, "font": {"size": 13}}, {"id": "cytoplasm", "label": "cytoplasm", "kind": "primitive", "tier": 0, "defines": "The entire region between the plasma membrane and the nuclear envelope, consisting of organelles suspended in cytosol.", "prereqs": [], "verifier": "", "lab": "", "play": "", "color": {"background": "#fffde7", "border": "#795548"}, "font": {"size": 13}}, {"id": "dna", "label": "dna", "kind": "primitive", "tier": 0, "defines": "The cell's genetic material, present in all cells and organized differently in prokaryotes versus eukaryotes.", "prereqs": [], "verifier": "", "lab": "", "play": "", "color": {"background": "#fffde7", "border": "#795548"}, "font": {"size": 13}}, {"id": "ribosome", "label": "ribosome", "kind": "primitive", "tier": 0, "defines": "A cellular structure, present in all cells, responsible for synthesizing proteins.", "prereqs": [], "verifier": "", "lab": "", "play": "", "color": {"background": "#fffde7", "border": "#795548"}, "font": {"size": 13}}, {"id": "magnification_and_resolution", "label": "magnification and resolution", "kind": "concept", "tier": 1, "defines": "Magnification is enlarging an object's appearance; resolving power is a microscope's ability to distinguish two adjacent structures as separate.", "prereqs": ["microscope"], "verifier": "", "lab": "", "play": "", "color": {"background": "#e8f5e9", "border": "#2e7d32"}, "font": {"size": 13}}, {"id": "light_microscope", "label": "light microscope", "kind": "concept", "tier": 2, "defines": "A microscope that uses visible light bent through a lens system to view specimens, useful for living organisms but limited in resolution.", "prereqs": ["microscope", "magnification_and_resolution"], "verifier": "", "lab": "", "play": "", "color": {"background": "#e8f5e9", "border": "#2e7d32"}, "font": {"size": 13}}, {"id": "electron_microscope", "label": "electron microscope", "kind": "concept", "tier": 2, "defines": "A microscope that uses a beam of electrons instead of light, providing higher magnification and resolving power but killing the specimen.", "prereqs": ["microscope", "magnification_and_resolution"], "verifier": "", "lab": "", "play": "", "color": {"background": "#e8f5e9", "border": "#2e7d32"}, "font": {"size": 13}}, {"id": "unified_cell_theory", "label": "unified cell theory", "kind": "concept", "tier": 1, "defines": "The theory stating that one or more cells comprise all living things, the cell is the basic unit of life, and new cells arise from existing cells.", "prereqs": ["cell"], "verifier": "", "lab": "", "play": "", "color": {"background": "#e8f5e9", "border": "#2e7d32"}, "font": {"size": 13}}, {"id": "cell_wall", "label": "cell wall", "kind": "concept", "tier": 1, "defines": "A rigid covering external to the plasma membrane that protects the cell, provides structural support, and gives it shape.", "prereqs": ["plasma_membrane"], "verifier": "", "lab": "", "play": "", "color": {"background": "#e8f5e9", "border": "#2e7d32"}, "font": {"size": 13}}, {"id": "surface_area_to_volume_ratio", "label": "surface area to volume ratio", "kind": "concept", "tier": 1, "defines": "The relationship explaining why cells must stay small, since volume grows faster than surface area as a cell enlarges, limiting diffusion efficiency.", "prereqs": ["cell"], "verifier": "", "lab": "", "play": "", "color": {"background": "#e8f5e9", "border": "#2e7d32"}, "font": {"size": 13}}, {"id": "nucleoid", "label": "nucleoid", "kind": "concept", "tier": 1, "defines": "The central part of a prokaryotic cell where its chromosomal DNA is located, lacking a surrounding membrane.", "prereqs": ["prokaryotic_cell", "dna"], "verifier": "", "lab": "", "play": "", "color": {"background": "#e8f5e9", "border": "#2e7d32"}, "font": {"size": 13}}, {"id": "nuclear_envelope", "label": "nuclear envelope", "kind": "concept", "tier": 1, "defines": "The double-membrane structure that constitutes the nucleus's outermost portion and is continuous with the endoplasmic reticulum.", "prereqs": ["eukaryotic_cell", "plasma_membrane"], "verifier": "", "lab": "", "play": "", "color": {"background": "#e8f5e9", "border": "#2e7d32"}, "font": {"size": 13}}, {"id": "nucleus", "label": "nucleus", "kind": "concept", "tier": 2, "defines": "The organelle that houses the cell's DNA and directs the synthesis of ribosomes and proteins.", "prereqs": ["eukaryotic_cell", "dna", "nuclear_envelope"], "verifier": "", "lab": "", "play": "", "color": {"background": "#e8f5e9", "border": "#2e7d32"}, "font": {"size": 13}}, {"id": "chromatin_and_chromosomes", "label": "chromatin and chromosomes", "kind": "concept", "tier": 3, "defines": "Chromosomes are linear DNA structures in the nucleus; chromatin is the decondensed protein-DNA complex they form outside of cell division.", "prereqs": ["nucleus", "dna"], "verifier": "", "lab": "", "play": "", "color": {"background": "#e8f5e9", "border": "#2e7d32"}, "font": {"size": 13}}, {"id": "nucleolus", "label": "nucleolus", "kind": "concept", "tier": 3, "defines": "A darkly staining region within the nucleus where ribosomal RNA and proteins assemble into ribosomal subunits.", "prereqs": ["nucleus", "ribosome"], "verifier": "", "lab": "", "play": "", "color": {"background": "#e8f5e9", "border": "#2e7d32"}, "font": {"size": 13}}, {"id": "mitochondria", "label": "mitochondria", "kind": "concept", "tier": 1, "defines": "Double-membrane organelles with their own DNA and ribosomes that carry out cellular respiration to produce ATP.", "prereqs": ["eukaryotic_cell", "dna", "ribosome"], "verifier": "", "lab": "", "play": "", "color": {"background": "#e8f5e9", "border": "#2e7d32"}, "font": {"size": 13}}, {"id": "peroxisome", "label": "peroxisome", "kind": "concept", "tier": 1, "defines": "A small, single-membrane organelle that oxidizes fatty acids and amino acids and detoxifies poisons.", "prereqs": ["eukaryotic_cell"], "verifier": "", "lab": "", "play": "", "color": {"background": "#e8f5e9", "border": "#2e7d32"}, "font": {"size": 13}}, {"id": "vesicle_and_vacuole", "label": "vesicle and vacuole", "kind": "concept", "tier": 1, "defines": "Membrane-bound sacs that function in storage and transport, with vacuoles being somewhat larger than vesicles.", "prereqs": ["eukaryotic_cell", "plasma_membrane"], "verifier": "", "lab": "", "play": "", "color": {"background": "#e8f5e9", "border": "#2e7d32"}, "font": {"size": 13}}, {"id": "central_vacuole", "label": "central vacuole", "kind": "concept", "tier": 2, "defines": "A large plant cell organelle that regulates water concentration, supports the cell wall, and enables cell expansion.", "prereqs": ["vesicle_and_vacuole"], "verifier": "", "lab": "", "play": "", "color": {"background": "#e8f5e9", "border": "#2e7d32"}, "font": {"size": 13}}, {"id": "centrosome", "label": "centrosome", "kind": "concept", "tier": 1, "defines": "A microtubule-organizing region near the nucleus of animal cells containing a pair of centrioles.", "prereqs": ["eukaryotic_cell"], "verifier": "", "lab": "", "play": "", "color": {"background": "#e8f5e9", "border": "#2e7d32"}, "font": {"size": 13}}, {"id": "lysosome", "label": "lysosome", "kind": "concept", "tier": 2, "defines": "An animal cell organelle that digests macromolecules, recycles worn-out organelles, and destroys engulfed pathogens.", "prereqs": ["eukaryotic_cell", "vesicle_and_vacuole"], "verifier": "", "lab": "", "play": "", "color": {"background": "#e8f5e9", "border": "#2e7d32"}, "font": {"size": 13}}, {"id": "chloroplast", "label": "chloroplast", "kind": "concept", "tier": 1, "defines": "A plant cell organelle with its own DNA and ribosomes that carries out photosynthesis.", "prereqs": ["eukaryotic_cell", "dna", "ribosome"], "verifier": "", "lab": "", "play": "", "color": {"background": "#e8f5e9", "border": "#2e7d32"}, "font": {"size": 13}}, {"id": "endosymbiosis", "label": "endosymbiosis", "kind": "concept", "tier": 2, "defines": "A mutually beneficial relationship in which one organism lives inside another, proposed to explain the origin of mitochondria and chloroplasts from ingested bacteria.", "prereqs": ["mitochondria", "chloroplast"], "verifier": "", "lab": "", "play": "", "color": {"background": "#e8f5e9", "border": "#2e7d32"}, "font": {"size": 13}}, {"id": "endoplasmic_reticulum", "label": "endoplasmic reticulum", "kind": "concept", "tier": 2, "defines": "A series of interconnected membranous sacs and tubules, divided into rough ER (protein modification) and smooth ER (lipid synthesis and detoxification).", "prereqs": ["nuclear_envelope", "eukaryotic_cell"], "verifier": "", "lab": "", "play": "", "color": {"background": "#e8f5e9", "border": "#2e7d32"}, "font": {"size": 13}}, {"id": "golgi_apparatus", "label": "golgi apparatus", "kind": "concept", "tier": 3, "defines": "A series of flattened membranous sacs that sorts, tags, packages, and distributes lipids and proteins received from the ER.", "prereqs": ["endoplasmic_reticulum", "vesicle_and_vacuole"], "verifier": "", "lab": "", "play": "", "color": {"background": "#e8f5e9", "border": "#2e7d32"}, "font": {"size": 13}}, {"id": "endomembrane_system", "label": "endomembrane system", "kind": "concept", "tier": 4, "defines": "A group of membranes and organelles in eukaryotic cells, including the nuclear envelope, ER, Golgi apparatus, lysosomes, vesicles, and plasma membrane, that work together to modify, package, and transport lipids and proteins.", "prereqs": ["nuclear_envelope", "endoplasmic_reticulum", "golgi_apparatus", "lysosome", "vesicle_and_vacuole", "plasma_membrane"], "verifier": "", "lab": "", "play": "", "color": {"background": "#e8f5e9", "border": "#2e7d32"}, "font": {"size": 13}}, {"id": "cytoskeleton", "label": "cytoskeleton", "kind": "concept", "tier": 1, "defines": "A network of protein fibers that maintains a cell's shape, secures organelles, and enables movement of cytoplasm, vesicles, and whole cells.", "prereqs": ["cytoplasm", "eukaryotic_cell"], "verifier": "", "lab": "", "play": "", "color": {"background": "#e8f5e9", "border": "#2e7d32"}, "font": {"size": 13}}, {"id": "microfilaments", "label": "microfilaments", "kind": "concept", "tier": 2, "defines": "The narrowest cytoskeletal fibers, composed of actin, that provide rigidity and enable cellular movement.", "prereqs": ["cytoskeleton"], "verifier": "", "lab": "", "play": "", "color": {"background": "#e8f5e9", "border": "#2e7d32"}, "font": {"size": 13}}, {"id": "intermediate_filaments", "label": "intermediate filaments", "kind": "concept", "tier": 2, "defines": "Cytoskeletal fibers of intermediate diameter, composed of fibrous proteins, that bear tension and anchor organelles in place.", "prereqs": ["cytoskeleton"], "verifier": "", "lab": "", "play": "", "color": {"background": "#e8f5e9", "border": "#2e7d32"}, "font": {"size": 13}}, {"id": "microtubules", "label": "microtubules", "kind": "concept", "tier": 2, "defines": "The widest cytoskeletal fibers, made of tubulin dimers, that resist compression, guide vesicle transport, and form flagella, cilia, and centrioles.", "prereqs": ["cytoskeleton", "centrosome"], "verifier": "", "lab": "", "play": "", "color": {"background": "#e8f5e9", "border": "#2e7d32"}, "font": {"size": 13}}, {"id": "flagella_and_cilia", "label": "flagella and cilia", "kind": "concept", "tier": 3, "defines": "Microtubule-based, hair-like structures that extend from the plasma membrane to move an entire cell or move substances along its surface.", "prereqs": ["microtubules"], "verifier": "", "lab": "", "play": "", "color": {"background": "#e8f5e9", "border": "#2e7d32"}, "font": {"size": 13}}, {"id": "extracellular_matrix", "label": "extracellular matrix", "kind": "concept", "tier": 1, "defines": "Material secreted by animal cells, composed mainly of collagen and proteoglycans, that anchors cells and enables cell-to-cell communication.", "prereqs": ["plasma_membrane", "eukaryotic_cell"], "verifier": "", "lab": "", "play": "", "color": {"background": "#e8f5e9", "border": "#2e7d32"}, "font": {"size": 13}}, {"id": "intercellular_junctions", "label": "intercellular junctions", "kind": "concept", "tier": 2, "defines": "Direct-contact structures between adjacent cells, including plasmodesmata in plants and tight junctions, desmosomes, and gap junctions in animals.", "prereqs": ["plasma_membrane", "cell_wall"], "verifier": "", "lab": "", "play": "", "color": {"background": "#e8f5e9", "border": "#2e7d32"}, "font": {"size": 13}}, {"id": "plant_vs_animal_cell_structures", "label": "plant vs animal cell structures", "kind": "application", "tier": 3, "defines": "The application of eukaryotic cell components to explain structural differences between plant cells (cell wall, chloroplasts, central vacuole) and animal cells (centrosome, lysosomes).", "prereqs": ["cell_wall", "chloroplast", "central_vacuole", "centrosome", "lysosome"], "verifier": "", "lab": "", "play": "", "color": {"background": "#fce4ec", "border": "#c62828"}, "font": {"size": 13}}, {"id": "cell_communication_and_signaling", "label": "cell communication and signaling", "kind": "application", "tier": 3, "defines": "The real-world process by which cells use the extracellular matrix and intercellular junctions to coordinate activities, such as blood clotting or coordinated muscle contraction.", "prereqs": ["extracellular_matrix", "intercellular_junctions"], "verifier": "", "lab": "", "play": "", "color": {"background": "#fce4ec", "border": "#c62828"}, "font": {"size": 13}}, {"id": "medical_applications_of_cell_biology", "label": "medical applications of cell biology", "kind": "application", "tier": 4, "defines": "Real-world diagnostic and clinical uses of cell structure knowledge, such as Pap smear cytology, heart failure related to ER calcium storage, and Lowe disease from Golgi enzyme deficiency.", "prereqs": ["microscope", "endoplasmic_reticulum", "golgi_apparatus"], "verifier": "", "lab": "", "play": "", "color": {"background": "#fce4ec", "border": "#c62828"}, "font": {"size": 13}}], "edges": [{"from": "cell", "to": "unified_cell_theory"}, {"from": "cell", "to": "surface_area_to_volume_ratio"}, {"from": "microscope", "to": "magnification_and_resolution"}, {"from": "microscope", "to": "light_microscope"}, {"from": "microscope", "to": "electron_microscope"}, {"from": "microscope", "to": "medical_applications_of_cell_biology"}, {"from": "prokaryotic_cell", "to": "nucleoid"}, {"from": "eukaryotic_cell", "to": "nuclear_envelope"}, {"from": "eukaryotic_cell", "to": "nucleus"}, {"from": "eukaryotic_cell", "to": "mitochondria"}, {"from": "eukaryotic_cell", "to": "peroxisome"}, {"from": "eukaryotic_cell", "to": "vesicle_and_vacuole"}, {"from": "eukaryotic_cell", "to": "centrosome"}, {"from": "eukaryotic_cell", "to": "lysosome"}, {"from": "eukaryotic_cell", "to": "chloroplast"}, {"from": "eukaryotic_cell", "to": "endoplasmic_reticulum"}, {"from": "eukaryotic_cell", "to": "cytoskeleton"}, {"from": "eukaryotic_cell", "to": "extracellular_matrix"}, {"from": "plasma_membrane", "to": "cell_wall"}, {"from": "plasma_membrane", "to": "nuclear_envelope"}, {"from": "plasma_membrane", "to": "vesicle_and_vacuole"}, {"from": "plasma_membrane", "to": "endomembrane_system"}, {"from": "plasma_membrane", "to": "extracellular_matrix"}, {"from": "plasma_membrane", "to": "intercellular_junctions"}, {"from": "cytoplasm", "to": "cytoskeleton"}, {"from": "dna", "to": "nucleoid"}, {"from": "dna", "to": "nucleus"}, {"from": "dna", "to": "chromatin_and_chromosomes"}, {"from": "dna", "to": "mitochondria"}, {"from": "dna", "to": "chloroplast"}, {"from": "ribosome", "to": "nucleolus"}, {"from": "ribosome", "to": "mitochondria"}, {"from": "ribosome", "to": "chloroplast"}, {"from": "magnification_and_resolution", "to": "light_microscope"}, {"from": "magnification_and_resolution", "to": "electron_microscope"}, {"from": "cell_wall", "to": "intercellular_junctions"}, {"from": "cell_wall", "to": "plant_vs_animal_cell_structures"}, {"from": "nuclear_envelope", "to": "nucleus"}, {"from": "nuclear_envelope", "to": "endoplasmic_reticulum"}, {"from": "nuclear_envelope", "to": "endomembrane_system"}, {"from": "nucleus", "to": "chromatin_and_chromosomes"}, {"from": "nucleus", "to": "nucleolus"}, {"from": "mitochondria", "to": "endosymbiosis"}, {"from": "vesicle_and_vacuole", "to": "central_vacuole"}, {"from": "vesicle_and_vacuole", "to": "lysosome"}, {"from": "vesicle_and_vacuole", "to": "golgi_apparatus"}, {"from": "vesicle_and_vacuole", "to": "endomembrane_system"}, {"from": "central_vacuole", "to": "plant_vs_animal_cell_structures"}, {"from": "centrosome", "to": "microtubules"}, {"from": "centrosome", "to": "plant_vs_animal_cell_structures"}, {"from": "lysosome", "to": "endomembrane_system"}, {"from": "lysosome", "to": "plant_vs_animal_cell_structures"}, {"from": "chloroplast", "to": "endosymbiosis"}, {"from": "chloroplast", "to": "plant_vs_animal_cell_structures"}, {"from": "endoplasmic_reticulum", "to": "golgi_apparatus"}, {"from": "endoplasmic_reticulum", "to": "endomembrane_system"}, {"from": "endoplasmic_reticulum", "to": "medical_applications_of_cell_biology"}, {"from": "golgi_apparatus", "to": "endomembrane_system"}, {"from": "golgi_apparatus", "to": "medical_applications_of_cell_biology"}, {"from": "cytoskeleton", "to": "microfilaments"}, {"from": "cytoskeleton", "to": "intermediate_filaments"}, {"from": "cytoskeleton", "to": "microtubules"}, {"from": "microtubules", "to": "flagella_and_cilia"}, {"from": "extracellular_matrix", "to": "cell_communication_and_signaling"}, {"from": "intercellular_junctions", "to": "cell_communication_and_signaling"}]};
+const DOMAIN_KEY = "graph";
+
+// ── index ──────────────────────────────────────────────────────────────────
+const nodeIndex = {};
+RAW.nodes.forEach(n => nodeIndex[n.id] = n);
+
+const prereqOf  = {};  // id → ids that are direct prerequisites OF id
+const dependsOn = {};  // id → ids that id feeds into
+RAW.nodes.forEach(n => { prereqOf[n.id] = []; dependsOn[n.id] = []; });
+RAW.edges.forEach(e => {
+  prereqOf[e.to].push(e.from);
+  dependsOn[e.from].push(e.to);
+});
+
+// ── BFS longest-path levels (fixes application nodes at wrong tier) ─────────
+const bfsLevels = (() => {
+  const levels = {};
+  const successors = {};
+  RAW.nodes.forEach(n => { levels[n.id] = -1; successors[n.id] = []; });
+  RAW.edges.forEach(e => successors[e.from].push(e.to));
+  const sources = RAW.nodes.filter(n => !RAW.edges.some(e => e.to === n.id));
+  const queue = sources.map(n => n.id);
+  queue.forEach(n => levels[n] = 0);
+  let i = 0;
+  while (i < queue.length) {
+    const cur = queue[i++];
+    for (const succ of successors[cur]) {
+      const nl = levels[cur] + 1;
+      if (levels[succ] < nl) { levels[succ] = nl; queue.push(succ); }
+    }
+  }
+  return levels;
+})();
+
+// ── graph algorithms ────────────────────────────────────────────────────────
+function getAncestors(targetId) {
+  const visited = new Set();
+  const queue = [targetId];
+  while (queue.length) {
+    const cur = queue.shift();
+    for (const p of prereqOf[cur])
+      if (!visited.has(p)) { visited.add(p); queue.push(p); }
+  }
+  return visited;
+}
+
+function topoSort(nodeSet) {
+  const inDeg = {};
+  nodeSet.forEach(n => inDeg[n] = 0);
+  nodeSet.forEach(n => { for (const p of prereqOf[n]) if (nodeSet.has(p)) inDeg[n]++; });
+  const reach = {};
+  nodeSet.forEach(n => {
+    let r = 0;
+    nodeSet.forEach(m => { if (m !== n && getAncestors(m).has(n)) r++; });
+    reach[n] = r;
+  });
+  const heap = [];
+  nodeSet.forEach(n => { if (inDeg[n] === 0) heap.push(n); });
+  heap.sort((a, b) => (reach[b] - reach[a]) || a.localeCompare(b));
+  const result = [];
+  while (heap.length) {
+    const node = heap.shift();
+    result.push(node);
+    for (const succ of dependsOn[node]) {
+      if (!nodeSet.has(succ)) continue;
+      if (--inDeg[succ] === 0) {
+        heap.push(succ);
+        heap.sort((a, b) => (reach[b] - reach[a]) || a.localeCompare(b));
+      }
+    }
+  }
+  return result;
+}
+
+// ── vis.js network ──────────────────────────────────────────────────────────
+const container = document.getElementById('graph-container');
+const visNodes = new vis.DataSet(RAW.nodes.map(n => ({
+  id: n.id,
+  label: n.label.replace(/ /g, '\n'),
+  level: bfsLevels[n.id] !== undefined ? bfsLevels[n.id] : n.tier,
+  color: n.color,
+  font: n.font,
+  shape: n.kind === 'concept' ? 'ellipse' : 'box',
+})));
+const visEdges = new vis.DataSet(RAW.edges.map((e, i) => ({
+  id: i, from: e.from, to: e.to,
+  arrows: 'to', color: {color: '#c8ccd4'}, width: 1,
+})));
+const network = new vis.Network(container, {nodes: visNodes, edges: visEdges}, {
+  layout: { hierarchical: {
+    enabled: true, direction: 'UD',
+    sortMethod: 'directed', levelSeparation: 85, nodeSpacing: 130,
+  } },
+  physics: { enabled: false },
+  interaction: { hover: true, tooltipDelay: 150 },
+  edges: { smooth: { type: 'cubicBezier', forceDirection: 'vertical' } },
+});
+
+// Compact layout: group by tier, sort alphabetically, left-align all nodes.
+network.once('afterDrawing', function() {
+  const pos = network.getPositions();
+  const spacing = 140;
+
+  // Group nodes by their BFS tier
+  const byTier = {};
+  RAW.nodes.forEach(n => {
+    const tier = bfsLevels[n.id] ?? n.tier ?? 0;
+    if (!byTier[tier]) byTier[tier] = [];
+    byTier[tier].push(n.id);
+  });
+
+  // Sort each tier alphabetically, assign X starting from 0
+  const tiers = Object.keys(byTier).map(Number).sort((a, b) => a - b);
+  const tierSep = 85;
+  tiers.forEach((tier, ti) => {
+    const ids = byTier[tier].sort();
+    const y = ti * tierSep;
+    ids.forEach((id, i) => {
+      network.moveNode(id, i * spacing, y);
+    });
+  });
+
+  network.fit({ animation: false });
+});
+
+function reCenterGraph() {
+  network.fit({ animation: true });
+}
+
+const C_PATH   = {background: '#fff9c4', border: '#f9a825'};
+const C_TARGET = {background: '#ffe082', border: '#e65100'};
+
+function resetColors() {
+  visNodes.update(RAW.nodes.map(n => ({id: n.id, color: n.color})));
+  visEdges.update(RAW.edges.map((e, i) => ({id: i, color: {color: '#c8ccd4'}, width: 1})));
+}
+
+// ── explanation panel ───────────────────────────────────────────────────────
+function renderExplanation(node) {
+  const kclass = node.kind;
+  const prereqChips = (node.prereqs || []).map(p =>
+    `<span class="prereq-chip" onclick="selectNode('${p}')">${p.replace(/_/g,' ')}</span>`
+  ).join('');
+  const metaItems = [
+    node.verifier ? `<span class="meta-item"><b>Verifier:</b> ${node.verifier}</span>` : '',
+    node.lab      ? `<span class="meta-item"><b>Lab:</b> ${node.lab}</span>` : '',
+  ].filter(Boolean).join('');
+  const playHtml = node.play
+    ? `<div class="section-label">Try it</div><div class="play-hint">${node.play}</div>`
+    : '';
+
+  const panel = document.getElementById('explain-panel');
+  panel.innerHTML = `
+    <div class="node-title">
+      <h2>${node.label}</h2>
+      <span class="badge ${kclass}">${kclass}</span>
+      <span class="tier-tag">BFS level ${bfsLevels[node.id] ?? node.tier}</span>
+    </div>
+    ${node.defines ? `<div class="defines">${node.defines}</div>` : ''}
+    ${prereqChips ? `<div class="section-label">Prerequisites</div><div class="prereq-list">${prereqChips}</div>` : ''}
+    ${metaItems ? `<div class="meta-row">${metaItems}</div>` : ''}
+    ${playHtml}
+  `;
+
+  // ── concept HTML detail ──
+  const conceptsBase = window.__cb_CONCEPTS_BASE;
+  const conceptUrls = window.__cb_CONCEPT_URLS || {};
+  const mappedUrl = conceptUrls[node.id];
+  if (mappedUrl || conceptsBase) {
+    const conceptUrl = mappedUrl || (conceptsBase + 'concept_' + encodeURIComponent(node.id) + '.html');
+    const detail = document.createElement('div');
+    detail.id = 'concept-detail';
+    detail.innerHTML = '<div class="section-label">Concept Detail</div><div class="concept-loading" style="color:#aaa;font-size:12px;padding:6px 0">Loading…</div>';
+    panel.appendChild(detail);
+    fetch(conceptUrl)
+      .then(r => {
+        if (!r.ok) throw new Error('not found');
+        return r.text();
+      })
+      .then(html => {
+        const slot = detail.querySelector('.concept-loading');
+        if (!slot) return;
+        // Vite dev server returns the SPA index.html (200) for missing static files.
+        // Verify we got a real concept page by checking for a known marker.
+        if (html.includes('spl-credit') || html.includes('Powered by')) {
+          const iframe = document.createElement('iframe');
+          iframe.id = 'concept-iframe';
+          iframe.src = conceptUrl;
+          slot.replaceWith(iframe);
+        } else {
+          slot.className = 'concept-not-found';
+          slot.textContent = 'Content not found — generate it first.';
+        }
+      })
+      .catch(() => {
+        const slot = detail.querySelector('.concept-loading');
+        if (slot) { slot.className = 'concept-not-found'; slot.textContent = 'Content not found — generate it first.'; }
+      });
+  }
+}
+
+// ── learning path sidebar ───────────────────────────────────────────────────
+function renderPathSidebar(orderedPath, targetId) {
+  const stepsEl = document.getElementById('path-steps');
+  const countEl = document.getElementById('path-count');
+  countEl.textContent = orderedPath.length
+    ? `${orderedPath.length} step${orderedPath.length !== 1 ? 's' : ''} to learn first`
+    : 'Root concept — no prerequisites';
+
+  const target = nodeIndex[targetId];
+  const kc = k => `${k.charAt(0).toUpperCase() + k.slice(1)}`;
+
+  stepsEl.innerHTML = orderedPath.map((n, i) => {
+    const nd = nodeIndex[n];
+    return `<div class="step-item" onclick="selectNode('${n}')">
+      <span class="step-num">${i + 1}.</span>
+      <div>
+        <div class="step-label">${nd.label}
+          <span class="step-kind ${nd.kind}-k">${nd.kind}</span>
+        </div>
+        ${nd.defines ? `<div class="step-def">${nd.defines}</div>` : ''}
+      </div>
+    </div>`;
+  }).join('') + `<div class="step-item target">
+    <span class="step-num">▶</span>
+    <div>
+      <div class="step-label">${target.label}
+        <span class="step-kind ${target.kind}-k">${target.kind}</span>
+      </div>
+      ${target.defines ? `<div class="step-def">${target.defines}</div>` : ''}
+    </div>
+  </div>`;
+}
+
+// ── notes (localStorage) ────────────────────────────────────────────────────
+let currentNodeId = null;
+
+function noteKey(nodeId) { return `concept_notes_${DOMAIN_KEY}_${nodeId}`; }
+
+function loadNote(nodeId) {
+  const parsed = _parseNote(localStorage.getItem(noteKey(nodeId)));
+  return parsed ? parsed.text : '';
+}
+
+function saveNote(nodeId, text) {
+  if (text.trim()) {
+    const data = JSON.stringify({ text, ts: new Date().toISOString() });
+    localStorage.setItem(noteKey(nodeId), data);
+  } else {
+    localStorage.removeItem(noteKey(nodeId));
+  }
+  renderNotesList();
+}
+
+function _parseNote(raw) {
+  if (!raw) return null;
+  try { const d = JSON.parse(raw); return { text: d.text || '', ts: d.ts || '' }; }
+  catch (_) { return { text: raw, ts: '' }; }
+}
+
+function _fmtTs(iso) {
+  if (!iso) return '';
+  const d = new Date(iso);
+  const yy = d.getFullYear();
+  const mm = String(d.getMonth()+1).padStart(2,'0');
+  const dd = String(d.getDate()).padStart(2,'0');
+  const hh = String(d.getHours()).padStart(2,'0');
+  const mi = String(d.getMinutes()).padStart(2,'0');
+  return `${yy}-${mm}-${dd} ${hh}:${mi}`;
+}
+
+function renderNotesList() {
+  const container = document.getElementById('notes-with-entries');
+  const entries = RAW.nodes
+    .filter(n => localStorage.getItem(noteKey(n.id)))
+    .map(n => {
+      const parsed = _parseNote(localStorage.getItem(noteKey(n.id)));
+      return {id: n.id, label: n.label, preview: (parsed?.text || '').slice(0, 60), ts: parsed?.ts || ''};
+    });
+  if (!entries.length) { container.innerHTML = ''; return; }
+  container.innerHTML = entries.map(e =>
+    `<div class="note-entry" onclick="selectNode('${e.id}')">
+      <div class="note-node">${e.label}<span class="note-ts">${_fmtTs(e.ts)}</span></div>
+      <div class="note-preview">${e.preview}</div>
+    </div>`
+  ).join('');
+}
+
+function switchNotes(nodeId) {
+  if (currentNodeId !== null) {
+    saveNote(currentNodeId, document.getElementById('notes-textarea').value);
+  }
+  currentNodeId = nodeId;
+  document.getElementById('notes-textarea').value = loadNote(nodeId);
+  document.getElementById('notes-node-label').textContent =
+    nodeIndex[nodeId]?.label || nodeId;
+}
+
+function clearNote() {
+  if (!currentNodeId) return;
+  document.getElementById('notes-textarea').value = '';
+  saveNote(currentNodeId, '');
+  const btn = document.getElementById('nb-clear-btn');
+  if (btn) { btn.textContent = 'Cleared!'; setTimeout(() => { btn.textContent = 'Clear'; }, 1000); }
+}
+
+function exportNotes() {
+  const notes = {};
+  RAW.nodes.forEach(n => {
+    const v = localStorage.getItem(noteKey(n.id));
+    if (v) notes[n.id] = v;
+  });
+  const blob = new Blob([JSON.stringify(notes, null, 2)], {type: 'application/json'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `${DOMAIN_KEY}_notes.json`;
+  a.click();
+}
+
+document.getElementById('notes-textarea').addEventListener('input', () => {
+  if (currentNodeId) saveNote(currentNodeId, document.getElementById('notes-textarea').value);
+});
+
+// ── unified node select ─────────────────────────────────────────────────────
+function selectNode(nodeId) {
+  if (!nodeIndex[nodeId]) return;
+  network.selectNodes([nodeId]);
+  handleSelect(nodeId);
+}
+
+function handleSelect(targetId) {
+  const node = nodeIndex[targetId];
+
+  renderExplanation(node);
+  switchNotes(targetId);
+
+  const ancestors = getAncestors(targetId);
+  const pathSet = new Set([...ancestors]);
+  const orderedPath = topoSort(pathSet);
+
+  renderPathSidebar(orderedPath, targetId);
+
+  resetColors();
+  visNodes.update(orderedPath.map(n => ({id: n, color: C_PATH})));
+  visNodes.update([{id: targetId, color: C_TARGET}]);
+  visEdges.update(RAW.edges.map((e, i) => {
+    const inPath = pathSet.has(e.from) && (pathSet.has(e.to) || e.to === targetId);
+    return {id: i, color: {color: inPath ? '#f9a825' : '#c8ccd4'}, width: inPath ? 2 : 1};
+  }));
+}
+
+network.on('click', params => {
+  if (params.nodes.length) handleSelect(params.nodes[0]);
+});
+
+// initialise notes list on load
+renderNotesList();
+
+// When viewed directly (not in an iframe), inject a back link next to the
+// "Learning Path" heading so it doesn't look like a title-bar element.
+if (window.parent === window) {
+  var h1 = document.querySelector('#path-header h1');
+  if (h1) {
+    var backLink = document.createElement('a');
+    backLink.href = '../../';
+    backLink.textContent = '← App';
+    backLink.style.cssText = [
+      'font-size:10px','color:#2563eb','font-family:system-ui,sans-serif',
+      'text-decoration:none','font-weight:400','letter-spacing:normal',
+      'text-transform:none','white-space:nowrap','flex-shrink:0'
+    ].join(';');
+    var row = document.createElement('div');
+    row.style.cssText = 'display:flex;align-items:baseline;gap:8px;';
+    h1.parentNode.insertBefore(row, h1);
+    row.appendChild(h1);
+    row.appendChild(backLink);
+  }
+}
+</script>
+</body>
+</html>

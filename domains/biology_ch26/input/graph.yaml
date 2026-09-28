@@ -1,0 +1,187 @@
+domain: biology_2e_ch26
+primitives:
+  alternation_of_generations:
+    defines: A life cycle in which plants alternate between a multicellular haploid gametophyte stage
+      and a multicellular diploid sporophyte stage.
+    tier: 0
+  heterospory:
+    defines: The production of two distinct spore types—megaspores (female) and microspores (male)—by
+      a single sporophyte, characteristic of all seed plants.
+    tier: 0
+  gametophyte:
+    defines: The haploid, gamete-producing generation of a plant life cycle, reduced to a microscopic
+      structure enclosed within sporophyte tissue in seed plants.
+    tier: 0
+  sporophyte:
+    defines: The diploid, spore-producing generation of a plant life cycle, which is the dominant and
+      longest-lived phase in seed plants.
+    tier: 0
+concepts:
+  integument:
+    defines: The layer of sporophyte tissue surrounding the megasporangium (and later the embryo) that
+      protects the developing seed.
+    composed_of:
+    - sporophyte
+    tier: 1
+  pollen_grain:
+    defines: A small, desiccation-resistant male gametophyte encased in a protective wall, allowing sperm
+      to be transported to the female gametophyte without water.
+    composed_of:
+    - gametophyte
+    - heterospory
+    tier: 1
+  ovule:
+    defines: The structure containing the megasporangium and female gametophyte, protected by integument
+      tissue, that develops into a seed after fertilization.
+    composed_of:
+    - gametophyte
+    - heterospory
+    - integument
+    tier: 2
+  pollination:
+    defines: The transfer of pollen from the anther (or male cone) to the stigma (or female cone), initiating
+      pollen tube growth toward the egg.
+    composed_of:
+    - pollen_grain
+    - ovule
+    tier: 3
+  seed:
+    defines: A structure containing an embryo, a nutrient storage tissue, and a protective coat, derived
+      from a fertilized ovule, that permits dispersal through space and dormancy through time.
+    composed_of:
+    - ovule
+    - pollination
+    tier: 4
+  strobilus:
+    defines: A tight, cone-like arrangement of sporophylls around a central stalk that houses the male
+      or female reproductive structures in gymnosperms.
+    composed_of:
+    - sporophyte
+    - ovule
+    - pollen_grain
+    tier: 2
+  gymnosperm:
+    defines: A seed plant group bearing "naked" seeds not enclosed in an ovary, sheltered instead by modified
+      leaves called sporophylls.
+    composed_of:
+    - seed
+    - strobilus
+    tier: 5
+  flower:
+    defines: A specialized reproductive shoot of modified leaves (sepals, petals, stamens, carpels) that
+      encloses and protects developing gametes and the embryo in angiosperms.
+    composed_of:
+    - sporophyte
+    - ovule
+    - pollen_grain
+    tier: 2
+  double_fertilization:
+    defines: A reproductive process unique to angiosperms in which one sperm fertilizes the egg to form
+      the diploid zygote while a second sperm fuses with two polar nuclei to form the triploid endosperm.
+    composed_of:
+    - flower
+    - pollination
+    tier: 4
+  fruit:
+    defines: Tissue derived from the thickened ovary wall (and sometimes adjacent tissue) that protects
+      the developing seed and facilitates its dispersal.
+    composed_of:
+    - flower
+    - double_fertilization
+    tier: 5
+  angiosperm:
+    defines: A seed plant phylum (Anthophyta) that produces both flowers and fruit, making it the most
+      diverse and dominant group of terrestrial plants.
+    composed_of:
+    - flower
+    - fruit
+    - seed
+    - double_fertilization
+    tier: 6
+  basal_angiosperm:
+    defines: A group of angiosperms believed to have branched off before the split of monocots and eudicots,
+      exhibiting traits of both.
+    composed_of:
+    - angiosperm
+    tier: 7
+  monocot:
+    defines: An angiosperm group characterized by a single cotyledon, parallel leaf veins, scattered stem
+      vascular tissue, and monosulcate pollen.
+    composed_of:
+    - angiosperm
+    tier: 7
+  eudicot:
+    defines: An angiosperm group characterized by two cotyledons, netted leaf veins, ring-arranged stem
+      vascular tissue, and trisulcate pollen.
+    composed_of:
+    - angiosperm
+    tier: 7
+  monoecious_dioecious:
+    defines: A classification of plants based on whether male and female reproductive structures occur
+      on the same individual (monoecious) or on separate individuals (dioecious).
+    composed_of:
+    - strobilus
+    - flower
+    tier: 3
+applications:
+  conifer:
+    defines: The dominant gymnosperm phylum (Coniferophyta), composed of cone-bearing trees with needle-
+      or scale-like leaves adapted to cold, dry climates.
+    needs:
+    - gymnosperm
+    tier: 6
+  cycad:
+    defines: A palm-like gymnosperm phylum (Cycadophyta) that bears large cones and often relies on insect
+      rather than wind pollination.
+    needs:
+    - gymnosperm
+    - pollination
+    tier: 6
+  ginkgophyte:
+    defines: A gymnosperm phylum represented today by the single species Ginkgo biloba, notable for fan-shaped
+      leaves and separate male and female plants.
+    needs:
+    - gymnosperm
+    - monoecious_dioecious
+    tier: 6
+  gnetophyte:
+    defines: A diverse gymnosperm phylum (including Ephedra, Gnetum, and Welwitschia) that uniquely produces
+      vessel elements in its vascular tissue, similar to angiosperms.
+    needs:
+    - gymnosperm
+    tier: 6
+  coevolution_pollination:
+    defines: The reciprocal evolutionary adaptation between flowering plants and their animal or wind
+      pollinators, reflected in flower color, scent, shape, and pollen quantity.
+    needs:
+    - pollination
+    - flower
+    tier: 4
+  herbivory_defense:
+    defines: The consumption of plants by animals and the corresponding evolution of plant defenses (alkaloids,
+      thorns, spines) and mutualistic relationships that arose in response.
+    needs:
+    - angiosperm
+    - gymnosperm
+    tier: 7
+  seed_dispersal:
+    defines: The mechanisms by which seeds and fruits are spread via wind, water, or animals to expand
+      a plant's geographic range and reduce competition with the parent.
+    needs:
+    - seed
+    - fruit
+    tier: 6
+  human_uses_of_seed_plants:
+    defines: The application of seed plants by humans as sources of food, medicine, fiber, timber, dyes,
+      and other manufactured products.
+    needs:
+    - angiosperm
+    - gymnosperm
+    tier: 7
+  plant_biodiversity_conservation:
+    defines: The study and protection of plant species diversity, threatened by deforestation, habitat
+      loss, and human population growth.
+    needs:
+    - angiosperm
+    - gymnosperm
+    tier: 7

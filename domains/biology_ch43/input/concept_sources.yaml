@@ -1,0 +1,214 @@
+domain: biology_2e_ch43
+sources:
+  asexual_reproduction:
+    label: Asexual Reproduction
+    sections:
+    - id: ch43_s43_1
+      title: 43.1 Reproduction Methods
+  sexual_reproduction:
+    label: Sexual Reproduction
+    sections:
+    - id: ch43_s43_1
+      title: 43.1 Reproduction Methods
+  fission:
+    label: Fission (Binary Fission)
+    sections:
+    - id: ch43_s43_1
+      title: 43.1 Reproduction Methods
+  budding:
+    label: Budding
+    sections:
+    - id: ch43_s43_1
+      title: 43.1 Reproduction Methods
+  fragmentation:
+    label: Fragmentation
+    sections:
+    - id: ch43_s43_1
+      title: 43.1 Reproduction Methods
+  parthenogenesis:
+    label: Parthenogenesis
+    sections:
+    - id: ch43_s43_1
+      title: 43.1 Reproduction Methods
+  hermaphroditism:
+    label: Hermaphroditism
+    sections:
+    - id: ch43_s43_1
+      title: 43.1 Reproduction Methods
+  sex_determination:
+    label: Sex Determination
+    sections:
+    - id: ch43_s43_1
+      title: 43.1 Reproduction Methods
+  fertilization:
+    label: Fertilization
+    sections:
+    - id: ch43_s43_2
+      title: 43.2 Fertilization
+    - id: ch43_s43_6
+      title: 43.6 Fertilization and Early Embryonic Development
+  external_fertilization:
+    label: External Fertilization
+    sections:
+    - id: ch43_s43_2
+      title: 43.2 Fertilization
+  internal_fertilization:
+    label: Internal Fertilization
+    sections:
+    - id: ch43_s43_2
+      title: 43.2 Fertilization
+  oviparity:
+    label: Oviparity
+    sections:
+    - id: ch43_s43_2
+      title: 43.2 Fertilization
+  ovoviviparity:
+    label: Ovoviviparity
+    sections:
+    - id: ch43_s43_2
+      title: 43.2 Fertilization
+  viviparity:
+    label: Viviparity
+    sections:
+    - id: ch43_s43_2
+      title: 43.2 Fertilization
+  gonads:
+    label: Gonads
+    sections:
+    - id: ch43_s43_3
+      title: 43.3 Human Reproductive Anatomy and Gametogenesis
+  male_reproductive_anatomy:
+    label: Male Reproductive Anatomy
+    sections:
+    - id: ch43_s43_3
+      title: 43.3 Human Reproductive Anatomy and Gametogenesis
+  female_reproductive_anatomy:
+    label: Female Reproductive Anatomy
+    sections:
+    - id: ch43_s43_3
+      title: 43.3 Human Reproductive Anatomy and Gametogenesis
+  sexual_response:
+    label: Human Sexual Response
+    sections:
+    - id: ch43_s43_3
+      title: 43.3 Human Reproductive Anatomy and Gametogenesis
+  meiosis:
+    label: Meiosis
+    sections:
+    - id: ch43_s43_3
+      title: 43.3 Human Reproductive Anatomy and Gametogenesis
+  gametogenesis:
+    label: Gametogenesis
+    sections:
+    - id: ch43_s43_3
+      title: 43.3 Human Reproductive Anatomy and Gametogenesis
+  spermatogenesis:
+    label: Spermatogenesis
+    sections:
+    - id: ch43_s43_3
+      title: 43.3 Human Reproductive Anatomy and Gametogenesis
+  oogenesis:
+    label: Oogenesis
+    sections:
+    - id: ch43_s43_3
+      title: 43.3 Human Reproductive Anatomy and Gametogenesis
+  hpg_axis_hormones:
+    label: Hypothalamic-Pituitary-Gonadal Hormonal Control
+    sections:
+    - id: ch43_s43_4
+      title: 43.4 Hormonal Control of Human Reproduction
+  male_hormonal_regulation:
+    label: Male Hormonal Regulation
+    sections:
+    - id: ch43_s43_4
+      title: 43.4 Hormonal Control of Human Reproduction
+  female_hormonal_regulation:
+    label: Female Hormonal Regulation
+    sections:
+    - id: ch43_s43_4
+      title: 43.4 Hormonal Control of Human Reproduction
+  ovarian_cycle:
+    label: Ovarian Cycle
+    sections:
+    - id: ch43_s43_4
+      title: 43.4 Hormonal Control of Human Reproduction
+  menstrual_cycle:
+    label: Menstrual Cycle
+    sections:
+    - id: ch43_s43_4
+      title: 43.4 Hormonal Control of Human Reproduction
+  menopause:
+    label: Menopause
+    sections:
+    - id: ch43_s43_4
+      title: 43.4 Hormonal Control of Human Reproduction
+  human_gestation:
+    label: Human Gestation
+    sections:
+    - id: ch43_s43_5
+      title: 43.5 Human Pregnancy and Birth
+  placenta_function:
+    label: Placental Function
+    sections:
+    - id: ch43_s43_5
+      title: 43.5 Human Pregnancy and Birth
+  labor_and_birth:
+    label: Labor and Birth
+    sections:
+    - id: ch43_s43_5
+      title: 43.5 Human Pregnancy and Birth
+  contraception:
+    label: Contraception
+    sections:
+    - id: ch43_s43_5
+      title: 43.5 Human Pregnancy and Birth
+  infertility_and_art:
+    label: Infertility and Assisted Reproductive Technology
+    sections:
+    - id: ch43_s43_5
+      title: 43.5 Human Pregnancy and Birth
+  acrosomal_reaction:
+    label: Acrosomal Reaction
+    sections:
+    - id: ch43_s43_6
+      title: 43.6 Fertilization and Early Embryonic Development
+  cleavage:
+    label: Cleavage
+    sections:
+    - id: ch43_s43_6
+      title: 43.6 Fertilization and Early Embryonic Development
+  blastula_and_blastocyst:
+    label: Blastula and Blastocyst
+    sections:
+    - id: ch43_s43_6
+      title: 43.6 Fertilization and Early Embryonic Development
+  gastrulation:
+    label: Gastrulation
+    sections:
+    - id: ch43_s43_6
+      title: 43.6 Fertilization and Early Embryonic Development
+  germ_layers:
+    label: Germ Layers
+    sections:
+    - id: ch43_s43_6
+      title: 43.6 Fertilization and Early Embryonic Development
+  organogenesis:
+    label: Organogenesis
+    sections:
+    - id: ch43_s43_7
+      title: 43.7 Organogenesis and Vertebrate Axis Formation
+  neural_tube_formation:
+    label: Neural Tube Formation
+    sections:
+    - id: ch43_s43_7
+      title: 43.7 Organogenesis and Vertebrate Axis Formation
+  somites_and_notochord:
+    label: Somites and Notochord
+    sections:
+    - id: ch43_s43_7
+      title: 43.7 Organogenesis and Vertebrate Axis Formation
+  vertebrate_axis_formation:
+    label: Vertebrate Axis Formation
+    sections:
+    - id: ch43_s43_7
+      title: 43.7 Organogenesis and Vertebrate Axis Formation

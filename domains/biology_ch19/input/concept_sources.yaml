@@ -1,0 +1,175 @@
+domain: biology_2e_ch19
+sources:
+  evolution:
+    label: Evolution
+    sections:
+    - id: ch19_s19_1
+      title: 19.1 Population Evolution
+  allele:
+    label: Allele
+    sections:
+    - id: ch19_s19_1
+      title: 19.1 Population Evolution
+  gene_pool:
+    label: Gene Pool
+    sections:
+    - id: ch19_s19_1
+      title: 19.1 Population Evolution
+  allele_frequency:
+    label: Allele Frequency
+    sections:
+    - id: ch19_s19_1
+      title: 19.1 Population Evolution
+  population_genetics:
+    label: Population Genetics
+    sections:
+    - id: ch19_s19_1
+      title: 19.1 Population Evolution
+    - id: ch19_s19_2
+      title: 19.2 Population Genetics
+  hardy_weinberg_principle:
+    label: Hardy-Weinberg Principle of Equilibrium
+    sections:
+    - id: ch19_s19_1
+      title: 19.1 Population Evolution
+  genetic_structure:
+    label: Genetic Structure
+    sections:
+    - id: ch19_s19_1
+      title: 19.1 Population Evolution
+  population_variation:
+    label: Population Variation
+    sections:
+    - id: ch19_s19_2
+      title: 19.2 Population Genetics
+  genetic_variability:
+    label: Genetic Variability
+    sections:
+    - id: ch19_s19_2
+      title: 19.2 Population Genetics
+  heritability:
+    label: Heritability
+    sections:
+    - id: ch19_s19_2
+      title: 19.2 Population Genetics
+  inbreeding:
+    label: Inbreeding
+    sections:
+    - id: ch19_s19_2
+      title: 19.2 Population Genetics
+  natural_selection:
+    label: Natural Selection
+    sections:
+    - id: ch19_s19_1
+      title: 19.1 Population Evolution
+    - id: ch19_s19_2
+      title: 19.2 Population Genetics
+    - id: ch19_s19_3
+      title: 19.3 Adaptive Evolution
+  genetic_drift:
+    label: Genetic Drift
+    sections:
+    - id: ch19_s19_2
+      title: 19.2 Population Genetics
+  bottleneck_effect:
+    label: Bottleneck Effect
+    sections:
+    - id: ch19_s19_2
+      title: 19.2 Population Genetics
+  founder_effect:
+    label: Founder Effect
+    sections:
+    - id: ch19_s19_1
+      title: 19.1 Population Evolution
+    - id: ch19_s19_2
+      title: 19.2 Population Genetics
+  gene_flow:
+    label: Gene Flow
+    sections:
+    - id: ch19_s19_2
+      title: 19.2 Population Genetics
+  mutation:
+    label: Mutation
+    sections:
+    - id: ch19_s19_2
+      title: 19.2 Population Genetics
+  nonrandom_mating:
+    label: Nonrandom Mating
+    sections:
+    - id: ch19_s19_3
+      title: 19.3 Adaptive Evolution
+  environmental_variation:
+    label: Environmental Variation
+    sections:
+    - id: ch19_s19_3
+      title: 19.3 Adaptive Evolution
+  cline:
+    label: Cline
+    sections:
+    - id: ch19_s19_3
+      title: 19.3 Adaptive Evolution
+  adaptive_evolution:
+    label: Adaptive Evolution
+    sections:
+    - id: ch19_s19_3
+      title: 19.3 Adaptive Evolution
+  evolutionary_fitness:
+    label: Evolutionary (Darwinian) Fitness
+    sections:
+    - id: ch19_s19_3
+      title: 19.3 Adaptive Evolution
+  relative_fitness:
+    label: Relative Fitness
+    sections:
+    - id: ch19_s19_3
+      title: 19.3 Adaptive Evolution
+  stabilizing_selection:
+    label: Stabilizing Selection
+    sections:
+    - id: ch19_s19_3
+      title: 19.3 Adaptive Evolution
+  directional_selection:
+    label: Directional Selection
+    sections:
+    - id: ch19_s19_3
+      title: 19.3 Adaptive Evolution
+  diversifying_selection:
+    label: Diversifying Selection
+    sections:
+    - id: ch19_s19_3
+      title: 19.3 Adaptive Evolution
+  frequency_dependent_selection:
+    label: Frequency-Dependent Selection
+    sections:
+    - id: ch19_s19_3
+      title: 19.3 Adaptive Evolution
+  sexual_selection:
+    label: Sexual Selection
+    sections:
+    - id: ch19_s19_3
+      title: 19.3 Adaptive Evolution
+  sexual_dimorphism:
+    label: Sexual Dimorphism
+    sections:
+    - id: ch19_s19_3
+      title: 19.3 Adaptive Evolution
+  handicap_principle:
+    label: Handicap Principle
+    sections:
+    - id: ch19_s19_3
+      title: 19.3 Adaptive Evolution
+  good_genes_hypothesis:
+    label: Good Genes Hypothesis
+    sections:
+    - id: ch19_s19_3
+      title: 19.3 Adaptive Evolution
+  hardy_weinberg_application:
+    label: Hardy-Weinberg Equilibrium Testing
+    sections:
+    - id: ch19_s19_1
+      title: 19.1 Population Evolution
+  flu_vaccine_evolution:
+    label: Flu Vaccine Design and Viral Evolution
+    sections:
+    - id: ch19_s19_1
+      title: 19.1 Population Evolution

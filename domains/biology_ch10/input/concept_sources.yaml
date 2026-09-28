@@ -1,0 +1,148 @@
+domain: biology_2e_ch10
+sources:
+  dna:
+    label: DNA (Genomic DNA)
+    sections:
+    - id: ch10_s10_1
+      title: 10.1 Cell Division
+  gene:
+    label: Gene
+    sections:
+    - id: ch10_s10_1
+      title: 10.1 Cell Division
+    - id: ch10_key_terms
+      title: Key Terms
+  trait:
+    label: Trait
+    sections:
+    - id: ch10_s10_1
+      title: 10.1 Cell Division
+  histone:
+    label: Histone
+    sections:
+    - id: ch10_s10_1
+      title: 10.1 Cell Division
+  chromosome:
+    label: Chromosome
+    sections:
+    - id: ch10_s10_1
+      title: 10.1 Cell Division
+  chromatin:
+    label: Chromatin
+    sections:
+    - id: ch10_s10_1
+      title: 10.1 Cell Division
+  nucleosome:
+    label: Nucleosome
+    sections:
+    - id: ch10_s10_1
+      title: 10.1 Cell Division
+  homologous_chromosomes:
+    label: Homologous Chromosomes
+    sections:
+    - id: ch10_s10_1
+      title: 10.1 Cell Division
+  ploidy:
+    label: Ploidy (Diploid and Haploid States)
+    sections:
+    - id: ch10_s10_1
+      title: 10.1 Cell Division
+  sister_chromatids:
+    label: Sister Chromatids
+    sections:
+    - id: ch10_s10_1
+      title: 10.1 Cell Division
+    - id: ch10_s10_2
+      title: 10.2 The Cell Cycle
+  interphase:
+    label: Interphase
+    sections:
+    - id: ch10_s10_2
+      title: 10.2 The Cell Cycle
+  mitotic_spindle:
+    label: Mitotic Spindle
+    sections:
+    - id: ch10_s10_2
+      title: 10.2 The Cell Cycle
+  mitosis:
+    label: Mitosis (Karyokinesis)
+    sections:
+    - id: ch10_s10_2
+      title: 10.2 The Cell Cycle
+  cytokinesis:
+    label: Cytokinesis
+    sections:
+    - id: ch10_s10_2
+      title: 10.2 The Cell Cycle
+  cell_cycle:
+    label: Cell Cycle
+    sections:
+    - id: ch10_s10_2
+      title: 10.2 The Cell Cycle
+  g0_phase:
+    label: G0 Phase
+    sections:
+    - id: ch10_s10_2
+      title: 10.2 The Cell Cycle
+  cell_cycle_checkpoints:
+    label: Cell-Cycle Checkpoints
+    sections:
+    - id: ch10_s10_3
+      title: 10.3 Control of the Cell Cycle
+  cyclin:
+    label: Cyclin
+    sections:
+    - id: ch10_s10_3
+      title: 10.3 Control of the Cell Cycle
+  cdk:
+    label: Cyclin-Dependent Kinase (Cdk)
+    sections:
+    - id: ch10_s10_3
+      title: 10.3 Control of the Cell Cycle
+  cdk_cyclin_complex:
+    label: Cdk/Cyclin Complex (Positive Regulation)
+    sections:
+    - id: ch10_s10_3
+      title: 10.3 Control of the Cell Cycle
+  negative_regulators:
+    label: Negative Regulator Proteins (Rb, p53, p21)
+    sections:
+    - id: ch10_s10_3
+      title: 10.3 Control of the Cell Cycle
+  apoptosis:
+    label: Apoptosis
+    sections:
+    - id: ch10_s10_3
+      title: 10.3 Control of the Cell Cycle
+    - id: ch10_s10_4
+      title: 10.4 Cancer and the Cell Cycle
+  gene_mutation:
+    label: Gene Mutation
+    sections:
+    - id: ch10_s10_4
+      title: 10.4 Cancer and the Cell Cycle
+  proto_oncogene_oncogene:
+    label: Proto-oncogenes and Oncogenes
+    sections:
+    - id: ch10_s10_4
+      title: 10.4 Cancer and the Cell Cycle
+  tumor_suppressor_gene:
+    label: Tumor Suppressor Gene
+    sections:
+    - id: ch10_s10_4
+      title: 10.4 Cancer and the Cell Cycle
+  cancer:
+    label: Cancer
+    sections:
+    - id: ch10_s10_4
+      title: 10.4 Cancer and the Cell Cycle
+  ftsz:
+    label: FtsZ Protein
+    sections:
+    - id: ch10_s10_5
+      title: 10.5 Prokaryotic Cell Division
+  binary_fission:
+    label: Binary Fission
+    sections:
+    - id: ch10_s10_5
+      title: 10.5 Prokaryotic Cell Division

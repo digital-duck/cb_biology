@@ -1,0 +1,178 @@
+domain: biology_2e_ch22
+sources:
+  prokaryote:
+    label: Prokaryote
+    sections:
+    - id: ch22_s22_1
+      title: 22.1 Prokaryotic Diversity
+    - id: ch22_s22_2
+      title: '22.2 Structure of Prokaryotes: Bacteria and Archaea'
+  eukaryote:
+    label: Eukaryote
+    sections:
+    - id: ch22_s22_2
+      title: '22.2 Structure of Prokaryotes: Bacteria and Archaea'
+  domains_of_life:
+    label: Three Domains of Life
+    sections:
+    - id: ch22_s22_2
+      title: '22.2 Structure of Prokaryotes: Bacteria and Archaea'
+  microbial_mat:
+    label: Microbial Mat
+    sections:
+    - id: ch22_s22_1
+      title: 22.1 Prokaryotic Diversity
+  hydrothermal_vent:
+    label: Hydrothermal Vent
+    sections:
+    - id: ch22_s22_1
+      title: 22.1 Prokaryotic Diversity
+  stromatolite:
+    label: Stromatolite
+    sections:
+    - id: ch22_s22_1
+      title: 22.1 Prokaryotic Diversity
+  ancient_atmosphere_oxygenation:
+    label: Oxygenation of the Ancient Atmosphere
+    sections:
+    - id: ch22_s22_1
+      title: 22.1 Prokaryotic Diversity
+  extremophile:
+    label: Extremophile
+    sections:
+    - id: ch22_s22_1
+      title: 22.1 Prokaryotic Diversity
+  culturing_prokaryotes:
+    label: Culturing Prokaryotes
+    sections:
+    - id: ch22_s22_1
+      title: 22.1 Prokaryotic Diversity
+  vbnc_state:
+    label: Viable-but-Non-Culturable (VBNC) State
+    sections:
+    - id: ch22_s22_1
+      title: 22.1 Prokaryotic Diversity
+  biofilm:
+    label: Biofilm
+    sections:
+    - id: ch22_s22_1
+      title: 22.1 Prokaryotic Diversity
+    - id: ch22_s22_2
+      title: '22.2 Structure of Prokaryotes: Bacteria and Archaea'
+    - id: ch22_s22_4
+      title: 22.4 Bacterial Diseases in Humans
+  prokaryotic_cell_structure:
+    label: Prokaryotic Cell Structure
+    sections:
+    - id: ch22_s22_2
+      title: '22.2 Structure of Prokaryotes: Bacteria and Archaea'
+  cell_wall:
+    label: Cell Wall
+    sections:
+    - id: ch22_s22_2
+      title: '22.2 Structure of Prokaryotes: Bacteria and Archaea'
+  peptidoglycan:
+    label: Peptidoglycan
+    sections:
+    - id: ch22_s22_2
+      title: '22.2 Structure of Prokaryotes: Bacteria and Archaea'
+  gram_staining:
+    label: Gram Staining and Gram-Positive/Negative Bacteria
+    sections:
+    - id: ch22_s22_2
+      title: '22.2 Structure of Prokaryotes: Bacteria and Archaea'
+  archaeal_cell_wall:
+    label: Archaeal Cell Wall
+    sections:
+    - id: ch22_s22_2
+      title: '22.2 Structure of Prokaryotes: Bacteria and Archaea'
+  archaeal_membrane_lipids:
+    label: Archaeal Membrane Lipids
+    sections:
+    - id: ch22_s22_2
+      title: '22.2 Structure of Prokaryotes: Bacteria and Archaea'
+  binary_fission:
+    label: Binary Fission
+    sections:
+    - id: ch22_s22_2
+      title: '22.2 Structure of Prokaryotes: Bacteria and Archaea'
+  horizontal_gene_transfer:
+    label: Horizontal Gene Transfer
+    sections:
+    - id: ch22_s22_2
+      title: '22.2 Structure of Prokaryotes: Bacteria and Archaea'
+  prokaryote_metabolic_diversity:
+    label: Prokaryotic Metabolic Diversity
+    sections:
+    - id: ch22_s22_3
+      title: 22.3 Prokaryotic Metabolism
+  macronutrients_micronutrients:
+    label: Macronutrients and Micronutrients
+    sections:
+    - id: ch22_s22_3
+      title: 22.3 Prokaryotic Metabolism
+  energy_and_carbon_source_classification:
+    label: Energy and Carbon Source Classification (Phototroph/Chemotroph/Autotroph/Heterotroph)
+    sections:
+    - id: ch22_s22_3
+      title: 22.3 Prokaryotic Metabolism
+  carbon_cycle:
+    label: Carbon Cycle
+    sections:
+    - id: ch22_s22_3
+      title: 22.3 Prokaryotic Metabolism
+  nitrogen_cycle:
+    label: Nitrogen Cycle
+    sections:
+    - id: ch22_s22_3
+      title: 22.3 Prokaryotic Metabolism
+  pathogen:
+    label: Pathogen
+    sections:
+    - id: ch22_s22_4
+      title: 22.4 Bacterial Diseases in Humans
+  disease_epidemiology_terms:
+    label: Epidemic, Pandemic, and Endemic Disease
+    sections:
+    - id: ch22_s22_4
+      title: 22.4 Bacterial Diseases in Humans
+  emerging_and_zoonotic_disease:
+    label: Emerging and Zoonotic Disease
+    sections:
+    - id: ch22_s22_4
+      title: 22.4 Bacterial Diseases in Humans
+  foodborne_disease:
+    label: Foodborne Disease
+    sections:
+    - id: ch22_s22_4
+      title: 22.4 Bacterial Diseases in Humans
+  antibiotic_resistance:
+    label: Antibiotic Resistance
+    sections:
+    - id: ch22_s22_4
+      title: 22.4 Bacterial Diseases in Humans
+  mrsa:
+    label: MRSA (Methicillin-Resistant Staphylococcus aureus)
+    sections:
+    - id: ch22_s22_4
+      title: 22.4 Bacterial Diseases in Humans
+  biological_nitrogen_fixation:
+    label: Biological Nitrogen Fixation
+    sections:
+    - id: ch22_s22_5
+      title: 22.5 Beneficial Prokaryotes
+  host_associated_beneficial_microbes:
+    label: Host-Associated Beneficial Microbes
+    sections:
+    - id: ch22_s22_5
+      title: 22.5 Beneficial Prokaryotes
+  food_biotechnology:
+    label: Food Biotechnology Using Prokaryotes
+    sections:
+    - id: ch22_s22_5
+      title: 22.5 Beneficial Prokaryotes
+  bioremediation:
+    label: Bioremediation
+    sections:
+    - id: ch22_s22_5
+      title: 22.5 Beneficial Prokaryotes

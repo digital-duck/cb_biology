@@ -1,0 +1,192 @@
+domain: biology_2e_ch38
+sources:
+  hydrostatic_skeleton:
+    label: Hydrostatic Skeleton
+    sections:
+    - id: ch38_s38_1
+      title: 38.1 Types of Skeletal Systems
+  exoskeleton:
+    label: Exoskeleton
+    sections:
+    - id: ch38_s38_1
+      title: 38.1 Types of Skeletal Systems
+  endoskeleton:
+    label: Endoskeleton
+    sections:
+    - id: ch38_s38_1
+      title: 38.1 Types of Skeletal Systems
+  axial_skeleton:
+    label: Axial Skeleton
+    sections:
+    - id: ch38_s38_1
+      title: 38.1 Types of Skeletal Systems
+  appendicular_skeleton:
+    label: Appendicular Skeleton
+    sections:
+    - id: ch38_s38_1
+      title: 38.1 Types of Skeletal Systems
+  skull:
+    label: Skull
+    sections:
+    - id: ch38_s38_1
+      title: 38.1 Types of Skeletal Systems
+  vertebral_column:
+    label: Vertebral Column
+    sections:
+    - id: ch38_s38_1
+      title: 38.1 Types of Skeletal Systems
+  thoracic_cage:
+    label: Thoracic Cage
+    sections:
+    - id: ch38_s38_1
+      title: 38.1 Types of Skeletal Systems
+  pectoral_girdle:
+    label: Pectoral Girdle
+    sections:
+    - id: ch38_s38_1
+      title: 38.1 Types of Skeletal Systems
+  pelvic_girdle:
+    label: Pelvic Girdle
+    sections:
+    - id: ch38_s38_1
+      title: 38.1 Types of Skeletal Systems
+  upper_limb_bones:
+    label: Upper Limb Bones
+    sections:
+    - id: ch38_s38_1
+      title: 38.1 Types of Skeletal Systems
+  lower_limb_bones:
+    label: Lower Limb Bones
+    sections:
+    - id: ch38_s38_1
+      title: 38.1 Types of Skeletal Systems
+  bone_tissue:
+    label: Bone (Osseous Tissue)
+    sections:
+    - id: ch38_s38_2
+      title: 38.2 Bone
+  calcification:
+    label: Calcification
+    sections:
+    - id: ch38_s38_2
+      title: 38.2 Bone
+  bone_shape_classification:
+    label: Bone Shape Classification
+    sections:
+    - id: ch38_s38_2
+      title: 38.2 Bone
+  compact_bone:
+    label: Compact Bone Tissue
+    sections:
+    - id: ch38_s38_2
+      title: 38.2 Bone
+  spongy_bone:
+    label: Spongy Bone Tissue
+    sections:
+    - id: ch38_s38_2
+      title: 38.2 Bone
+  bone_cell_types:
+    label: Bone Cell Types
+    sections:
+    - id: ch38_s38_2
+      title: 38.2 Bone
+  ossification:
+    label: Ossification (Osteogenesis)
+    sections:
+    - id: ch38_s38_2
+      title: 38.2 Bone
+  bone_growth:
+    label: Bone Growth
+    sections:
+    - id: ch38_s38_2
+      title: 38.2 Bone
+  bone_remodeling_repair:
+    label: Bone Remodeling and Repair
+    sections:
+    - id: ch38_s38_2
+      title: 38.2 Bone
+  joint:
+    label: Joint (Articulation)
+    sections:
+    - id: ch38_s38_3
+      title: 38.3 Joints and Skeletal Movement
+  joint_structural_classification:
+    label: Structural Classification of Joints
+    sections:
+    - id: ch38_s38_3
+      title: 38.3 Joints and Skeletal Movement
+  joint_functional_classification:
+    label: Functional Classification of Joints
+    sections:
+    - id: ch38_s38_3
+      title: 38.3 Joints and Skeletal Movement
+  synovial_joint_movement_types:
+    label: Types of Synovial Joint Movement
+    sections:
+    - id: ch38_s38_3
+      title: 38.3 Joints and Skeletal Movement
+  synovial_joint_shape_types:
+    label: Structural Types of Synovial Joints
+    sections:
+    - id: ch38_s38_3
+      title: 38.3 Joints and Skeletal Movement
+  muscle_tissue_types:
+    label: Types of Muscle Tissue
+    sections:
+    - id: ch38_s38_4
+      title: 38.4 Muscle Contraction and Locomotion
+  skeletal_muscle_fiber_structure:
+    label: Skeletal Muscle Fiber Structure
+    sections:
+    - id: ch38_s38_4
+      title: 38.4 Muscle Contraction and Locomotion
+  sarcomere:
+    label: Sarcomere
+    sections:
+    - id: ch38_s38_4
+      title: 38.4 Muscle Contraction and Locomotion
+  actin_myosin_filaments:
+    label: Actin and Myosin Filaments
+    sections:
+    - id: ch38_s38_4
+      title: 38.4 Muscle Contraction and Locomotion
+  sliding_filament_model:
+    label: Sliding Filament Model of Contraction
+    sections:
+    - id: ch38_s38_4
+      title: 38.4 Muscle Contraction and Locomotion
+  cross_bridge_cycle:
+    label: Cross-Bridge Cycle
+    sections:
+    - id: ch38_s38_4
+      title: 38.4 Muscle Contraction and Locomotion
+  regulatory_proteins:
+    label: Regulatory Proteins (Troponin and Tropomyosin)
+    sections:
+    - id: ch38_s38_4
+      title: 38.4 Muscle Contraction and Locomotion
+  excitation_contraction_coupling:
+    label: Excitation–Contraction Coupling
+    sections:
+    - id: ch38_s38_4
+      title: 38.4 Muscle Contraction and Locomotion
+  neuromuscular_junction:
+    label: Neuromuscular Junction
+    sections:
+    - id: ch38_s38_4
+      title: 38.4 Muscle Contraction and Locomotion
+  membrane_action_potential:
+    label: Membrane Potential and Action Potential
+    sections:
+    - id: ch38_s38_4
+      title: 38.4 Muscle Contraction and Locomotion
+  muscle_tension_control:
+    label: Control of Muscle Tension
+    sections:
+    - id: ch38_s38_4
+      title: 38.4 Muscle Contraction and Locomotion
+  rheumatoid_arthritis_diagnosis:
+    label: Rheumatoid Arthritis and Diagnosis
+    sections:
+    - id: ch38_s38_4
+      title: 38.4 Muscle Contraction and Locomotion
